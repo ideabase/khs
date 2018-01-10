@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="97.69" height="97.69" viewBox="0 0 97.69 97.69">
+  <defs>
+    <clipPath id="clip-path">
+      <circle cx="48.85" cy="48.85" r="36" style="fill: none"/>
+    </clipPath>
+  </defs>
+  <title>flickr-white</title>
+  <g style="clip-path: url(#clip-path)">
+    <rect x="7.85" y="7.85" width="82" height="82" style="fill: #fff"/>
+  </g>
+  <path d="M56.92,37.54a11.26,11.26,0,0,0-8.08,3.4,11.3,11.3,0,1,0-.18,16l0.18-.18A11.3,11.3,0,1,0,56.92,37.54Zm0,19.38A8.07,8.07,0,1,1,65,48.85a8.07,8.07,0,0,1-8.08,8.07h0Z" style="fill: #191919"/>
+</svg>

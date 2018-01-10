@@ -1,0 +1,8 @@
+.sass-cache/
+*.css.map
+.DS_Store
+/craft/config/general.php
+/craft/config/db.php
+/public/.htaccess
+/public/node_modules
+package-lock.json
