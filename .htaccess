@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^(.*)$ /httpdocs/$1 [L]
