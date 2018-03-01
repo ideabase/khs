@@ -18,6 +18,7 @@
 {% block content %}
 	<article>
 		<h1>{{ entry.title }}</h1>
+    <h2>{{ entry.subHeadline }}</h2>
 		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
 		{{ entry.body }}
 	</article>
