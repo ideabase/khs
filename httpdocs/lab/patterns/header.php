@@ -36,14 +36,14 @@
     <li>
       <h2><a href="#">Support</a></h2>
         <ul>
-          <li>Membership</a></li>
-          <li>Donate</a></li>
-          <li>Volunteer</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Volunteer</a></li>
         </ul>
     </li>
 
     <li>
-      <h2><a href="#">Resourcces</a></h2>
+      <h2><a href="#">Resources</a></h2>
         <ul>
           <li><a href="#">Kent Tribune</a></li>
           <li><a href="#">Historic Landmarks</a></li>
