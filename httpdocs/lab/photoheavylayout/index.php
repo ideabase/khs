@@ -244,8 +244,6 @@
 
 
 
-
-
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>
