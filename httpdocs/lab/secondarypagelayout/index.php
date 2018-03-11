@@ -12,15 +12,11 @@
 
 
     <!--Use this code whenever you need to include a shared component -->
-    <?php include '../patterns/sample.php';?>
+<h1>This is Headline 1</h1>
 
-    <header>
-    <img src="#" alt= "This header image">
-    <div>
-      <h1>Headline</h1>
-      <h2> Subhead</h2>
-    </div>
-    </header>
+    <?php include '../patterns/para.php';?>
+
+<h2>This Is Headline 2</h2>
     <body>
       <div>
         <h1> Headline</h1>
