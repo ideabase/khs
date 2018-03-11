@@ -32,25 +32,28 @@
       </figure>
       </div>
     <img src="#" alt="this is a background image">
+    <div>
+      <h1> Headline</h1>
+    <div>
       <div>
-        <h1> Headline</h1>
-          <div>
-            <div>
-              <h3> Header 3 </h3>
-              <img src="#">
-              <p> This is a paragraph. This will describe the link below and image. </p>
-              <button type="button"> This is a button </button>
-            </div>
-            <h3> Header 3 </h3>
-              <img src="#">
-              <p> This is a paragraph. This will describe the link below and image. </p>
-              <button type="button"> This is a button </button>
-            </div>
+        <img src="#">
         <h3> Header 3 </h3>
-              <img src="#">
-              <p> This is a paragraph. This will describe the link below and image. </p>
-              <button type="button"> This is a button </button>
+        <p> This is a paragraph. This will describe the link below and image. </p>
+        <button type="button"> This is a button </button>
       </div>
+        <div>
+        <img src="#">
+        <h3> Header 3 </h3>
+        <p> This is a paragraph. This will describe the link below and image. </p>
+        <button type="button"> This is a button </button>
+      </div>
+        <div>
+        <img src="#">
+        <h3> Header 3 </h3>
+        <p> This is a paragraph. This will describe the link below and image. </p>
+        <button type="button"> This is a button </button>
+      </div>
+  </div>
 
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
