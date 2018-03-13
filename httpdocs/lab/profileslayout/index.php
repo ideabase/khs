@@ -7,15 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <!--Included Header -->
+    <header>
     <?php include '../patterns/header.php';?>
+    <h1>This is Headline 1</h1>
+    <h2>This Is Headline 2</h2>
+  </header>
+    <h1> Headline</h1>
+    <h2> Subhead</h2>
+      <?php include '../patterns/para.php';?>
 
+  <h3> Headline</h3>
+  <?php include '../patterns/profile1.php';?>
+  <?php include '../patterns/profile1.php';?>
+  <?php include '../patterns/profile1.php';?>
 
-    <!--Use this code whenever you need to include a shared component -->
-    <?php include '../patterns/sample.php';?>
-
-
-
+  <h3> Headline</h3>
+  <?php include '../patterns/profile2.php';?>
+  <?php include '../patterns/profile2.php';?>
+  <?php include '../patterns/profile2.php';?>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>

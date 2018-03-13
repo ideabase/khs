@@ -13,7 +13,7 @@
 <header>
   <img src="" alt="KHS Logo">
   <nav role="navigation">
-    <input type="search" placeholder="Can't find something?">
+    <input type="search" placeholder="Search">
     <div>
     <ul>
         <li><a href="#">Join</a></li>
@@ -21,14 +21,52 @@
         <li><a href="#">Learn</a></li>
     </ul>
   </div>
+
   <div>
     <ul>
-        <li><a href="#">Visit</a></li>
-        <li><a href="#">Support</a><li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">About Us</a><li>
-        <li><a href="#">Shop</a></li>
-    </ul>
+    <li>
+      <h2><a href="#">Visit</a></h2>
+        <ul>
+          <li><a href="#">Location & Hours</a></li>
+          <li><a href="#">Exhibits</a></li>
+          <li><a href="#">Events & Calandar</a></li>
+        </ul>
+    </li>
+
+    <li>
+      <h2><a href="#">Support</a></h2>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Volunteer</a></li>
+        </ul>
+    </li>
+
+    <li>
+      <h2><a href="#">Resources</a></h2>
+        <ul>
+          <li><a href="#">Kent Tribune</a></li>
+          <li><a href="#">Historic Landmarks</a></li>
+          <li><a href="#">City History</a></li>
+          <li><a href="#">Residential History</a></li>
+          <li><a href="#">Photo & Video Archive</a></li>
+          <li><a href="#">Artifacts</a></li>
+        </ul>
+    </li>
+
+    <li>
+      <h2><a href="#">About Us</a></h2>
+        <ul>
+          <li><a href="#">About the KHS</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Our Home</a></li>
+        </ul>
+    </li>
+
+    <li>
+      <h2><a href="#">Shop</a></h2>
+    </li>
+    <ul>
   </div>
   </nav>
 </header>
