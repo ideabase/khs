@@ -15,7 +15,7 @@
   <nav role="navigation">
     <input type="search" placeholder="Search">
     <div>
-    <ul>
+    <ul class="callout">
         <li><a href="#">Join</a></li>
         <li><a href="#">Give</a><li>
         <li><a href="#">Learn</a></li>
@@ -23,7 +23,7 @@
   </div>
 
   <div>
-    <ul>
+    <ul class="nav-main">
     <li>
       <h2><a href="#">Visit</a></h2>
         <ul>
