@@ -19,7 +19,7 @@
     <ul>
       <li> <a href="#"> Visit </a></li>
       <li> <a href="#"> Support</a></li>
-      <li> <a href="#"> Resources </a></li>
+      <li> <a href="#"> Collections & Resources </a></li>
       <li> Search Bar </li>
       <li> <a href="#"> About Us </a></li>
       <li> <a href="#"> Shop </a></li>
