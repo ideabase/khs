@@ -1,0 +1,32 @@
+footer{
+  background-color: $blue;
+  font-family: $sans;
+  text-align: center;
+  display: flex;
+
+
+  justify-content: space-around;
+}
+h4{
+  color: $green;
+}
+h5{
+  color: white;
+}
+.callout{
+  font-size: 15px;
+  padding-top: 3px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 3em;
+}
+
+
+ul{
+color: white;
+}
+
+.menu-options{
+  color: white;
+}

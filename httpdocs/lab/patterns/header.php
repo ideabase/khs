@@ -43,7 +43,7 @@
     </li>
 
     <li>
-      <h2><a href="#">Resources</a></h2>
+      <h2><a href="#">Collections & Resources</a></h2>
         <ul>
           <li><a href="#">Kent Tribune</a></li>
           <li><a href="#">Historic Landmarks</a></li>
