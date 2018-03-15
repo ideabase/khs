@@ -1,9 +1,41 @@
+<!-- Secondary Logo -->
 {% if footer.secondaryLogo | length %}
     {% for asset in footer.secondaryLogo %}
         <img src="{{ asset.url }}" alt="{{ asset.title }}" />
     {% endfor %}
 {% endif %}
 
+<!-- Social Media Matrix -->
+{% for block in footer.socialMedia %}
+
+    {% if block.type == "socialMedia" %}
+
+      <a href="{{ block.siteURL }}">{{ block.socialMediaName }}</a>
+
+    {% endif %}
+
+{% endfor %}
+
+<!-- Phone Output -->
+{% if footer.phone %}
+    {{ footer.phone | markdown }}
+{% endif %}
+
+<!-- Address Output -->
+{% if footer.address %}
+    {{ footer.address | markdown }}
+{% endif %}
+
+<!-- Admission text Output -->
+{% if footer.admissionText %}
+    {{ footer.admissionText | markdown }}
+{% endif %}
+
+<!-- PrimaryNav -->
 {{ craft.amNav.getNav("primaryNav") }}
 
+<!-- SecondaryNav -->
 {{ craft.amNav.getNav("secondaryNav") }}
+
+<!-- Days of Hours Globals -->
+{% include 'globals/hours.html' %}
