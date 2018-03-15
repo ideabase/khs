@@ -24,7 +24,7 @@
       <?php include '../patterns/para.php';?>
 
     </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/uP_0DkpFOKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
 
