@@ -19,10 +19,26 @@
 
 {% extends "_layout" %}
 
+
 {% block content %}
 	<h1>{{ entry.title }}</h1>
+  {{ entry.headline }}
 
-	{{ entry.body }}
+<!-- For statement for Days and Hours -->
+  {% if entry.daysAndHours | length %}
+    <h3>Days and Hours</h3>
+
+    <ul>
+        {% for row in entry.daysAndHours %}
+            <li>{{ row.days }} - {{ row.hours }}</li>
+        {% endfor %}
+    </ul>
+  {% endif %}
+  <!-- End for statement for Days and Hours -->
+
+  <!-- Output featuredItems -->
+  {% set entries = entry.featuredItems %}
+
 
 	<h2>Recent News</h2>
 	<ul>

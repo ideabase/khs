@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% if footer.secondaryLogo | length %}
+    {% for asset in footer.secondaryLogo %}
+        <img src="{{ asset.url }}" alt="{{ asset.title }}" />
+    {% endfor %}
+{% endif %}
 
-  </body>
-</html>
+{{ craft.amNav.getNav("primaryNav") }}
+
+{{ craft.amNav.getNav("secondaryNav") }}
