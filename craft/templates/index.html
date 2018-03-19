@@ -19,10 +19,18 @@
 
 {% extends "_layout" %}
 
+
 {% block content %}
 	<h1>{{ entry.title }}</h1>
+  {{ entry.headline }}
+  {{ entry.body }}
 
-	{{ entry.body }}
+  <!-- For statement for Days and Hours -->
+  {% include 'globals/hours.html' %}
+
+  <!-- Output featuredItems -->
+  {% set entries = entry.featuredItems %}
+
 
 	<h2>Recent News</h2>
 	<ul>

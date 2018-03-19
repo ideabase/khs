@@ -34,10 +34,7 @@
     {% endif %}
 
 
-		<header role="banner">
-      <a id="skip-to-content" href="#content">skip to main content</a>
-			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-		</header>
+		{% include 'globals/header.html' %}
 
 		<main role="main">
 			{% block content %}
@@ -46,9 +43,7 @@
 			{% endblock %}
 		</main>
 
-		<footer role="contentinfo">
-			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
-		</footer>
+		{% include 'globals/footer.html' %}
 
   <link href="{{ siteUrl }}assets/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
   <script type="text/javascript" src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>

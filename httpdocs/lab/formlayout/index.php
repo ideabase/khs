@@ -16,6 +16,8 @@
 
     <?php include '../patterns/para.php';?>
 
+<hr>
+
 <h2>This Is Headline 2</h2>
 
     <form action="">
@@ -29,6 +31,7 @@
        <input type="text" name="" placeholder="City">
       <form action="">
         <select>
+          <option value="">State</option>
           <option value="AL">AL</option>
           <option value="AK">AK</option>
           <option value="AR">AR</option>
