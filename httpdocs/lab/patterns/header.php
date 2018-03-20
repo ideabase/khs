@@ -15,7 +15,7 @@
   <nav role="navigation">
     <input type="search" placeholder="Search">
     <div>
-    <ul>
+    <ul class="callout">
         <li><a href="#">Join</a></li>
         <li><a href="#">Give</a><li>
         <li><a href="#">Learn</a></li>
@@ -23,7 +23,7 @@
   </div>
 
   <div>
-    <ul>
+    <ul class="nav-main">
     <li>
       <h2><a href="#">Visit</a></h2>
         <ul>
@@ -43,7 +43,7 @@
     </li>
 
     <li>
-      <h2><a href="#">Resources</a></h2>
+      <h2><a href="#">Collections & Resources</a></h2>
         <ul>
           <li><a href="#">Kent Tribune</a></li>
           <li><a href="#">Historic Landmarks</a></li>

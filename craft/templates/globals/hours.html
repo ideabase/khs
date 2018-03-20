@@ -1,0 +1,7 @@
+{% if hours.daysAndHours | length %}
+    <ul>
+        {% for row in hours.daysAndHours %}
+            <li>{{ row.days }} - {{ row.hours }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}

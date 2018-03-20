@@ -10,19 +10,21 @@
     <h5> ADMISSION IS ALWAYS FREE</h5>
   </div>
   <div>
-    <div> KHS LOGO HERE </div>
-    <ul>
+    <div class="smalllogo"> KHS LOGO HERE</div>
+    <ul class="callout">
       <li> <a href= "#"> Join </a></li>
-      <li> <a href= "#"> Give </a></li>
-      <li> <a href="#"> Learn</a></li>
+      <li> <a  href= "#"> Give </a></li>
+      <li> <a  href="#"> Learn</a></li>
     </ul>
+  </div>
+    <div class="menu-options">
     <ul>
-      <li> <a href="#"> Visit </a></li>
-      <li> <a href="#"> Support</a></li>
-      <li> <a href="#"> Resources </a></li>
+      <li> <a class="menu-options" href="#"> Visit </a></li>
+      <li> <a class="menu-options" href="#"> Support</a></li>
+      <li> <a class="menu-options" href="#"> Resources </a></li>
       <li> Search Bar </li>
-      <li> <a href="#"> About Us </a></li>
-      <li> <a href="#"> Shop </a></li>
+      <li> <a class="menu-options" href="#"> About Us </a></li>
+      <li> <a class="menu-options" href="#"> Shop </a></li>
     </ul>
   </div>
 </footer>
