@@ -14,7 +14,7 @@
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
   <!-- Render SEO Metatags -->
-    {# {% hook 'seomaticRender' %} #}
+     {% hook 'seomaticRender' %}
   <!-- Render Favicons -->
   	{% include '_includes/_favicons.html' %}
   <!--Begin Critical CSS -->
