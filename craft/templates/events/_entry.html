@@ -1,0 +1,13 @@
+{% extends "_layout" %}
+
+{% block content %}
+{{entry.title}}
+{{entry.eventTime}}
+{{entry.eventDescription}}
+{{entry.location}}
+{{entry.specialGuests}}
+{% set image = entry.eventPhotos.first(3) %}
+            <img src="{{ image.url }}"
+                 alt="{{ entry.previewText }}"/>
+{{entry.imageCaption}}
+{% endblock %}

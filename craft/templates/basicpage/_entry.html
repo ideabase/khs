@@ -1,0 +1,13 @@
+{% extends "_layout" %}
+
+{% block content %}
+{{entry.title}}
+{% set image = entry.thubnail.first() %}
+            <img src="{{ image.url }}"
+                 alt="{{ entry.previewText }}"/>
+{{entry.bodyCopy}}
+{% set image = entry.photo.first() %}
+            <img src="{{ image.url }}"
+                 alt="{{ entry.previewText }}"/>
+{{entry.imageCaption}}
+{% endblock %}

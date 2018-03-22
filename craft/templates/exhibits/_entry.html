@@ -3,6 +3,11 @@
 {% block content %}
 
 {{entry.title}}
-{{entry.exhibitDates}}
-
+{{entry.exhibitStart}}
+{{entry.exhibitEnd}}
+{{entry.exhibitDescription}}
+{% set image = entry.exhibitImage.first() %}
+            <img src="{{ image.url }}"
+                 alt="{{ entry.imageCaption }}"/>
+{{entry.imageCaption}}
 {% endblock %}
