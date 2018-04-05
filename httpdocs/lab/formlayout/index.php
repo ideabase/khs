@@ -20,13 +20,13 @@
 
 <h2>This Is Headline 2</h2>
 
-    <form action="">
-      <input type="text" name="" placeholder="First name">
-      <input type="text" name="" placeholder="M.I.">
+    <form role="search">
+      <input type="text" name="formboxes" placeholder="First name">
+      <input type="text" name="formboxes" placeholder="M.I.">
       <br>
-        <input type="text" name="" placeholder="Last name">
+        <input type="text" name="formboxes" placeholder="Last name">
       <br>
-      <input type="text" name="" placeholder="Street Address">
+      <input type="text" name="formboxes" placeholder="Street Address">
       <br>
        <input type="text" name="" placeholder="City">
       <form action="">
@@ -103,7 +103,7 @@
           <option value="">Founder - $500.00</option>
         </select>
     </form>
-      <input type="submit" value="Check Out">
+      <input type="submit" class="check-out" value="Check Out">
     </form>
 
     <!--Included Footer -->
