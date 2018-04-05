@@ -4,8 +4,13 @@
         <img src="{{ asset.url }}" alt="{{ asset.title }}" />
     {% endfor %}
 {% endif %}
+<nav role="navigation">
 
-
-{{ craft.amNav.getNav("primaryNav") }}
+<form action="{{ url('search/results') }}">
+    <input type="search" name="q" placeholder="Search">
+    <input type="submit" value="Go">
+</form>
 
 {{ craft.amNav.getNav("secondaryNav") }}
+
+{{ craft.amNav.getNav("primaryNav") }}

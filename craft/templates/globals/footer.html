@@ -1,10 +1,44 @@
-<!-- Secondary Logo -->
-{% if footer.secondaryLogo | length %}
-    {% for asset in footer.secondaryLogo %}
-        <img src="{{ asset.url }}" alt="{{ asset.title }}" />
-    {% endfor %}
-{% endif %}
+<div>
+  <h4> Contact </h4>
+  <h5> Phone: </h5>
+  <!-- Phone Output -->
+  {% if footer.phone %}
+      {{ footer.phone | markdown }}
+  {% endif %}
+  <h5> Kent Historical Society</h5>
+  <!-- Address Output -->
+  {% if footer.address %}
+      {{ footer.address | markdown }}
+  {% endif %}
+</div>
 
+<div>
+  <h4> Hours</h4>
+  <h5>{% include 'globals/hours.html' %}</h5>
+  <h5>
+    {% if footer.admissionText %}
+      {{ footer.admissionText | markdown }}
+    {% endif %}
+  </h5>
+</div>
+
+<div>
+  <div class="smalllogo">
+    {% if footer.secondaryLogo | length %}
+        {% for asset in footer.secondaryLogo %}
+            <img src="{{ asset.url }}" alt="{{ asset.title }}" />
+        {% endfor %}
+    {% endif %}
+  </div>
+  {{ craft.amNav.getNav("secondaryNav") }}
+</div>
+
+<div class="menu-options">
+  {{ craft.amNav.getNav("primaryNav") }}
+</div>
+
+
+<!-- Where is this going -->
 <!-- Social Media Matrix -->
 {% for block in footer.socialMedia %}
 
@@ -15,27 +49,3 @@
     {% endif %}
 
 {% endfor %}
-
-<!-- Phone Output -->
-{% if footer.phone %}
-    {{ footer.phone | markdown }}
-{% endif %}
-
-<!-- Address Output -->
-{% if footer.address %}
-    {{ footer.address | markdown }}
-{% endif %}
-
-<!-- Admission text Output -->
-{% if footer.admissionText %}
-    {{ footer.admissionText | markdown }}
-{% endif %}
-
-<!-- PrimaryNav -->
-{{ craft.amNav.getNav("primaryNav") }}
-
-<!-- SecondaryNav -->
-{{ craft.amNav.getNav("secondaryNav") }}
-
-<!-- Days of Hours Globals -->
-{% include 'globals/hours.html' %}
