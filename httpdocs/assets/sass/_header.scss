@@ -12,13 +12,13 @@ a {
   color: $blue;
 }
 
-.callout a {
-  margin: 0 auto;
+.callout-header a {
   background-color: white;
+  text-transform: uppercase;
   color: gray;
   border: 1px solid gray;
-  border-radius: 3px;
-  padding: 0.5%;
+  border-radius: 5px;
+  padding: 0.5em;
   &:hover {
      color: white;
      background-color: $green;
@@ -30,6 +30,7 @@ a {
   background-color: $green;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .nav-main a:hover {
@@ -42,4 +43,14 @@ a {
 
 .nav-main li ul:hover {
   display: inline;
+}
+
+.header-top {
+  display: inline-flex;
+}
+
+.header-top input {
+    padding: 0.5em;
+    border: 1px solid $green;
+    border-radius: 5px;
 }

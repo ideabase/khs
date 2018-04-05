@@ -11,7 +11,7 @@
   </div>
   <div>
     <div class="smalllogo"> KHS LOGO HERE</div>
-    <ul class="callout">
+    <ul class="callout-footer">
       <li> <a href= "#"> Join </a></li>
       <li> <a  href= "#"> Give </a></li>
       <li> <a  href="#"> Learn</a></li>

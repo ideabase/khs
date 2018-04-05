@@ -1,4 +1,4 @@
-footer{
+footer {
   background-color: $blue;
   font-family: $sans;
   text-align: center;
@@ -7,26 +7,46 @@ footer{
 
   justify-content: space-around;
 }
-h4{
+
+h4 {
   color: $green;
 }
-h5{
+
+h5 {
   color: white;
 }
-.callout{
+
+.callout-footer a {
   font-size: 15px;
+  margin: 0;
   padding-top: 3px;
   display: flex;
   justify-content: space-between;
+  padding: 0.5em;
+  background-color: white;
+  text-transform: uppercase;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  &:hover {
+     color: white;
+     background-color: $green;
+     border: 1px solid $green;
+ }
+}
+
+.callout-footer ul {
+  margin: 3em;
+}
+
+
+ul {
+  list-style-type: none;
   margin: 0;
-  padding: 3em;
+  padding: 0;
+  color: white;
 }
 
-
-ul{
-color: white;
-}
-
-.menu-options{
+.menu-options {
   color: white;
 }
