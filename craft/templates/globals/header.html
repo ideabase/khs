@@ -1,7 +1,10 @@
+
+<header>
+
 <!-- Logo goes here -->
 {% if header.primaryLogo | length %}
     {% for asset in header.primaryLogo %}
-        <img src="{{ asset.url }}" alt="{{ asset.title }}" />
+        <a href="index.html"><img src="{{ asset.url }}" alt="{{ asset.title }}" />
     {% endfor %}
 {% endif %}
 <nav role="navigation">
@@ -14,3 +17,5 @@
 {{ craft.amNav.getNav("secondaryNav") }}
 
 {{ craft.amNav.getNav("primaryNav") }}
+
+</header>
