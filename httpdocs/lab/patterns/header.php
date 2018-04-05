@@ -11,16 +11,18 @@
 
 
 <header>
+  <div class="header-top">
   <img src="" alt="KHS Logo">
   <nav role="navigation">
-    <input type="search" placeholder="Search">
     <div>
-    <ul class="callout">
+    <ul class="callout-header">
         <li><a href="#">Join</a></li>
         <li><a href="#">Give</a><li>
         <li><a href="#">Learn</a></li>
     </ul>
+    <input type="search" placeholder="Search">
   </div>
+</div>
 
   <div>
     <ul class="nav-main">
