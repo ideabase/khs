@@ -15,7 +15,7 @@
     <?php include '../patterns/sample.php';?>
 
     <div>
-      <img src="" alt="alt text"/>
+      <img src="../images/master_19214.jpg" alt="alt text"/>
       <h1>This is the headline</h1>
       <?php include '../patterns/para.php';?>
     </div>

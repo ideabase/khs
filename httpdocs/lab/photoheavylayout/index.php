@@ -11,10 +11,7 @@
     <?php include '../patterns/header.php';?>
 
 
-    <!--Use this code whenever you need to include a shared component -->
-    <?php include '../patterns/sample.php';?>
-
-<input type="search" placeholder="Search">
+<input type="search" placeholder="Find Photos & Video">
 
 <h1>This is the headline</h1>
 <p>Lorem ipsum, laborest, sit, consequ aerchil in rempos ea possimenda et antotatum as sandebis di doluptasped min cullendit lab cus molupti dustibusciet modis cus sed qui dolessi seceatur?</p>
@@ -22,223 +19,121 @@
 <ul>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
 <li>
 <figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
-    <figcaption>Caption Here</figcaption>
-</figure>
-</li>
-<li>
-<figure>
-    <img src="#" alt=“alt text here”/>
+    <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>

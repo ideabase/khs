@@ -1,5 +1,5 @@
 <figure>
-  <img src="#">
+  <img src="../images/ProfilePhoto.jpg">
 </figure>
 <h3> First and Last Name</h3>
 <h4> Phone Number </h4>
