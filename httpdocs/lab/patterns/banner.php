@@ -1,1 +1,1 @@
-<img src="../images/opera-house@2x.png" alt="Kent Opera House"/>
+<img src="../images/bannerimage.jpg" alt="Banner Image"/>
