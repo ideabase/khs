@@ -20,6 +20,7 @@
 <h2>This Is Headline 2</h2>
 
     <form role="search">
+
       <input type="text" name="formboxes" placeholder="First name">
       <input type="text" name="formboxes" placeholder="M.I.">
       <br>
@@ -102,7 +103,8 @@
           <option value="">Founder - $500.00</option>
         </select>
     </form>
-      <input type="submit" class="check-out" value="Check Out">
+    <input type="submit" class="check-out" value="Check Out">
+
     </form>
 
     <!--Included Footer -->
