@@ -1,16 +1,22 @@
-<h1>Search Results</h1>
+{% extends "_layout" %}
 
-{% set query = craft.request.getParam('q') %}
-{% set entries = craft.entries.search(query).order('score') %}
+{% block content %}
 
-{% if entries|length %}
-    <p>{{ entries|length }} results:</p>
+  <h1>Search Results</h1>
 
-    <ul>
-        {% for entry in entries %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>Your search for “{{ query }}” didn’t return any results.</p>
-{% endif %}
+  {% set query = craft.request.getParam('q') %}
+  {% set entries = craft.entries.search(query).order('score') %}
+
+  {% if entries|length %}
+      <p>{{ entries|length }} results:</p>
+
+      <ul>
+          {% for entry in entries %}
+              <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {% endfor %}
+      </ul>
+  {% else %}
+      <p>Your search for “{{ query }}” didn’t return any results.</p>
+  {% endif %}
+
+{% endblock %}
