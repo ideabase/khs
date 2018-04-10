@@ -1,10 +1,9 @@
 
-.pictures{
-  display: block;
-  width: 200px;
-  height: 200px;
-  float: left;
-  margin:15px;
+/*.pictures{
+  display: inline-block;
+  max-width: 400px;
+  //float: left;
+  //margin:15px;
 
   position: relative;
   overflow: hidden;
@@ -29,4 +28,33 @@ figcaption{
 
   font-weight: bold;
   font-size: 90%;
+}
+*/
+//body { margin: 0; background: #333; }
+.photo-heavy-ul {
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+}
+.photo-heavy-ul li {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  margin: .5vw;
+}
+.photo-heavy-ul li figure {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 400px) {
+  .photo-heavy-ul li { margin: 0; }
+  .photo-heavy-ul { padding: 0; }
+
 }
