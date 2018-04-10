@@ -1,11 +1,16 @@
-{% extends "_layout" %}
+{% extends '_layout' %}
 
 {% block subheader %}
-{{ entry.title }}
+<h1>{{ entry.title }}</h1>
+<h2>{{ entry.subHeadline }}</h2>
+<figure>
+
+  {% for asset in entry.featureImage.first() %}
+    <img src="{{asset.url}}" alt="{{asset.title}}" / >
+  {% endfor %}
+
+</figure>
 {% endblock %}
-
-
 {% block content %}
-
 
 {% endblock %}
