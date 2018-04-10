@@ -9,6 +9,12 @@ $gray: #F1F1F1;
 // Typography
 $sans: 'Lato';
 $serif: 'IBM Plex Serif';
+
+
+// Breakpoint for navigation
+$breakpoint: 799px;
+
+
 h1 {
   font-weight: 100;
 }
