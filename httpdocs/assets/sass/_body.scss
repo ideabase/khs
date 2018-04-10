@@ -1,4 +1,15 @@
 body {
   font-family: $sans;
   padding: 1em;
+  max-width: 1200px;
+}
+
+button, input, select, textarea {
+  background-color: $green;
+  text-transform: uppercase;
+  color: white;
+  &:hover {
+    color: $green;
+    background-color: white;
+  }
 }
