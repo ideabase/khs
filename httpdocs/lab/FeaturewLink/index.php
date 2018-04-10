@@ -10,7 +10,7 @@
     <?php include '../patterns/header.php';?>
   <header>
     <figure>
-      <img src="#" alt="this is the banner image">
+      <?php include '../patterns/banner.php';?>
     </figure>
     <h1> This is a Headline</h1>
     <h2> This is a Subhead</h2>
@@ -18,7 +18,7 @@
   <?php include '../patterns/LGpara.php';?>
   <h3> Headline </h3>
   <h4> Subhead</h4>
-  <img src="#" alt="this is an image">
+  <img src="../images/master_1537.jpg" alt="this is an image">
   <?php include '../patterns/para.php';?>
   <button type="button"> This is a button </button>
   <?php include '../patterns/profile2.php';?>

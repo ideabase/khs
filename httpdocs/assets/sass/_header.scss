@@ -3,6 +3,11 @@ header {
   font-family: $sans;
 }
 
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
 // Container with no padding for navbar
 .main-nav-container {
   width: 100%;
@@ -17,16 +22,78 @@ a {
   color: $blue;
 }
 
-a:hover {
-  color: white;
-}
-
 .callout-header {
-  color: white;
+  display: inline-block;
   padding: 0;
 }
 
+.nav-main {
+  background-color: $green;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-main li {
+  font-size: 1.1em;
+}
+
+.nav-links {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-dropdown li {
+  font-size: 1em;
+  text-transform: none;
+  font-weight: normal;
+}
+
+/* Added for Header Navigation Drop-down */
+
+.main-nav-container {
+  width: 100%;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      position: relative;
+      a,
+      a:visited {
+        display: block;
+        padding: 0 50px;
+        line-height: 70px;
+        background: $green;
+        color: $blue;
+        text-decoration: none;
+        &:hover {
+          background: $blue;
+          color: white;
+          transition: all 0.2s ease;
+        }
+      } // Dropdown list
+      ul li {
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $breakpoint) {
+
+  a:hover {
+    color: white;
+  }
+
+  .callout-header {
+    display: inline-block;
+    color: white;
+    padding: 0;
+  }
+
   .callout-header a {
     display: flex;
     justify-content: space-around;
@@ -42,68 +109,17 @@ a:hover {
        border: 1px solid $green;
    }
   }
-}
 
-.nav-main {
-  background-color: $green;
-  display: flex;
-  margin: 0 auto;
-  width: 100%;
-}
+  .nav-main {
+    display: flex !important;
+    justify-content: center;
+  }
 
-.nav-main li {
-  font-size: 1.3em;
-}
 
-.nav-links {
-
-}
-
-.nav-dropdown li {
-  font-size: .9em;
-}
-
-/* Added for Header Navigation Drop-down */
-
-.main-nav-container ul {
-  float: right;
-}
-
-.main-nav-container {
-  float: right;
-  width: 100%;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      float: left;
-      position: relative;
-      a,
-      a:visited {
-        display: block;
-        padding: 0 20px;
-        line-height: 70px;
-        background: $green;
-        color: white;
-        text-decoration: none;
-        &:hover {
-          background: $blue;
-          color: white;
-          transition: all 0.2s ease;
-        }
-      } // Dropdown list
-      ul li {
-        min-width: 259px;
-        a {
-          padding: 15px;
-          line-height: 20px;
-        }
-      }
-    }
+  .main-nav-container .nav-dropdown li a {
+    padding: 22px 20px;
   }
 }
-
 
 // Dropdown list binds to JS toggle event
 .nav-dropdown {
@@ -122,9 +138,6 @@ a:hover {
   position: absolute;
   top: 0;
   right: 0;
-  background: $green;
-  height: 80px;
-  width: 100%;
 }
 @media only screen and (max-width: 798px) {
   // Hamburger nav visible on mobile only
@@ -134,7 +147,7 @@ a:hover {
   nav {
    width: 100%;
     padding: 80px 0 15px;
-    ul {
+    .nav-main {
       display: none;
       li {
         float: none;
@@ -156,7 +169,7 @@ a:hover {
 
 #nav-toggle {
   position: absolute;
-  left: 18px;
+  right: 22px;
   top: 22px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
@@ -194,17 +207,11 @@ a:hover {
   }
 }
 
-
-@media screen and (min-width: $breakpoint) {
-  .nav-list {
-    display: block !important;
-  }
-}
-
 // Hover Additions
 @media screen and (min-width: $breakpoint) {
-  nav ul li:hover {
+  nav .nav-main li:hover {
     .nav-dropdown {
+      width: 100%;
       background-color: $green;
       display: block !important;
     }
@@ -219,12 +226,19 @@ a:hover {
   }
 
   // Hides the arrows
- .nav-list li a:after {
+ .nav-main li a:after {
    display: none;
   }
 }
 
 /* End Added for Header Navigation Drop-down */
+
+@media screen and (max-width: $breakpoint) {
+
+  .header-top {
+    border-bottom: 2px $green solid;
+  }
+}
 
 .header-top {
   display: inline-flex;

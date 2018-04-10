@@ -12,9 +12,9 @@
   <div>
     <div class="smalllogo">KHS LOGO HERE</div>
     <ul class="callout-footer">
-      <li> <a href= "#">Join</a></li>
-      <li> <a  href= "#">Give</a></li>
-      <li> <a  href="#">Learn</a></li>
+      <li> <a href= "formlayout/index.php">Join</a></li>
+      <li> <a  href="#">Learn</a></li><!--Waiting on decided layout-->
+      <li> <a  href= "formlayout/index.php">Donate</a></li>
     </ul>
   </div>
     <div class="menu-options">
@@ -34,7 +34,7 @@
 
 </body>
 </html>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../../assets/js/min/scripts-min.js"></script>
 <script src="//localhost:35729/livereload.js"></script>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />

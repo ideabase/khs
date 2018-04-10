@@ -12,79 +12,76 @@
 
   <header>
     <div class="header-top">
-      <img src="#" alt="KHS Logo">
+      <img src="#" alt="KHS Logo" class="logo">
       <div class="callout-nav-container">
         <nav role="navigation">
-          <div>
             <ul class="callout-header">
-                <li>
-                  <a href="#">Join</a>
+                <li class="callout-header-li">
+                  <a href="formlayout/index.php">Join</a>
                 </li>
                 <li>
-                  <a href="#">Give</a>
-                  <li>
+                  <a href="#">Learn</a><!--Waiting on decided layout-->
+                </li>
                 <li>
-                  <a href="#">Learn</a>
+                  <a href="formlayout/index.php">Donate</a>
                 </li>
             </ul>
             <input type="search" placeholder="Search">
-          </div>
+            <!-- Mobile Menu Button -->
+              <div class="nav-mobile">
+                <a id="nav-toggle" href="#"><span></span></a>
+              </div>
+            <!-- End Mobile Menu Button -->
         </nav>
       </div>
     </div>
       <div class="main-nav-container">
         <nav role="navigation">
-          <!-- Mobile Menu Button -->
-            <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
-          <!-- End Mobile Menu Button -->
-        <div>
           <ul class="nav-main">
           <li class="nav-links">
-            <a href="#">Visit</a>
+            <a href="secondary-mixed/index.php">Visit</a>
               <ul class="nav-dropdown">
-                <li><a href="#">Location & Hours</a></li>
-                <li><a href="#">Exhibits</a></li>
-                <li><a href="#">Events & Calandar</a></li>
+                <!--<li><a href="#">Location & Hours</a></li>-->
+                <li><a href="FeaturewLink/index.php">Exhibits</a></li>
+                <li><a href="FeaturewLink/index.php">Events & Calandar</a></li>
               </ul>
           </li>
 
           <li class="nav-links">
-            <a href="#">Support</a>
+            <a href="secondary-mixed/index.php">Support</a>
               <ul class="nav-dropdown">
-                <li><a href="#">Membership</a></li>
-                <li><a href="#">Donate</a></li>
-                <li><a href="#">Volunteer</a></li>
+                <li><a href="formlayout/index.php">Membership</a></li>
+                <li><a href="formlayout/index.php">Donate</a></li>
+                <li><a href="formlayout/index.php">Volunteer</a></li>
               </ul>
           </li>
 
           <li class="nav-links">
-            <a href="#">Collections & Resources</a>
+            <a href="secondary-mixed/index.php">Collections & Resources</a>
               <ul class="nav-dropdown">
-                <li><a href="#">Kent Tribune</a></li>
-                <li><a href="#">Historic Landmarks</a></li>
-                <li><a href="#">City History</a></li>
-                <li><a href="#">Residential History</a></li>
-                <li><a href="#">Photo & Video Archive</a></li>
-                <li><a href="#">Artifacts</a></li>
+                <li><a href="FeaturewLink/index.php">Kent Tribune</a></li>
+                <li><a href="timeline/index.php">Railroad</a></li>
+                <li><a href="FeaturewLink/index.php">Historic Landmarks</a></li>
+                <li><a href="timeline/index.php">City History</a></li>
+                <li><a href="timeline/index.php">Residential History</a></li>
+                <li><a href="FeaturewLink/index.php">Kent State University</a></li>
+                <li><a href="photoheavylayout/index.php">Photo & Video Archive</a></li>
               </ul>
           </li>
 
           <li class="nav-links">
-            <a href="#">About Us</a>
+            <a href="secondary-mixed/index.php">About Us</a>
               <ul class="nav-dropdown">
-                <li><a href="#">About the KHS</a></li>
-                <li><a href="#">Meet the Team</a></li>
-                <li><a href="#">Our Homes</a></li>
+                <li><a href="profileslayout/index.php">Meet the Team</a></li>
+                <li><a href="#">Our Homes</a></li><!--Waiting on decided layout-->
               </ul>
           </li>
 
           <li class="nav-links">
-            <a href="#">Shop</a>
+            <a href="shop/index.php">Shop</a>
           </li>
           <ul>
-        </div>
-      </div>
       </nav>
+    </div>
   </header>
-  <script src="scripts.js"></script>
 </body>

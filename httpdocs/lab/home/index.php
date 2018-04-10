@@ -10,12 +10,8 @@
     <!--Included Header -->
     <?php include '../patterns/header.php';?>
 
-
-    <!--Use this code whenever you need to include a shared component -->
-    <?php include '../patterns/sample.php';?>
-
     <div>
-      <img src="../images/master_19214.jpg" alt="alt text"/>
+      <img src="../images/bannerimage.jpg" alt="alt text"/>
       <h1>This is the headline</h1>
       <?php include '../patterns/para.php';?>
     </div>

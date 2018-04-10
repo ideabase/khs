@@ -17,121 +17,121 @@
 <p>Lorem ipsum, laborest, sit, consequ aerchil in rempos ea possimenda et antotatum as sandebis di doluptasped min cullendit lab cus molupti dustibusciet modis cus sed qui dolessi seceatur?</p>
 
 <ul>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
-</li>
-<li>
+</li >
+<li class="pictures">
 <figure>
     <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1513.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1537.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_1531.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
 </figure>
 </li>
-<li>
+<li class="pictures">
 <figure>
     <img src="../images/master_19214.jpg" alt=“alt text here”/>
     <figcaption>Caption Here</figcaption>
