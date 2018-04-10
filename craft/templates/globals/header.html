@@ -1,21 +1,45 @@
 
 <header>
+  <div class="header-top">
+    <!-- Logo goes here -->
+    {% if header.primaryLogo | length %}
+        {% for asset in header.primaryLogo %}
+            <a href="{{siteUrl}}"><img src="{{ asset.url }}" alt="{{ asset.title }}" />
+        {% endfor %}
+    {% endif %}
+    <div class="callout-nav-container">
+    <nav role="navigation">
+      <div>
+        <ul class="callout-header">
+          {{ craft.amNav.getNav("secondaryNav") }}
+        </ul>
+        <form action="{{ url('search/results') }}">
+          <input type="search" name="q" placeholder="Search">
+          <input type="submit" value="Go">
+        </form>
+      </div>
+    </nav>
+    </div>
+  </div>
+  <div class="main-nav-container">
+    <nav role="navigation">
+      <!-- Mobile Menu Button -->
+        <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+      <!-- End Mobile Menu Button -->
+      <div>
+        <ul class="nav-main">
+        <li class="nav-links">
+          <a href="{{ primaryNav.getLink() }}"></a>
+            <ul class="nav-dropdown">
+              <li>{{ primaryNav.getLink() }}</li>
+            </ul>
+        </li>
+        <ul>
+      </div>
+    </div>
+    </nav>
+</header>
 
-<!-- Logo goes here -->
-{% if header.primaryLogo | length %}
-    {% for asset in header.primaryLogo %}
-        <a href="index.html"><img src="{{ asset.url }}" alt="{{ asset.title }}" />
-    {% endfor %}
-{% endif %}
-<nav role="navigation">
-
-<form action="{{ url('search/results') }}">
-    <input type="search" name="q" placeholder="Search">
-    <input type="submit" value="Go">
-</form>
-
-{{ craft.amNav.getNav("secondaryNav") }}
+<script src="{% includeJs myJs %}"></script>
 
 {{ craft.amNav.getNav("primaryNav") }}
-
-</header>
