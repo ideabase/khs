@@ -9,3 +9,10 @@ $gray: #F1F1F1;
 // Typography
 $sans: 'Lato';
 $serif: 'IBM Plex Serif';
+h1 {
+  font-weight: 100;
+}
+h1 span {
+  font-family: $serif;
+  font-weight: bold;
+}
