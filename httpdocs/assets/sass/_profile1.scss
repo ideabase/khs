@@ -1,0 +1,43 @@
+.holder{
+  position:relative;
+  top: 100px;
+  left: 300px;
+  background:$green;
+  display:table;
+  cursor:pointer;
+  transition: transform 0.2s;
+  perspective: 1000px;
+}
+.holder:hover {
+  transform: translate(0,20px);
+}
+.holder img{
+  z-index:22;
+  transform: rotateY(0deg);
+  transform-origin: 50% 0%;
+  opacity:1;
+  transition: transform 0.3s, opacity 0.3s;
+  perspective: 400px;
+}
+.holder:hover img{
+  opacity: 0.75;
+  transform: rotateX(120deg);
+}
+.title{
+  width: 100%;
+  height: 100%;
+  background: $yellow;
+  position: absolute;
+  top: 0;
+}
+.title h3{
+  padding: 12px;
+  color:#fff;
+  font-family: $sans;
+  font-size: 19pt;
+  font-weight: 100;
+  overflow: hidden;
+ /* text-overflow:ellipsis;
+  white-space: nowrap;*/
+  margin: 8px auto 6px 12px;
+}
