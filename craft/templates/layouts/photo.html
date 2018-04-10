@@ -1,0 +1,21 @@
+{% extends '_layout' %}
+
+{% block subheader %}
+<h1>{{ entry.title }}</h1>
+{{ entry.body }}
+<ul>
+  {% for media in craft.entries.section('historicalMedia') %}
+      <li>
+        <figure>
+          {% for asset in media.image %}
+            <img src="{{asset.url}}" alt="{{asset.title}}" />
+          {% endfor %}
+          <figcaption>{{ media.imageCaption }}</figcaption>
+        </figure>
+      </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+{% block content %}
+
+{% endblock %}
