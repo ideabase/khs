@@ -20,7 +20,7 @@
         {% if node.hasChildren %}
             <ul class="nav-dropdown">
                 {% for subnode in node.children %}
-                    {{ _self.addNodeToNavigation(subnode, loop.index) }}
+                  {{ _self.addNodeToNavigation(subnode, loop.index) }}
                 {% endfor %}
             </ul>
         {% endif %}
@@ -28,8 +28,6 @@
 {% endmacro %}
 
 
-
-<header>
   <div class="header-top">
     <!-- Logo goes here -->
     {% if header.primaryLogo | length %}
@@ -46,22 +44,19 @@
           <input type="search" name="q" placeholder="Search">
           <input type="submit" value="Go">
         </form>
+        <!-- Mobile Menu Button -->
+          <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+        <!-- End Mobile Menu Button -->
     </nav>
     </div>
   </div>
 
   <div class="main-nav-container">
     <nav role="navigation">
-      <!-- Mobile Menu Button -->
-        <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
-      <!-- End Mobile Menu Button -->
-      <div>
         <ul class="nav-main">
               {% for node in nav %}
                 {{ _self.addNodeToNavigation(node, loop.index) }}
               {% endfor %}
         <ul>
-      </div>
-    </div>
     </nav>
-</header>
+  </div>

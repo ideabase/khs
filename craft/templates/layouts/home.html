@@ -2,22 +2,27 @@
 
 {% block subheader %}
 
+<figure>
+  {% for asset in entry.featureImage %}
+    <img src="{{asset.url}}" alt="{{asset.title}}" / >
+  {% endfor %}
+</figure>
 
-{% for asset in entry.featureImage %}
-  <img src="{{asset.url}}" alt="{{asset.title}}" / >
-{% endfor %}
-<h1>{{ entry.title }}</h1>
+{% endblock %}
+
+
+{% block content %}
+
+{{ entry.body }}
+<h2>{{ entry.subHeadline }}</h2>
 {{ entry.body }}
 
-<h2>{{ entry.subHeadline }}</h2>
 <figure>
-
   {% for asset in entry.featureImage.first() %}
     <img src="{{asset.url}}" alt="{{asset.title}}" / >
   {% endfor %}
-
 </figure>
-{% endblock %}
-{% block content %}
+
+<h3>{{ entry.subHeadline }}</h3>
 
 {% endblock %}
