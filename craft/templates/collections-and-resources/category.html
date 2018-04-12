@@ -1,0 +1,25 @@
+{% extends "layouts/secondary" %}
+
+{# this is the category page that is used to output Collections and Resources by type #}
+
+{% block subheader %}
+
+<h1>{{ category.title }}</h1>
+<h2>{{ category.subHeadline }}</h2>
+<figure>
+  {% for asset in category.featureImage %}
+    <img src="{{asset.url}}" alt="{{asset.title}}" / >
+  {% endfor %}
+</figure>
+
+{% endblock %}
+
+{% block content %}
+  {% set entries = craft.entries.relatedTo(category) %}
+  <ul>
+    {% for entry in entries %}
+      <li><a href="{{entry.url}}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
