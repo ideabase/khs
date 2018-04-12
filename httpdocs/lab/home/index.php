@@ -23,7 +23,7 @@
       <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 <div class="home-card">
-    <h3> Headline</h3>
+    <h3>Headline</h3>
     <?php include '../patterns/profile1.php';?>
     <?php include '../patterns/profile1.php';?>
     <?php include '../patterns/profile1.php';?>

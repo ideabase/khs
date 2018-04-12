@@ -82,6 +82,19 @@ a {
   }
 }
 
+@media screen and (min-width: 799px) and (max-width: 923px) {
+  .main-nav-container {
+    ul {
+      li {
+        a,
+        a:visited {
+          padding: 0 35px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $breakpoint) {
 
   a:hover {
@@ -180,7 +193,7 @@ a {
     border-radius: 1px;
     height: 5px;
     width: 35px;
-    background: white;
+    background: $blue;
     position: absolute;
     display: block;
     content: '';
