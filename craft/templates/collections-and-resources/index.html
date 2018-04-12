@@ -1,0 +1,23 @@
+{% extends "layouts/Secondary" %}
+
+
+{% block content %}
+
+  {# List all of the Collections and Resources Categories by Media Category #}
+  {% set categories = craft.categories.group('mediaCategory') %}
+  <h2>By Topic</h2>
+  <ul>
+    {% for item in categories %}
+      <li><a href="{{item.url}}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {# List all of the Collections and Resources Categories by Media Format #}
+  {% set categories = craft.categories.group('mediaType') %}
+  <h2>By Format</h2>
+  <ul>
+    {% for item in categories %}
+      <li><a href="{{item.url}}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

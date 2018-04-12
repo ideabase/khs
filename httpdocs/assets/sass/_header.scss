@@ -97,9 +97,12 @@ a {
 
 @media screen and (min-width: $breakpoint) {
 
-  a:hover {
+  /*a:hover {
     color: white;
   }
+  Chris commented out - this needs to be more specific, or it will affect every link on the site
+
+  */
 
   .callout-header {
     display: inline-block;
@@ -256,6 +259,7 @@ a {
 .header-top {
   display: inline-flex;
   width: 100%;
+  position: relative;
 }
 
 .header-top input {
