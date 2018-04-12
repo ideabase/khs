@@ -57,7 +57,7 @@
           </li>
 
           <li class="nav-links">
-            <a href="secondary-mixed/index.php">Collections & Resources</a>
+            <a href="secondary-mixed/index.php">Collections</a>
               <ul class="nav-dropdown">
                 <li><a href="FeaturewLink/index.php">Kent Tribune</a></li>
                 <li><a href="timeline/index.php">Railroad</a></li>

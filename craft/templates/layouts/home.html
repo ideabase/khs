@@ -1,16 +1,47 @@
 {% extends '_layout' %}
 
 {% block subheader %}
-<h1>{{ entry.title }}</h1>
-<h2>{{ entry.subHeadline }}</h2>
+
+<div class="home-banner">
 <figure>
-
-  {% for asset in entry.featureImage.first() %}
-    <img src="{{asset.url}}" alt="{{asset.title}}" / >
+  {% for asset in entry.featureImage %}
+    <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
   {% endfor %}
-
 </figure>
+<h1>{{ entry.headline }}</h1>
+</div>
 {% endblock %}
+
+
 {% block content %}
+
+{{ entry.body }}
+<h2>{{ entry.subHeadline }}</h2>
+{{ entry.body }}
+
+<figure>
+  {% for asset in entry.featureImage.first() %}
+    <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
+  {% endfor %}
+</figure>
+
+<div class="home-card">
+  <h3>{{ entry.subHeadline }}</h3>
+  <figure class="holder">
+    {% for asset in entry.featuredItems.first() %}
+      <figcaption class="title">
+        <h3>{{ entry.subHeadline }}</h3>
+        <h4>{{ entry.phone }}</h4><!-- Probably need another field for specific contact number? -->
+        <h4><a href="mailto:example@email.com">Email Me</a></h4><!-- What should I do with this? -->
+        <p>{{ entry.body }}</p>
+      </figcaption>
+    {% endfor %}
+
+    {% for asset in entry.profilePhoto.first() %}
+      <img src="{{ asset.url }}" alt="{{ asset.title }}"/><!-- This does not appear in Craft -->
+    {% endfor %}
+
+  </figure>
+</div>
 
 {% endblock %}

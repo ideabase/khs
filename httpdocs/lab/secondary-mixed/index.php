@@ -14,7 +14,7 @@
     <?php include '../patterns/banner.php';?>
     <!--Use this code whenever you need to include a shared component -->
 
-<h1>Page Title</h1>
+<h1><span>Page Title</span> as more than one word</h1>
 <h2>Page Title Subhead</h2>
 <figure>
   <img src="../images/bannerimage.jpg" alt="This is a feature image">

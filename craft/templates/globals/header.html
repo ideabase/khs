@@ -1,5 +1,33 @@
+{% set nav = craft.amNav.getNavRaw("primaryNav") %}
 
-<header>
+{% macro addNodeToNavigation(node, index) %}
+    {%- set nodeClasses = [] -%}
+    {%- if node.hasChildren -%}
+        {%- set nodeClasses = nodeClasses|merge(['has-children']) -%}
+    {%- endif -%}
+    {%- if node.active or node.hasActiveChild -%}
+        {%- set nodeClasses = nodeClasses|merge(['active']) -%}
+    {%- endif -%}
+    {%- if node.level == 1 and index == 1 -%}
+        {%- set nodeClasses = nodeClasses|merge(['first']) -%}
+    {%- endif -%}
+    {%- if node.listClass|length -%}
+        {%- set nodeClasses = nodeClasses|merge([node.listClass]) -%}
+    {%- endif -%}
+
+    <li class="nav-links">
+        <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
+        {% if node.hasChildren %}
+            <ul class="nav-dropdown">
+                {% for subnode in node.children %}
+                  {{ _self.addNodeToNavigation(subnode, loop.index) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}
+
+
   <div class="header-top">
     <!-- Logo goes here -->
     {% if header.primaryLogo | length %}
@@ -16,28 +44,19 @@
           <input type="search" name="q" placeholder="Search">
           <input type="submit" value="Go">
         </form>
+        <!-- Mobile Menu Button -->
+          <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+        <!-- End Mobile Menu Button -->
     </nav>
     </div>
   </div>
+
   <div class="main-nav-container">
     <nav role="navigation">
-      <!-- Mobile Menu Button -->
-        <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
-      <!-- End Mobile Menu Button -->
-      <div>
         <ul class="nav-main">
-        <li class="nav-links">
-          <a href="{{ primaryNav.getLink() }}"></a>
-            <ul class="nav-dropdown">
-              <li>{{ primaryNav.getLink() }}</li>
-            </ul>
-        </li>
+              {% for node in nav %}
+                {{ _self.addNodeToNavigation(node, loop.index) }}
+              {% endfor %}
         <ul>
-      </div>
-    </div>
     </nav>
-</header>
-
-<script src="{% includeJs myJs %}"></script>
-
-{{ craft.amNav.getNav("primaryNav") }}
+  </div>
