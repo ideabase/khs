@@ -1,6 +1,19 @@
+{# This is the Secondary Page Layout #}
+
 {% extends '_layout' %}
 
+{% block subheader %}
+
+<h1>{{ entry.title }}</h1>
+<h2>{{ entry.subHeadline }}</h2>
+<figure>
+  {% for asset in entry.featureImage %}
+    <img src="{{asset.url}}" alt="{{asset.title}}" / >
+  {% endfor %}
+</figure>
+
+{% endblock %}
+
 {% block content %}
-	<h1>{{ entry.title }}</h1>
-	<h2>{{ entry.subheadline }}</h2>
+    You forgot to include content block on this page.
 {% endblock %}
