@@ -2,6 +2,15 @@
 
 {% block content %}
 
-
-
+{% for exhibition in craft.entries.section('exhibits') %}
+{{entry.title}}
+{{entry.exhibitStart}}
+{{entry.exhibitEnd}}
+{{entry.exhibitDescription}}
+{% set image = entry.exhibitImage.first() %}
+            <img src="{{ image.url }}"
+                 alt="{{ entry.imageCaption }}"/>
+{{entry.imageCaption}}
+{{ entry.body }}
+{% endfor %}
 {% endblock %}
