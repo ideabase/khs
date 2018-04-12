@@ -1,10 +1,15 @@
+.profile-card {
+  display: inline-flex;
+  max-width: 350px;
+}
+
 .holder{
-  position:relative;
+  //position:relative;
   top: 100px;
   left: 300px;
-  background:$green;
-  display:table;
-  cursor:pointer;
+  background: $green;
+  display: table;
+  cursor: pointer;
   transition: transform 0.2s;
   perspective: 1000px;
 }
@@ -12,10 +17,10 @@
   transform: translate(0,20px);
 }
 .holder img{
-  z-index:22;
+  z-index: 22;
   transform: rotateY(0deg);
   transform-origin: 50% 0%;
-  opacity:1;
+  opacity: 1;
   transition: transform 0.3s, opacity 0.3s;
   perspective: 400px;
 }
@@ -29,15 +34,34 @@
   background: $yellow;
   position: absolute;
   top: 0;
+  padding: 1%;
 }
 .title h3{
-  padding: 12px;
-  color:#fff;
+  padding: 0;
+  color: #fff;
   font-family: $sans;
-  font-size: 19pt;
+  font-size: 1.3em;
   font-weight: 100;
-  overflow: hidden;
+  //overflow: hidden;
  /* text-overflow:ellipsis;
   white-space: nowrap;*/
-  margin: 8px auto 6px 12px;
+  //margin: 8px auto 6px 12px;
+}
+
+.title h4 {
+  margin:0;
+  font-size: 0.9em;
+}
+
+.title p {
+  font-size: 0.8em;
+  padding: 5% 8%;
+  text-align: left;
+}
+
+@media screen and (min-width: 550px) {
+
+
+
+
 }
