@@ -20,9 +20,9 @@
 {{ entry.body }}
 
 <figure>
-  {% for asset in entry.featureImage.first() %}
-    <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
-  {% endfor %}
+    {% for asset in entry.featureImage.first() %}
+      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
+    {% endfor %}
 </figure>
 
 <div class="home-card">
@@ -37,9 +37,9 @@
       </figcaption>
     {% endfor %}
 
-    {% for asset in entry.profilePhoto.first() %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}"/><!-- This does not appear in Craft -->
-    {% endfor %}
+      {% for asset in entry.profilePhoto.first() %}
+        <img src="{{ asset.url }}" alt="{{ asset.title }}"/><!-- This does not appear in Craft -->
+      {% endfor %}
 
   </figure>
 </div>
