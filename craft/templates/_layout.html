@@ -29,6 +29,7 @@
       {% if entry is defined %}
       {% set config = {
         entry: entry,
+        sticky: false,
       } %}
       {{ craft.adminbar.bar(config) }}
     {% endif %}
