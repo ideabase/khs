@@ -1,9 +1,8 @@
-img {
+.banner-img {
   width: 100%;
-  max-width: 900px;
 }
 
-h1 {
+.banner-h1 {
   font-family: $sans;
   font-size: 2em;
   font-weight: 200;
@@ -14,19 +13,27 @@ span {
   font-weight: 500;
 }
 
-h2 {
+.banner-h2 {
   font-family: $sans;
   font-size: 1em;
   font-weight: 200;
   margin-top: -15px;
 }
 
+.top-banner {
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+}
+
 .banner {
-  background-color: #ffffff;
-  opacity: 0.5;
+  background-color: rgba(#ffffff,.7);
+  //opacity: 0.5;
   -webkit-clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
-  margin: -200px 0;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
   padding: 0.5em 1em;
   width: 80%;
 }
@@ -38,11 +45,11 @@ h2 {
     padding: 1em 1em 1em 3em;
   }
 
-  h1 {
+  .banner-h1 {
     font-size: 2em;
   }
 
-  h2 {
+  .banner-h2 {
     font-size: 1.5em;
   }
 }
