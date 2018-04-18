@@ -54,7 +54,7 @@
         <h3>{{ entry.title }}</h3>
         <h4>{{ entry.subHeadline }}</h4>
         <!--h4><a href="mailto:example@email.com">Email Me</a></h4><!-- What should I do with this? -->
-        <p>{{ entry.body }}</p>
+        <!--<p>{{ entry.body }}</p>--> {# Removing the body field because it's too long.  Recommend a teaser field instead #}
       </figcaption>
       {% for asset in entry.featureImage %}
         <img src="{{ asset.url }}" alt="{{ asset.title }}"/><!-- This does not appear in Craft -->
