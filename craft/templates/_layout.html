@@ -13,8 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-  <!-- Render SEO Metatags -->
-     {% hook 'seomaticRender' %}
   <!-- Render Favicons -->
   	{% include '_includes/_favicons.html' %}
   <!--Begin Critical CSS -->
@@ -22,31 +20,19 @@
   	 {% include '_includes/critical.css' %}
     </style>
 </head>
-
+{# Helper code for the Admin toolbar, only shown when logged in #}
+{{ adminbar({ entry: entry }) }}
 <body>
-  <!-- Helper code for the Admin toolbar, only shown when logged in -->
-
-      {% if entry is defined %}
-      {% set config = {
-        entry: entry,
-        sticky: false,
-      } %}
-      {{ craft.adminbar.bar(config) }}
-    {% endif %}
-
-
 		{% include 'globals/header.html' %}
 
+		{% block subheader %}
+			{# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
+		{% endblock %}
+
 		<main role="main">
-
-      {% block subheader %}
-        {# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
-      {% endblock %}
-
 			{% block content %}
 				 {# This is where the main body content of the page display.  Required on each template. #}
 			{% endblock %}
-
 		</main>
 
 		{% include 'globals/footer.html' %}

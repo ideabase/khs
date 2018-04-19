@@ -4,13 +4,7 @@
 
 {% block subheader %}
 
-<h1>{{ entry.title }}</h1>
-<h2>{{ entry.subHeadline }}</h2>
-<figure>
-  {% for asset in entry.featureImage %}
-    <img src="{{asset.url}}" alt="{{asset.title}}" / >
-  {% endfor %}
-</figure>
+  {% include 'globals/banner.html' %}
 
 {% endblock %}
 

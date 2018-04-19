@@ -19,6 +19,7 @@
 <figure>
   <img src="../images/bannerimage.jpg" alt="This is a feature image">
 </figure>-->
+<main>
 <h1>Section Title</h1>
 <h2>Section Subhead</h2>
   <?php include '../patterns/para.php';?>
@@ -51,7 +52,7 @@
         <button type="button"> This is a button </button>
       </div>
   </div>
-
+</main>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>

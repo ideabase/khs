@@ -1,44 +1,21 @@
-{% set nav = craft.amNav.getNavRaw("primaryNav") %}
-
-{% macro addNodeToNavigation(node, index) %}
-    {%- set nodeClasses = [] -%}
-    {%- if node.hasChildren -%}
-        {%- set nodeClasses = nodeClasses|merge(['has-children']) -%}
-    {%- endif -%}
-    {%- if node.active or node.hasActiveChild -%}
-        {%- set nodeClasses = nodeClasses|merge(['active']) -%}
-    {%- endif -%}
-    {%- if node.level == 1 and index == 1 -%}
-        {%- set nodeClasses = nodeClasses|merge(['first']) -%}
-    {%- endif -%}
-    {%- if node.listClass|length -%}
-        {%- set nodeClasses = nodeClasses|merge([node.listClass]) -%}
-    {%- endif -%}
-
-    <li class="nav-links">
-        <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
-        {% if node.hasChildren %}
-            <ul class="nav-dropdown">
-                {% for subnode in node.children %}
-                  {{ _self.addNodeToNavigation(subnode, loop.index) }}
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </li>
-{% endmacro %}
-
-
+<header>
   <div class="header-top">
     <!-- Logo goes here -->
     {% if header.primaryLogo | length %}
         {% for asset in header.primaryLogo %}
-            <a href="{{siteUrl}}"><img src="{{ asset.url }}" alt="{{ asset.title }}" />
+            <a href="{{siteUrl}}"><img src="{{ asset.url }}" alt="{{ asset.title }}" /></a>
         {% endfor %}
     {% endif %}
     <div class="callout-nav-container">
     <nav role="navigation">
         <ul class="callout-header">
-          {{ craft.amNav.getNav("secondaryNav") }}
+          {% nav entry in craft.entries.section('secondaryNavigation').level('1') %}
+                <li>
+                    {% for item in entry.navigationItem %}
+                      <a href="{{ item.url }}">{{ entry.title }}</a>
+                    {% endfor %}
+                </li>
+            {% endnav %}
         </ul>
         <form action="{{ url('search/results') }}">
           <input type="search" name="q" placeholder="Search">
@@ -54,9 +31,29 @@
   <div class="main-nav-container">
     <nav role="navigation">
         <ul class="nav-main">
-              {% for node in nav %}
-                {{ _self.addNodeToNavigation(node, loop.index) }}
-              {% endfor %}
+          {# Chris's super fancy navigation plugin TM #}
+          {% nav entry in craft.entries.section('primaryNavigation') %}
+                <li class="nav-links">
+                    {% for item in entry.navigationItem %}
+                      <a href="{{ item.url }}">{{ entry.title }}</a>
+                    {% endfor %}
+                    {% ifchildren %}
+                        <ul class="nav-dropdown">
+                            {% children %}
+                        </ul>
+                    {% endifchildren %}
+                    {% if entry.displayFeaturedCategories %}
+                        <ul class="nav-dropdown">
+                            {% for category in craft.categories %}
+                              {% if category.featuredCategory %}
+                                <li class="nav-links"><a href="{{category.url}}">{{category.title}}</a></li>
+                              {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endnav %}
         <ul>
     </nav>
   </div>
+</header>

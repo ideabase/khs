@@ -1,4 +1,5 @@
 <footer>
+  <div class="footer-container">
   <div>
     <h4>Contact</h4>
     <h5>Phone: (330) 678-2712</h5>
@@ -27,6 +28,7 @@
       <li class="main-nav-links"><a class="menu-options" href="#">Shop</a></li>
     </ul>
   </div>
+</div>
 </footer>
 
 
