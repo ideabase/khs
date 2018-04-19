@@ -1,0 +1,6 @@
+{
+    "require": {
+        "craftcms/cms": "3.0.3.1",
+        "wbrowar/adminbar": "3.1.5"
+    }
+}
