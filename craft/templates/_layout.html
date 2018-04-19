@@ -25,16 +25,14 @@
 <body>
 		{% include 'globals/header.html' %}
 
+		{% block subheader %}
+			{# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
+		{% endblock %}
+
 		<main role="main">
-
-      {% block subheader %}
-        {# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
-      {% endblock %}
-
 			{% block content %}
 				 {# This is where the main body content of the page display.  Required on each template. #}
 			{% endblock %}
-
 		</main>
 
 		{% include 'globals/footer.html' %}
