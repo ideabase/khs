@@ -15,11 +15,9 @@
       <h1>This is the headline</h1>
       <?php include '../patterns/para.php';?>
     </div>
-    <div>
+    <main>
       <h2>This is headline 2</h2>
       <?php include '../patterns/para.php';?>
-
-    </div>
       <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 <div class="home-card">
@@ -28,7 +26,7 @@
     <?php include '../patterns/profile1.php';?>
     <?php include '../patterns/profile1.php';?>
 </div>
-
+    </main>
 
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>

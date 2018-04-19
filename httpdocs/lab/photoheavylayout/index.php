@@ -10,7 +10,7 @@
     <!--Included Header -->
     <?php include '../patterns/header.php';?>
 
-
+<main>
 <input type="search" placeholder="Find Photos & Video">
 
 <h1>This is the headline</h1>
@@ -138,9 +138,7 @@
 </figure>
 </li>
 </ul>
-
-
-
+</main>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>

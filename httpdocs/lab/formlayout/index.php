@@ -11,13 +11,15 @@
     <?php include '../patterns/header.php';?>
 
     <?php include '../patterns/banner.php';?>
-<h1>This is Headline 1</h1>
 
-    <?php include '../patterns/para.php';?>
+    <main>
+      <h1>This is Headline 1</h1>
 
-<hr>
+          <?php include '../patterns/para.php';?>
 
-<h2>This Is Headline 2</h2>
+      <hr>
+
+      <h2>This Is Headline 2</h2>
 
     <form role="search">
 
@@ -106,7 +108,7 @@
     <input type="submit" class="check-out" value="Check Out">
 
     </form>
-
+  </main>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>

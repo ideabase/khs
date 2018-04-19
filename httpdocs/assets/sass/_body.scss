@@ -1,8 +1,12 @@
 body {
   font-family: $sans;
   padding: 1em;
-  max-width: 1200px;
   text-align: center;
+
+}
+
+main {
+  max-width: 1200px;
   margin: 0 auto;
 }
 

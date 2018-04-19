@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <!--Included Header -->
+    <?php include '../patterns/header.php';?>
+    <main>
     <h1>This is Headline 1</h1>
 
     <h2>This Is Headline 2</h2>
@@ -36,7 +39,7 @@
          <li> <a href="#"> Article 2</li>
          <li> <a href="#"> Article 3</li>
       </ul>
-
+    </main>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>
