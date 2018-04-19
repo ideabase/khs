@@ -20,6 +20,8 @@
   	 {% include '_includes/critical.css' %}
     </style>
 </head>
+{# Helper code for the Admin toolbar, only shown when logged in #}
+{{ adminbar({ entry: entry }) }}
 <body>
 		{% include 'globals/header.html' %}
 
