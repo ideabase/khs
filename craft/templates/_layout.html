@@ -13,8 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-  <!-- Render SEO Metatags -->
-     {% hook 'seomaticRender' %}
   <!-- Render Favicons -->
   	{% include '_includes/_favicons.html' %}
   <!--Begin Critical CSS -->
@@ -22,19 +20,9 @@
   	 {% include '_includes/critical.css' %}
     </style>
 </head>
-
+{# Helper code for the Admin toolbar, only shown when logged in #}
+{{ adminbar({ entry: entry }) }}
 <body>
-  <!-- Helper code for the Admin toolbar, only shown when logged in -->
-
-      {% if entry is defined %}
-      {% set config = {
-        entry: entry,
-        sticky: false,
-      } %}
-      {{ craft.adminbar.bar(config) }}
-    {% endif %}
-
-
 		{% include 'globals/header.html' %}
 
 		<main role="main">
