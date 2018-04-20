@@ -1,6 +1,4 @@
-form{
-
-
+main form{
   padding: 0.2em;
   box-sizing: border-box;
   margin: 20px auto;
@@ -28,7 +26,7 @@ button, input, select, textarea {
   }
 
   @media screen and (min-width: 650px){
-  form{
+  main form{
     display: flex;
   flex-wrap: wrap;
   padding: 5% 22%;

@@ -2,31 +2,35 @@
   <div class="header-top">
     <!-- Logo goes here -->
     {% if header.primaryLogo | length %}
+      <div class="logo">
         {% for asset in header.primaryLogo %}
             <a href="{{siteUrl}}"><img src="{{ asset.url }}" alt="{{ asset.title }}" /></a>
         {% endfor %}
+      </div>
     {% endif %}
-    <div class="callout-nav-container">
-    <nav role="navigation">
+    <nav class="callout-header-navigation"  role="navigation">
         <ul class="callout-header">
           {% nav entry in craft.entries.section('secondaryNavigation').level('1') %}
-                <li>
+                <li class="callout-header-li">
                     {% for item in entry.navigationItem %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>
                     {% endfor %}
                 </li>
             {% endnav %}
         </ul>
-        <form action="{{ url('search/results') }}">
-          <input type="search" name="q" placeholder="Search">
-          <input type="submit" value="Go">
-        </form>
+        <div class="search-large">
+          <form action="{{ url('search/results') }}">
+            <input type="search" name="q" placeholder="Search">
+            <input class="search-button" type="submit" value="Go">
+          </form>
+        </div>
         <!-- Mobile Menu Button -->
-          <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#"><span class="label">More</span><span class="icon"></span></a>
+          </div>
         <!-- End Mobile Menu Button -->
     </nav>
     </div>
-  </div>
 
   <div class="main-nav-container">
     <nav role="navigation">

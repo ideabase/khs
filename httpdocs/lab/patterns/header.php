@@ -12,9 +12,10 @@
 
   <header>
     <div class="header-top">
-      <img src="#" alt="KHS Logo" class="logo">
-      <div class="callout-nav-container">
-        <nav role="navigation">
+      <div class="logo">
+        <a href="../home"><img src="../images/temp-logo.png" alt="KHS Logo"></a>
+      </div>
+        <nav class="callout-header-navigation" role="navigation">
             <ul class="callout-header">
                 <li class="callout-header-li">
                   <a href="formlayout/index.php">Join</a>
@@ -26,15 +27,19 @@
                   <a href="formlayout/index.php">Donate</a>
                 </li>
             </ul>
-            <input type="search" placeholder="Search">
+            <div class="search-large">
+              <form>
+                <input  type="search" placeholder="Search">
+                <input class="search-button" type="submit" value="Search">
+              </form>
+            </div>
             <!-- Mobile Menu Button -->
               <div class="nav-mobile">
-                <a id="nav-toggle" href="#"><span></span></a>
+                <a id="nav-toggle" href="#"><span class="label">More</span><span class="icon"></span></a>
               </div>
             <!-- End Mobile Menu Button -->
         </nav>
       </div>
-    </div>
       <div class="main-nav-container">
         <nav role="navigation">
           <ul class="nav-main">
