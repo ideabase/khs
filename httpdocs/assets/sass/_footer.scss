@@ -4,13 +4,21 @@ footer {
   text-align: center;
   font-weight: lighter;
   border-top: 2px solid $green;
+  margin-top: 2em;
+  padding: 2em 1em;
+}
+
+.small-logo {
+  max-width: 125px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  @media screen and (min-width: $breakpoint) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 footer h4 {
@@ -25,7 +33,10 @@ footer h5 {
 }
 
 .callout-footer {
-  display: inline-block;
+  display: none;
+  @media screen and (min-width: $breakpoint) {
+    display: inline-block;
+  }
 }
 
 .callout-footer a {

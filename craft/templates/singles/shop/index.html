@@ -2,7 +2,7 @@
 {% set title = "Shop" %}
 
 {% block content %}
-	{{entry.paypalProductCode}}
+	{{entry.paypalProductCode|raw}}
 	<h1>{{entry.featureTitle}}</h1>
 	<p>{{entry.body}}</p>
 {% endblock %}

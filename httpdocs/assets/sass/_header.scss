@@ -4,15 +4,33 @@ header {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  display: inline-block;
+  @media screen and (min-width: $breakpoint) {
+    width: 200px;
+  }
 }
 
 // Container with no padding for navbar
 .main-nav-container {
   width: 100%;
 }
-
+.search-large {
+  display: none;
+  @media screen and (min-width: $breakpoint) {
+    display: block;
+    form {
+      display: flex;
+    }
+  }
+  .search-button {
+    margin: 0;
+    width: 50px;
+    margin-left: .5em;
+    text-indent: -99999px;
+    overflow: hidden;
+  }
+}
 ul {
   list-style-type: none;
 }
@@ -22,9 +40,20 @@ a {
   color: $blue;
 }
 
+.callout-header-navigation {
+  width: 50%;
+  max-width: 250px;
+  @media screen and (min-width: $breakpoint) {
+    display: flex;
+    align-items: flex-start;
+    width: inherit;
+    max-width: 525px;
+  }
+}
+
 .callout-header {
-  display: inline-block;
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-main {
@@ -34,7 +63,7 @@ a {
 }
 
 .nav-main li {
-  font-size: 1.1em;
+  font-size: 1.05em;
 }
 
 .nav-links {
@@ -64,7 +93,7 @@ a {
         padding: 0 50px;
         line-height: 70px;
         background: $green;
-        color: $blue;
+        color: white;
         text-decoration: none;
         &:hover {
           background: $blue;
@@ -95,26 +124,25 @@ a {
   }
 }
 
+.callout-header a {
+  text-transform: uppercase;
+  color: $green;
+  font-weight: bold;
+
+}
+
 @media screen and (min-width: $breakpoint) {
 
-  /*a:hover {
-    color: white;
-  }
-  Chris commented out - this needs to be more specific, or it will affect every link on the site
-
-  */
-
   .callout-header {
-    display: inline-block;
     color: white;
     padding: 0;
+    width: 100%;
   }
 
   .callout-header a {
     display: flex;
     justify-content: space-around;
     background-color: white;
-    text-transform: uppercase;
     color: gray;
     border: 1px solid gray;
     border-radius: 5px;
@@ -151,7 +179,6 @@ a {
 // Binds to JS Toggle
 .nav-mobile {
   display: none;
-  position: absolute;
   top: 0;
   right: 0;
 }
@@ -160,9 +187,8 @@ a {
   .nav-mobile {
     display: block;
   }
-  nav {
+  .main-nav-container nav {
    width: 100%;
-    padding: 80px 0 15px;
     .nav-main {
       display: none;
       li {
@@ -185,13 +211,18 @@ a {
 
 #nav-toggle {
   position: absolute;
+  display: flex;
   right: 22px;
-  top: 22px;
+  bottom: 25px;
+  width: 85px;
+  .label {
+    margin-top: -8px;
+    font-family: $sans;
+  }
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
-  span,
-  span:before,
-  span:after {
+  .icon,
+  .icon:before,
+  .icon:after {
     cursor: pointer;
     border-radius: 1px;
     height: 5px;
@@ -199,16 +230,17 @@ a {
     background: $blue;
     position: absolute;
     display: block;
+    right: 0;
     content: '';
     transition: all 300ms ease-in-out;
   }
-  span:before {
+  .icon:before {
     top: -10px;
   }
-  span:after {
+  .icon:after {
     bottom: -10px;
   }
-  &.active span {
+  &.active .icon {
     background-color: transparent;
     &:before,
     &:after {
@@ -237,37 +269,41 @@ a {
 @media screen and (max-width: $breakpoint) {
 
   // Removes drop down behavior on mobile, if desired
-  .nav-dropdown {
+  /*.nav-dropdown {
    display: none !important;
-  }
+ }*/
 
   // Hides the arrows
- .nav-main li a:after {
+ /*.nav-main li a:after {
    display: none;
-  }
+ }*/
 }
 
 /* End Added for Header Navigation Drop-down */
 
-@media screen and (max-width: $breakpoint) {
-
-  .header-top {
-    border-bottom: 2px $green solid;
-  }
-}
-
 .header-top {
-  display: inline-flex;
   width: 100%;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px $green solid;
+  padding: 1em;
+  @media screen and (min-width: $breakpoint) {
+    border: none;
+    align-items: center;
+    padding: 1.25em 2em
+  }
 }
 
 .header-top input {
   padding: 0.5em;
   border: 1px solid $green;
   border-radius: 5px;
+  margin: 0;
+  margin-left: 2em;
 }
 
 
