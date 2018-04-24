@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f42e651337aebd035a47a4ce0fefa1c3",
+    "content-hash": "439a6a5c6f8861f2b32e0a441ff04c39",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -814,6 +814,50 @@
                 "html"
             ],
             "time": "2018-02-23T01:58:20+00:00"
+        },
+        {
+            "name": "firstborn/migrationmanager",
+            "version": "3.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Firstborn/Craft-Migration-Manager/zipball/34a1e5fa330370d5ee44f41181691f1b6dc26f66",
+                "reference": "34a1e5fa330370d5ee44f41181691f1b6dc26f66",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Migration Manager",
+                "handle": "migrationmanager",
+                "developer": "FirstBorn",
+                "developerUrl": "https://firstborn.com",
+                "class": "firstborn\\migrationmanager\\MigrationManager",
+                "hasCpSettings": false,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/Firstborn/Craft-Migration-Manager/master/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "firstborn\\migrationmanager\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derrick Grigg",
+                    "email": "derrick.grigg@firstborn.com"
+                }
+            ],
+            "description": "Quickly create migrations for settings (ie fields, sections, sites) and content (ie entries and categories) at the click of a mouse.",
+            "support": {
+                "docs": "https://github.com/Firstborn/Craft-Migration-Manager/blob/master/README.md",
+                "issues": "https://github.com/Firstborn/Craft-Migration-Manager/issues"
+            },
+            "time": "2018-04-23T17:17:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

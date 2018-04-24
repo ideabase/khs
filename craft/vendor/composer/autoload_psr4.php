@@ -22,6 +22,7 @@ return array(
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'wbrowar\\adminbar\\' => array($vendorDir . '/wbrowar/adminbar/src'),
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
+    'firstborn\\migrationmanager\\' => array($vendorDir . '/firstborn/migrationmanager/src'),
     'enshrined\\svgSanitize\\' => array($vendorDir . '/enshrined/svg-sanitize/src'),
     'creocoder\\nestedsets\\' => array($vendorDir . '/creocoder/yii2-nested-sets/src'),
     'craftcms\\oauth2\\client\\' => array($vendorDir . '/craftcms/oauth2-craftid/src'),

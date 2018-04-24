@@ -843,6 +843,52 @@
         ]
     },
     {
+        "name": "firstborn/migrationmanager",
+        "version": "3.0.2",
+        "version_normalized": "3.0.2.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Firstborn/Craft-Migration-Manager/zipball/34a1e5fa330370d5ee44f41181691f1b6dc26f66",
+            "reference": "34a1e5fa330370d5ee44f41181691f1b6dc26f66",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.0.0-RC1"
+        },
+        "time": "2018-04-23T17:17:57+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "name": "Migration Manager",
+            "handle": "migrationmanager",
+            "developer": "FirstBorn",
+            "developerUrl": "https://firstborn.com",
+            "class": "firstborn\\migrationmanager\\MigrationManager",
+            "hasCpSettings": false,
+            "hasCpSection": true,
+            "changelogUrl": "https://raw.githubusercontent.com/Firstborn/Craft-Migration-Manager/master/CHANGELOG.md"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "firstborn\\migrationmanager\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Derrick Grigg",
+                "email": "derrick.grigg@firstborn.com"
+            }
+        ],
+        "description": "Quickly create migrations for settings (ie fields, sections, sites) and content (ie entries and categories) at the click of a mouse.",
+        "support": {
+            "docs": "https://github.com/Firstborn/Craft-Migration-Manager/blob/master/README.md",
+            "issues": "https://github.com/Firstborn/Craft-Migration-Manager/issues"
+        }
+    },
+    {
         "name": "guzzlehttp/guzzle",
         "version": "6.3.2",
         "version_normalized": "6.3.2.0",
