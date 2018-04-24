@@ -4,5 +4,5 @@
 {% block content %}
 	<h1>{{entry.sectionTitle}}</h1>
 	<p>{{entry.body}}</p>
-	{{entry.paypalProductCode}}
+	{{entry.paypalProductCode|raw}}
 {% endblock %}
