@@ -2,7 +2,8 @@
 {% set title = "Join" %}
 
 {% block content %}
-	<h1>{{entry.sectionTitle}}</h1>
+	<h1>{{entry.featuredTitle}}</h1>
 	<p>{{entry.body}}</p>
+	<p>{{entry.teaserText}}</p>
 	{{entry.paypalProductCode|raw}}
 {% endblock %}
