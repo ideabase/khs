@@ -2,5 +2,17 @@
 {% set title = "Shop" %}
 
 {% block content %}
-	{{entry.paypalProductCode|raw}}
+
+{% for entry in craft.entries.section('historicalMedia') %}
+	{% if entry.forSale%}
+		{% for asset in entry.image %}
+			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+		{% endfor %}
+		{{entry.title}}
+		{{entry.mediaDescription}}
+		{{entry.price}}
+		{{entry.paypalProductCode|raw}}
+	{%endif%}
+{% endfor %}
+
 {% endblock %}
