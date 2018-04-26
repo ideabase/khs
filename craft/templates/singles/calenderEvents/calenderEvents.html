@@ -1,0 +1,16 @@
+{% extends "layouts/secondary" %}
+{% set title = "calenderEvents" %}
+
+<p>{{entry.subHeadline}}<p/>
+
+  {% for entry in craft.entries.section('exhibits') %}
+  <a href="{{entry.url}}">{{entry.title}}</a>
+  {{entry.startTime}}
+  {{entry.endTime}}
+  {% set image = entry.featureImage.first() %}
+              <img src="{{ entry.featuredImage }}"
+                   alt="{{ entry.imageCaption }}"/>
+  {{entry.imageCaption}}
+  {{entry.eventLocation}}
+  {{ entry.body }}
+  {% endfor %}
