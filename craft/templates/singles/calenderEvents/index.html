@@ -2,17 +2,30 @@
 {% set title = "calenderEvents" %}
 
 {% block content %}
-<p>{{entry.subHeadline}}<p/>
-
+<p>{{entry.subHeadline}}</p>
+<p>{{entry.body}}</p>
   {% for entry in craft.entries.section('events') %}
-  <a href="{{entry.url}}">{{entry.title}}</a>
-  {{entry.body}}
-  {{entry.date.localeDate}}
-  {{entry.eventLocation}}
-  {{entry.startTime.localeTime}}
-  {{entry.endTime.localeTime}}
-  {% for asset in entry.featureImage %}
-    <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-  {% endfor %}
+    {% if craft.entries.section('events').first %}
+      {{entry.title}}
+      {{entry.body}}
+      {{entry.date.localeDate}}
+      {{entry.eventLocation}}
+      {{entry.startTime.localeTime}}
+      {{entry.endTime.localeTime}}
+      {% for asset in entry.featureImage %}
+        <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+      {% endfor %}
+    {% endif %}
+    {% if not craft.entries.section('events').first %}
+      {{entry.title}}
+      {{entry.body}}
+      {{entry.date.localeDate}}
+      {{entry.eventLocation}}
+      {{entry.startTime.localeTime}}
+      {{entry.endTime.localeTime}}
+      {% for asset in entry.featureImage %}
+        <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 {% endblock %}
