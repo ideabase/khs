@@ -2,8 +2,10 @@
 {% set title = "Donate" %}
 
 {% block content %}
-	<h1>{{entry.sectionTitle}}</h1>
-	<p>{{entry.body}}</p>
+
+	{{ entry.body }}
+
+	<h2>{{ entry.subHeadline }}</h2>
 	{{entry.paypalProductCode|raw}}
 
 {% endblock %}
