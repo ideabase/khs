@@ -1,8 +1,16 @@
-{% extends "layouts/secondary" %}
+{% extends "_layout" %}
 
 {# this is the category page that is used to output Collections and Resources by type #}
 
 {% block subheader %}
+
+{% if category.layout == "feature" %}
+    This is the content layout
+  {% elseif category.layout == "photo" %}
+    This is the photo layout
+  {% else %}
+    This is the timeline layout
+{% endif %}
 
 <h1>{{ category.title }}</h1>
 <h2>{{ category.subHeadline }}</h2>
