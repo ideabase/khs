@@ -9,8 +9,7 @@
   <body>
     <header>
     <?php include '../patterns/header.php';?>
-    <h1>This is Headline 1</h1>
-    <h2>This Is Headline 2</h2>
+
   </header>
 
     <?php include '../patterns/banner.php';?>
