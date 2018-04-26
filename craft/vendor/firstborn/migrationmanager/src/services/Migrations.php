@@ -215,6 +215,8 @@ class Migrations extends Component
         }
 
         $migration = json_encode($migration, JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        //escape backslashes
+        $migration = str_replace('\\', '\\\\', $migration);
 
         $content = Craft::$app->view->renderTemplate('migrationmanager/_migration', array('empty' => $empty, 'migration' => $migration, 'className' => $filename, 'manifest' => $manifest, true));
 
@@ -236,61 +238,56 @@ class Migrations extends Component
         //$data = str_replace('\/n', '\n', $data);
 
         $data = json_decode($data, true);
-
         $plugin = MigrationManager::getInstance();
 
-        //try {
-            if (array_key_exists('settings', $data)) {
-                // run through dependencies first to create any elements that need to be in place for fields, field layouts and other dependencies
-                foreach ($this->_settingsDependencyTypes as $key => $value) {
-                    $service = $plugin->get($value);
-                    if (array_key_exists($service->getDestination(), $data['settings']['dependencies'])) {
-                        $service->import($data['settings']['dependencies'][$service->getDestination()]);
-                        if ($service->hasErrors()) {
-                            $errors = $service->getErrors();
-                            foreach ($errors as $error) {
-                                Craft::error($error);
-                            }
-                            return false;
-                        }
-                    }
-                }
 
-                foreach ($this->_settingsMigrationTypes as $key => $value) {
-                    $service = $plugin->get($value);
-                    if (array_key_exists($service->getDestination(), $data['settings']['elements'])) {
-                        $service->import($data['settings']['elements'][$service->getDestination()]);
-                        if ($service->hasErrors()) {
-                            $errors = $service->getErrors();
-                            foreach ($errors as $error) {
-                                Craft::error($error);
-                            }
-                            return false;
+        if (array_key_exists('settings', $data)) {
+            // run through dependencies first to create any elements that need to be in place for fields, field layouts and other dependencies
+            foreach ($this->_settingsDependencyTypes as $key => $value) {
+                $service = $plugin->get($value);
+                if (array_key_exists($service->getDestination(), $data['settings']['dependencies'])) {
+                    $service->import($data['settings']['dependencies'][$service->getDestination()]);
+                    if ($service->hasErrors()) {
+                        $errors = $service->getErrors();
+                        foreach ($errors as $error) {
+                            Craft::error($error);
                         }
+                        return false;
                     }
                 }
             }
 
-            if (array_key_exists('content', $data)) {
-                foreach ($this->_contentMigrationTypes as $key => $value) {
-                    $service = $plugin->get($value);
-                    if (array_key_exists($service->getDestination(), $data['content'])) {
-                        $service->import($data['content'][$service->getDestination()]);
-                        if ($service->hasErrors()) {
-                            $errors = $service->getErrors();
-                            foreach ($errors as $error) {
-                                Craft::error($error);
-                            }
-                            return false;
+            foreach ($this->_settingsMigrationTypes as $key => $value) {
+                $service = $plugin->get($value);
+                if (array_key_exists($service->getDestination(), $data['settings']['elements'])) {
+                    $service->import($data['settings']['elements'][$service->getDestination()]);
+                    if ($service->hasErrors()) {
+                        $errors = $service->getErrors();
+                        foreach ($errors as $error) {
+                            Craft::error($error);
                         }
+                        return false;
                     }
                 }
             }
-        //} catch (\Exception $e) {
-         //   Craft::error('Exception handled: ' . $e->getMessage());
-         //   Craft::error()
-         //   return false;
-        //}
+        }
+
+        if (array_key_exists('content', $data)) {
+            foreach ($this->_contentMigrationTypes as $key => $value) {
+                $service = $plugin->get($value);
+                if (array_key_exists($service->getDestination(), $data['content'])) {
+                    $service->import($data['content'][$service->getDestination()]);
+                    if ($service->hasErrors()) {
+                        $errors = $service->getErrors();
+                        foreach ($errors as $error) {
+                            Craft::error($error);
+                        }
+                        return false;
+                    }
+                }
+            }
+        }
+
 
         return true;
     }
