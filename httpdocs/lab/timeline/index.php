@@ -8,10 +8,7 @@
   </head>
   <body>
     <?php include '../patterns/header.php';?>
-    <div>
-      <img src="../images/bannerimage.jpg" alt="alt text"/>
-      <h1>This is the Page headline</h1>
-    </div>
+    <?php include '../patterns/banner.php';?>
 <main>
         <h3>This is an article headline</h3>
         <?php include '../patterns/para.php';?>

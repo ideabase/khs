@@ -106,6 +106,23 @@
         </select>
     </form>
     <input type="submit" class="check-out" value="Check Out">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+
+    </form>
+>>>>>>> Stashed changes
 
     </form>
   </main>
