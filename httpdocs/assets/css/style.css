@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "...ort 'home.scss'": expected "{", was ";"
-        on line 13 of assets/sass/style.scss
+        on line 14 of assets/sass/style.scss
 
-8: <<<<<<< Updated upstream
 9: <<<<<<< Updated upstream
 10: <<<<<<< Updated upstream
 11: <<<<<<< Updated upstream
 12: <<<<<<< Updated upstream
-13: @import 'home.scss';
-14: @import 'forms.scss';
-15: @import 'photopage.scss';
-16: @import 'profile1.scss';
-17: @import 'secondary.scss';
-18: @import 'banner.scss';
+13: <<<<<<< Updated upstream
+14: @import 'home.scss';
+15: @import 'forms.scss';
+16: @import 'photopage.scss';
+17: @import 'profile1.scss';
+18: @import 'secondary.scss';
+19: @import 'banner.scss';
 
 Backtrace:
-assets/sass/style.scss:13
+assets/sass/style.scss:14
 /Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1278:in `expected'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1208:in `expected'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1203:in `tok!'
@@ -39,4 +39,4 @@ assets/sass/style.scss:13
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...ort 'home.scss'\": expected \"{\", was \";\"\A         on line 13 of assets/sass/style.scss\A \A 8: <<<<<<< Updated upstream\A 9: <<<<<<< Updated upstream\A 10: <<<<<<< Updated upstream\A 11: <<<<<<< Updated upstream\A 12: <<<<<<< Updated upstream\A 13: @import 'home.scss';\A 14: @import 'forms.scss';\A 15: @import 'photopage.scss';\A 16: @import 'profile1.scss';\A 17: @import 'secondary.scss';\A 18: @import 'banner.scss';"; }
+  content: "Error: Invalid CSS after \"...ort 'home.scss'\": expected \"{\", was \";\"\A         on line 14 of assets/sass/style.scss\A \A 9: <<<<<<< Updated upstream\A 10: <<<<<<< Updated upstream\A 11: <<<<<<< Updated upstream\A 12: <<<<<<< Updated upstream\A 13: <<<<<<< Updated upstream\A 14: @import 'home.scss';\A 15: @import 'forms.scss';\A 16: @import 'photopage.scss';\A 17: @import 'profile1.scss';\A 18: @import 'secondary.scss';\A 19: @import 'banner.scss';"; }
