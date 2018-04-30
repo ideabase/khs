@@ -1,0 +1,9 @@
+.shopitem {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .shopitem {
+    display: inline-flex;
+  }
+}
