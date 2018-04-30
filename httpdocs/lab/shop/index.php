@@ -14,7 +14,7 @@
         <label for="videos"> Videos </label>
       </div>
     <!--Vist rwdkent.com/common-patterns for the proper css-->
-
+<div class="shop-items">
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
@@ -30,6 +30,7 @@
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
+</div>
 </main>
 
 

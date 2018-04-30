@@ -1,9 +1,13 @@
-.shopitem {
+.shop-items {
   display: block;
 }
 
+.item {
+  min-width: 330px;
+}
+
 @media screen and (min-width: 600px) {
-  .shopitem {
-    display: inline-flex;
+  .shop-items {
+    display: flex;
   }
 }
