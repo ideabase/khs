@@ -7,7 +7,7 @@ header {
   width: 125px;
   display: inline-block;
   @media screen and (min-width: $breakpoint) {
-    width: 200px;
+    width: 130px;
   }
 }
 
@@ -63,7 +63,7 @@ a {
 }
 
 .nav-main li {
-  font-size: 1.05em;
+  font-size: 0.9em;
 }
 
 .nav-links {
@@ -91,7 +91,7 @@ a {
       a:visited {
         display: block;
         padding: 0 50px;
-        line-height: 70px;
+        line-height: 50px;
         background: $green;
         color: white;
         text-decoration: none;

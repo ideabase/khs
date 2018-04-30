@@ -3,32 +3,4 @@
 
 {% block content %}
 
-<figure>
-    {% for asset in entry.secondaryImage %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
-    {% endfor %}
-</figure>
-
-
-<h1>{{ entry.featuredTitle }}</h1>
-
-<div class="teaser-group">
-	{% for entry in entry.featuredItems %}
-	<a href="{{ entry.url }}">
-		<div class="teaser-block">
-			<figure class="holder">
-				<figcaption class="title">
-					<h3>{{ entry.title }}</h3>
-					<p>{{ entry.teaserText }}</p>
-				</figcaption>
-				{% for asset in entry.featureImage %}
-					<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-				{% endfor %}
-			</figure>
-		</div>
-	</a>
-	{% endfor %}
-</div>
-
-
 {% endblock %}

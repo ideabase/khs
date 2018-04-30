@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Change Me</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
-    <?php include '../patterns/header.php';?>
-    <h1>This is Headline 1</h1>
-    <h2>This Is Headline 2</h2>
-  </header>
 
+    <?php include '../patterns/header.php';?>
+    
     <?php include '../patterns/banner.php';?>
     <main>
     <h1> Headline</h1>

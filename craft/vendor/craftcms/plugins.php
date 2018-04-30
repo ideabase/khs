@@ -47,4 +47,23 @@ return array (
     'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
     'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
   ),
+  'firstborn/migrationmanager' => 
+  array (
+    'class' => 'firstborn\\migrationmanager\\MigrationManager',
+    'basePath' => $vendorDir . '/firstborn/migrationmanager/src',
+    'handle' => 'migrationmanager',
+    'aliases' => 
+    array (
+      '@firstborn/migrationmanager' => $vendorDir . '/firstborn/migrationmanager/src',
+    ),
+    'name' => 'Migration Manager',
+    'version' => '3.0.5',
+    'description' => 'Quickly create migrations for settings and content at the click of a mouse.',
+    'developer' => 'FirstBorn',
+    'developerUrl' => 'https://firstborn.com',
+    'documentationUrl' => 'https://github.com/Firstborn/Craft-Migration-Manager/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/Firstborn/Craft-Migration-Manager/master/CHANGELOG.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => true,
+  ),
 );
