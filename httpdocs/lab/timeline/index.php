@@ -31,14 +31,10 @@
     <div>
       <?php include '../patterns/fact.php';?>
       <?php include '../patterns/fact.php';?>
-      <img src="#" alt="This is an image">
-      <img src="#" alt="This is an image">
       <?php include '../patterns/fact.php';?>
       <?php include '../patterns/fact.php';?>
-      <img src="#" alt="This is an image">
       <?php include '../patterns/fact.php';?>
       <?php include '../patterns/fact.php';?>
-      <img src="#" alt="This is an image">
       <?php include '../patterns/fact.php';?>
   </div>
 </main>

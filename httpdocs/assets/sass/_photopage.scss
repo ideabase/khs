@@ -1,81 +1,29 @@
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-/*.pictures{
-  display: inline-block;
-  max-width: 400px;
-  //float: left;
-  //margin:15px;
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .pictures{
   display: block;
   width: 200px;
   height: 200px;
   float: left;
   margin:15px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-
   position: relative;
   overflow: hidden;
-
   &:hover{
     figcaption{
       top: 0;
     }
-
   }
 }
 
 figcaption{
-
-
   position: absolute;
   width: 100%;
   height:100%;
   padding: 13px 27px;
   top: 155px;
   left: 0;
-
   font-weight: bold;
   font-size: 90%;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-*/
-//body { margin: 0; background: #333; }
+
 .photo-heavy-ul {
   padding: .5vw;
   font-size: 0;
@@ -103,15 +51,3 @@ figcaption{
   .photo-heavy-ul { padding: 0; }
 
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
