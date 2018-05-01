@@ -1,7 +1,6 @@
 <section class="top-banner">
 <h1>{{ entry.title }}</h1>
 <h2>{{ entry.subHeadline }}</h2>
-{{ entry.body }}
 <figure>
   {% for asset in entry.featureImage %}
     <img src="{{asset.url}}" alt="{{asset.title}}" / >

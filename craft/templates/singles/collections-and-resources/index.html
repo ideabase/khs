@@ -4,15 +4,6 @@
 
 {% block content %}
 
-{{ entry.body }}
-
-  <figure>
-      {% for asset in entry.secondaryImage %}
-        <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
-      {% endfor %}
-  </figure>
-
-  <h1>{{ entry.featuredTitle }}</h1>
 
   {# List all of the Collections and Resources Categories by Media Category #}
   {% set categories = craft.categories.group('mediaCategory') %}
@@ -33,7 +24,6 @@
   	</a>
   	{% endfor %}
   </div>
-
 
 
 {% endblock %}

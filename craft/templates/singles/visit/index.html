@@ -1,11 +1,8 @@
-{% extends "layouts/form" %}
+{% extends "layouts/secondary" %}
 {% set title = "Visit" %}
 
-{% block content %}
-
-	{{ entry.body }}
+{% block subcontent %}
 
 	<h2>{{ entry.subHeadline }}</h2>
-	{{entry.paypalProductCode|raw}}
 
 {% endblock %}
