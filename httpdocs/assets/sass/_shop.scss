@@ -1,0 +1,13 @@
+.shop-items {
+  display: block;
+}
+
+.item {
+  min-width: 330px;
+}
+
+@media screen and (min-width: 600px) {
+  .shop-items {
+    display: flex;
+  }
+}

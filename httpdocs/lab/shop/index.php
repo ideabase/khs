@@ -1,12 +1,9 @@
     <?php include '../patterns/header.php';?>
     <body>
-    <div>
-      <img src="../images/bannerimage.jpg" alt="alt text"/>
-      <h1>This is the headline</h1>
-    </div>
     <main>
+      <h1><span>Shop</span> at KHS</h1>
       <div>
-      <h2> Filter</h2>
+      <h3> Filter</h3>
         <input type="radio" id="books" name="filter">
         <label for="books"> Books </label>
         <input type="radio" id="audio" name="filter">
@@ -17,7 +14,7 @@
         <label for="videos"> Videos </label>
       </div>
     <!--Vist rwdkent.com/common-patterns for the proper css-->
-
+<div class="shop-items">
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
@@ -33,6 +30,7 @@
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
   <?php include '../patterns/shopitem.php';?>
+</div>
 </main>
 
 

@@ -5,7 +5,7 @@
 
 {% for entry in craft.entries.section('historicalMedia') %}
 	{% if entry.forSale%}
-		{% for asset in entry.featureImage %}
+		{% for asset in entry.image %}
 			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
 		{% endfor %}
 		{{entry.title}}

@@ -106,8 +106,6 @@
         </select>
     </form>
     <input type="submit" class="check-out" value="Check Out">
-
-    </form>
   </main>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
