@@ -7,13 +7,18 @@
   //position:relative;
   top: 100px;
   left: 300px;
-  background: $green;
+  //background: $green;
   cursor: pointer;
   transition: transform 0.2s;
   perspective: 1000px;
+  margin-bottom: 80px;
 }
 .holder:hover {
   transform: translate(0,20px);
+  .title h3 {
+    top: 0;
+    position: relative;
+  }
 }
 .holder img{
   z-index: 22;
@@ -32,7 +37,7 @@
   height: 100%;
   background: $yellow;
   position: absolute;
-  top: 0;
+  top: 60px;
   padding: 1%;
 }
 .title h3{
@@ -41,6 +46,11 @@
   font-family: $sans;
   font-size: 1.3em;
   font-weight: 100;
+  bottom: 0;
+  position: absolute;
+  left: auto;
+  right: auto;
+  width: 100%;
   //overflow: hidden;
  /* text-overflow:ellipsis;
   white-space: nowrap;*/

@@ -8,20 +8,21 @@
   </head>
   <body>
     <?php include '../patterns/header.php';?>
-  <header>
-    <figure>
+
       <?php include '../patterns/banner.php';?>
-    </figure>
-    <h1> This is a Page Headline</h1>
-    <h2> This is a Page Subhead</h2>
-  </header>
+      <?php include '../patterns/LGpara.php';?>
+
+
   <main>
-  <?php include '../patterns/LGpara.php';?>
+
+<div class="feature-section-1">
   <h3> Headline </h3>
   <h4> Subhead</h4>
   <img src="../images/master_1537.jpg" alt="this is an image">
   <?php include '../patterns/para.php';?>
   <button type="button"> This is a button </button>
+</div>
+
 </main>
 <h2> Section Header</h2>
   <?php include '../patterns/profile2.php';?>

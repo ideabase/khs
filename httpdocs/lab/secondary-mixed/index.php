@@ -25,29 +25,26 @@
   <?php include '../patterns/para.php';?>
   <button type="button"> This is a button </button>
     <img src="#" alt="this is a background image">
+
       <h1>Teaser Section Headline</h1>
-    <div class="teaser-group">
+<div class="feature-section-3">
       <div class="teaser-block">
         <img src="../images/ProfilePhoto.jpg">
-        <span>
+
         <h3>Teaser 1 Headline</h3>
-      </span>
+
         <p> This is a paragraph. This will describe the link below and image. </p>
         <button type="button"> This is a button </button>
       </div>
         <div class="teaser-block">
         <img src="../images/ProfilePhoto.jpg">
-        <span>
         <h3>Teaser 1 Headline</h3>
-      </span>
         <p> This is a paragraph. This will describe the link below and image. </p>
         <button type="button"> This is a button </button>
       </div>
         <div class="teaser-block">
         <img src="../images/ProfilePhoto.jpg">
-        <span>
         <h3>Teaser 1 Headline</h3>
-      </span>
         <p> This is a paragraph. This will describe the link below and image. </p>
         <button type="button"> This is a button </button>
       </div>
