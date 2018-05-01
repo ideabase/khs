@@ -1,21 +1,33 @@
 
     <?php include '../patterns/header.php';?>
-    
+
     <?php include '../patterns/banner.php';?>
     <main>
-    <h1> Headline</h1>
-    <h2> Subhead</h2>
+    <h1><span>Kent Historical Society</span> Board Members</h1>
       <?php include '../patterns/para.php';?>
 
-  <h3> Headline</h3>
+<div class="feature-section">
+  <h1><span>The</span> Team</h1>
   <?php include '../patterns/profile1.php';?>
   <?php include '../patterns/profile1.php';?>
   <?php include '../patterns/profile1.php';?>
+</div>
 
-  <h3> Headline</h3>
-  <?php include '../patterns/profile2.php';?>
-  <?php include '../patterns/profile2.php';?>
-  <?php include '../patterns/profile2.php';?>
+<div class="feature-links">
+  <div class="feature">
+  <h1><span>Header</span> Profiles</h1>
+  <h2>Subhead</h2>
+  <?php include '../patterns/para.php';?>
+  <button type="button"> This is a button </button>
+</div>
+  <div class="feature">
+  <h1><span>Header</span> Profiles</h1>
+  <h2>Subhead</h2>
+  <?php include '../patterns/para.php';?>
+  <button type="button"> This is a button </button>
+</div>
+</div>
+
     <!--Included Footer -->
   </main>
     <?php include '../patterns/footer.php';?>
