@@ -45,41 +45,7 @@
 
 <h2>{{ entry.subHeadline }}</h2>
 
-<div class="teaser-group">
-	{% for entry in entry.featuredItems %}
-	<a href="{{ entry.url }}">
-		<div class="teaser-block">
-			<figure class="holder">
-				<figcaption class="title">
-					<h3>{{ entry.title }}</h3>
-					<p>{{ entry.teaserText }}</p>
-				</figcaption>
-				{% for asset in entry.featureImage %}
-					<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-				{% endfor %}
-			</figure>
-		</div>
-	</a>
-	{% endfor %}
-</div>
 
-<!-- Profile
-<div class="home-card">
-  <h3>{{ entry.subHeadline }}</h3>
-    {% for entry in entry.featuredItems %}
-    <figure class="holder">
-      <figcaption class="title">
-        <h3>{{ entry.title }}</h3>
-        <h4>{{ entry.subHeadline }}</h4>
-        <h4><a href="mailto:example@email.com">Email Me</a></h4>
-        <p>{{ entry.teaserText }}</p>
-      </figcaption>
-      {% for asset in entry.featureImage %}
-        <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-      {% endfor %}
-    </figure>
-    {% endfor %}
-</div>
--->
+{% include 'globals/profile-card.html' %}
 
 {% endblock %}

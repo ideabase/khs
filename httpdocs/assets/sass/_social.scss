@@ -1,0 +1,34 @@
+.social-media__icons {
+  display: inline-flex;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+    margin-left:-10px;
+}
+
+.social-media-icon{
+  width: 50px;
+}
+
+.social-media__icon {
+  background-image: url('../img/ui/web.svg');
+  background-size: 100% auto;
+  width: 50px;
+  height: 50px;
+  text-indent: -10000px;
+  overflow: hidden;
+  margin-right: 5px;
+  // Repeat the following as many times as needed for each social network.  No commas needed//
+  &.Facebook {
+    background-image: url('../img/ui/social/facebook-white.svg');
+  }
+  &.Twitter {
+    background-image: url('../img/ui/social/twitter-white.svg');
+  }
+  &.Instagram {
+    background-image: url('../img/ui/social/instagram-white.svg');
+  }
+  &.Youtube {
+    background-image: url('../img/ui/social/youtube-white.svg');
+  }
+   // End repeat //
+}
