@@ -2,8 +2,10 @@
 
 {% block content %}
 {{entry.title}}
-{{entry.eventTime}}
-{{entry.eventDescription}}
+{{entry.startTime}}
+{{entry.endTime}}
+{{entry.date}}
+{{entry.body}}
 {{entry.location}}
 {{entry.specialGuests}}
 {% set image = entry.eventPhotos.first(3) %}
