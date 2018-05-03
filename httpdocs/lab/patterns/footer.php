@@ -11,22 +11,10 @@
     <h5>ADMISSION IS ALWAYS FREE</h5>
   </div>
   <div>
-    <div class="smalllogo">KHS LOGO HERE</div>
-    <ul class="callout-footer">
-      <li> <a href= "formlayout/index.php">Join</a></li>
-      <li> <a  href="#">Learn</a></li><!--Waiting on decided layout-->
-      <li> <a  href= "formlayout/index.php">Donate</a></li>
-    </ul>
+    Social Media
   </div>
-    <div class="menu-options">
-    <ul>
-      <li class="main-nav-links"><a class="menu-options" href="#">Visit</a></li>
-      <li class="main-nav-links"><a class="menu-options" href="#">Support</a></li>
-      <li class="main-nav-links"><a class="menu-options" href="#">Resources</a></li>
+  <div class="menu-options">
       <input type="search" placeholder="Search" class="main-nav-links">
-      <li class="main-nav-links"><a class="menu-options" href="#">About Us</a></li>
-      <li class="main-nav-links"><a class="menu-options" href="#">Shop</a></li>
-    </ul>
   </div>
 </div>
 </footer>

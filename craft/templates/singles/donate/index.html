@@ -2,25 +2,10 @@
 {% set title = "Donate" %}
 
 {% block content %}
-	<h1>{{entry.sectionTitle}}</h1>
-	<p>{{entry.body}}</p>
 
-	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="hosted_button_id" value="K9GNLTCVR4ME4">
-	<table>
-	<tr><td><input type="hidden" name="on0" value="Pledge">Pledge</td></tr><tr><td><select name="os0">
-	<option value="Option 1">$10.00 USD</option>
-	<option value="Option 2">$25.00 USD</option>
-	<option value="Option 3">$50.00 USD</option>
-	<option value="Option 4">$100.00 USD</option>
-	<option value="Option 5">$250.00 USD</option>
-	<option value="Option 6">$500.00 USD</option>
-	</select> </td></tr>
-	<tr><td><input type="hidden" name="on1" value="Your Name Here">Your Name Here</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
-	</table>
-	<input type="hidden" name="currency_code" value="USD">
-	<input type="image" src="http://kentohiohistory.org/Pledge_button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-	</form>
+	{{ entry.body }}
+
+	<h2>{{ entry.subHeadline }}</h2>
+	{{entry.paypalProductCode|raw}}
+
 {% endblock %}

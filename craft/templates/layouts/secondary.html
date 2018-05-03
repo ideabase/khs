@@ -3,11 +3,23 @@
 {% extends '_layout' %}
 
 {% block subheader %}
-
   {% include 'globals/banner.html' %}
-
 {% endblock %}
 
 {% block content %}
-    You forgot to include content block on this page.
+
+{{ entry.body }}
+
+<figure>
+    {% for asset in entry.secondaryImage %}
+      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
+    {% endfor %}
+</figure>
+
+<h1>{{ entry.featuredTitle }}</h1>
+
+{% include 'globals/profile-card.html' %}
+
+
+
 {% endblock %}

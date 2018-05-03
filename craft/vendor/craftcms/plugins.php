@@ -28,6 +28,25 @@ return array (
       'editLinks' => 'wbrowar\\adminbar\\services\\EditLinks',
     ),
   ),
+  'firstborn/migrationmanager' => 
+  array (
+    'class' => 'firstborn\\migrationmanager\\MigrationManager',
+    'basePath' => $vendorDir . '/firstborn/migrationmanager/src',
+    'handle' => 'migrationmanager',
+    'aliases' => 
+    array (
+      '@firstborn/migrationmanager' => $vendorDir . '/firstborn/migrationmanager/src',
+    ),
+    'name' => 'Migration Manager',
+    'version' => '3.0.5',
+    'description' => 'Quickly create migrations for settings and content at the click of a mouse.',
+    'developer' => 'FirstBorn',
+    'developerUrl' => 'https://firstborn.com',
+    'documentationUrl' => 'https://github.com/Firstborn/Craft-Migration-Manager/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/Firstborn/Craft-Migration-Manager/master/CHANGELOG.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => true,
+  ),
   'craftcms/redactor' => 
   array (
     'class' => 'craft\\redactor\\Plugin',
@@ -38,7 +57,7 @@ return array (
       '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
     ),
     'name' => 'Redactor',
-    'version' => '1.1.0',
+    'version' => '2.0.0.1',
     'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
     'developer' => 'Pixel & Tonic',
     'developerUrl' => 'https://pixelandtonic.com/',

@@ -478,9 +478,14 @@ class Sections extends Component
                 }
 
                 $siteSettingsRecord->enabledByDefault = $siteSettings->enabledByDefault;
-                $siteSettingsRecord->hasUrls = $siteSettings->hasUrls;
-                $siteSettingsRecord->uriFormat = $siteSettings->uriFormat;
-                $siteSettingsRecord->template = $siteSettings->template;
+
+                if ($siteSettingsRecord->hasUrls = $siteSettings->hasUrls) {
+                    $siteSettingsRecord->uriFormat = $siteSettings->uriFormat;
+                    $siteSettingsRecord->template = $siteSettings->template;
+                } else {
+                    $siteSettingsRecord->uriFormat = $siteSettings->uriFormat = null;
+                    $siteSettingsRecord->template = $siteSettings->template = null;
+                }
 
                 $siteSettingsRecord->save(false);
 
@@ -1171,11 +1176,12 @@ class Sections extends Component
             }
         }
 
-        // Update the remaining entry type's name, if this isn't a new section
+        // Update the remaining entry type's name and handle, if this isn't a new section
         // ---------------------------------------------------------------------
 
         if (!$isNewSection) {
             $entryTypes[$entry->typeId]->name = $section->name;
+            $entryTypes[$entry->typeId]->handle = $section->handle;
             $this->saveEntryType($entryTypes[$entry->typeId]);
         }
     }

@@ -20,47 +20,32 @@
 {% extends '_layout' %}
 
 {% block subheader %}
-
-
 <div class="home-banner">
+  <h1>{{ entry.headline }}</h1>
+  <p>{{ entry.teaserText }}</p>
 <figure>
   {% for asset in entry.featureImage %}
     <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
   {% endfor %}
 </figure>
-<h1>{{ entry.headline }}</h1>
 </div>
 {% endblock %}
 
 
 {% block content %}
+<!-- {% include 'globals/hours.html' %} add to _layout? -->
 
-{% include 'globals/hours.html' %}
-
-{{ entry.body }} <!--Where are these coming from -->
-<h2>{{ entry.subHeadline }}</h2> <!--Where are these coming from -->
+{{ entry.body }}
 
 <figure>
-    {% for asset in entry.featureImage %}
+    {% for asset in entry.secondaryImage %}
       <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
     {% endfor %}
 </figure>
 
-<div class="home-card">
-  <h3>{{ entry.subHeadline }}</h3><!-- Profile headline? -->
-    {% for entry in entry.featuredItems %}<!-- This does not show up -->
-    <figure class="holder">
-      <figcaption class="title">
-        <h3>{{ entry.title }}</h3>
-        <h4>{{ entry.subHeadline }}</h4>
-        <!--h4><a href="mailto:example@email.com">Email Me</a></h4><!-- What should I do with this? -->
-        <!--<p>{{ entry.body }}</p>--> {# Removing the body field because it's too long.  Recommend a teaser field instead #}
-      </figcaption>
-      {% for asset in entry.featureImage %}
-        <img src="{{ asset.url }}" alt="{{ asset.title }}"/><!-- This does not appear in Craft -->
-      {% endfor %}
-    </figure>
-    {% endfor %}
-</div>
+<h2>{{ entry.subHeadline }}</h2>
+
+
+{% include 'globals/profile-card.html' %}
 
 {% endblock %}

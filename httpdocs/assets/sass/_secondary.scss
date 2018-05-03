@@ -1,3 +1,7 @@
+.feature-section-background {
+  background-color: $gray;
+  padding: 1em;
+}
 .teaser-block {
   max-width: 370px;
   text-align: center;
@@ -9,9 +13,14 @@
 
 @media screen and (min-width: 850px) {
 
-  .teaser-group {
+  .feature-section-3 {
     display:flex;
     justify-content: space-around;
+  }
+
+  .feature-links {
+    display: flex;
+    padding: 1.5em;
   }
 
   .teaser-block {

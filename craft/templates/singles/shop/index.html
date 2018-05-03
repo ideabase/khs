@@ -2,15 +2,17 @@
 {% set title = "Shop" %}
 
 {% block content %}
-	<h3> Item Title </h3>
-	<p> This is a description of the item. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-	<button type="button"> Add To Cart </button>
-	<h3> Item Title </h3>
-	<p> This is a description of the item. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-	<button type="button"> Add To Cart </button>
-	<h3> Item Title </h3>
-	<p> This is a description of the item. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-	<button type="button"> Add To Cart </button>  
-	<h1>{{entry.sectionTitle}}</h1>
-	<p>{{entry.body}}</p>
+
+{% for entry in craft.entries.section('historicalMedia') %}
+	{% if entry.forSale%}
+		{% for asset in entry.image %}
+			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+		{% endfor %}
+		{{entry.title}}
+		{{entry.mediaDescription}}
+		{{entry.price}}
+		{{entry.paypalProductCode|raw}}
+	{%endif%}
+{% endfor %}
+
 {% endblock %}

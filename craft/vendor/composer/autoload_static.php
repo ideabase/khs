@@ -43,6 +43,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         array (
             'mikehaertl\\shellcommand\\' => 24,
         ),
+        'f' => 
+        array (
+            'firstborn\\migrationmanager\\' => 27,
+        ),
         'e' => 
         array (
             'enshrined\\svgSanitize\\' => 22,
@@ -115,7 +119,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
     public static $prefixDirsPsr4 = array (
         'yii\\swiftmailer\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src',
         ),
         'yii\\queue\\sync\\' => 
         array (
@@ -176,6 +180,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'mikehaertl\\shellcommand\\' => 
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
+        'firstborn\\migrationmanager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firstborn/migrationmanager/src',
         ),
         'enshrined\\svgSanitize\\' => 
         array (
@@ -1869,6 +1877,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'craft\\behaviors\\FieldLayoutBehavior' => __DIR__ . '/..' . '/craftcms/cms/src/behaviors/FieldLayoutBehavior.php',
         'craft\\behaviors\\SessionBehavior' => __DIR__ . '/..' . '/craftcms/cms/src/behaviors/SessionBehavior.php',
         'craft\\cache\\AppPathDependency' => __DIR__ . '/..' . '/craftcms/cms/src/cache/AppPathDependency.php',
+        'craft\\composer\\Factory' => __DIR__ . '/..' . '/craftcms/cms/src/composer/Factory.php',
         'craft\\composer\\Installer' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/Installer.php',
         'craft\\composer\\InvalidPluginException' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/InvalidPluginException.php',
         'craft\\composer\\Plugin' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/Plugin.php',
@@ -2251,6 +2260,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'craft\\migrations\\m180404_182320_edition_changes' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m180404_182320_edition_changes.php',
         'craft\\migrations\\m180411_102218_fix_db_routes' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m180411_102218_fix_db_routes.php',
         'craft\\migrations\\m180416_205628_resourcepaths_table' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m180416_205628_resourcepaths_table.php',
+        'craft\\migrations\\m180418_205713_widget_cleanup' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m180418_205713_widget_cleanup.php',
         'craft\\models\\AssetIndexData' => __DIR__ . '/..' . '/craftcms/cms/src/models/AssetIndexData.php',
         'craft\\models\\AssetTransform' => __DIR__ . '/..' . '/craftcms/cms/src/models/AssetTransform.php',
         'craft\\models\\AssetTransformIndex' => __DIR__ . '/..' . '/craftcms/cms/src/models/AssetTransformIndex.php',
@@ -2350,9 +2360,11 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'craft\\redactor\\Plugin' => __DIR__ . '/..' . '/craftcms/redactor/src/Plugin.php',
         'craft\\redactor\\assets\\field\\FieldAsset' => __DIR__ . '/..' . '/craftcms/redactor/src/assets/field/FieldAsset.php',
         'craft\\redactor\\assets\\redactor\\RedactorAsset' => __DIR__ . '/..' . '/craftcms/redactor/src/assets/redactor/RedactorAsset.php',
+        'craft\\redactor\\controllers\\DefaultController' => __DIR__ . '/..' . '/craftcms/redactor/src/controllers/DefaultController.php',
         'craft\\redactor\\events\\RegisterLinkOptionsEvent' => __DIR__ . '/..' . '/craftcms/redactor/src/events/RegisterLinkOptionsEvent.php',
         'craft\\redactor\\events\\RegisterPluginPathsEvent' => __DIR__ . '/..' . '/craftcms/redactor/src/events/RegisterPluginPathsEvent.php',
         'craft\\redactor\\migrations\\Install' => __DIR__ . '/..' . '/craftcms/redactor/src/migrations/Install.php',
+        'craft\\redactor\\migrations\\m180430_204710_remove_old_plugins' => __DIR__ . '/..' . '/craftcms/redactor/src/migrations/m180430_204710_remove_old_plugins.php',
         'craft\\search\\SearchQuery' => __DIR__ . '/..' . '/craftcms/cms/src/search/SearchQuery.php',
         'craft\\search\\SearchQueryTerm' => __DIR__ . '/..' . '/craftcms/cms/src/search/SearchQueryTerm.php',
         'craft\\search\\SearchQueryTermGroup' => __DIR__ . '/..' . '/craftcms/cms/src/search/SearchQueryTermGroup.php',
@@ -2572,6 +2584,37 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'enshrined\\svgSanitize\\data\\AllowedTags' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AllowedTags.php',
         'enshrined\\svgSanitize\\data\\AttributeInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AttributeInterface.php',
         'enshrined\\svgSanitize\\data\\TagInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/TagInterface.php',
+        'firstborn\\migrationmanager\\MigrationManager' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/MigrationManager.php',
+        'firstborn\\migrationmanager\\actions\\MigrateCategoryElementAction' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/actions/MigrateCategoryElementAction.php',
+        'firstborn\\migrationmanager\\actions\\MigrateEntryElementAction' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/actions/MigrateEntryElementAction.php',
+        'firstborn\\migrationmanager\\actions\\MigrateUserElementAction' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/actions/MigrateUserElementAction.php',
+        'firstborn\\migrationmanager\\assetbundles\\cp\\CpAssetBundle' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/assetbundles/cp/CpAssetBundle.php',
+        'firstborn\\migrationmanager\\assetbundles\\cpglobals\\CpGlobalsAssetBundle' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/assetbundles/cpglobals/CpGlobalsAssetBundle.php',
+        'firstborn\\migrationmanager\\controllers\\CpController' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/controllers/CpController.php',
+        'firstborn\\migrationmanager\\controllers\\MigrationsController' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/controllers/MigrationsController.php',
+        'firstborn\\migrationmanager\\controllers\\RunController' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/controllers/RunController.php',
+        'firstborn\\migrationmanager\\events\\ExportEvent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/events/ExportEvent.php',
+        'firstborn\\migrationmanager\\events\\ImportEvent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/events/ImportEvent.php',
+        'firstborn\\migrationmanager\\helpers\\MigrationManagerHelper' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/helpers/MigrationManagerHelper.php',
+        'firstborn\\migrationmanager\\services\\AssetTransforms' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/AssetTransforms.php',
+        'firstborn\\migrationmanager\\services\\AssetVolumes' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/AssetVolumes.php',
+        'firstborn\\migrationmanager\\services\\BaseContentMigration' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/BaseContentMigration.php',
+        'firstborn\\migrationmanager\\services\\BaseMigration' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/BaseMigration.php',
+        'firstborn\\migrationmanager\\services\\Categories' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Categories.php',
+        'firstborn\\migrationmanager\\services\\CategoriesContent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/CategoriesContent.php',
+        'firstborn\\migrationmanager\\services\\EntriesContent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/EntriesContent.php',
+        'firstborn\\migrationmanager\\services\\Fields' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Fields.php',
+        'firstborn\\migrationmanager\\services\\Globals' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Globals.php',
+        'firstborn\\migrationmanager\\services\\GlobalsContent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/GlobalsContent.php',
+        'firstborn\\migrationmanager\\services\\IMigrationService' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/IMigrationService.php',
+        'firstborn\\migrationmanager\\services\\Migrations' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Migrations.php',
+        'firstborn\\migrationmanager\\services\\Routes' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Routes.php',
+        'firstborn\\migrationmanager\\services\\Sections' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Sections.php',
+        'firstborn\\migrationmanager\\services\\Sites' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Sites.php',
+        'firstborn\\migrationmanager\\services\\SystemMessages' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/SystemMessages.php',
+        'firstborn\\migrationmanager\\services\\Tags' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Tags.php',
+        'firstborn\\migrationmanager\\services\\UserGroups' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/UserGroups.php',
+        'firstborn\\migrationmanager\\services\\UsersContent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/UsersContent.php',
         'mikehaertl\\shellcommand\\Command' => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src/Command.php',
         'wbrowar\\adminbar\\AdminBar' => __DIR__ . '/..' . '/wbrowar/adminbar/src/AdminBar.php',
         'wbrowar\\adminbar\\assetbundles\\AdminBar\\AdminBarAsset' => __DIR__ . '/..' . '/wbrowar/adminbar/src/assetbundles/adminbar/AdminBarAsset.php',
@@ -3018,9 +3061,9 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'yii\\rest\\UpdateAction' => __DIR__ . '/..' . '/yiisoft/yii2/rest/UpdateAction.php',
         'yii\\rest\\UrlRule' => __DIR__ . '/..' . '/yiisoft/yii2/rest/UrlRule.php',
         'yii\\rest\\ViewAction' => __DIR__ . '/..' . '/yiisoft/yii2/rest/ViewAction.php',
-        'yii\\swiftmailer\\Logger' => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/Logger.php',
-        'yii\\swiftmailer\\Mailer' => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/Mailer.php',
-        'yii\\swiftmailer\\Message' => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/Message.php',
+        'yii\\swiftmailer\\Logger' => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src/Logger.php',
+        'yii\\swiftmailer\\Mailer' => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src/Mailer.php',
+        'yii\\swiftmailer\\Message' => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src/Message.php',
         'yii\\test\\ActiveFixture' => __DIR__ . '/..' . '/yiisoft/yii2/test/ActiveFixture.php',
         'yii\\test\\ArrayFixture' => __DIR__ . '/..' . '/yiisoft/yii2/test/ArrayFixture.php',
         'yii\\test\\BaseActiveFixture' => __DIR__ . '/..' . '/yiisoft/yii2/test/BaseActiveFixture.php',

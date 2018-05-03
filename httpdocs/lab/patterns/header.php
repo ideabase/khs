@@ -5,16 +5,25 @@
     <title>Home Page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
 <body>
 <!-- Don't touch above this -->
 
 
   <header>
+
     <div class="header-top">
-      <img src="#" alt="KHS Logo" class="logo">
-      <div class="callout-nav-container">
-        <nav role="navigation">
+      <div class="logo">
+        <a href="../home"><img src="../images/temp-logo.png" alt="KHS Logo"></a>
+      </div>
+        <nav class="callout-header-navigation" role="navigation">
             <ul class="callout-header">
                 <li class="callout-header-li">
                   <a href="formlayout/index.php">Join</a>
@@ -26,15 +35,19 @@
                   <a href="formlayout/index.php">Donate</a>
                 </li>
             </ul>
-            <input type="search" placeholder="Search">
+            <div class="search-large">
+              <form>
+                <input  type="search" placeholder="Search">
+                <input class="search-button" type="submit" value="Search">
+              </form>
+            </div>
             <!-- Mobile Menu Button -->
               <div class="nav-mobile">
-                <a id="nav-toggle" href="#"><span></span></a>
+                <a id="nav-toggle" href="#"><span class="label">More</span><span class="icon"></span></a>
               </div>
             <!-- End Mobile Menu Button -->
         </nav>
       </div>
-    </div>
       <div class="main-nav-container">
         <nav role="navigation">
           <ul class="nav-main">
