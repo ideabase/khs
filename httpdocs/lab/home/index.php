@@ -11,6 +11,7 @@
     <?php include '../patterns/header.php';?>
 
     <?php include '../patterns/banner.php';?>
+    <?php include '../patterns/khshours.php';?>
 <body>
     <main>
       <h1><span>Our</span> Mission</h1>
