@@ -16,7 +16,7 @@
   <main>
 
 <div class="feature-section-background">
-<?php include '../patterns/feature1.php';?>
+<?php include '../patterns/feature2.php';?>
 </div>
 
 <h1><span>More</span> Resources</h1>

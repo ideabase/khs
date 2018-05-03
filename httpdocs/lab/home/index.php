@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+
     <!--Included Header -->
     <?php include '../patterns/header.php';?>
 
     <?php include '../patterns/banner.php';?>
-
+<body>
     <main>
       <h1><span>Our</span> Mission</h1>
       <?php include '../patterns/para.php';?>

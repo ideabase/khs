@@ -38,3 +38,16 @@ input {
   background-color: white;
   color: $green;
 }
+
+.feature-section-1 {
+  display: flex;
+  .feature-2 {
+    order: 1;
+  }
+}
+.feature-section-2 {
+  display: flex;
+  .feature-1 {
+    order: 1;
+  }
+}
