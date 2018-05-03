@@ -1,0 +1,17 @@
+<div class="home-card">
+{% for entry in entry.featuredItems %}
+<div class="profile-card">
+  <figure class="holder">
+    <a href="{{ entry.url }}">
+    <figcaption class="title">
+      <h3>{{ entry.title }}</h3>
+      <p>{{ entry.teaserText}}</p>
+    </figcaption>
+    {% for asset in entry.featureImage %}
+      <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+    {% endfor %}
+    </a>
+  </figure>
+</div>
+{% endfor %}
+</div>
