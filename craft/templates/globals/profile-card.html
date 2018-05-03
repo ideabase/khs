@@ -8,7 +8,7 @@
       <p>{{ entry.teaserText}}</p>
     </figcaption>
     {% for asset in entry.featureImage %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+      <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
     {% endfor %}
     </a>
   </figure>
