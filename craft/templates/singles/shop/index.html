@@ -1,4 +1,9 @@
-{% extends "layouts/shop" %}
+{% extends '_layout' %}
+
+{% block subheader %}
+  <h1>{{ entry.headline}}</h1>
+{% endblock %}
+
 {% block content %}
 
 {% for entry in craft.entries.section("historicalMedia") %}
