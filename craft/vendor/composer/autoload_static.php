@@ -41,6 +41,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         ),
         'm' => 
         array (
+            'mmikkel\\cpfieldinspect\\' => 23,
             'mikehaertl\\shellcommand\\' => 24,
         ),
         'f' => 
@@ -176,6 +177,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'wbrowar\\adminbar\\' => 
         array (
             0 => __DIR__ . '/..' . '/wbrowar/adminbar/src',
+        ),
+        'mmikkel\\cpfieldinspect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mmikkel/cp-field-inspect/src',
         ),
         'mikehaertl\\shellcommand\\' => 
         array (
@@ -2616,6 +2621,8 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'firstborn\\migrationmanager\\services\\UserGroups' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/UserGroups.php',
         'firstborn\\migrationmanager\\services\\UsersContent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/UsersContent.php',
         'mikehaertl\\shellcommand\\Command' => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src/Command.php',
+        'mmikkel\\cpfieldinspect\\CpFieldInspect' => __DIR__ . '/..' . '/mmikkel/cp-field-inspect/src/CpFieldInspect.php',
+        'mmikkel\\cpfieldinspect\\CpFieldInspectBundle' => __DIR__ . '/..' . '/mmikkel/cp-field-inspect/src/CpFieldInspectBundle.php',
         'wbrowar\\adminbar\\AdminBar' => __DIR__ . '/..' . '/wbrowar/adminbar/src/AdminBar.php',
         'wbrowar\\adminbar\\assetbundles\\AdminBar\\AdminBarAsset' => __DIR__ . '/..' . '/wbrowar/adminbar/src/assetbundles/adminbar/AdminBarAsset.php',
         'wbrowar\\adminbar\\console\\controllers\\DefaultController' => __DIR__ . '/..' . '/wbrowar/adminbar/src/console/controllers/DefaultController.php',

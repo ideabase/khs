@@ -21,6 +21,7 @@ return array(
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap/src'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'wbrowar\\adminbar\\' => array($vendorDir . '/wbrowar/adminbar/src'),
+    'mmikkel\\cpfieldinspect\\' => array($vendorDir . '/mmikkel/cp-field-inspect/src'),
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
     'firstborn\\migrationmanager\\' => array($vendorDir . '/firstborn/migrationmanager/src'),
     'enshrined\\svgSanitize\\' => array($vendorDir . '/enshrined/svg-sanitize/src'),

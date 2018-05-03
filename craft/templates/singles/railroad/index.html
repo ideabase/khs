@@ -1,6 +1,18 @@
-{% extends "layouts/timeline" %}
-{% set title = "railroad" %}
+{% extends '/layouts/timeline' %}
 
-{% block content %}
+{% block tiles %}
+{% set categories = entry.railroad %}
 
+{% block profile %}
+{% for member in craft.entries.section('teamMembers') %}
+	<figcaption class="title">
+		<h3> {{ member.title }}</h3>
+			<h4> {{ member.phone }} </h4>
+			<h4> <a href="{{ member.email }}"> Email Me</a></h4>
+				{{ member.bio }}
+	</figcaption>
+	{% for asset in member.image %}
+		<img src="{{asset.url}}" alt="{{asset.title}}" />
+	{% endfor %}
+{% endfor %}
 {% endblock %}
