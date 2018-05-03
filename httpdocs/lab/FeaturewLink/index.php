@@ -15,18 +15,30 @@
 
   <main>
 
-<div class="feature-section-1">
-  <h3> Headline </h3>
-  <h4> Subhead</h4>
-  <img src="../images/master_1537.jpg" alt="this is an image">
+<div class="feature-section-background">
+<?php include '../patterns/feature1.php';?>
+</div>
+
+<h1><span>More</span> Resources</h1>
+<div class="feature-links">
+
+  <div class="feature">
+  <h1><span>Header</span> Profiles</h1>
+  <h2>Subhead</h2>
   <?php include '../patterns/para.php';?>
   <button type="button"> This is a button </button>
 </div>
 
+  <div class="feature">
+  <h1><span>Header</span> Profiles</h1>
+  <h2>Subhead</h2>
+  <?php include '../patterns/para.php';?>
+  <button type="button"> This is a button </button>
+</div>
+
+</div>
 </main>
-<h2> Section Header</h2>
-  <?php include '../patterns/profile2.php';?>
-  <?php include '../patterns/profile2.php';?>
+
 </body>
   <footer>
   <?php include '../patterns/footer.php';?>

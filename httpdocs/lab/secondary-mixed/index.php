@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Change Me</title>
+    <title>KHS Secondary</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -21,11 +21,9 @@
 </figure>-->
 <main>
 <h1>Section Title</h1>
-<h2>Section Subhead</h2>
-  <?php include '../patterns/para.php';?>
-  <button type="button"> This is a button </button>
-    <img src="#" alt="this is a background image">
+    <?php include '../patterns/feature1.php';?>
 
+<div class="feature-section-background">
       <h1>Teaser Section Headline</h1>
 <div class="feature-section-3">
       <div class="teaser-block">
@@ -48,6 +46,7 @@
         <p> This is a paragraph. This will describe the link below and image. </p>
         <button type="button"> This is a button </button>
       </div>
+  </div>
   </div>
 </main>
     <!--Included Footer -->

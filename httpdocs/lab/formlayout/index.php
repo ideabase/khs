@@ -13,7 +13,7 @@
     <?php include '../patterns/banner.php';?>
 
     <main>
-      <h1>This is Headline 1</h1>
+      <h1><span>This is</span> Headline 1</h1>
 
           <?php include '../patterns/para.php';?>
 
