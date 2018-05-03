@@ -1,0 +1,30 @@
+.hours {
+  background-color: $blue;
+  //opacity: 0.5;
+  -webkit-clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%);
+  padding: 0.5em 1em;
+  width: 80%;
+  margin: auto 0 auto auto;
+  @media screen and (min-width: 560px) {
+    padding: 0.07em 0.2em;
+    width: 50%;
+  }
+  @media screen and (min-width: 840px) {
+    width: 35%;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 30%;
+  }
+}
+
+.hours-h3 {
+  color: white;
+  font-size: 0.8em;
+}
+
+.hours-h3 span {
+  font-weight: bold;
+  font-family: $sans;
+  font-size: 1.2em;
+}

@@ -1,22 +1,27 @@
-{% extends '_layout' %}
-{% set title = "Shop" %}
-
-{% block subheader %}
-  <h1>{{ entry.headline}}</h1>
-{% endblock %}
-
+{% extends "layouts/shop" %}
 {% block content %}
 
-{% for entry in craft.entries.section('historicalMedia') %}
+{% for entry in craft.entries.section("historicalMedia") %}
+	{% if entry.first %}
 	{% if entry.forSale%}
 		{% for asset in entry.featureImage %}
 			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-		{% endfor %}
-		{{entry.title}}
-		{{entry.mediaDescription}}
-		{{entry.price}}
-		{{entry.paypalProductCode|raw}}
-	{%endif%}
-{% endfor %}
-
+			{% endfor %}
+			{{entry.title}}
+			{{entry.mediaDescription}}
+			{{entry.price}}
+			{{entry.paypalProductCode|raw}}
+	{% endif %}
+	{% else %}
+	{% if entry.forSale%}
+		{% for asset in entry.featureImage %}
+			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+			{% endfor %}
+			{{entry.title}}
+			{{entry.mediaDescription}}
+			{{entry.price}}
+			{{entry.paypalProductCode|raw}}
+	{% endif %}
+	{% endif %}
+	{% endfor %}
 {% endblock %}
