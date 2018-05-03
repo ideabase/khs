@@ -1296,6 +1296,58 @@
         ]
     },
     {
+        "name": "mmikkel/cp-field-inspect",
+        "version": "1.0.4",
+        "version_normalized": "1.0.4.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/426d9638f8eca0f6a9f1beedb8a945726840d436",
+            "reference": "426d9638f8eca0f6a9f1beedb8a945726840d436",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.0.0-RC1"
+        },
+        "time": "2018-03-28T07:58:02+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "name": "CP Field Inspect",
+            "handle": "cp-field-inspect",
+            "schemaVersion": "1.0.0",
+            "hasCpSettings": false,
+            "hasCpSection": false,
+            "changelogUrl": "https://raw.githubusercontent.com/mmikkel/CpFieldInspect-Craft/master/CHANGELOG.md",
+            "class": "mmikkel\\cpfieldinspect\\CpFieldInspect"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "mmikkel\\cpfieldinspect\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mats Mikkel Rummelhoff",
+                "homepage": "http://mmikkel.no"
+            }
+        ],
+        "description": "Inspect field handles and easily edit field settings",
+        "keywords": [
+            "cms",
+            "cp field inspect",
+            "craft",
+            "craft-plugin",
+            "craftcms"
+        ],
+        "support": {
+            "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
+            "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
+        }
+    },
+    {
         "name": "paragonie/random_compat",
         "version": "v2.0.12",
         "version_normalized": "2.0.12.0",

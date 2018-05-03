@@ -3,6 +3,7 @@
         "craftcms/cms": "3.0.5",
         "wbrowar/adminbar": "3.1.5",
         "craftcms/redactor": "2.0.0.1",
-        "firstborn/migrationmanager": "3.0.5"
+        "firstborn/migrationmanager": "3.0.5",
+        "mmikkel/cp-field-inspect": "1.0.4"
     }
 }

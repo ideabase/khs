@@ -2267,6 +2267,8 @@ return array(
     'firstborn\\migrationmanager\\services\\UserGroups' => $vendorDir . '/firstborn/migrationmanager/src/services/UserGroups.php',
     'firstborn\\migrationmanager\\services\\UsersContent' => $vendorDir . '/firstborn/migrationmanager/src/services/UsersContent.php',
     'mikehaertl\\shellcommand\\Command' => $vendorDir . '/mikehaertl/php-shellcommand/src/Command.php',
+    'mmikkel\\cpfieldinspect\\CpFieldInspect' => $vendorDir . '/mmikkel/cp-field-inspect/src/CpFieldInspect.php',
+    'mmikkel\\cpfieldinspect\\CpFieldInspectBundle' => $vendorDir . '/mmikkel/cp-field-inspect/src/CpFieldInspectBundle.php',
     'wbrowar\\adminbar\\AdminBar' => $vendorDir . '/wbrowar/adminbar/src/AdminBar.php',
     'wbrowar\\adminbar\\assetbundles\\AdminBar\\AdminBarAsset' => $vendorDir . '/wbrowar/adminbar/src/assetbundles/adminbar/AdminBarAsset.php',
     'wbrowar\\adminbar\\console\\controllers\\DefaultController' => $vendorDir . '/wbrowar/adminbar/src/console/controllers/DefaultController.php',

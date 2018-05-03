@@ -2,21 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Change Me</title>
+    <title>KHS Home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+
     <!--Included Header -->
     <?php include '../patterns/header.php';?>
 
     <?php include '../patterns/banner.php';?>
-    
+<body>
     <main>
-      <h2>This is headline 2</h2>
+      <h1><span>Our</span> Mission</h1>
       <?php include '../patterns/para.php';?>
       <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+
+<div class="feature-section-background">
+    <?php include '../patterns/feature1.php';?>
+</div>
+
+
 
 <div class="home-card">
     <h3>Headline</h3>
