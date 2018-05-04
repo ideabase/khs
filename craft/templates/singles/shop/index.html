@@ -6,27 +6,32 @@
 
 {% block content %}
 
-{% for entry in craft.entries.section("historicalMedia") %}
-	{% if entry.first %}
+{% for entry in craft.entries.section('historicalMedia').limit(1) %}
 	{% if entry.forSale%}
+		{{entry.title}}
 		{% for asset in entry.featureImage %}
 			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
 			{% endfor %}
-			{{entry.title}}
 			{{entry.mediaDescription}}
 			{{entry.price}}
 			{{entry.paypalProductCode|raw}}
 	{% endif %}
-	{% else %}
+{% endfor %}
+<br><br>
+{% set nF = 0 %}
+{% for entry in craft.entries.section('historicalMedia')%}
 	{% if entry.forSale%}
-		{% for asset in entry.featureImage %}
-			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-			{% endfor %}
+		{% if nF == 1 %}
 			{{entry.title}}
-			{{entry.mediaDescription}}
-			{{entry.price}}
-			{{entry.paypalProductCode|raw}}
+			{% for asset in entry.featureImage %}
+				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+				{% endfor %}
+				{{entry.mediaDescription}}
+				{{entry.price}}
+				{{entry.paypalProductCode|raw}}
+				<br>
+			{% endif %}
 	{% endif %}
-	{% endif %}
+	{% set nF = 1 %}
 	{% endfor %}
 {% endblock %}
