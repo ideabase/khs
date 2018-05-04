@@ -5,25 +5,46 @@
 .banner-h1 {
   font-family: $sans;
   font-size: 2em;
-  font-weight: 200;
-}
-
-span {
-  font-family: $serif;
-  font-weight: 500;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .banner-h2 {
   font-family: $sans;
   font-size: 1em;
   font-weight: 200;
-  margin-top: -15px;
+  text-align: left;
+  margin-top: 0;
+  padding-top: .25em;
+}
+
+.banner-h1 span {
+  font-family: $serif;
+  font-weight: 900;
 }
 
 .top-banner {
   position: relative;
   max-height: 500px;
   overflow: hidden;
+  min-height: 300px;
+  background-color: gray;
+  &:after {
+    content: "";
+    background-color: white;
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform:
+           translateY(0px)
+           translateX(5px)
+           rotate(27deg);
+    @media screen and (min-width: 600px) {
+      left: 47%;
+    }
+  }
   img {
     width: 100%;
   }
@@ -32,33 +53,33 @@ span {
 .banner {
   background-color: rgba(#ffffff,.7);
   //opacity: 0.5;
-  -webkit-clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 0;
   padding: 0.5em 1em;
-  width: 80%;
+  width: 350px;
+  text-align: left;
 }
 
 @media screen and (min-width: 600px) {
 
   .banner {
-    width: 55%;
-    padding: 1em 1em 1em 3em;
+    width: 500px;
+    padding: 1em 2em 1em 10%;
   }
 
   .banner-h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   .banner-h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 
 @media screen and (min-width: 800px) {
   .banner {
-    width: 42%;
+    width: 700px;
   }
 }

@@ -27,3 +27,9 @@
   }); // end DOM ready
 })(jQuery); // end jQuery
 // End Script for Dropdown Menu
+
+$(".banner-h1").html(function(){
+  var text= $(this).text().trim().split(" ");
+  var first = text.shift();
+  return (text.length > 0 ? "<span class='first'>"+ first + "</span> " : first) + text.join(" ");
+});
