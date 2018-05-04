@@ -8,7 +8,7 @@
       <li>
         <figure>
           {% for asset in media.image %}
-            <img src="{{asset.url}}" alt="{{asset.title}}" />
+            <img src="{{ asset.url('photoHeavy') }}" alt="{{ asset.title }}" />
           {% endfor %}
           <figcaption>{{ media.imageCaption }}</figcaption>
         </figure>

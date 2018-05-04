@@ -38,7 +38,7 @@
 
 <figure>
     {% for asset in entry.secondaryImage %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
+      <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
     {% endfor %}
 </figure>
 
