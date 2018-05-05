@@ -15,7 +15,7 @@
 
     <body>
       <main>
-      <?php include '../patterns/intropara.php';?>
+      <?php include '../patterns/404text.php';?>
 
    </main>
 
