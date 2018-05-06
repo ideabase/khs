@@ -10,7 +10,7 @@
     <?php include '../patterns/header.php';?>
 
       <?php include '../patterns/banner.php';?>
-      <?php include '../patterns/LGpara.php';?>
+        <?php include '../patterns/intropara.php';?>
 
 
   <main>

@@ -28,4 +28,4 @@
 <script src="../../assets/js/min/scripts-min.js"></script>
 <script src="//localhost:35729/livereload.js"></script>
 <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,700|Lato:300,400,700" rel="stylesheet">
