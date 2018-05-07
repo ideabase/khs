@@ -48,3 +48,10 @@
     color: $yellow;
   }
 }
+
+@media screen and (min-width: 600px) {
+  h5 {
+    padding: 0 2.5em;
+  }
+
+}
