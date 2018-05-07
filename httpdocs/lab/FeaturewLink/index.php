@@ -10,6 +10,7 @@
     <?php include '../patterns/header.php';?>
 
       <?php include '../patterns/banner.php';?>
+      <?php include '../patterns/khshours.php';?>
         <?php include '../patterns/intropara.php';?>
 
 

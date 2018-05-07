@@ -41,3 +41,10 @@
   bottom: -3rem;
   right: 3rem;
 }
+
+.text-link {
+  color: $green;
+  &:hover {
+    color: $yellow;
+  }
+}

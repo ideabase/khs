@@ -9,6 +9,7 @@
   <body>
     <?php include '../patterns/header.php';?>
     <?php include '../patterns/banner.php';?>
+    <?php include '../patterns/khshours.php';?>
 <main>
         <h3>This is an article headline</h3>
         <?php include '../patterns/para.php';?>
