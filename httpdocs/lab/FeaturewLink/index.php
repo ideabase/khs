@@ -40,8 +40,7 @@
 </div>
 </main>
 
-</body>
-  <footer>
+
   <?php include '../patterns/footer.php';?>
-</footer>
+
 </html>

@@ -23,7 +23,7 @@
 <main>
 <h1>Section Title</h1>
     <?php include '../patterns/feature1.php';?>
-
+</main>
 <div class="feature-section-background">
       <h1><span>Teaser</span> Section Headline</h1>
 <div class="feature-section-3">
@@ -49,7 +49,7 @@
       </div>
   </div>
   </div>
-</main>
+
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>
