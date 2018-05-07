@@ -8,9 +8,9 @@
 		<h3>{{ member.title }}</h3>
 			<h4>{{ member.phone }}</h4>
 			<h4> <a href="{{ member.email }}"> Email Me</a></h4>
-				{{ member.bio }}
+				{{ member.body }}
 	</figcaption>
-	{% for asset in member.image %}
+	{% for asset in member.featureImage %}
 		<img src="{{ asset.url }}" alt="{{ asset.title }}" />
 	{% endfor %}
 </figure>

@@ -1,3 +1,5 @@
+{# This is the feature layout - contains lead paragraph, lead featured post and 2 additional features (without images) #}
+
 {% extends '_layout' %}
 
 {% block subheader %}
@@ -5,7 +7,7 @@
 <h2>{{ entry.subHeadline }}</h2>
 <figure>
 
-  {% for asset in entry.featureImage.first() %}
+  {% for asset in entry.featureImage.limit(1) %}
     <img src="{{asset.url}}" alt="{{asset.title}}" / >
   {% endfor %}
 
