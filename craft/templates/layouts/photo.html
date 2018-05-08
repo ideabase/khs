@@ -1,11 +1,12 @@
 {% extends '_layout' %}
 
 {% block subheader %}
+<input type="search" placeholder="Find Photos & Video">
 <h1>{{ entry.title }}</h1>
 {{ entry.body }}
-<ul>
+<ul class="photo-heavy-ul">
   {% for media in craft.entries.section('historicalMedia') %}
-      <li>
+      <li class="pictures">
         <figure>
           {% for asset in media.image %}
             <img src="{{ asset.url('photoHeavy') }}" alt="{{ asset.title }}" />

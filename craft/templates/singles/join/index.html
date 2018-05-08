@@ -1,11 +1,8 @@
 {% extends "layouts/form" %}
-{% set title = "Join" %}
 
 {% block content %}
-
 	{{ entry.body }}
-
+	<hr>
 	<h2>{{ entry.subHeadline }}</h2>
 	{{entry.paypalProductCode|raw}}
-
 {% endblock %}
