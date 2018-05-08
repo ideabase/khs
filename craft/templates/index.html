@@ -36,19 +36,20 @@
 
 
 {% block content %}
-<!-- {% include 'globals/hours.html' %} add to _layout? -->
 
-{{ entry.body }}
+<div class="introduction">
+  {{ entry.body }}
+</div>
 
-<figure>
-    {% for asset in entry.secondaryImage %}
-      <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-    {% endfor %}
-</figure>
+<div class="feature-section-background">
+  {% for asset in entry.secondaryImage %}
+    <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+  {% endfor %}
+</div>
 
-<h2>{{ entry.subHeadline }}</h2>
-
-
-{% include 'globals/profile-card.html' %}
+<div class="home-card">
+  <h3>{{ entry.subHeadline }}</h3>
+  {% include 'globals/profile-card.html' %}
+</div>
 
 {% endblock %}

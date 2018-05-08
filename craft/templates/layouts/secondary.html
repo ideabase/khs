@@ -8,18 +8,30 @@
 
 {% block content %}
 
-{{ entry.body }}
+<div class="feature-section-1">
+  {{ entry.body }}
+  <div class="feature-1">
+      {% for asset in entry.secondaryImage %}
+        <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+      {% endfor %}
+  </div>
+{#
+  <div class="feature-2">
+    {{ entry.secondBody }}
+    <button type="button" class="feature-button">This is a button </button>
+  </div>
+#}
+</div>
 
-<figure>
-    {% for asset in entry.secondaryImage %}
-      <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-    {% endfor %}
-</figure>
 
-<h1>{{ entry.featuredTitle }}</h1>
-
-{% include 'globals/profile-card.html' %}
-
+<div class="feature-section-background">
+  <h1>{{ entry.featuredTitle }}</h1>
+  <div class="feature-section-3">
+    <div class="teaser-block">
+      {% include 'globals/profile-card.html' %}
+    </div>
+  </div>
+</div>
 
 
 {% endblock %}

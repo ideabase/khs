@@ -6,6 +6,7 @@
     <figcaption class="title">
       <h3>{{ entry.title }}</h3>
       <p>{{ entry.teaserText}}</p>
+      <button type="button"> Click for more </button>
     </figcaption>
     {% for asset in entry.featureImage %}
       <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
