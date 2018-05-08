@@ -4,10 +4,13 @@
 
 .item {
   min-width: 330px;
+  width: 30%;
+  padding: 2em;
 }
 
 @media screen and (min-width: 600px) {
   .shop-items {
     display: flex;
+    flex-wrap: wrap;
   }
 }
