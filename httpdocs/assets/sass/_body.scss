@@ -23,45 +23,9 @@ button, input, select, textarea {
   }
 }
 
-.feature-button {
-  background-color: $yellow;
-  text-transform: uppercase;
-  color: white;
-  border: 1px solid $yellow;
-  &:hover {
-    color: $yellow;
-    background-color: white;
-  }
-}
+
 
 input {
   background-color: white;
   color: $green;
-}
-
-.feature-section-1 {
-  display: block;
-
-
-}
-.feature-section-2 {
-  display: block;
-
-}
-@media screen and (min-width: 600px) {
-  .feature-section-1 {
-    display: flex;
-    .feature-1 {
-      order: 1;
-    }
-  }
-  .feature-section-2 {
-    display: flex;
-    .feature-1 {
-      order: 1;
-    }
-  }
-}
-.feature p{
-  padding-right: 2em;
 }
