@@ -1,7 +1,56 @@
+.feature-section-1 {
+  display: block;
+
+
+}
+.feature-section-2 {
+  display: block;
+
+}
+@media screen and (min-width: 600px) {
+  .feature-section-1 {
+    display: flex;
+    .feature-1 {
+      order: 1;
+    }
+  }
+  .feature-section-2 {
+    display: flex;
+    .feature-1 {
+      order: 1;
+    }
+  }
+}
+
+
+.feature-2 {
+  text-align: left;
+
+  @media screen and (min-width: 600px) {
+    padding-right: 2em;
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.feature-button {
+  background-color: $yellow;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid $yellow;
+  margin: 1em 0;
+  &:hover {
+    color: $yellow;
+    background-color: white;
+  }
+}
+
 .feature-section-background {
   background-color: $gray;
   padding: 2em;
   width: 100%;
+  margin: 4em;
 
 }
 .teaser-block {
@@ -12,7 +61,7 @@
 }
 
 .feature-section-1{
-  padding: 2.5em;
+  padding: 0 2.5em 2em 2.5em;
 }
 
 @media screen and (min-width: 850px) {
@@ -20,6 +69,8 @@
   .feature-section-3 {
     display:flex;
     justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .feature-links {

@@ -3,7 +3,9 @@
   max-width: 350px;
 }
 
-
+.profile-card a {
+  color: white;
+}
 
 .holder{
   //position:relative;
@@ -11,15 +13,18 @@
   left: 300px;
   //background: $green;
   cursor: pointer;
-  transition: transform 0.2s;
+  //transition: transform 0.2s;
   perspective: 1000px;
   margin-bottom: 80px;
 }
 .holder:hover {
-  transform: translate(0,20px);
-  .title h3 {
+  transform: translate(0,60px);
+  .title {
     top: 0;
-    position: relative;
+  }
+  .title h3 {
+    //top: 0;
+    //position: relative;
   }
 }
 .holder img{
@@ -29,6 +34,7 @@
   opacity: 1;
   transition: transform 0.3s, opacity 0.3s;
   perspective: 400px;
+  transform: skew(2deg);
 }
 .holder:hover img{
   opacity: 0.75;
@@ -40,7 +46,7 @@
   background: $yellow;
   position: absolute;
   top: 60px;
-  padding: 1%;
+  padding: 2em 1em 1em 1em;
 }
 .title h3{
   padding: 0;
@@ -50,7 +56,7 @@
   font-weight: 100;
   bottom: 0;
   position: absolute;
-  left: auto;
+  left: 0;
   right: auto;
   width: 100%;
   //overflow: hidden;
@@ -72,11 +78,4 @@
 
 .title button {
   margin-top: 0;
-}
-
-@media screen and (min-width: 550px) {
-
-
-
-
 }

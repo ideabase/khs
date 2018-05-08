@@ -1,5 +1,9 @@
--p {
-  text-align: left;
+h1 {
+  font-weight: 100;
+}
+h1 span {
+  font-family: $serif;
+  font-weight: bold;
 }
 
 .introduction{
