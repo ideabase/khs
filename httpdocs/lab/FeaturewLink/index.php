@@ -20,7 +20,6 @@
 <?php include '../patterns/feature2.php';?>
 </div>
 
-<h1><span>More</span> Resources</h1>
 <div class="feature-links">
 
   <div class="feature">
