@@ -1,67 +1,76 @@
 <footer>
   <div class="footer-container">
+    <div class="footer-logo-cta-container">
+      <div class="footer-logo-container">
+        {% if footer.secondaryLogo | length %}
+            {% for asset in footer.secondaryLogo %}
+                <img src="{{ asset.url }}" alt="{{ asset.title }}" />
+            {% endfor %}
+        {% endif %}
+      </div>
+<!--
+      <div class="callout-footer">
+        <ul>
+          <a href="/"> <li>Join</li></a>
+          <a href="/"> <li> Give</li></a>
+          <a href="/"> <li> Learn</li></a>
+        </ul>
+      </div>
+    -->
+    </div>
 
-  <div>
-  <h4>Contact</h4>
-  <h5>
-  <!-- Phone Output -->
-  {% if footer.phone %}
-      {{ footer.phone }}
-  {% endif %} </h5>
-  <h5>Kent Historical Society</h5>
-  <!-- Address Output -->
-  <h5>{% if footer.address %}
-      {{ footer.address }}
-  {% endif %}</h5>
-</div>
+  <div class="footer-contact-hours">
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <h5>
+      <!-- Phone Output -->
+      {% if footer.phone %}
+        {{ footer.phone }}
+      {% endif %}
+      </h5>
+      <h5>Kent Historical Society</h5>
+      <!-- Address Output -->
+      <h5>{% if footer.address %}
+        {{ footer.address }}
+      {% endif %}
+      </h5>
+    </div>
 
-<div>
-  <h4>Hours</h4>
-  {% include 'globals/hours.html' %}
-  <h5>
-    {% if footer.admissionText %}
-      {{ footer.admissionText  }}
-    {% endif %}
-  </h5>
-</div>
-
-<div>
+    <div class="footer-hours">
+      <h4>Hours</h4>
+      <h5>{% include 'globals/hours.html' %}</h5>
+      <h5>
+        {% if footer.admissionText %}
+          {{ footer.admissionText  }}
+        {% endif %}
+      </h5>
+    </div>
+  </div>
 
   <!-- Social Media Matrix -->
   <div class="social-media__icons">
   {% for block in footer.socialMedia %}
-
       {% if block.type == "socialMedia" %}
-
         <a class="social-media__icon {{ block.socialMediaName }}" href="{{ block.siteURL }}">{{ block.socialMediaName }}</a>
-
       {% endif %}
-
   {% endfor %}
   </div>
 
-</div>
-
-<div class="smalllogo">
-    {% if footer.secondaryLogo | length %}
-        {% for asset in footer.secondaryLogo %}
-            <img src="{{ asset.url }}" alt="{{ asset.title }}" />
-        {% endfor %}
-    {% endif %}
-</div>
-
-
-<div class="menu-options">
-  <ul>
-  {% nav entry in craft.entries.section('primaryNavigation').level('1') %}
-        <li>
-            {% for item in entry.navigationItem %}
-              <a href="{{ item.url }}">{{ entry.title }}</a>
-            {% endfor %}
-        </li>
-    {% endnav %}
-  </ul>
-</div>
-
+  <div class="menu-options">
+    <ul>
+    {% nav entry in craft.entries.section('primaryNavigation').level('1') %}
+          <li>
+              {% for item in entry.navigationItem %}
+                <a href="{{ item.url }}">{{ entry.title }}</a>
+              {% endfor %}
+          </li>
+      {% endnav %}
+    </ul>
+  </div>
 </div> <!-- End footer container -->
+
+  <div class="footer-copyright">
+    <p> Copyight 2018 All rights Reserved </p>
+  </div>
+
 </footer>
