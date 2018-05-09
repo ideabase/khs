@@ -28,10 +28,14 @@
 		{% block subheader %}
 			{# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
 		{% endblock %}
-    
+
     {% include 'globals/hours.html' %}
 
+
 		<main role="main">
+      {% block subcontent %}
+        {# This is where the main body content of the page display.  Required on each template. #}
+      {% endblock %}
 			{% block content %}
 				 {# This is where the main body content of the page display.  Required on each template. #}
 			{% endblock %}

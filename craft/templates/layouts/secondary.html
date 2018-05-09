@@ -15,39 +15,24 @@
           {% endfor %}
         </div>
         <div class="feature-2">
-          <h1>{{entry.title}}</h1>
-          {% if entry.teaserText %}
-            {{ entry.teaserText }}
-          {% else %}
+          <h1>{{entry.headline}}</h1>
             {{ entry.body}}
-          {% endif %}
-          <a href="{{entry.url}}" class="feature-button">Learn More</a>
         </div>
       </div>
 
-{#
-<div class="feature-section-1">
-  {{ entry.body }}
-  <div class="feature-1">
-      {% for asset in entry.secondaryImage %}
-        <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-      {% endfor %}
-  </div>
-
-  <div class="feature-2">
-    {{ entry.secondBody }}
-    <button type="button" class="feature-button">This is a button </button>
-  </div>
-
-</div>
-#}
+      {% include 'globals/featureItem.html' %}
 
 <div class="feature-section-background">
-  <h1>{{ entry.featuredTitle }}</h1>
-  <div class="feature-section-3">
-    <div class="teaser-block">
-      {% include 'globals/profile-card.html' %}
-    </div>
+  <div class="teaser-block">
+    <h1>{{ entry.featuredTitle }}</h1>
+    {% for entry in entry.featuredItems %}
+      {% for asset in entry.featureImage %}
+        <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+      {% endfor %}
+      {{ entry.title }}
+      {{ entry.teaserText }}
+      <button type="button">Learn more</button>
+    {% endfor %}
   </div>
 </div>
 
