@@ -4,19 +4,23 @@
       <div class="footer-logo-container">
         {% if footer.secondaryLogo | length %}
             {% for asset in footer.secondaryLogo %}
+            <a href="{{siteUrl}}" class="footer-logo">
                 <img src="{{ asset.url }}" alt="{{ asset.title }}" />
+            </a>
             {% endfor %}
         {% endif %}
       </div>
-<!--
       <div class="callout-footer">
         <ul>
-          <a href="/"> <li>Join</li></a>
-          <a href="/"> <li> Give</li></a>
-          <a href="/"> <li> Learn</li></a>
+          {% nav entry in craft.entries.section('secondaryNavigation').level('1') %}
+                <li class="callout-header-li">
+                    {% for item in entry.navigationItem %}
+                      <a href="{{ item.url }}">{{ entry.title }}</a>
+                    {% endfor %}
+                </li>
+            {% endnav %}
         </ul>
       </div>
-    -->
     </div>
 
   <div class="footer-contact-hours">
@@ -38,7 +42,7 @@
 
     <div class="footer-hours">
       <h4>Hours</h4>
-      <h5>{% include 'globals/hours.html' %}</h5>
+      <h5>{{ hoursOfOperation.daysAndHours }}</h5>
       <h5>
         {% if footer.admissionText %}
           {{ footer.admissionText  }}
