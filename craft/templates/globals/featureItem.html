@@ -1,0 +1,43 @@
+{% for entry in entry.mainFeaturedItem %}
+<div class="feature-section-background">
+      <div class="feature-section-1">
+        <div class="feature-1">
+          {% for asset in entry.featureImage %}
+            <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+          {% endfor %}
+        </div>
+        <div class="feature-2">
+          <h2>Now Featuring: {{entry.title}}</h2>
+          {% if entry.teaserText %}
+            {{ entry.teaserText }}
+          {% else %}
+            {{ entry.body}}
+          {% endif %}
+          <a href="{{entry.url}}" class="feature-button">Learn More</a>
+        </div>
+      </div>
+</div>
+{% endfor %}
+
+{#
+
+
+<div class="home-card">
+{% for entry in entry.featuredItems %}
+<div class="profile-card">
+  <figure class="holder">
+    <a href="{{ entry.url }}">
+    <figcaption class="title">
+      <p>{{ entry.teaserText}}</p>
+      <button type="button">Learn More</button>
+      <h3>{{ entry.title }}</h3>
+    </figcaption>
+    {% for asset in entry.featureImage %}
+      <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+    {% endfor %}
+    </a>
+  </figure>
+</div>
+{% endfor %}
+</div>
+#}

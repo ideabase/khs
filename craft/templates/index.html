@@ -41,11 +41,7 @@
   {{ entry.body }}
 </div>
 
-<div class="feature-section-background">
-  {% for asset in entry.secondaryImage %}
-    <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-  {% endfor %}
-</div>
+{% include 'globals/featureItem.html' %}
 
 <div class="home-card">
   <h3>{{ entry.subHeadline }}</h3>
