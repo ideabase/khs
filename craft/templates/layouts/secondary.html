@@ -6,7 +6,7 @@
   {% include 'globals/banner.html' %}
 {% endblock %}
 
-{% block content %}
+{% block subcontent %}
 
       <div class="feature-section-1">
         <div class="feature-1">
@@ -21,19 +21,22 @@
       </div>
 
       {% include 'globals/featureItem.html' %}
+{% endblock %}
 
+{% block content %}
 <div class="feature-section-background">
-  <div class="teaser-block">
-    <h1>{{ entry.featuredTitle }}</h1>
+  <h1>{{ entry.featuredTitle }}</h1>
+  <div class="feature-section-3">
     {% for entry in entry.featuredItems %}
+  <div class="teaser-block">
       {% for asset in entry.featureImage %}
         <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
       {% endfor %}
-      {{ entry.title }}
-      {{ entry.teaserText }}
-      <button type="button">Learn more</button>
-    {% endfor %}
+      <h3>{{ entry.title }}</h3>
+      <p>{{ entry.teaserText }}</p>
+      <a href="{{entry.url}}" class="button-link">Learn more</a>
   </div>
+  {% endfor %}
 </div>
 
 

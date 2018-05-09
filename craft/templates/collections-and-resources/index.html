@@ -6,22 +6,22 @@
 
   {# List all of the Collections and Resources Categories by Media Category #}
   {% set categories = craft.categories.group('mediaCategory') %}
-  <div class="teaser-group">
-  	{% for item in categories %}
-  	<a href="{{ item.url }}">
-  		<div class="teaser-block">
-  			<figure class="holder">
-  				<figcaption class="title">
-  					<h3>{{ item.title }}</h3>
-  					<p>{{ item.teaserText }}</p>
-  				</figcaption>
-  				{% for asset in item.featureImage %}
-  					<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-  				{% endfor %}
-  			</figure>
-  		</div>
-  	</a>
-  	{% endfor %}
+
+  <div class="feature-section-background">
+    <h1>{{ entry.featuredTitle }}</h1>
+    <div class="feature-section-3">
+      {% for item in categories %}
+    <div class="teaser-block">
+        {% for asset in item.featureImage %}
+          <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+        {% endfor %}
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.teaserText }}</p>
+        <a href="{{item.url}}" class="button-link">Learn more</a>
+    </div>
+    {% endfor %}
+  </div>
+
   </div>
 
 {% endblock %}
