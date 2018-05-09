@@ -10,7 +10,8 @@
     <?php include '../patterns/header.php';?>
 
       <?php include '../patterns/banner.php';?>
-      <?php include '../patterns/LGpara.php';?>
+      <?php include '../patterns/khshours.php';?>
+        <?php include '../patterns/intropara.php';?>
 
 
   <main>
@@ -19,7 +20,6 @@
 <?php include '../patterns/feature2.php';?>
 </div>
 
-<h1><span>More</span> Resources</h1>
 <div class="feature-links">
 
   <div class="feature">
@@ -39,8 +39,7 @@
 </div>
 </main>
 
-</body>
-  <footer>
+
   <?php include '../patterns/footer.php';?>
-</footer>
+
 </html>
