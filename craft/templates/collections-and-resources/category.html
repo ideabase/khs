@@ -31,13 +31,12 @@
 {% block content %}
 {{ category.body }}
 
-  {#{% set entries = craft.entries.relatedTo(category) %}
+{% set entries = craft.entries.relatedTo(category) %}
   <ul>
     {% for entry in entries %}
       <li><a href="{{entry.url}}">{{ entry.title }}</a></li>
     {% endfor %}
   </ul>
-#}
 
 {% if category.layout == "timeline" %}
   {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
