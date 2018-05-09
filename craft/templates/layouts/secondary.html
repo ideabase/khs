@@ -1,4 +1,4 @@
-{# This is the Secondary Page Layout #}
+{# This is the Secondary-Mixed Page Layout - includes 1 lead feature item and 3 secondary featured items #}
 
 {% extends '_layout' %}
 
@@ -6,20 +6,38 @@
   {% include 'globals/banner.html' %}
 {% endblock %}
 
+{% block subcontent %}
+
+      <div class="feature-section-1">
+        <div class="feature-1">
+          {% for asset in entry.featureImage %}
+            <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+          {% endfor %}
+        </div>
+        <div class="feature-2">
+          <h1>{{entry.headline}}</h1>
+            {{ entry.body}}
+        </div>
+      </div>
+
+      {% include 'globals/featureItem.html' %}
+{% endblock %}
+
 {% block content %}
-
-{{ entry.body }}
-
-<figure>
-    {% for asset in entry.secondaryImage %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
-    {% endfor %}
-</figure>
-
-<h1>{{ entry.featuredTitle }}</h1>
-
-{% include 'globals/profile-card.html' %}
-
+<div class="feature-section-background">
+  <h1>{{ entry.featuredTitle }}</h1>
+  <div class="feature-section-3">
+    {% for entry in entry.featuredItems %}
+  <div class="teaser-block">
+      {% for asset in entry.featureImage %}
+        <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+      {% endfor %}
+      <h3>{{ entry.title }}</h3>
+      <p>{{ entry.teaserText }}</p>
+      <a href="{{entry.url}}" class="button-link">Learn more</a>
+  </div>
+  {% endfor %}
+</div>
 
 
 {% endblock %}

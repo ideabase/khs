@@ -12,6 +12,7 @@
 
 
     <?php include '../patterns/banner.php';?>
+    <?php include '../patterns/khshours.php';?>
     <!--Use this code whenever you need to include a shared component -->
 
 <!--<h1><span>Page Title</span> as more than one word</h1>
@@ -22,9 +23,9 @@
 <main>
 <h1>Section Title</h1>
     <?php include '../patterns/feature1.php';?>
-
+</main>
 <div class="feature-section-background">
-      <h1>Teaser Section Headline</h1>
+      <h1><span>Teaser</span> Section Headline</h1>
 <div class="feature-section-3">
       <div class="teaser-block">
         <img src="../images/ProfilePhoto.jpg">
@@ -48,7 +49,7 @@
       </div>
   </div>
   </div>
-</main>
+
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>
   </body>

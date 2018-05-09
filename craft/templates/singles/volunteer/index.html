@@ -1,11 +1,17 @@
 {% extends "layouts/form" %}
-{% set title = "Volunteer" %}
 
 {% block content %}
 
 	{{ entry.body }}
 
-	<h2>{{ entry.subHeadline }}</h2>
+	<h2>{{ entry.subHeadline }}</h2><br>
+	Name: <input id="volName"></input><br>
+	Phone Number: <input id="volNum"></input><br>
+	Email: <input id="volEmail"></input><br>
+	Additional Info:<br>
+	<textarea id="VaddInfo" rows="4" cols="50">
+	</textarea><br>
+	<button id="vSubBtn">Submit</button><button id="vResetBtn">Reset</button>
 	{{entry.paypalProductCode|raw}}
 
 {% endblock %}

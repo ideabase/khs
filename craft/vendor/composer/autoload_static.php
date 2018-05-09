@@ -37,6 +37,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         ),
         'w' => 
         array (
+            'workingconcept\\cloudflare\\' => 26,
             'wbrowar\\adminbar\\' => 17,
         ),
         'm' => 
@@ -173,6 +174,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'workingconcept\\cloudflare\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src',
         ),
         'wbrowar\\adminbar\\' => 
         array (
@@ -2156,6 +2161,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'craft\\helpers\\Stringy' => __DIR__ . '/..' . '/craftcms/cms/src/helpers/Stringy.php',
         'craft\\helpers\\Template' => __DIR__ . '/..' . '/craftcms/cms/src/helpers/Template.php',
         'craft\\helpers\\UrlHelper' => __DIR__ . '/..' . '/craftcms/cms/src/helpers/UrlHelper.php',
+        'craft\\i18n\\FormatConverter' => __DIR__ . '/..' . '/craftcms/cms/src/i18n/FormatConverter.php',
         'craft\\i18n\\Formatter' => __DIR__ . '/..' . '/craftcms/cms/src/i18n/Formatter.php',
         'craft\\i18n\\I18N' => __DIR__ . '/..' . '/craftcms/cms/src/i18n/I18N.php',
         'craft\\i18n\\Locale' => __DIR__ . '/..' . '/craftcms/cms/src/i18n/Locale.php',
@@ -2632,6 +2638,17 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'wbrowar\\adminbar\\services\\Bar' => __DIR__ . '/..' . '/wbrowar/adminbar/src/services/Bar.php',
         'wbrowar\\adminbar\\services\\EditLinks' => __DIR__ . '/..' . '/wbrowar/adminbar/src/services/EditLinks.php',
         'wbrowar\\adminbar\\twigextensions\\AdminBarTwigExtension' => __DIR__ . '/..' . '/wbrowar/adminbar/src/twigextensions/AdminBarTwigExtension.php',
+        'workingconcept\\cloudflare\\Cloudflare' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/Cloudflare.php',
+        'workingconcept\\cloudflare\\assetbundles\\Cloudflare\\CloudflareAsset' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/assetbundles/cloudflare/CloudflareAsset.php',
+        'workingconcept\\cloudflare\\assetbundles\\quickpurgewidget\\QuickPurgeWidgetAsset' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/assetbundles/quickpurgewidget/QuickPurgeWidgetAsset.php',
+        'workingconcept\\cloudflare\\controllers\\DefaultController' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/controllers/DefaultController.php',
+        'workingconcept\\cloudflare\\migrations\\Install' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/migrations/Install.php',
+        'workingconcept\\cloudflare\\models\\Settings' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/models/Settings.php',
+        'workingconcept\\cloudflare\\records\\RuleRecord' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/records/RuleRecord.php',
+        'workingconcept\\cloudflare\\services\\CloudflareService' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/services/CloudflareService.php',
+        'workingconcept\\cloudflare\\services\\RulesService' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/services/RulesService.php',
+        'workingconcept\\cloudflare\\variables\\CloudflareVariable' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/variables/CloudflareVariable.php',
+        'workingconcept\\cloudflare\\widgets\\QuickPurge' => __DIR__ . '/..' . '/workingconcept/craft-cloudflare/src/widgets/QuickPurge.php',
         'yii\\BaseYii' => __DIR__ . '/..' . '/yiisoft/yii2/BaseYii.php',
         'yii\\base\\Action' => __DIR__ . '/..' . '/yiisoft/yii2/base/Action.php',
         'yii\\base\\ActionEvent' => __DIR__ . '/..' . '/yiisoft/yii2/base/ActionEvent.php',

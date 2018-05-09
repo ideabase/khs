@@ -2,7 +2,17 @@
   display: inline-flex;
   margin-bottom: 2em;
   flex-wrap: wrap;
-    margin-left:-10px;
+  margin-left:-10px;
+  @media screen and (min-width: 600px) {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  @media screen and (min-width: 900px) {
+    width: 100%;
+    margin-bottom: 0;
+    max-width: 65px;
+    align-items: center;
+  }
 }
 
 .social-media-icon{
@@ -10,25 +20,29 @@
 }
 
 .social-media__icon {
-  background-image: url('../img/ui/web.svg');
+  background-image: url('/img/ui/web.svg');
   background-size: 100% auto;
   width: 50px;
   height: 50px;
   text-indent: -10000px;
   overflow: hidden;
-  margin-right: 5px;
+  margin: 0 10px;
+  background-repeat: no-repeat;
   // Repeat the following as many times as needed for each social network.  No commas needed//
   &.Facebook {
-    background-image: url('../img/ui/social/facebook-white.svg');
+    background-image: url('/assets/img/ui/social/facebook-green.svg');
   }
   &.Twitter {
-    background-image: url('../img/ui/social/twitter-white.svg');
+    background-image: url('/assets/img/ui/social/twitter-white.svg');
   }
   &.Instagram {
-    background-image: url('../img/ui/social/instagram-white.svg');
+    background-image: url('/assets/img/ui/social/instagram-green.svg');
   }
   &.Youtube {
-    background-image: url('../img/ui/social/youtube-white.svg');
+    background-image: url('/assets/img/ui/social/youtube-white.svg');
   }
    // End repeat //
+   @media screen and (min-width: 900px) {
+     width: 100%;
+   }
 }

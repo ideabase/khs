@@ -1,7 +1,9 @@
-<h1><span>This is</span> a feature post</h1>
+
 
 <div class="feature-section-2">
+
   <div class="feature-1">
+      <h1><span>This is</span> a feature post</h1>
     <?php include '../patterns/LGpara.php';?>
     <button type="button" class="feature-button">This is a button </button>
   </div>

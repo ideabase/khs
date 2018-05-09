@@ -20,32 +20,32 @@
 {% extends '_layout' %}
 
 {% block subheader %}
-<div class="home-banner">
-  <h1>{{ entry.headline }}</h1>
-  <p>{{ entry.teaserText }}</p>
-<figure>
+<section class="top-banner">
   {% for asset in entry.featureImage %}
-    <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
+      <picture>
+        <source media="(min-width: 600px)" srcset="{{asset.url('featureImage')}}">
+        <img src="{{asset.url('featureItems')}}" alt="{{asset.title}}">
+      </picture>
   {% endfor %}
-</figure>
-</div>
+  <div class="banner">
+    <h1 class="banner-h1">{{ entry.headline }}</h1>
+    <h2 class="banner-h2">{{ entry.subHeadline }}</h2>
+  </div>
+</section>
 {% endblock %}
 
 
 {% block content %}
-<!-- {% include 'globals/hours.html' %} add to _layout? -->
 
-{{ entry.body }}
+<div class="introduction">
+  {{ entry.body }}
+</div>
 
-<figure>
-    {% for asset in entry.secondaryImage %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
-    {% endfor %}
-</figure>
+{% include 'globals/featureItem.html' %}
 
-<h2>{{ entry.subHeadline }}</h2>
-
-
-{% include 'globals/profile-card.html' %}
+<div class="home-card">
+  <h3>{{ entry.featuredTitle }}</h3>
+  {% include 'globals/profile-card.html' %}
+</div>
 
 {% endblock %}

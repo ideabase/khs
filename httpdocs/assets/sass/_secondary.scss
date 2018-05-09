@@ -1,6 +1,65 @@
+.feature-section-1 {
+  display: block;
+
+
+}
+.feature-section-2 {
+  display: block;
+
+}
+@media screen and (min-width: 600px) {
+  .feature-section-1 {
+    display: flex;
+    .feature-1 {
+      order: 1;
+      width: 40%;
+    }
+  }
+  .feature-section-2 {
+    display: flex;
+    .feature-1 {
+      order: 1;
+      width: 40%;
+    }
+  }
+}
+
+
+.feature-2 {
+  text-align: left;
+
+  @media screen and (min-width: 600px) {
+    padding-right: 2em;
+    width: 60%;
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.feature-button {
+  background-color: $yellow;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid $yellow;
+  margin: 1em 0;
+  padding: .5em;
+  border-radius: 5px;
+  transition: .3s ease-in-out all;
+  &:hover {
+    color: $yellow;
+    background-color: white;
+  }
+}
+
 .feature-section-background {
   background-color: $gray;
-  padding: 1em;
+  padding: 2em;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-bottom: 4em;
+
 }
 .teaser-block {
   max-width: 370px;
@@ -9,13 +68,17 @@
   margin-top: 2em;
 }
 
-
+.feature-section-1{
+  padding: 0 2.5em 2em 2.5em;
+}
 
 @media screen and (min-width: 850px) {
 
   .feature-section-3 {
     display:flex;
     justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .feature-links {

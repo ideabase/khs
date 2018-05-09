@@ -20,6 +20,7 @@ return array(
     'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap/src'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'workingconcept\\cloudflare\\' => array($vendorDir . '/workingconcept/craft-cloudflare/src'),
     'wbrowar\\adminbar\\' => array($vendorDir . '/wbrowar/adminbar/src'),
     'mmikkel\\cpfieldinspect\\' => array($vendorDir . '/mmikkel/cp-field-inspect/src'),
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),

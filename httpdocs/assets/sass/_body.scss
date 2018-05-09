@@ -9,7 +9,7 @@ main {
   padding: 1em;
 }
 
-button, input, select, textarea {
+button, input, select, textarea, .button-link {
   background-color: $green;
   text-transform: uppercase;
   color: white;
@@ -23,31 +23,9 @@ button, input, select, textarea {
   }
 }
 
-.feature-button {
-  background-color: $yellow;
-  text-transform: uppercase;
-  color: white;
-  border: 1px solid $yellow;
-  &:hover {
-    color: $yellow;
-    background-color: white;
-  }
-}
+
 
 input {
   background-color: white;
   color: $green;
-}
-
-.feature-section-1 {
-  display: flex;
-  .feature-2 {
-    order: 1;
-  }
-}
-.feature-section-2 {
-  display: flex;
-  .feature-1 {
-    order: 1;
-  }
 }

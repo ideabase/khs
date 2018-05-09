@@ -1,19 +1,17 @@
-{# This is the Secondary Page Layout #}
+{# This is the Profiles page layout - contains lead paragraph, team profiles with images, additional team members without images #}
 
 {% extends '_layout' %}
 
 {% block subheader %}
-
-<h1>{{ entry.title }}</h1>
-<h2>{{ entry.subHeadline }}</h2>
-<figure>
-  {% for asset in entry.featureImage %}
-    <img src="{{asset.url}}" alt="{{asset.title}}" / >
-  {% endfor %}
-</figure>
-
+  {% include 'globals/banner.html' %}
+  <h1>{{ entry.headline }}</h1>
+  {{ entry.body }}
+  {# add secondary image #}
 {% endblock %}
 
 {% block content %}
-    You forgot to include content block on this page.
+
+
+    <!-- This is where the feature-links section goes. Check with Chris about this. -->
+
 {% endblock %}

@@ -1,12 +1,5 @@
 {% extends '_layout' %}
 
 {% block subheader %}
-
-<h1>{{ entry.headline }}</h1>
-<figure>
-    {% for asset in entry.featureImage %}
-      <img src="{{ asset.url }}" alt="{{ asset.title }}" / >
-    {% endfor %}
-</figure>
-
+  {% include 'globals/banner.html' %}
 {% endblock %}

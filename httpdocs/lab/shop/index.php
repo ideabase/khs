@@ -1,4 +1,5 @@
     <?php include '../patterns/header.php';?>
+    <?php include '../patterns/khshours.php';?>
     <body>
     <main>
       <h1><span>Shop</span> at KHS</h1>

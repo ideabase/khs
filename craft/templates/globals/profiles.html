@@ -1,0 +1,17 @@
+<div class="home-card">
+<div class="profile-card">
+  <figure class="holder">
+    <a href="{{ entry.url }}">
+    <figcaption class="title">
+      <p>{{ entry.email}}</p>
+      {{ entry.phone }}
+      <h3>{{ entry.title }}</h3>
+    </figcaption>
+    {% for asset in entry.featureImage %}
+      <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+    {% endfor %}
+    </a>
+  </figure>
+</div>
+{{ entry.body }}
+</div>

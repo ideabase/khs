@@ -1,18 +1,39 @@
-{% extends "layouts/shop" %}
-{% set title = "Shop" %}
+{% extends '_layout' %}
+
+{% block subheader %}
+  <h1>{{ entry.headline}}</h1>
+{% endblock %}
 
 {% block content %}
-
-{% for entry in craft.entries.section('historicalMedia') %}
-	{% if entry.forSale%}
-		{% for asset in entry.image %}
-			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-		{% endfor %}
-		{{entry.title}}
-		{{entry.mediaDescription}}
-		{{entry.price}}
-		{{entry.paypalProductCode|raw}}
-	{%endif%}
+<button>Filter</button>
+<div class="shop-items">
+  {% for entry in craft.entries.section('historicalMedia').limit(1) %}
+	 {% if entry.forSale%}
+		 {{entry.title}}
+		   {% for asset in entry.featureImage %}
+			    <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+			 {% endfor %}
+			{{entry.mediaDescription}}
+			{{entry.price}}
+			{{entry.paypalProductCode|raw}}
+	{% endif %}
 {% endfor %}
-
+<br><br>
+{% set nF = 0 %}
+{% for entry in craft.entries.section('historicalMedia')%}
+	{% if entry.forSale%}
+		{% if nF == 1 %}
+			{{entry.title}}
+			{% for asset in entry.featureImage %}
+				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+				{% endfor %}
+				{{entry.mediaDescription}}
+				{{entry.price}}
+				{{entry.paypalProductCode|raw}}
+				<br>
+			{% endif %}
+	{% endif %}
+	{% set nF = 1 %}
+	{% endfor %}
+  <div>
 {% endblock %}

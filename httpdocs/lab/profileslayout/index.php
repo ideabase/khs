@@ -2,9 +2,10 @@
     <?php include '../patterns/header.php';?>
 
     <?php include '../patterns/banner.php';?>
+    <?php include '../patterns/khshours.php';?>
     <main>
     <h1><span>Kent Historical Society</span> Board Members</h1>
-      <?php include '../patterns/para.php';?>
+      <?php include '../patterns/intropara.php';?>
 
 <div class="feature-section-background">
   <h1><span>The</span> Team</h1>

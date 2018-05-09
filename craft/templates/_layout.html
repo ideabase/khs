@@ -29,7 +29,13 @@
 			{# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
 		{% endblock %}
 
+    {% include 'globals/hours.html' %}
+
+
 		<main role="main">
+      {% block subcontent %}
+        {# This is where the main body content of the page display.  Required on each template. #}
+      {% endblock %}
 			{% block content %}
 				 {# This is where the main body content of the page display.  Required on each template. #}
 			{% endblock %}
@@ -37,7 +43,7 @@
 
 		{% include 'globals/footer.html' %}
 
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,700|Lato:300,400,700" rel="stylesheet">
   <link href="{{ siteUrl }}assets/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>

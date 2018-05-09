@@ -1,3 +1,61 @@
-p {
-  text-align: left;
+h1 {
+  font-weight: 100;
+}
+h1 span {
+  font-family: $serif;
+  font-weight: bold;
+}
+
+.introduction{
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 1.7em;
+}
+
+.quote-page-quote {
+  padding: 2.6rem 2.2rem 2rem 3.6rem;
+  width: 20rem;
+  position: relative;
+  margin: 0 2rem 2rem 0;
+  float: right;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+ border: 1px solid ;
+
+}
+
+.quote-page-quote br { display: none; }
+.quote-page-quote:before, .quote-page-quote:after {
+  content: "“";
+  font-size: 400%;
+  position: absolute;
+  color: $green;
+}
+
+.quote-page-quote:before{
+  top: .25rem;
+  left: .5rem;
+}
+
+.quote-page-quote:after {
+  content: "”";
+  bottom: -3rem;
+  right: 3rem;
+}
+
+.text-link {
+  color: $green;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  h5 {
+    padding: 0 2.5em;
+  }
+
 }

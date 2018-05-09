@@ -1,7 +1,3 @@
-{% if hoursOfOperation.daysAndHours | length %}
-    <ul>
-        {% for row in hoursOfOperation.daysAndHours %}
-            <li>{{ row.days }} - {{ row.hours }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
+<div class="hours">
+  <h3 class="hours-h3">{{ hoursOfOperation.daysAndHours }}</h3>
+</div>

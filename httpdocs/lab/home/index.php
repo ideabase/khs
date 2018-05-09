@@ -11,12 +11,13 @@
     <?php include '../patterns/header.php';?>
 
     <?php include '../patterns/banner.php';?>
+    <?php include '../patterns/khshours.php';?>
 <body>
     <main>
       <h1><span>Our</span> Mission</h1>
-      <?php include '../patterns/para.php';?>
-      <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+      <?php include '../patterns/intropara.php';?>
+
+
 
 <div class="feature-section-background">
     <?php include '../patterns/feature1.php';?>

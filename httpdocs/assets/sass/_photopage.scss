@@ -1,9 +1,9 @@
 .pictures{
   display: block;
   width: 200px;
-  height: 200px;
+  //height: 200px;
   float: left;
-  margin:15px;
+  // margin:15px;
   position: relative;
   overflow: hidden;
   &:hover{
@@ -15,7 +15,7 @@
 
 figcaption{
   position: absolute;
-  width: 100%;
+  //width: 100%;
   height:100%;
   padding: 13px 27px;
   top: 155px;
@@ -27,10 +27,10 @@ figcaption{
 .photo-heavy-ul {
   padding: .5vw;
   font-size: 0;
-  display: -ms-flexbox;
+  /* display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;*/
   flex-flow: row wrap;
   display: -webkit-box;
   display: flex;
@@ -39,8 +39,8 @@ figcaption{
   -webkit-box-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  width: 200px;
-  margin: .5vw;
+  width: 33%;
+  //margin: .5vw;
 }
 .photo-heavy-ul li figure {
   width: 100%;
