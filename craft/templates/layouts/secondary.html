@@ -8,6 +8,24 @@
 
 {% block content %}
 
+      <div class="feature-section-1">
+        <div class="feature-1">
+          {% for asset in entry.featureImage %}
+            <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+          {% endfor %}
+        </div>
+        <div class="feature-2">
+          <h1>{{entry.title}}</h1>
+          {% if entry.teaserText %}
+            {{ entry.teaserText }}
+          {% else %}
+            {{ entry.body}}
+          {% endif %}
+          <a href="{{entry.url}}" class="feature-button">Learn More</a>
+        </div>
+      </div>
+
+{#
 <div class="feature-section-1">
   {{ entry.body }}
   <div class="feature-1">
@@ -15,14 +33,14 @@
         <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
       {% endfor %}
   </div>
-{#
+
   <div class="feature-2">
     {{ entry.secondBody }}
     <button type="button" class="feature-button">This is a button </button>
   </div>
-#}
-</div>
 
+</div>
+#}
 
 <div class="feature-section-background">
   <h1>{{ entry.featuredTitle }}</h1>
