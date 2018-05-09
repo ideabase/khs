@@ -12,12 +12,14 @@
     display: flex;
     .feature-1 {
       order: 1;
+      width: 40%;
     }
   }
   .feature-section-2 {
     display: flex;
     .feature-1 {
       order: 1;
+      width: 40%;
     }
   }
 }
@@ -28,6 +30,7 @@
 
   @media screen and (min-width: 600px) {
     padding-right: 2em;
+    width: 60%;
     h2 {
       text-align: left;
     }
