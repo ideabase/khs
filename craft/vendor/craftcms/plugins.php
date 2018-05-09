@@ -47,25 +47,6 @@ return array (
     'hasCpSettings' => false,
     'hasCpSection' => true,
   ),
-  'craftcms/redactor' => 
-  array (
-    'class' => 'craft\\redactor\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/redactor/src',
-    'handle' => 'redactor',
-    'aliases' => 
-    array (
-      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
-    ),
-    'name' => 'Redactor',
-    'version' => '2.0.0.1',
-    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
-    'developer' => 'Pixel & Tonic',
-    'developerUrl' => 'https://pixelandtonic.com/',
-    'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/redactor',
-    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
-    'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
-  ),
   'mmikkel/cp-field-inspect' => 
   array (
     'class' => 'mmikkel\\cpfieldinspect\\CpFieldInspect',
@@ -85,5 +66,50 @@ return array (
     'changelogUrl' => 'https://raw.githubusercontent.com/mmikkel/CpFieldInspect-Craft/master/CHANGELOG.md',
     'hasCpSettings' => false,
     'hasCpSection' => false,
+  ),
+  'workingconcept/craft-cloudflare' => 
+  array (
+    'class' => 'workingconcept\\cloudflare\\Cloudflare',
+    'basePath' => $vendorDir . '/workingconcept/craft-cloudflare/src',
+    'handle' => 'cloudflare',
+    'aliases' => 
+    array (
+      '@workingconcept/cloudflare' => $vendorDir . '/workingconcept/craft-cloudflare/src',
+    ),
+    'name' => 'Cloudflare',
+    'version' => '0.2.0',
+    'schemaVersion' => '1.0.0',
+    'description' => 'Purge Cloudflare caches from Craft.',
+    'developer' => 'Working Concept',
+    'developerUrl' => 'https://workingconcept.com/',
+    'documentationUrl' => 'https://github.com/workingconcept/cloudflare-craft-plugin/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/workingconcept/cloudflare-craft-plugin/master/CHANGELOG.md',
+    'downloadUrl' => 'https://github.com/workingconcept/cloudflare-craft-plugin/archive/master.zip',
+    'hasCpSettings' => true,
+    'hasCpSection' => false,
+    'components' => 
+    array (
+      'cloudflareService' => 'workingconcept\\cloudflare\\services\\CloudflareService',
+      'rulesService' => 'workingconcept\\cloudflare\\services\\RulesService',
+    ),
+  ),
+  'craftcms/redactor' => 
+  array (
+    'class' => 'craft\\redactor\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/redactor/src',
+    'handle' => 'redactor',
+    'aliases' => 
+    array (
+      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+    ),
+    'name' => 'Redactor',
+    'version' => '2.0.1',
+    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
+    'developer' => 'Pixel & Tonic',
+    'developerUrl' => 'https://pixelandtonic.com/',
+    'developerEmail' => 'support@craftcms.com',
+    'documentationUrl' => 'https://github.com/craftcms/redactor',
+    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
+    'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
   ),
 );
