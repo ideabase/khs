@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-
+<button>Filter</button>
 {% for entry in craft.entries.section('historicalMedia').limit(1) %}
 	{% if entry.forSale%}
 		{{entry.title}}
