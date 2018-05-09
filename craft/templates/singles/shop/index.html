@@ -18,7 +18,6 @@
 			{{entry.paypalProductCode|raw}}
 	{% endif %}
 {% endfor %}
-<div>
 <br><br>
 {% set nF = 0 %}
 {% for entry in craft.entries.section('historicalMedia')%}
@@ -36,4 +35,5 @@
 	{% endif %}
 	{% set nF = 1 %}
 	{% endfor %}
+  <div>
 {% endblock %}
