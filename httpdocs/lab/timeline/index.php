@@ -28,9 +28,9 @@
   <div>
     <h2> This is a Section Headline </h2>
     <?php include '../patterns/para.php';?>
-    <div>
-      <?php include '../patterns/fact.php';?>
-      <?php include '../patterns/fact.php';?>
+    <div class="timeline">
+      <?php include '../patterns/timeline-image.php';?>
+      <?php include '../patterns/timeline-text.php';?>
       <?php include '../patterns/fact.php';?>
       <?php include '../patterns/fact.php';?>
       <?php include '../patterns/fact.php';?>

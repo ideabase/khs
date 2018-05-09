@@ -1,3 +1,14 @@
+.timeline {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.timeline-text {
+  color: blue;
+}
+
+
+
 .quote-page-quote {
   padding: 2.6rem 2.2rem 2rem 3.6rem;
   width: 20rem;
