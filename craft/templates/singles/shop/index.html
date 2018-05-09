@@ -6,17 +6,19 @@
 
 {% block content %}
 <button>Filter</button>
-{% for entry in craft.entries.section('historicalMedia').limit(1) %}
-	{% if entry.forSale%}
-		{{entry.title}}
-		{% for asset in entry.featureImage %}
-			<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-			{% endfor %}
+<div class="shop-items">
+  {% for entry in craft.entries.section('historicalMedia').limit(1) %}
+	 {% if entry.forSale%}
+		 {{entry.title}}
+		   {% for asset in entry.featureImage %}
+			    <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+			 {% endfor %}
 			{{entry.mediaDescription}}
 			{{entry.price}}
 			{{entry.paypalProductCode|raw}}
 	{% endif %}
 {% endfor %}
+<div>
 <br><br>
 {% set nF = 0 %}
 {% for entry in craft.entries.section('historicalMedia')%}
