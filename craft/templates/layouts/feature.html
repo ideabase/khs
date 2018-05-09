@@ -1,14 +1,12 @@
 {# This is the feature layout - contains lead paragraph, lead featured post and 2 additional features (without images) #}
 
 {% extends '_layout' %}
-
 {% block subheader %}
   {% include 'globals/banner.html' %}
 {% endblock %}
 
-{% block content %}
-  {% entry.body %}
+{% block subcontent %}
+  {{ entry.body }}
   {% include 'globals/featureItem.html' %}
-  {% entry.featuredTitle %}
-  {% include 'globals/profile-card.html' %} {# Probably isn't correct #}
+  {{ entry.featuredTitle }}
 {% endblock %}

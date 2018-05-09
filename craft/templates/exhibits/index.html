@@ -3,14 +3,7 @@
 {% block content %}
 
 {% for entry in craft.entries.section('exhibits') %}
-<a href="{{entry.url}}">{{entry.title}}</a>
-{{entry.startTime}}
-{{entry.endTime}}
-{% set image = entry.featureImage.first() %}
-            <img src="{{ image.url }}"
-                 alt="{{ entry.imageCaption }}"/>
-{{entry.imageCaption}}
-{{ entry.body }}
+{% include 'globals/noImageTeaser.html' %}
 {% endfor %}
 
 {% endblock %}

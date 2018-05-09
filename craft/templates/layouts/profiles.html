@@ -4,17 +4,13 @@
 
 {% block subheader %}
   {% include 'globals/banner.html' %}
+  <h1>{{ entry.headline }}</h1>
+  {{ entry.body }}
+  {# add secondary image #}
 {% endblock %}
 
 {% block content %}
-  <h1>{{ entry.headline }}</h1>
-  {{ entry.body }}
 
-  <div class="feature-section-background">
-    <h1>{{ entry.subHeadline }}</h1><!-- this is a h1, but have to use subHeadline field for now -->
-    <div class="feature-section-3">
-      {% include 'globals/profile-card.html' %}
-    </div>
 
     <!-- This is where the feature-links section goes. Check with Chris about this. -->
 
