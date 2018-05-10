@@ -23,6 +23,7 @@
 {% for entry in craft.entries.section('historicalMedia')%}
 	{% if entry.forSale%}
 		{% if nF == 1 %}
+    <div class="item">
 			{{entry.title}}
 			{% for asset in entry.featureImage %}
 				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
@@ -31,6 +32,7 @@
 				{{entry.price}}
 				{{entry.paypalProductCode|raw}}
 				<br>
+      </div>
 			{% endif %}
 	{% endif %}
 	{% set nF = 1 %}
