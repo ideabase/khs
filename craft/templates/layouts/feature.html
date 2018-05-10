@@ -6,7 +6,9 @@
 {% endblock %}
 
 {% block subcontent %}
-  {{ entry.body }}
+<div class="introduction">
+  <p>{{ entry.blockquote }}</p>
+</div>
   {% include 'globals/featureItem.html' %}
-  {{ entry.featuredTitle }}
+    <h1>{{ entry.featuredTitle }}</h1>
 {% endblock %}

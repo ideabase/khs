@@ -6,7 +6,9 @@
   {% include 'globals/banner.html' %}
   <h1>{{ entry.headline }}</h1>
   {{ entry.body }}
-  {# add secondary image #}
+  {% for asset in entry.secondaryImage %}
+    <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+  {% endfor %}
 {% endblock %}
 
 {% block content %}
