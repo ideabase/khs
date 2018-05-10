@@ -10,7 +10,7 @@
 
       <div class="feature-section-1">
         <div class="feature-1">
-          {% for asset in entry.featureImage %}
+          {% for asset in entry.secondaryImage %}
             <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
           {% endfor %}
         </div>
@@ -21,14 +21,9 @@
       </div>
 
       <div class="feature-section-1">
-        <div class="feature-1">
-          {% for asset in entry.secondaryImage %}
-            <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-          {% endfor %}
-        </div>
         <div class="feature-2">
           {{ entry.secondBody }}
-        </div>        
+        </div>
       </div>
 
       {% include 'globals/featureItem.html' %}

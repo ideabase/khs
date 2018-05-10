@@ -30,14 +30,14 @@
 
 {% block content %}
 {{ category.body }}
-
+{#
 {% set entries = craft.entries.relatedTo(category) %}
   <ul>
     {% for entry in entries %}
       <li>{{ entry.title }}</li>
     {% endfor %}
   </ul>
-
+#}
 {% if category.layout == "timeline" %}
   {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
   {{ event.title }}

@@ -15,7 +15,18 @@
   <h1>Board Members</h1>
   {% for entry in craft.entries.section('teamMembers') %}
     {% if entry.role == "boardMembers" %}
-      {% include 'globals/noImageTeaser.html' %}
+      {# {% include 'globals/noImageTeaser.html' %} need this to display without learn more putting code here for now #}
+      <div class="feature-links">
+
+        <h1>{{ entry.featuredTitle }}</h1>
+        <div class="feature">
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.body }}</p>
+        {% if entry.url %}
+        {% endif %}
+        </div>
+
+      </div>
     {% endif %}
   {% endfor %}
 
