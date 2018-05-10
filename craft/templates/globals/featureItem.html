@@ -9,7 +9,7 @@
         <div class="feature-2">
           <h2>Now Featuring: {{entry.title}}</h2>
           {% if entry.teaserText %}
-            {{ entry.teaserText }}
+            <p>{{ entry.teaserText }}</p>
           {% else %}
             {{ entry.body}}
           {% endif %}
