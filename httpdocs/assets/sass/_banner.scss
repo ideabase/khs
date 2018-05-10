@@ -36,13 +36,24 @@
     width: 2px;
     position: absolute;
     top: 0;
-    left: 80%;
+    left: 390px;
     transform:
            translateY(0px)
            translateX(5px)
-           rotate(27deg);
+           rotate(25deg);
     @media screen and (min-width: 600px) {
-      left: 47%;
+      left: 500px;
+      transform:
+             translateY(0px)
+             translateX(5px)
+             rotate(26deg);
+    }
+    @media screen and (min-width: 800px) {
+      left: 700px;
+      transform:
+             translateY(0px)
+             translateX(5px)
+             rotate(35deg);
     }
   }
   img {
@@ -58,7 +69,7 @@
   bottom: 30px;
   left: 0;
   padding: 0.5em 1em;
-  width: 350px;
+  width: 370px;
   text-align: left;
 }
 
