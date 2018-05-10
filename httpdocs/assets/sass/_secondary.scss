@@ -62,7 +62,7 @@
 
 }
 .teaser-block {
-  max-width: 370px;
+  width: 100%;
   text-align: center;
   display: inline-block;
   margin-top: 2em;
@@ -79,6 +79,7 @@
     justify-content: space-around;
     max-width: 1000px;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 
   .feature-links {
@@ -87,6 +88,6 @@
   }
 
   .teaser-block {
-    max-width: 200px;
+    width: 30%;
   }
 }
