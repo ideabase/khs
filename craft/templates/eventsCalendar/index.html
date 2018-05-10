@@ -1,11 +1,11 @@
 {% extends "layouts/feature" %}
 
 {% block content %}
-<p>{{entry.subHeadline}}</p>
+<h2>{{entry.subHeadline}}</h2>
 <p>{{entry.body}}</p>
   {% for entry in craft.entries.section('events') %}
     {% if craft.entries.section('events').first %}
-      {{entry.title}}
+      <h3>{{entry.title}}</h3>
       {{entry.body}}
       {{entry.date  | date('M j, Y')}}
       {{entry.eventLocation}}
@@ -16,7 +16,7 @@
       {% endfor %}
     {% endif %}
     {% if not craft.entries.section('events').first %}
-      {{entry.title}}
+      <h3>{{entry.title}}</h3>
       {{entry.body}}
       {{entry.date  | date('M j, Y')}}
       {{entry.eventLocation}}
