@@ -29,19 +29,22 @@
   <div>
     <h2> This is a Section Headline </h2>
     <?php include '../patterns/para.php';?>
-    <div class="timeline">
-      <?php include '../patterns/timeline-image.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-image.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-image.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/timeline-text.php';?>
+    <div class="center-timeline">
+      <div class="timeline">
+        <?php include '../patterns/timeline-image.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-image.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-image.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+        <?php include '../patterns/timeline-text.php';?>
+      </div>
   </div>
+</div>
 </main>
     <!--Included Footer -->
     <?php include '../patterns/footer.php';?>

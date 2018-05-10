@@ -1,17 +1,20 @@
+.center-timeline {
+  margin: auto;
+}
+
 .timeline {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
   grid-auto-rows: 100px;
   grid-auto-flow: dense;
-  margin: 0 auto;
+  grid-gap: 5px;
 }
 .tile {
-  margin: 5px;
+  // margin: 5px;
   overflow: hidden;
 }
-
 .timeline-image img {
-  min-height: 400px;
+  min-height: 425px;
   width: auto;
   overflow: hidden;
   object-fit: cover;
@@ -23,6 +26,7 @@
   position: relative;
   height: 100%;
   overflow: hidden;
+  // padding: 5px;
 }
 .timeline-text {
   padding: 10px;
