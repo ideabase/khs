@@ -29,6 +29,15 @@ header {
     margin-left: .5em;
     text-indent: -99999px;
     overflow: hidden;
+    background-color: $green;
+    background-image: url(../img/ui/search-white.svg);
+    background-size: 40% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: .3s ease-in-out all;
+    &:hover {
+      background-color: $blue;
+    }
   }
 }
 ul {
@@ -47,7 +56,7 @@ a {
     display: flex;
     align-items: flex-start;
     width: inherit;
-    max-width: 525px;
+    max-width: 490px;
   }
 }
 
@@ -63,7 +72,7 @@ a {
 }
 
 .nav-main li {
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .nav-links {
@@ -91,7 +100,7 @@ a {
       a:visited {
         display: block;
         padding: 0 50px;
-        line-height: 50px;
+        line-height: 60px;
         background: $green;
         color: white;
         text-decoration: none;
@@ -146,7 +155,8 @@ a {
     color: gray;
     border: 1px solid gray;
     border-radius: 5px;
-    padding: 0.5em;
+    padding: 0.5em 0.6em;
+    font-size: .9em;
     &:hover {
        color: white;
        background-color: $green;
@@ -294,7 +304,8 @@ a {
   @media screen and (min-width: $breakpoint) {
     border: none;
     align-items: center;
-    padding: 1.25em 2em
+    padding: 1.25em 2em;
+    min-height: 100px;
   }
 }
 
@@ -305,6 +316,7 @@ a {
   margin: 0;
   margin-left: 2em;
 }
+
 
 
 // Removes blue border on search bar
