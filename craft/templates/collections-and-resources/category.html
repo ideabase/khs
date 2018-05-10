@@ -34,7 +34,7 @@
 {% set entries = craft.entries.relatedTo(category) %}
   <ul>
     {% for entry in entries %}
-      <li><a href="{{entry.url}}">{{ entry.title }}</a></li>
+      <li><a href="{{entry}}">{{ entry.title }}</a></li>
     {% endfor %}
   </ul>
 
@@ -43,7 +43,7 @@
   {{ event.title }}
   {{ event.body }}
     {% for asset in event.featureImage %}
-      <img src="{{asset.url}}" alt="{{asset.title}}" / >
+      <img src="{{asset]}}" alt="{{asset.title}}" / >
     {% endfor %}
   {% endfor %}
 {% endif %}
