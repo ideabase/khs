@@ -32,11 +32,15 @@
     <div class="timeline">
       <?php include '../patterns/timeline-image.php';?>
       <?php include '../patterns/timeline-text.php';?>
-      <?php include '../patterns/fact.php';?>
-      <?php include '../patterns/fact.php';?>
-      <?php include '../patterns/fact.php';?>
-      <?php include '../patterns/fact.php';?>
-      <?php include '../patterns/fact.php';?>
+      <?php include '../patterns/timeline-text.php';?>
+      <?php include '../patterns/timeline-text.php';?>
+      <?php include '../patterns/timeline-image.php';?>
+      <?php include '../patterns/timeline-text.php';?>
+      <?php include '../patterns/timeline-image.php';?>
+      <?php include '../patterns/timeline-text.php';?>
+      <?php include '../patterns/timeline-text.php';?>
+      <?php include '../patterns/timeline-text.php';?>
+      <?php include '../patterns/timeline-text.php';?>
   </div>
 </main>
     <!--Included Footer -->
