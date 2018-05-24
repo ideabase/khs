@@ -35,7 +35,7 @@
 {% set entries = craft.entries.relatedTo(category) %}
   <ul>
     {% for entry in entries %}
-      <li>{{ entry.title }}</li>
+      <li><a href="{{entry.url}}">{{ entry.title }}</a></li>
     {% endfor %}
   </ul>
 
