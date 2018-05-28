@@ -1,4 +1,23 @@
-<div class="home-card">
+<div class="cards">
+{% for entry in entry.featuredItems %}
+<div class="card-container">
+  <figure class="card">
+    {% for asset in entry.featureImage %}
+      <div class="card__image" style="background-image:url({{ asset.url('featureItems') }})">
+      </div>
+    {% endfor %}
+    <div class="card__title__container">
+      <h5 class="card__title">{{ entry.title }}</h5>
+      <figcaption class="card__figure__large"><a href="{{ entry.url }}">{{ entry.teaserText}}</a></figcaption>
+    </div>
+  </figure>
+  <figcaption class="card__figure"><a href="{{ entry.url }}">{{ entry.teaserText}}</a></figcaption>
+  <a class="card__link" href="{{ entry.url }}">See {{ entry.title}}</a>
+</div>
+{% endfor %}
+</div>
+
+<!-- <div class="home-card">
 {% for entry in entry.featuredItems %}
 <div class="profile-card">
   <figure class="holder">
@@ -15,4 +34,4 @@
   </figure>
 </div>
 {% endfor %}
-</div>
+</div> -->

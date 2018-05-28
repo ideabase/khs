@@ -13,11 +13,12 @@
 .banner-h2 {
   font-family: $sans;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   text-align: left;
   margin-top: 0;
   padding-top: .1em;
   margin-bottom: 0;
+  color: $blue;
 }
 
 .banner-h1 span {
@@ -31,7 +32,7 @@
   overflow: hidden;
   margin: .25em;
   overflow: hidden;
-  &:after {
+  /*&:after {
     content: "";
     top: 0;
     right: 0;
@@ -44,6 +45,9 @@
     transform: rotate(30deg);
     background: white;
     z-index: 2;
+  }*/
+  @media screen and (min-width: 600px) {
+    margin: .75em;
   }
   img {
     width: 100%;
@@ -52,12 +56,11 @@
 
 .banner {
   background-image: url('../img/ui/banner-background.svg');
-  background-size: 100% auto;
   background-repeat: no-repeat;
   position: absolute;
   bottom: 50px;
   left: 0;
-  padding: 1.5em 1em;
+  padding: 1.75em 1em;
   width: 90%;
   max-width: 500px;
   background-size: auto;
@@ -78,6 +81,6 @@
   }
 
   .banner-h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }

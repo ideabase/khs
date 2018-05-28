@@ -28,6 +28,15 @@
 })(jQuery); // end jQuery
 // End Script for Dropdown Menu
 
+// Card Accordion //
+
+$(document).ready(function(){
+    $('.card-container').click(function(){
+      $(this).toggleClass('active');
+      $('.card-container').not($(this)).removeClass('active');
+    });
+});
+
 $(".banner-h1").html(function(){
   var text= $(this).text().trim().split(" ");
   var first = text.shift();

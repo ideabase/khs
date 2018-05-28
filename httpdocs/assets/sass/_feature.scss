@@ -23,8 +23,6 @@
 }
 
 .feature-1 {
-  width: calc(100% + 4em);
-  margin-left: -2em;
   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
   img {
     width: 100%;
@@ -32,11 +30,10 @@
   @media screen and (min-width: 800px) {
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
     margin-left: 0;
-    width: 55%;
-    position:absolute;
-    top: -5%;
+    width: 46%;
     right: 0;
-    max-width: 520px;
+    transform: scale(1.2);
+    min-width: 400px;
   }
 }
 
@@ -49,6 +46,7 @@
   }
   .feature-section-2 {
     display: flex;
+
     .feature-1 {
       order: 1;
       width: 40%;
@@ -59,7 +57,9 @@
 
 .feature-2 {
   text-align: left;
-
+  p {
+    font-weight: 300;
+  }
   @media screen and (min-width: 800px) {
     padding-right: 2em;
     width: 50%;
@@ -91,13 +91,13 @@
 .feature-section-background {
   background-color: $gray;
   padding: 0 2em 0 2em;
-  width: 90%;
   margin: 0 auto;
   margin-bottom: 5em;
   @media screen and (min-width: 600px) {
     padding-right: 0;
-    padding: 0 0em 2em 3em;
+    padding: 0 0em 0em 3em;
     position: relative;
+    margin-bottom: 6em;
     /*&:before {
       width: 10%;
       height: 135%;
