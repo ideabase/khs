@@ -6,11 +6,32 @@ h1 span {
   font-weight: bold;
 }
 
-.introduction{
+h2 {
+  text-align: center;
+  font-size: 1.75em;
+  span {
+    font-family: $serif;
+    color: $yellow;
+  }
+  @media screen and (min-width: 600px) {
+    font-size: 1.9em;
+  }
+}
+
+h3 {
   font-size: 1.2em;
-  max-width: 700px;
+  @media screen and (min-width: 600px) {
+    font-size: 1.3em;
+  }
+}
+
+.introduction{
+  font-size: 1.1em;
+  max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 1.7em;
+  padding: 1em;
+  margin-bottom: 3em;
+  line-height: 1.45;
 }
 
 .quote-page-quote {

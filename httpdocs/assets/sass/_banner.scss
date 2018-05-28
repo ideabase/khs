@@ -3,58 +3,47 @@
 }
 
 .banner-h1 {
-  font-family: $sans;
+  font-family: $serif;
   font-size: 2em;
   margin-bottom: 0;
   padding-bottom: 0;
+  margin-top: 0;
 }
 
 .banner-h2 {
   font-family: $sans;
   font-size: 1em;
-  font-weight: 200;
+  font-weight: 300;
   text-align: left;
   margin-top: 0;
-  padding-top: .25em;
+  padding-top: .1em;
+  margin-bottom: 0;
 }
 
 .banner-h1 span {
   font-family: $serif;
   font-weight: 900;
+  color: $green;
 }
 
 .top-banner {
   position: relative;
-  max-height: 500px;
   overflow: hidden;
-  min-height: 300px;
-  background-color: gray;
+  margin: .25em;
+  overflow: hidden;
   &:after {
     content: "";
-    background-color: white;
-    height: 100%;
-    width: 2px;
-    position: absolute;
     top: 0;
-    left: 390px;
-    transform:
-           translateY(0px)
-           translateX(5px)
-           rotate(25deg);
-    @media screen and (min-width: 600px) {
-      left: 500px;
-      transform:
-             translateY(0px)
-             translateX(5px)
-             rotate(26deg);
-    }
-    @media screen and (min-width: 800px) {
-      left: 700px;
-      transform:
-             translateY(0px)
-             translateX(5px)
-             rotate(35deg);
-    }
+    right: 0;
+    position: absolute;
+    height: 210%;
+    width: 120%;
+    margin-right: -52%;
+    display: block;
+    opacity: 0.15;
+    transform: rotate(30deg);
+    background: white;
+    z-index: 2;
   }
   img {
     width: 100%;
@@ -62,35 +51,33 @@
 }
 
 .banner {
-  background-color: rgba(#ffffff,.7);
-  //opacity: 0.5;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  background-image: url('../img/ui/banner-background.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 0;
-  padding: 0.5em 1em;
-  width: 370px;
+  padding: 1.5em 1em;
+  width: 90%;
+  max-width: 500px;
+  background-size: auto;
+  background-position: top right;
   text-align: left;
+  z-index: 200;
+  @media screen and (min-width: 600px) {
+    padding-left: 3em;
+    max-width: 600px;
+    bottom: 70px;
+  }
 }
 
 @media screen and (min-width: 600px) {
 
-  .banner {
-    width: 500px;
-    padding: 1em 2em 1em 10%;
-  }
-
   .banner-h1 {
-    font-size: 2.2em;
+    font-size: 2.4em;
   }
 
   .banner-h2 {
     font-size: 1.2em;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .banner {
-    width: 700px;
   }
 }

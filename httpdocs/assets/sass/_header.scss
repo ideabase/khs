@@ -1,6 +1,7 @@
 header {
   background-color: $gray;
   font-family: $sans;
+  margin: .25em;
 }
 
 .logo {
@@ -51,12 +52,12 @@ a {
 
 .callout-header-navigation {
   width: 50%;
-  max-width: 250px;
+  max-width: 200px;
   @media screen and (min-width: $breakpoint) {
     display: flex;
     align-items: flex-start;
     width: inherit;
-    max-width: 490px;
+    max-width: 500px;
   }
 }
 
@@ -180,7 +181,7 @@ a {
   color: $blue;
   position: absolute;
   display: none;
-  z-index: 1;
+  z-index: 300;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -222,46 +223,25 @@ a {
 #nav-toggle {
   position: absolute;
   display: flex;
-  right: 22px;
-  bottom: 25px;
+  right: 18px;
+  bottom: 15px;
   width: 85px;
+  background-color: white;
+  border: 1px solid $blue;
+  color: $blue;
+  text-transform: uppercase;
+  padding: .35em .75em;
+  font-size: .95em;
+  border-radius: 3px;
   .label {
-    margin-top: -8px;
     font-family: $sans;
   }
-  cursor: pointer;
-  .icon,
-  .icon:before,
-  .icon:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: $blue;
-    position: absolute;
+  &:after {
+    content: ">";
     display: block;
-    right: 0;
-    content: '';
-    transition: all 300ms ease-in-out;
-  }
-  .icon:before {
-    top: -10px;
-  }
-  .icon:after {
-    bottom: -10px;
-  }
-  &.active .icon {
-    background-color: transparent;
-    &:before,
-    &:after {
-      top: 0;
-    }
-    &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
+    height: 100%;
+    width: 15px;
+    margin-left: 10px;
   }
 }
 
@@ -299,7 +279,6 @@ a {
   text-align: left;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px $green solid;
   padding: 1em;
   @media screen and (min-width: $breakpoint) {
     border: none;

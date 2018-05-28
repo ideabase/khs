@@ -1,14 +1,15 @@
 .hours {
-  background-color: $blue;
-  clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%);
-  padding: 0.5em 1em;
-  width: 80%;
+  background-image: url('../img/ui/secondary-background.svg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.25em 1em;
+  width: 90%;
   margin: auto 0 auto auto;
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 700px) {
     padding: 0.07em 0.2em;
-    width: 50%;
+    width: 60%;
     max-width: 600px;
-    clip-path: polygon(6% 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
 

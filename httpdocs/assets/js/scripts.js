@@ -34,7 +34,7 @@ $(".banner-h1").html(function(){
   return (text.length > 0 ? "<span class='first'>"+ first + "</span> " : first) + text.join(" ");
 });
 
-$("main h1").html(function(){
+$("main h2").html(function(){
   var text= $(this).text().trim().split(" ");
   var first = text.shift();
   return (text.length > 0 ? "<span class='first'>"+ first + "</span> " : first) + text.join(" ");
