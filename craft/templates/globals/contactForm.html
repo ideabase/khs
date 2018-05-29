@@ -32,7 +32,7 @@
 
 
     <h3><label for="message">Message</label></h3>
-    <textarea rows="10" cols="40" id="message" name="message">{{ message.message ?? '' }}</textarea>
+    <textarea rows="10" cols="40" id="message" name="message[body]">{{ message.message.body ?? '' }}</textarea>
     {{ message is defined and message ? errorList(message.getErrors('message')) }}
 
     <input type="submit" value="Send">
