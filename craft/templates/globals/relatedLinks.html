@@ -1,0 +1,13 @@
+{% for block in entry.relatedLinksDownloads %}
+
+    {% if block.type == "externalLink" %}
+
+        <a href="{{block.linkUrl}}">{{block.linkName}}</a>
+
+    {% elseif block.type == "fileDownload" %}
+        {% for files in block.file %}
+          <a href="{{files.url}}">{{block.fileName}}</a>
+        {% endfor %}
+    {% endif %}
+
+{% endfor %}
