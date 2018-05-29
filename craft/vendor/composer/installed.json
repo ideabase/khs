@@ -371,6 +371,59 @@
         }
     },
     {
+        "name": "craftcms/contact-form",
+        "version": "2.1.1",
+        "version_normalized": "2.1.1.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/craftcms/contact-form/zipball/84a76265f1258e9b9450ae4df5c80db970c16e39",
+            "reference": "84a76265f1258e9b9450ae4df5c80db970c16e39",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.0.0-beta.27"
+        },
+        "time": "2017-12-05T00:33:27+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "name": "Contact Form",
+            "handle": "contact-form",
+            "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form/v2/CHANGELOG.md",
+            "downloadUrl": "https://github.com/craftcms/contact-form/archive/v2.zip",
+            "components": {
+                "mailer": "craft\\contactform\\Mailer"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "craft\\contactform\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pixel & Tonic",
+                "homepage": "https://pixelandtonic.com/"
+            }
+        ],
+        "description": "Add a simple contact form to your Craft CMS site",
+        "keywords": [
+            "cms",
+            "craftcms",
+            "yii2"
+        ],
+        "support": {
+            "email": "support@craftcms.com",
+            "issues": "https://github.com/craftcms/contact-form/issues?state=open",
+            "source": "https://github.com/craftcms/contact-form",
+            "docs": "https://github.com/craftcms/contact-form",
+            "rss": "https://github.com/craftcms/contact-form/commits/v2.atom"
+        }
+    },
+    {
         "name": "craftcms/oauth2-craftid",
         "version": "1.0.0.1",
         "version_normalized": "1.0.0.1",
