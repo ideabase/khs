@@ -34,9 +34,8 @@
       </h5>
       <!-- Email Address Output -->
       {% if footer.emailAddress %}
-        {{ footer.emailAddress }}
+        <h5><a href="mailto:{{ footer.emailAddress }}">{{ footer.emailAddress }}</a></h5>
       {% endif %}
-      <h5>Kent Historical Society</h5>
       <!-- Address Output -->
       <h5>{% if footer.address %}
         {{ footer.address }}
