@@ -37,10 +37,11 @@
         <h5><a href="mailto:{{ footer.emailAddress }}">{{ footer.emailAddress }}</a></h5>
       {% endif %}
       <!-- Address Output -->
-      <h5>{% if footer.address %}
-        {{ footer.address }}
+      <!-- Concatenates the static google url to the footer address value in craft and opens up that address in google maps-->
+      {% if footer.address %}
+      {% set staticGoogleUrl = 'https://www.google.com/maps/place/' %}
+        <h5><a href="{{ staticGoogleUrl ~ footer.address |replace({' ': '+', ',': '+', '.': '+'}) }}">{{ footer.address }}</a></h5>
       {% endif %}
-      </h5>
     </div>
 
     <div class="footer-hours">
