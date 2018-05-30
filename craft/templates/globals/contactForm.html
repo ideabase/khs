@@ -24,10 +24,16 @@
     {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
 
     <h3>What services are you interested in?</h3>
-<label><input type="checkbox" name="message[Services][]" value="Design"> Design</label>
-<label><input type="checkbox" name="message[Services][]" value="Development"> Development</label>
-<label><input type="checkbox" name="message[Services][]" value="Strategy"> Strategy</label>
-<label><input type="checkbox" name="message[Services][]" value="Marketing"> Marketing</label>
+    {% if entry.section.handle == "volunteer" %}
+      <label><input type="checkbox" checked name="message[Services][]" value="Design">Volunteer</label>
+    {% else %}
+      <label><input type="checkbox" name="message[Services][]" value="Design">Volunteer</label>
+    {% endif %}
+<label><input type="checkbox" name="message[Services][]" value="Development"> Photos</label>
+<label><input type="checkbox" name="message[Services][]" value="Strategy"> Research</label>
+<label><input type="checkbox" name="message[Services][]" value="Marketing"> Collections</label>
+<label><input type="checkbox" name="message[Services][]" value="Marketing"> Schedule a Visit</label>
+<label><input type="checkbox" name="message[Services][]" value="Marketing"> General Question</label>
 
 
 
