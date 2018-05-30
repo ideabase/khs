@@ -2,6 +2,7 @@
 
 {% block content %}
 
+  <div class="searchResults">
   <h1>Search Results</h1>
 
   {% set query = craft.request.getParam('q') %}
@@ -9,14 +10,16 @@
 
   {% if entries|length %}
       <p>{{ entries|length }} results:</p>
-
       <ul>
           {% for entry in entries %}
-              <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+            {% if entry.teaserText %} <p>{{entry.teaserText}}</p> {% endif %}
+            {% if entry.featureImage %} <p><img src="{{ entry.featureImage }}"></p> {% endif %}
           {% endfor %}
       </ul>
   {% else %}
       <p>Your search for “{{ query }}” didn’t return any results.</p>
   {% endif %}
+  </div>
 
 {% endblock %}

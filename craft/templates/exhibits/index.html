@@ -2,8 +2,8 @@
 
 {% block content %}
 
-{% for entry in craft.entries.section('exhibits') %}
-{% include 'globals/noImageTeaser.html' %}
-{% endfor %}
+  {% for entry in craft.entries.section('exhibits') %}
+    {% include 'globals/noImageTeaser.html' %}
+  {% endfor %}
 
 {% endblock %}

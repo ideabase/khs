@@ -1,13 +1,13 @@
 {% extends '_layout' %}
 
 {% block content %}
-{{entry.title}}
-{{entry.startTime}}
-{{entry.endTime}}
-{% set image = entry.featureImage.first() %}
-            <img src="{{ image.url }}"
-                 alt="{{ entry.imageCaption }}"/>
-{{entry.imageCaption}}
-{{ entry.body }}
+  {{entry.title}}
+  {{entry.startTime}}
+  {{entry.endTime}}
+  {% set image = entry.featureImage.first() %}
+              <img src="{{ image.url }}"
+                   alt="{{ entry.imageCaption }}"/>
+  {{entry.imageCaption}}
+  {{ entry.body }}
 
 {% endblock %}
