@@ -17,7 +17,7 @@
               {% if entry.teaserText %} <p>{{entry.teaserText}}</p> {% endif %}
               {% if entry.featureImage %}
                 {% for image in entry.featureImage %}
-                  <img src="{{ image.url }}" alt="{{ image.title }}">
+                  <img src="{{ image.url('featureItems') }}" alt="{{ image.title }}">
                 {% endfor %}
               {% endif %}
           {% endfor %}

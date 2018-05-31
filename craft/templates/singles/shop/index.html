@@ -5,25 +5,21 @@
 {% endblock %}
 
 {% block content %}
-<button>Filter</button>
-<div class="shop-items">
-  {% for entry in craft.entries.section('historicalMedia').limit(1) %}
-	 {% if entry.forSale%}
-		 {{entry.title}}
-		   {% for asset in entry.featureImage %}
-			    <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-			 {% endfor %}
-			{{entry.mediaDescription}}
-			{{entry.price}}
-			{{entry.paypalProductCode|raw}}
-	{% endif %}
+{# Category names in Media Type category (mediaType) go here dynmically #}
+
+{% for category in craft.categories.group('mediaType') %}
+<input type="radio" id="{{category.slug}}" name="media" />
+<label for="{{category.slug}}">{{ category.title }}</label>
+
 {% endfor %}
-<br><br>
-{% set nF = 0 %}
+<input type="radio" id="reset" name="color"/>
+<label for="reset">Reset</label>
+
+
+<div class="shop-items">
 {% for entry in craft.entries.section('historicalMedia')%}
 	{% if entry.forSale%}
-		{% if nF == 1 %}
-    <div class="item">
+    <div class="item {% for type in entry.mediaType %}{{ type.slug }} {% endfor %}">
 			{{entry.title}}
 			{% for asset in entry.featureImage %}
 				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
@@ -31,11 +27,12 @@
 				{{entry.mediaDescription}}
 				{{entry.price}}
 				{{entry.paypalProductCode|raw}}
+        {% for type in entry.mediaType %}
+          {{ type.title }}
+        {% endfor %}
 				<br>
       </div>
 			{% endif %}
-	{% endif %}
-	{% set nF = 1 %}
 	{% endfor %}
   <div>
 {% endblock %}

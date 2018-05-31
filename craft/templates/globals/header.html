@@ -1,3 +1,4 @@
+{% cache globally %}
 <header>
   <div class="header-top">
     <!-- Logo goes here -->
@@ -42,7 +43,7 @@
                       <a href="{{ item.url }}">{{ entry.title }}</a>
                     {% endfor %}
                     {% ifchildren %}
-                        <ul class="nav-dropdown">
+                        <ul class="nav-dropdown dual-column">
                             {% children %}
                         </ul>
                     {% endifchildren %}
@@ -61,3 +62,4 @@
     </nav>
   </div>
 </header>
+{% endcache %}
