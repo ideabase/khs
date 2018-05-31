@@ -3,23 +3,44 @@
 {% block content %}
 
   <div class="searchResults">
-  <h1>Search Results</h1>
 
   {% set query = craft.request.getParam('q') %}
   {% set entries = craft.entries.search(query).order('score') %}
 
-  {% if entries|length %}
-      <p>{{ entries|length }} results:</p>
+  {% paginate craft.entries.section('not primaryNavigation', 'not secondaryNavigation').search(query).limit(10).order('score') as pageInfo, pageEntries %}
+
+  {% if pageEntries|length %}
+      <h1>{{ entries|length }} Search Results</h1>
       <ul>
-          {% for entry in entries %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-            {% if entry.teaserText %} <p>{{entry.teaserText}}</p> {% endif %}
-            {% if entry.featureImage %} <p><img src="{{ entry.featureImage }}"></p> {% endif %}
+          {% for entry in pageEntries %}
+              <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+              {% if entry.teaserText %} <p>{{entry.teaserText}}</p> {% endif %}
+              {% if entry.featureImage %}
+                {% for image in entry.featureImage %}
+                  <img src="{{ image.url }}" alt="{{ image.title }}">
+                {% endfor %}
+              {% endif %}
           {% endfor %}
       </ul>
   {% else %}
       <p>Your search for “{{ query }}” didn’t return any results.</p>
   {% endif %}
+
+  {# Prints out the search navigation at the bottom of the webpage #}
+  {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}"> Previous </a>{% endif %}
+
+  {% for page, url in pageInfo.getPrevUrls( 5 ) %}
+    <a href="{{ url }}">{{ page }}</a>
+  {% endfor %}
+
+  {% if pageInfo.currentPage %}<a class="currentPage">{{ pageInfo.currentPage }}</a>{% endif %}
+
+  {% for page, url in pageInfo.getNextUrls( 5 ) %}
+    <a href="{{ url }}">{{ page }}</a>
+  {% endfor %}
+
+  {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}"> Next </a>{% endif %}
+
   </div>
 
 {% endblock %}
