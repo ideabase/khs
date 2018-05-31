@@ -105,6 +105,7 @@ a {
         background: $green;
         color: white;
         text-decoration: none;
+        transition: .3s background ease-in-out;
         &:hover {
           background: $blue;
           color: white;
@@ -180,7 +181,11 @@ a {
 .nav-dropdown {
   color: $blue;
   position: absolute;
-  display: none;
+  //display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s opacity ease-in-out;
   z-index: 300;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
@@ -252,6 +257,8 @@ a {
       width: 100%;
       background-color: $green;
       display: block !important;
+      opacity: 1;
+      max-height: inherit;
     }
   }
 }
