@@ -1,3 +1,4 @@
+{% cache globally %}
 <section class="top-banner">
   {% for asset in entry.featureImage %}
       <picture>
@@ -10,3 +11,4 @@
     <h2 class="banner-h2">{{ entry.subHeadline }}</h2>
   </div>
 </section>
+{% endcache %}
