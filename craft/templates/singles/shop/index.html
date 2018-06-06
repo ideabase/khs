@@ -1,38 +1,38 @@
 {% extends '_layout' %}
 
 {% block subheader %}
-  <h1>{{ entry.headline}}</h1>
+  <h1>{{ entry.headline }}</h1>
 {% endblock %}
 
 {% block content %}
 {# Category names in Media Type category (mediaType) go here dynmically #}
 
 {% for category in craft.categories.group('mediaType') %}
-<input type="radio" id="{{category.slug}}" name="media" />
-<label for="{{category.slug}}">{{ category.title }}</label>
-
+  <input type="radio" id="{{category.slug}}" name="media" />
+  <label for="{{category.slug}}">{{ category.title }}</label>
 {% endfor %}
+
 <input type="radio" id="reset" name="color"/>
 <label for="reset">Reset</label>
 
 
 <div class="shop-items">
-{% for entry in craft.entries.section('historicalMedia')%}
-	{% if entry.forSale%}
-    <div class="item {% for type in entry.mediaType %}{{ type.slug }} {% endfor %}">
-			{{entry.title}}
+{% for entry in craft.entries.section('historicalMedia') %}
+	{% if entry.forSale %}
+    <div class="item {% for type in entry.mediaType %} {{ type.slug }} {% endfor %}">
+			{{ entry.title }}
 			{% for asset in entry.featureImage %}
 				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-				{% endfor %}
-				{{entry.mediaDescription}}
-				{{entry.price}}
-				{{entry.paypalProductCode|raw}}
-        {% for type in entry.mediaType %}
-          {{ type.title }}
-        {% endfor %}
-				<br>
-      </div>
-			{% endif %}
-	{% endfor %}
-  <div>
+			{% endfor %}
+			{{ entry.mediaDescription }}
+			{{ entry.price }}
+			{{ entry.paypalProductCode|raw }}
+      {% for type in entry.mediaType %}
+        {{ type.title }}
+      {% endfor %}
+			<br>
+    </div>
+	{% endif %}
+{% endfor %}
+<div>
 {% endblock %}

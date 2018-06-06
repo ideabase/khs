@@ -14,7 +14,7 @@
       <ul>
           {% for entry in pageEntries %}
               <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-              {% if entry.teaserText %} <p>{{entry.teaserText}}</p> {% endif %}
+              {% if entry.teaserText %} {{entry.teaserText}} {% endif %}
               {% if entry.featureImage %}
                 {% for image in entry.featureImage %}
                   <img src="{{ image.url('featureItems') }}" alt="{{ image.title }}">

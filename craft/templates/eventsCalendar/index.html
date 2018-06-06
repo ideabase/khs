@@ -1,4 +1,33 @@
-{% extends "layouts/feature" %}
+{# {% extends 'layouts/feature' %}#}
+
+
+{#Displays the main featured item #}
+{% extends '_layout' %}
+{% block subcontent %}
+
+  {% set allEvents = craft.entries.section('events').orderby('date', 'asc') %}
+  {% for tmpEvent in allEvents %}
+    {{ tmpEvent }}
+  {% endfor %}
+
+
+  {% set entry = craft.entries.section('events').first %}
+  <div class="feature-section-background">
+        <div class="feature-section-1">
+          <div class="feature-2">
+            <h5 class="feature-title">Now Featuring</h5>
+            <h3 class="feature-heading">{{ entry.title }}</h2>
+            {% if entry.teaserText %} {{ entry.teaserText }} {% endif %}
+            {% if entry.body %} {{ entry.body }} {% endif %}
+            {% if entry.eventLocation %} <p>Location: </p> {{ entry.eventLocation }} {% endif %}
+          </div>
+        </div>
+  </div>
+  <h1>-----------------------</h1>
+{% endblock %}
+
+
+
 
 {% block content %}
 <h2>{{entry.subHeadline}}</h2>

@@ -13,7 +13,7 @@
 		</div>
   </div>
   <h1>Board Members</h1>
-  {% for entry in craft.entries.section('teamMembers').orderBy('title') %}
+  {% for entry in craft.entries.section('teamMembers').orderBy('jobTitle') %}
     {% if entry.role == "boardMembers" %}
       {# {% include 'globals/noImageTeaser.html' %} need this to display without learn more putting code here for now #}
       <div class="feature-links">
