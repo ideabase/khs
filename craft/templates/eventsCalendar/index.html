@@ -1,17 +1,10 @@
 {# {% extends 'layouts/feature' %}#}
 
 
-{#Displays the main featured item #}
+{# Displays the main featured item #}
 {% extends '_layout' %}
 {% block subcontent %}
-
-  {% set allEvents = craft.entries.section('events').orderby('date', 'asc') %}
-  {% for tmpEvent in allEvents %}
-    {{ tmpEvent }}
-  {% endfor %}
-
-
-  {% set entry = craft.entries.section('events').first %}
+  {% set entry = craft.entries.section('events').orderby('date desc').first() %}
   <div class="feature-section-background">
         <div class="feature-section-1">
           <div class="feature-2">
@@ -23,12 +16,11 @@
           </div>
         </div>
   </div>
-  <h1>-----------------------</h1>
 {% endblock %}
 
 
 
-
+{# Displays the all the events underneath the now featuring item on the webpage #}
 {% block content %}
 <h2>{{entry.subHeadline}}</h2>
 <p>{{entry.body}}</p>
