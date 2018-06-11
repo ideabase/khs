@@ -1,6 +1,8 @@
+
 {% extends 'layouts/profiles' %}
 
 {% block content %}
+{% cache globally %}
 
   <div class="feature-section-background">
     <h1>{{ entry.subHeadline }}</h1><!-- this is a h1, but have to use subHeadline field for now -->
@@ -42,4 +44,5 @@
     {% endif %}
   {% endfor %}
 
+{% endcache %}
 {% endblock %}
