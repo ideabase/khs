@@ -20,6 +20,7 @@
 {% extends '_layout' %}
 
 {% block subheader %}
+{% cache %}
 <section class="top-banner">
   {% for asset in entry.featureImage %}
       <picture>
@@ -32,20 +33,24 @@
     <h2 class="banner-h2">{{ entry.subHeadline }}</h2>
   </div>
 </section>
+{% endcache %}
 {% endblock %}
 
 
 {% block content %}
-
+{% cache %}
 <div class="introduction">
   {{ entry.body }}
 </div>
+{% endcache %}
 
 {% include 'globals/featureItem.html' %}
 
+{% cache %}
 <div class="home-card">
   <h2>{{ entry.featuredTitle }}</h2>
   {% include 'globals/profile-card.html' %}
 </div>
+{% endcache %}
 
 {% endblock %}
