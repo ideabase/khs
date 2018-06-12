@@ -39,11 +39,13 @@
           {# Chris's super fancy navigation plugin TM #}
           {% nav entry in craft.entries.section('primaryNavigation') %}
                 <li class="nav-links">
+                    {% set count = 0 %}
                     {% for item in entry.navigationItem %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>
+                      {% set count = count + 1 %}
                     {% endfor %}
                     {% ifchildren %}
-                        <ul class="nav-dropdown dual-column">
+                        <ul class="nav-dropdown {# {% if count >= 6 %}dual-column{% endif %} #}">
                             {% children %}
                         </ul>
                     {% endifchildren %}
