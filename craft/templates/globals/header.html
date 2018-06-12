@@ -39,18 +39,25 @@
           {# Chris's super fancy navigation plugin TM #}
           {% nav entry in craft.entries.section('primaryNavigation') %}
                 <li class="nav-links">
-                    {% set count = 0 %}
                     {% for item in entry.navigationItem %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>
-                      {% set count = count + 1 %}
+                      {% set totalDescendents = entry.getDescendants().count() %}
                     {% endfor %}
                     {% ifchildren %}
-                        <ul class="nav-dropdown dual-column">
+                        <ul class="nav-dropdown">
                             {% children %}
                         </ul>
                     {% endifchildren %}
                     {% if entry.displayFeaturedCategories %}
-                        <ul class="nav-dropdown">
+                        {# Count the number of categories in the menu #}
+                            {% set count = 0 %}
+                            {% for category in craft.categories %}
+                              {% if category.featuredCategory %}
+                                {% set count = count + 1 %}
+                              {% endif %}
+                            {% endfor %}
+                        {# End Count #}
+                        <ul class="nav-dropdown {% if count >= 6 %}dual-column{%endif%}">
                             {% for category in craft.categories %}
                               {% if category.featuredCategory %}
                                 <li class="nav-links"><a href="{{category.url}}">{{category.title}}</a></li>

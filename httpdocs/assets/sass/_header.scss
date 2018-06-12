@@ -87,6 +87,21 @@ a {
   font-weight: normal;
 }
 
+@media screen and (min-width: $breakpoint) {
+  nav .nav-main li:hover .nav-dropdown.dual-column {
+    display: flex;
+    width: 150%;
+    text-align: left;
+    flex-wrap: wrap;
+    li {
+      width: 50%;
+    }
+    a {
+      padding: 20px 30px 20px 30px;
+    }
+  }
+}
+
 /* Added for Header Navigation Drop-down */
 
 .main-nav-container {
@@ -256,7 +271,7 @@ a {
     .nav-dropdown {
       width: 100%;
       background-color: $green;
-      display: block !important;
+      display: block;
       opacity: 1;
       max-height: inherit;
     }
