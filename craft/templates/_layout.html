@@ -19,6 +19,8 @@
     <style type="text/css">
   	 {% include '_includes/critical.css' %}
     </style>
+    <script async src="{{ siteUrl }}assets/js/min/critical-min.js"></script>
+    <noscript><link href="{{ siteUrl }}assets/css/style.css" rel="stylesheet"></noscript>
 </head>
 {# Helper code for the Admin toolbar, only shown when logged in #}
 {{ adminbar({ sticky: false }) }}
@@ -47,7 +49,6 @@
 
 		{% include 'globals/footer.html' %}
 
-  <link href="{{ siteUrl }}assets/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
   <script async src="{{ siteUrl }}assets/js/min/analytics.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
