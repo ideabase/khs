@@ -2,48 +2,53 @@
 {% extends 'layouts/profiles' %}
 
 {% block content %}
-{% cache globally %}
+  {% cache %}
 
-  <div class="feature-section-background">
-    <h1>{{ entry.subHeadline }}</h1><!-- this is a h1, but have to use subHeadline field for now -->
-    <div class="feature-section-3">
-			{% for entry in craft.entries.section('teamMembers') %}
-				{% if entry.role == "leadership" %}
-          {% include 'globals/profiles.html' %}
-				{% endif %}
-			{% endfor %}
-		</div>
-  </div>
+    {# displays the leaders #}
+    <div class="feature-section-background">
+      <h1>{{ entry.subHeadline }}</h1><!-- this is a h1, but have to use subHeadline field for now -->
+      <div class="feature-section-3">
+  			{% for entry in craft.entries.section('teamMembers').orderBy('lastName') %}
+  				{% if entry.role.contains('leadership') %}
+            {% include 'globals/profiles.html' %}
+  				{% endif %}
+  			{% endfor %}
+  		</div>
+    </div>
 
+    {# displays the board members #}
+    <h1>Board Members</h1>
 
+    <h1>{{ entry.featuredTitle }}</h1>
 
-  {# below is testing how to use arrays #}
-  {% set lastNameArray = [] %}
-  {% set allMembers = craft.entries.section('teamMembers').orderBy('title') %}
-  {% for singleMember in allMembers %}
-    {% set fullNameArray = singleMember.title | split(' ') %}
-    {% set lastNameArray = fullNameArray[1] %}
-  {% endfor %}
+    {% set members = craft.entries.section('teamMembers').orderBy('lastName') %}
 
-
-
-
-  <h1>Board Members</h1>
-  {% set myMembers = craft.entries.section('teamMembers').orderBy('lastName') %}
-  {% for entry in myMembers %}
-    {% if entry.role == "boardMembers" %}
-      {# {% include 'globals/noImageTeaser.html' %} need this to display without learn more putting code here for now #}
-      <div class="feature-links">
-        <h1>{{ entry.featuredTitle }}</h1>
-        <div class="feature">
-          <h2>{{ entry.title }}</h2>
-          <p>{{ entry.jobTitle }} </p>
-          <p>{{ entry.body }}</p>
-          {% if entry.url %} {% endif %}
+    {% for entry in members %}
+      {% if entry.role.contains('boardMembers') %}
+        {% if entry.jobTitle != "Board Member" %}
+        <div class="feature-links">
+          <div class="feature">
+            <h2>{{ entry.title }}</h2>
+            <p>{{ entry.jobTitle }} </p>
+          </div>
         </div>
-      </div>
-    {% endif %}
-  {% endfor %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
 
-{% endcache %}
+    {% for entry in members %}
+      {% if entry.role.contains('boardMembers') %}
+        {% if entry.jobTitle == "Board Member" %}
+        <div class="feature-links">
+          <div class="feature">
+            <h2>{{ entry.title }}</h2>
+            <p>{{ entry.jobTitle }} </p>
+          </div>
+        </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+
+  {% endcache %}
 {% endblock %}
