@@ -3,6 +3,17 @@
 {% block content %}
 
 	{{ entry.body }}
+	{{ footer.phone }}
+	{% if footer.emailAddress %}
+		<h5><a href="mailto:{{ footer.emailAddress }}">{{ footer.emailAddress }}</a></h5>
+	{% endif %}
+
+	{% if footer.address %}
+	{% set staticGoogleUrl = 'https://www.google.com/maps/place/' %}
+		<h5><a href="{{ staticGoogleUrl ~ footer.address |replace({' ': '+', ',': '+', '.': '+'}) }}">{{ footer.address }}</a></h5>
+	{% endif %}
+
+	{% include "globals/relatedLinks.html" %}
 
   {% include "globals/contactForm.html" %}
 

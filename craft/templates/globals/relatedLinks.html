@@ -8,6 +8,11 @@
         {% for files in block.file %}
           <a href="{{files.url}}">{{block.fileName}}</a>
         {% endfor %}
+
+    {% elseif block.type == "internalLink" %}
+        {% for link in block.internalUrl %}
+          <a href="{{ link.url }}">{{ block.linkName }}</a>
+        {% endfor %}
     {% endif %}
 
 {% endfor %}
