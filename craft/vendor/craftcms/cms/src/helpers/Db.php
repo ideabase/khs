@@ -416,6 +416,7 @@ class Db
 
     /**
      * Parses a query param value and returns a [[\yii\db\QueryInterface::where()]]-compatible condition.
+     *
      * If the `$value` is a string, it will automatically be converted to an array, split on any commas within the
      * string (via [[ArrayHelper::toArray()]]). If that is not desired behavior, you can escape the comma
      * with a backslash before it.
@@ -456,6 +457,9 @@ class Db
         $condition = [$glue];
         $isMysql = Craft::$app->getDb()->getIsMysql();
 
+        $inVals = [];
+        $notInVals = [];
+
         foreach ($value as $val) {
             self::_normalizeEmptyValue($val);
             $operator = self::_parseParamOperator($val, $defaultOperator);
@@ -492,7 +496,10 @@ class Db
                         ];
                     }
                 }
-            } else if (is_string($val)) {
+                continue;
+            }
+
+            if (is_string($val)) {
                 // Trim any whitespace from the value
                 $val = trim($val);
 
@@ -514,12 +521,31 @@ class Db
                         $val,
                         false
                     ];
-                } else {
-                    $condition[] = [$operator, $column, $val];
+                    continue;
                 }
-            } else {
-                $condition[] = [$operator, $column, $val];
             }
+
+            // ['or', 1, 2, 3] => IN (1, 2, 3)
+            if ($glue == 'or' && $operator === '=') {
+                $inVals[] = $val;
+                continue;
+            }
+
+            // ['and', '!=1', '!=2', '!=3'] => NOT IN (1, 2, 3)
+            if ($glue == 'and' && $operator === '!=') {
+                $notInVals[] = $val;
+                continue;
+            }
+
+            $condition[] = [$operator, $column, $val];
+        }
+
+        if (!empty($inVals)) {
+            $condition[] = ['in', $column, $inVals];
+        }
+
+        if (!empty($notInVals)) {
+            $condition[] = ['not in', $column, $notInVals];
         }
 
         return $condition;

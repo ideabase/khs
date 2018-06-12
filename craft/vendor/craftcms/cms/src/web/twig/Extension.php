@@ -392,19 +392,15 @@ class Extension extends \Twig_Extension implements \Twig_Extension_GlobalsInterf
      */
     public function withoutFilter(array $arr, $exclude): array
     {
-        $filteredArray = [];
-
         if (!is_array($exclude)) {
             $exclude = (array)$exclude;
         }
 
-        foreach ($arr as $key => $value) {
-            if (!in_array($value, $exclude, false)) {
-                $filteredArray[$key] = $value;
-            }
+        foreach ($exclude as $value) {
+            ArrayHelper::removeValue($arr, $value);
         }
 
-        return $filteredArray;
+        return $arr;
     }
 
     /**
@@ -471,7 +467,12 @@ class Extension extends \Twig_Extension implements \Twig_Extension_GlobalsInterf
         }
 
         $date = \twig_date_converter($env, $date, $timezone);
-        return Craft::$app->getFormatter()->asDate($date, $format);
+        $formatter = Craft::$app->getFormatter();
+        $fmtTimeZone = $formatter->timeZone;
+        $formatter->timeZone = $timezone ? $date->getTimezone()->getName() : $formatter->timeZone;
+        $formatted = $formatter->asDate($date, $format);
+        $formatter->timeZone = $fmtTimeZone;
+        return $formatted;
     }
 
     /**
@@ -521,7 +522,12 @@ class Extension extends \Twig_Extension implements \Twig_Extension_GlobalsInterf
         }
 
         $date = \twig_date_converter($env, $date, $timezone);
-        return Craft::$app->getFormatter()->asTime($date, $format);
+        $formatter = Craft::$app->getFormatter();
+        $fmtTimeZone = $formatter->timeZone;
+        $formatter->timeZone = $timezone ? $date->getTimezone()->getName() : $formatter->timeZone;
+        $formatted = $formatter->asTime($date, $format);
+        $formatter->timeZone = $fmtTimeZone;
+        return $formatted;
     }
 
     /**
@@ -545,7 +551,12 @@ class Extension extends \Twig_Extension implements \Twig_Extension_GlobalsInterf
         }
 
         $date = \twig_date_converter($env, $date, $timezone);
-        return Craft::$app->getFormatter()->asDatetime($date, $format);
+        $formatter = Craft::$app->getFormatter();
+        $fmtTimeZone = $formatter->timeZone;
+        $formatter->timeZone = $timezone ? $date->getTimezone()->getName() : $formatter->timeZone;
+        $formatted = $formatter->asDatetime($date, $format);
+        $formatter->timeZone = $fmtTimeZone;
+        return $formatted;
     }
 
     /**

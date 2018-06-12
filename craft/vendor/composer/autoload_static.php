@@ -8,6 +8,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
@@ -81,6 +82,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
@@ -262,6 +264,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
         'Symfony\\Component\\Process\\' => 
         array (
@@ -1386,6 +1392,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'Symfony\\Component\\Process\\Pipes\\WindowsPipes' => __DIR__ . '/..' . '/symfony/process/Pipes/WindowsPipes.php',
         'Symfony\\Component\\Process\\Process' => __DIR__ . '/..' . '/symfony/process/Process.php',
         'Symfony\\Component\\Process\\ProcessUtils' => __DIR__ . '/..' . '/symfony/process/ProcessUtils.php',
+        'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Twig\\Cache\\CacheInterface' => __DIR__ . '/..' . '/twig/twig/src/Cache/CacheInterface.php',
         'Twig\\Cache\\FilesystemCache' => __DIR__ . '/..' . '/twig/twig/src/Cache/FilesystemCache.php',
@@ -2020,6 +2027,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'craft\\db\\QueryAbortedException' => __DIR__ . '/..' . '/craftcms/cms/src/db/QueryAbortedException.php',
         'craft\\db\\StructuredElementQuery' => __DIR__ . '/..' . '/craftcms/cms/src/db/StructuredElementQuery.php',
         'craft\\db\\TableSchema' => __DIR__ . '/..' . '/craftcms/cms/src/db/TableSchema.php',
+        'craft\\db\\mysql\\ColumnSchema' => __DIR__ . '/..' . '/craftcms/cms/src/db/mysql/ColumnSchema.php',
         'craft\\db\\mysql\\ColumnSchemaBuilder' => __DIR__ . '/..' . '/craftcms/cms/src/db/mysql/ColumnSchemaBuilder.php',
         'craft\\db\\mysql\\QueryBuilder' => __DIR__ . '/..' . '/craftcms/cms/src/db/mysql/QueryBuilder.php',
         'craft\\db\\mysql\\Schema' => __DIR__ . '/..' . '/craftcms/cms/src/db/mysql/Schema.php',
