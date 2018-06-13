@@ -1,0 +1,30 @@
+{% if entry is defined %}
+<ul class="breadcrumbs">
+  {% for navItem in craft.entries.section('primaryNavigation').relatedTo(entry) %}
+      {% for crumb in navItem.getAncestors() %}
+        {% for link in crumb.navigationItem %}
+          <li class="breadcrumbs__item"><a href="{{link.url}}">{{ crumb.title }}</a></li>
+        {% endfor %}
+      {% endfor %}
+  {% endfor %}
+  {% if not entry.mediaCategory | length %}
+    {% if craft.entries.section('primaryNavigation').relatedTo(entry) | length %}
+      <li class="breadcrumbs__item">{{ entry.title }}</li>
+    {% endif %}
+  {% endif %}
+  {% if entry.mediaCategory | length %}
+    <li class="breadcrumbs__item"><a href="/collections">Collections</a></li>
+    {% for category in entry.mediaCategory %}
+      <li class="breadcrumbs__item"><a href="{{category.url}}">{{ category.title}}</li></a>
+    {% endfor %}
+    <li class="breadcrumbs__item">{{ entry.title }}</li>
+  {% endif %}
+</ul>
+{% endif %}
+
+{% if category is defined %}
+<ul class="breadcrumbs">
+  <li class="breadcrumbs__item"><a href="/collections">Collections</a></li>
+  <li class="breadcrumbs__item">{{ category.title}}</li>
+</ul>
+{% endif %}
