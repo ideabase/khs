@@ -1,8 +1,8 @@
 {
     "require": {
-        "craftcms/cms": "3.0.10.3",
-        "wbrowar/adminbar": "3.1.5",
-        "craftcms/redactor": "2.0.1",
+        "craftcms/cms": "3.0.11",
+        "wbrowar/adminbar": "3.1.6",
+        "craftcms/redactor": "2.1.0",
         "firstborn/migrationmanager": "3.0.5",
         "mmikkel/cp-field-inspect": "1.0.4",
         "workingconcept/craft-cloudflare": "0.2.0",

@@ -375,12 +375,12 @@
     },
     {
         "name": "craftcms/cms",
-        "version": "3.0.10.3",
-        "version_normalized": "3.0.10.3",
+        "version": "3.0.11",
+        "version_normalized": "3.0.11.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/craftcms/cms/zipball/672378182526d819bd06aad66b2d60d4e7870734",
-            "reference": "672378182526d819bd06aad66b2d60d4e7870734",
+            "url": "https://api.github.com/repos/craftcms/cms/zipball/8cb1ec0f12691683bcba7d94003065c7d7a2693c",
+            "reference": "8cb1ec0f12691683bcba7d94003065c7d7a2693c",
             "shasum": ""
         },
         "require": {
@@ -426,7 +426,7 @@
             "ext-imagick": "Adds support for more image processing formats and options.",
             "ext-intl": "Adds rich internationalization support."
         },
-        "time": "2018-06-07T22:06:26+00:00",
+        "time": "2018-06-12T16:58:59+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -594,18 +594,18 @@
     },
     {
         "name": "craftcms/redactor",
-        "version": "2.0.1",
-        "version_normalized": "2.0.1.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/craftcms/redactor/zipball/4d83ac07bf91236db163a46a92fede6ecf1503e4",
-            "reference": "4d83ac07bf91236db163a46a92fede6ecf1503e4",
+            "url": "https://api.github.com/repos/craftcms/redactor/zipball/7d72a873e12ea7c92a8a6d00e025e303089d504e",
+            "reference": "7d72a873e12ea7c92a8a6d00e025e303089d504e",
             "shasum": ""
         },
         "require": {
             "craftcms/cms": "^3.0.0-RC15"
         },
-        "time": "2018-05-07T17:50:01+00:00",
+        "time": "2018-05-15T21:58:54+00:00",
         "type": "craft-plugin",
         "extra": {
             "name": "Redactor",
@@ -2366,18 +2366,18 @@
     },
     {
         "name": "wbrowar/adminbar",
-        "version": "3.1.5",
-        "version_normalized": "3.1.5.0",
+        "version": "3.1.6",
+        "version_normalized": "3.1.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/wbrowar/craft-3-adminbar/zipball/f6d3a5b05b8330e150de9af7fa274c39be4a45d3",
-            "reference": "f6d3a5b05b8330e150de9af7fa274c39be4a45d3",
+            "url": "https://api.github.com/repos/wbrowar/craft-3-adminbar/zipball/1915c2dbb7e1759faea053ed0e40e41d52e8b562",
+            "reference": "1915c2dbb7e1759faea053ed0e40e41d52e8b562",
             "shasum": ""
         },
         "require": {
-            "craftcms/cms": "^3.0.0-RC9"
+            "craftcms/cms": "^3.0.7"
         },
-        "time": "2018-02-16T23:45:19+00:00",
+        "time": "2018-05-11T01:46:55+00:00",
         "type": "craft-plugin",
         "extra": {
             "name": "Admin Bar",
