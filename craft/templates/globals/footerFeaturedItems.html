@@ -1,0 +1,16 @@
+{% cache %}
+<div class="feature-footer">
+  <h2>{{ entry.featuredTitle }}</h2>
+  <div class="feature-section-3">
+    {% for entry in entry.featuredItems %}
+  <div class="teaser-block">
+      {% for asset in entry.featureImage %}
+        <img src="{{ asset.url('footerFeatureItems') }}" alt="{{ asset.title }}"/>
+      {% endfor %}
+      <h3>{{ entry.title }}</h3>
+      <p>{{ entry.teaserText }}</p>
+      <a href="{{entry.url}}" class="button-link">See {{entry.title}}</a>
+  </div>
+  {% endfor %}
+</div>
+{% endcache %}

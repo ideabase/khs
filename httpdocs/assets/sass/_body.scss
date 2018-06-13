@@ -8,24 +8,3 @@ main {
   margin: 0 auto;
   padding: 1em;
 }
-
-button, input, select, textarea, .button-link {
-  background-color: $green;
-  text-transform: uppercase;
-  color: white;
-  margin: 0.5em;
-  padding: 0.5em;
-  border: 1px solid $green;
-  border-radius: 5px;
-  &:hover {
-    color: $green;
-    background-color: white;
-  }
-}
-
-
-
-input {
-  background-color: white;
-  color: $green;
-}

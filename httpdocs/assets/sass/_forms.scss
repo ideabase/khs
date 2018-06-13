@@ -1,18 +1,26 @@
+button, .button-link {
+  background-color: $green;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.65em 1em;
+  border: 1px solid $green;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  display: inline-block;
+  transition: .3s all ease-in-out;
+  &:hover,&:active {
+    color: $green;
+    background-color: white;
+  }
+}
+
 main form{
   padding: 0.2em;
   box-sizing: border-box;
   margin: 20px auto;
 }
 
-
-/*button, input, select, textarea {
-    margin: 0.5em;
-    padding: 0.5em;
-    border: 1px solid $green;
-    border-radius: 5px;
-  }
-*/
-  .check-out{
+.check-out{
     width: 100%;
     margin: 0 auto;
     padding: 12px 60px;

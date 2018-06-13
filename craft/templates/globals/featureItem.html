@@ -18,8 +18,10 @@
           {% endif %}
           {% if entry.teaserText %}
             <p>{{ entry.teaserText }}</p>
+          {% elseif entry.body %}
+            {{ entry.body | raw }}
           {% else %}
-            {{ entry.body}}
+            {{ entry.mediaDescription | raw }}
           {% endif %}
           <a href="{{entry.url}}" class="feature-button">See {{entry.title}}</a>
         </div>
