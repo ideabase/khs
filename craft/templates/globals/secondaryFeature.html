@@ -1,0 +1,11 @@
+<div class="secondary-feature">
+  <div class="secondary-feature__image">
+    {% for asset in entry.secondaryImage %}
+      <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+    {% endfor %}
+  </div>
+  <div class="feature-2">
+    <h2>{{entry.headline}}</h2>
+      {{ entry.body}}
+  </div>
+</div>

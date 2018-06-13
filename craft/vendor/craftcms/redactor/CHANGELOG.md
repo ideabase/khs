@@ -1,5 +1,11 @@
 # Release Notes for Redactor
 
+## 2.1.0 - 2018-05-15
+
+### Changed
+- Updated Redactor to 3.0.9.
+- Improved Redactor field styles. ([#49](https://github.com/craftcms/redactor/pull/49))
+
 ## 2.0.1 - 2018-05-07
 
 ### Changed

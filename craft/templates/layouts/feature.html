@@ -7,8 +7,11 @@
 
 {% block subcontent %}
   <div class="introduction">
-    <p>{{ entry.blockquote }}</p>
+    {{ entry.body }}
   </div>
   {% include 'globals/featureItem.html' %}
-  <h2>{{ entry.featuredTitle }}</h2>
+{% endblock %}
+
+{% block content %}
+  {% include 'globals/noImageTeaser.html' %}
 {% endblock %}

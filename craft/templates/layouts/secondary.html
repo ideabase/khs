@@ -7,45 +7,9 @@
 {% endblock %}
 
 {% block subcontent %}
-
-      <div class="feature-section-1">
-        <div class="feature-1">
-          {% for asset in entry.secondaryImage %}
-            <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-          {% endfor %}
-        </div>
-        <div class="feature-2">
-          <h2>{{entry.headline}}</h2>
-            {{ entry.body}}
-        </div>
-      </div>
-
-      <div class="feature-section-1">
-        <div class="feature-2">
-          {{ entry.secondBody }}
-        </div>
-      </div>
-
-      {% include 'globals/featureItem.html' %}
-
+      {% include 'globals/secondaryFeature.html' %}
 {% endblock %}
 
 {% block content %}
-{% cache %}
-<div class="feature-section-background">
-  <h1>{{ entry.featuredTitle }}</h1>
-  <div class="feature-section-3">
-    {% for entry in entry.featuredItems %}
-  <div class="teaser-block">
-      {% for asset in entry.featureImage %}
-        <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
-      {% endfor %}
-      <h3>{{ entry.title }}</h3>
-      <p>{{ entry.teaserText }}</p>
-      <a href="{{entry.url}}" class="button-link">Learn more</a>
-  </div>
-  {% endfor %}
-</div>
-
-{% endcache %}
+      {% include 'globals/footerFeaturedItems.html' %}
 {% endblock %}

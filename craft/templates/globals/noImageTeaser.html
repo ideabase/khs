@@ -1,13 +1,12 @@
-{% cache %}
+<h1>{{ entry.featuredTitle }}</h1>
 <div class="feature-links">
-
-  <h1>{{ entry.featuredTitle }}</h1>
+  {% for entry in entry.featuredItems %}
   <div class="feature">
-    <h2>{{ entry.title }}</h2>
+    <h3>{{ entry.title }}</h3>
     <p>{{ entry.body }}</p>
     {% if entry.url %}
       <a href="{{entry.url}}" class="button-link">Learn more</a>
     {% endif %}
   </div>
+  {% endfor %}
 </div>
-{% endcache %}
