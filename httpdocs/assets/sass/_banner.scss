@@ -2,25 +2,6 @@
   width: 100%;
 }
 
-.banner-h1 {
-  font-family: $serif;
-  font-size: 2em;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-}
-
-.banner-h2 {
-  font-family: $sans;
-  font-size: 1em;
-  font-weight: 400;
-  text-align: left;
-  margin-top: 0;
-  padding-top: .1em;
-  margin-bottom: 0;
-  color: $blue;
-}
-
 .banner-h1 span {
   font-family: $serif;
   font-weight: 900;
@@ -60,18 +41,54 @@
   position: absolute;
   bottom: 50px;
   left: 0;
-  padding: 1.75em 1em;
-  width: 90%;
-  max-width: 500px;
+  padding: 1.25em 5rem 1.25em 1em;
+  width: 95%;
   background-size: auto;
   background-position: top right;
   text-align: left;
   z-index: 200;
+  @media screen and (min-width: 450px) {
+    padding: 1.75em 1em;
+    max-width: 500px;
+    width: 90%;
+  }
   @media screen and (min-width: 600px) {
     padding-left: 3em;
     max-width: 600px;
     bottom: 70px;
   }
+}
+
+.banner-h1 {
+  font-family: $serif;
+  font-size: 1.1em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.banner-h2 {
+  font-family: $sans;
+  font-size: .8em;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 0;
+  padding-top: .1em;
+  margin-bottom: 0;
+  color: $blue;
+}
+
+@media screen and (min-width: 450px) {
+
+  .banner-h1 {
+    font-size: 2em;
+  }
+
+  .banner-h2 {
+    font-family: $sans;
+    font-size: 1em;
+  }
+
 }
 
 @media screen and (min-width: 600px) {
