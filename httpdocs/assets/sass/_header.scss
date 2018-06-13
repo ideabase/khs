@@ -91,6 +91,7 @@ a {
   nav .nav-main li:hover .nav-dropdown.dual-column {
     display: flex;
     width: 150%;
+    margin-left: -25%;
     text-align: left;
     flex-wrap: wrap;
     li {
