@@ -5,8 +5,8 @@
         <div class="feature-2">
           <h5 class="feature-title">Now Featuring</h5>
           <h3 class="feature-heading">{{entry.title}}</h2>
-          {% if entry.date | length %}
-            {{entry.date  | date('M j, Y')}}
+          {% if entry.startDate | length %}
+            {{entry.startDate  | date('M j, Y')}}
           {% endif %}
           {% if entry.date | length %}
             {{entry.eventLocation}}

@@ -18,7 +18,6 @@
   </div>
 </section>
 
-{#
 {% if category.layout == "feature" %}
     This is the content layout
   {% elseif category.layout == "photo" %}
@@ -26,7 +25,6 @@
   {% else %}
     This is the timeline layout
 {% endif %}
-#}
 
 {% endcache %}
 {% endblock %}
@@ -36,14 +34,35 @@
 
 {{ category.body }}
 
-{# leave this here for now until we have these templates working so we can see the related entries #}
+
+{# FEATURE LAYOUT #}
+{% if category.layout == "feature" %}
 {% set entries = craft.entries.relatedTo(category) %}
   <ul>
     {% for entry in entries %}
       <li><a href="{{entry.url}}">{{ entry.title }}</a></li>
     {% endfor %}
   </ul>
+{% endif %}
 
+
+{# PHOTO LAYOUT #}
+
+{% if category.layout == "photo" %}
+{% set entries = craft.entries.relatedTo(category) %}
+  <ul class="photo-heavy-ul">
+    {% for entry in entries %}
+    <li class="pictures">
+      {% for asset in entry.featureImage %}
+          <a href="{{ asset.url}}"><img src="{{ asset.url('photoHeavy') }}" alt=" {{asset.title }}" /></a>
+      {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+
+{# TIMELINE LAYOUT #}
 {% if category.layout == "timeline" %}
   {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
   {{ event.title }}
@@ -53,6 +72,7 @@
     {% endfor %}
   {% endfor %}
 {% endif %}
+
 
 {% endcache %}
 {% endblock %}

@@ -8,8 +8,12 @@
 
 <h2>{{entry.subHeadline}}</h2>
 
+<div class="feature-links">
 {% set entries = craft.entries.section('events') %}
+{% for entry in entries %}
 {% include 'globals/noImageListing.html' %}
+{% endfor %}
+</div>
 
 {% endcache %}
 {% endblock %}

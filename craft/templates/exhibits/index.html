@@ -4,13 +4,23 @@
 {% cache %}
 
   <h2>Upcoming Exhibits</h2>
-
   {% set entries = craft.entries.section('exhibits') %}
-    {% include 'globals/noImageListing.html' %}
+  <div class="feature-links">
+    {% for entry in entries %}
+      {% if entry.exhibitStatus == 'specialExhibit' %}
+        {% include 'globals/noImageListing.html' %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
   <h2>Ongoing Exhibits</h2>
-  {% set entries = craft.entries.section('exhibits') %}
-    {% include 'globals/noImageListing.html' %}
+  <div class="feature-links">
+    {% for entry in entries %}
+      {% if entry.exhibitStatus == 'ongoingExhibit' %}
+        {% include 'globals/noImageListing.html' %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
 {% endcache %}
 {% endblock %}
