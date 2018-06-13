@@ -3,6 +3,7 @@
 {# this is the category page that is used to output Collections and Resources by type #}
 
 {% block subheader %}
+{% cache %}
 
 <section class="top-banner">
   {% for asset in category.featureImage %}
@@ -26,9 +27,13 @@
     This is the timeline layout
 {% endif %}
 #}
+
+{% endcache %}
 {% endblock %}
 
 {% block content %}
+{% cache %}
+
 {{ category.body }}
 
 {# leave this here for now until we have these templates working so we can see the related entries #}
@@ -49,5 +54,5 @@
   {% endfor %}
 {% endif %}
 
-
+{% endcache %}
 {% endblock %}

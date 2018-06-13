@@ -1,3 +1,4 @@
+{% cache %}
 {% for block in entry.relatedLinksDownloads %}
 
     {% if block.type == "externalLink" %}
@@ -16,3 +17,4 @@
     {% endif %}
 
 {% endfor %}
+{% endcache %}

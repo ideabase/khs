@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block content %}
+{% cache %}
+
 {# Category names in Media Type category (mediaType) go here dynmically #}
 
 {% for category in craft.categories.group('mediaType') %}
@@ -35,4 +37,6 @@
 	{% endif %}
 {% endfor %}
 <div>
+
+{% endcache %}
 {% endblock %}

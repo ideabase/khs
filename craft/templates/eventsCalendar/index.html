@@ -4,6 +4,8 @@
 
 {# Displays the all the events underneath the now featuring item on the webpage #}
 {% block content %}
+{% cache %}
+
 <h2>{{entry.subHeadline}}</h2>
 <p>{{entry.body}}</p>
   {# Filter out the main featured item from this listing #}
@@ -16,4 +18,6 @@
       {{entry.endTime}}
       {% for asset in entry.featureImage %} <img src="{{ asset.url }}" alt="{{ asset.title }}"/> {% endfor %}
   {% endfor %}
+  
+{% endcache %}
 {% endblock %}

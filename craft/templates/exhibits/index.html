@@ -1,9 +1,11 @@
 {% extends 'layouts/feature' %}
 
 {% block content %}
+{% cache %}
 
   {% for entry in craft.entries.section('exhibits') %}
     {% include 'globals/noImageTeaser.html' %}
   {% endfor %}
 
+{% endcache %}
 {% endblock %}
