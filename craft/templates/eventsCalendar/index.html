@@ -7,17 +7,9 @@
 {% cache %}
 
 <h2>{{entry.subHeadline}}</h2>
-<p>{{entry.body}}</p>
-  {# Filter out the main featured item from this listing #}
-  {% for entry in craft.entries.section('events') %}
-      <h3>{{entry.title}}</h3>
-      {{entry.body}}
-      {{entry.date  | date('M j, Y')}}
-      {{entry.eventLocation}}
-      {{entry.startTime}}
-      {{entry.endTime}}
-      {% for asset in entry.featureImage %} <img src="{{ asset.url }}" alt="{{ asset.title }}"/> {% endfor %}
-  {% endfor %}
-  
+
+{% set entries = craft.entries.section('events') %}
+{% include 'globals/noImageListing.html' %}
+
 {% endcache %}
 {% endblock %}

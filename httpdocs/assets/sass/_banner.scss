@@ -101,3 +101,9 @@
     font-size: 1.1em;
   }
 }
+
+.supplemental {
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
+}

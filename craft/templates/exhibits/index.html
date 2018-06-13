@@ -3,9 +3,14 @@
 {% block content %}
 {% cache %}
 
-  {% for entry in craft.entries.section('exhibits') %}
-    {% include 'globals/noImageTeaser.html' %}
-  {% endfor %}
+  <h2>Upcoming Exhibits</h2>
+
+  {% set entries = craft.entries.section('exhibits') %}
+    {% include 'globals/noImageListing.html' %}
+
+  <h2>Ongoing Exhibits</h2>
+  {% set entries = craft.entries.section('exhibits') %}
+    {% include 'globals/noImageListing.html' %}
 
 {% endcache %}
 {% endblock %}

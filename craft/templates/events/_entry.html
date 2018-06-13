@@ -1,15 +1,9 @@
-{% extends "_layout" %}
+{% extends "layouts/secondary" %}
 
 {% block content %}
 {{entry.title}}
 {{entry.startTime}}
 {{entry.endTime}}
-{{entry.date}}
 {{entry.body}}
-{{entry.location}}
-{{entry.specialGuests}}
-{% set image = entry.eventPhotos.first(3) %}
-            <img src="{{ image.url }}"
-                 alt="{{ entry.previewText }}"/>
-{{entry.imageCaption}}
+{{entry.date  | date('M j, Y')}}
 {% endblock %}

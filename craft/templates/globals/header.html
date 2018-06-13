@@ -37,7 +37,7 @@
     <nav role="navigation">
         <ul class="nav-main">
           {# Chris's super fancy navigation plugin TM #}
-          {% nav entry in craft.entries.section('primaryNavigation') %}
+          {% nav entry in craft.entries.section('primaryNavigation').level('<=2') %}
                 <li class="nav-links">
                     {% for item in entry.navigationItem %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>

@@ -31,9 +31,10 @@
 		{% block subheader %}
 			{# If a subheader block is included in the template, it will display here.  Empty by default and optional. #}
 		{% endblock %}
-
-    {% include 'globals/hours.html' %}
-
+    <section class="supplemental">
+      {% include 'globals/breadcrumbs.html' %}
+      {% include 'globals/hours.html' %}
+    </section>
 
 		<main role="main">
       {% block subcontent %}

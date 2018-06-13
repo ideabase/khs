@@ -1,22 +1,4 @@
 {% cache %}
-
-
-
-{% set myPath = craft.request.path %}
-<a href="{{ myPath }}"> {{ myPath }} </a>
-
-<h1>==============</h1>
-
-
-
-
-
-{% set parent = craft.entries.ancestorOf(entry).level(1).first() %}
-{% if parent %}
-  <a href="{{ parent.url }}">{{ parent.title }}</a>
-{% endif %}
-
-
 <section class="top-banner">
   {% for asset in entry.featureImage %}
       <picture>
