@@ -3,7 +3,8 @@ footer {
   font-family: $sans;
   text-align: center;
   font-weight: lighter;
-  border-top: 2px solid $green;
+  //border-top: 2px solid $green;
+  margin: .25em;
   margin-top: 2em;
   padding: 2em 1em;
   @media screen and (min-width: 900px) {
