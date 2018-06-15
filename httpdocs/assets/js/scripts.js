@@ -55,7 +55,8 @@
         return (text.length > 0 ? "<span class='first'>"+ first + "</span> " : first) + text.join(" ");
       });
 
-      // End Jquery code //
+
+      // END JQUERY CODE //
 
       clearInterval(nTimer);
     }

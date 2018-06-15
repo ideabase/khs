@@ -3,7 +3,8 @@
 <div class="card-container">
   <figure class="card">
     {% for asset in entry.featureImage.all() %}
-      <div class="card__image" style="background-image:url({{ asset.url('featureItems') }})">
+      <div class="lazy card__image" data-src="{{ asset.url('featureItems') }}">
+      <noscript><div class="card__image" style="background-image: url('{{ asset.url('featureItems') }}')"></noscript>
       </div>
     {% endfor %}
     <div class="card__title__container">

@@ -6,7 +6,7 @@
         {% if footer.secondaryLogo | length %}
             {% for asset in footer.secondaryLogo.all() %}
             <a href="{{siteUrl}}" class="footer-logo">
-                <img src="{{ asset.url }}" alt="{{ asset.title }}" />
+                <img class="lazy" data-src="{{ asset.url }}" src="" alt="{{ asset.title }}" />
             </a>
             {% endfor %}
         {% endif %}

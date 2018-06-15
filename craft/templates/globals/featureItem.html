@@ -28,7 +28,7 @@
         </div>
         <div class="feature-1">
           {% for asset in entry.featureImage.all() %}
-            <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+            <img class="lazy" data-src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
           {% endfor %}
         </div>
       </div>
