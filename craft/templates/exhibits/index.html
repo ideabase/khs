@@ -4,7 +4,7 @@
 {% cache %}
 
   <h2>Upcoming Exhibits</h2>
-  {% set entries = craft.entries.section('exhibits') %}
+  {% set entries = craft.entries.section('exhibits').all() %}
   <div class="feature-links">
     {% for entry in entries %}
       {% if entry.exhibitStatus == 'specialExhibit' %}

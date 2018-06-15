@@ -5,7 +5,7 @@
 
 {# Category names in Media Type category (mediaType) go here dynmically #}
 
-{% for category in craft.categories.group('mediaType') %}
+{% for category in craft.categories.group('mediaType').all() %}
   <input type="radio" id="{{category.slug}}" name="media" />
   <label for="{{category.slug}}">{{ category.title }}</label>
 {% endfor %}
@@ -15,17 +15,19 @@
 
 
 <div class="shop-items">
-{% for entry in craft.entries.section('historicalMedia') %}
+{% for entry in craft.entries.section('historicalMedia').all() %}
 	{% if entry.forSale %}
-    <div class="item {% for type in entry.mediaType %} {{ type.slug }} {% endfor %}">
+    <div class="item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
 			{{ entry.title }}
-			{% for asset in entry.featureImage %}
-				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-			{% endfor %}
+      {% if entry.featureImage | length %}
+  			{% for asset in entry.featureImage.all() %}
+  				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+  			{% endfor %}
+      {% endif %}
 			{{ entry.mediaDescription }}
 			{{ entry.price }}
 			{{ entry.paypalProductCode|raw }}
-      {% for type in entry.mediaType %}
+      {% for type in entry.mediaType.all() %}
         {{ type.title }}
       {% endfor %}
 			<br>
