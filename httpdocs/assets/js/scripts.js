@@ -19,9 +19,9 @@
             e.stopPropagation();
           });
           // Clicking away from dropdown will remove the dropdown class
-          $('html').click(function() {
-            $('.nav-dropdown').hide();
-          });
+          // $('html').click(function() {
+          //   $('.nav-dropdown').hide();
+          // });
           // Toggle open and close nav styles on click
           $('#nav-toggle').click(function() {
             $('nav .nav-main').slideToggle();
