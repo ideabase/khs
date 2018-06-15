@@ -4,6 +4,13 @@ header {
   margin: .25em;
 }
 
+header ul, footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
 .logo {
   width: 125px;
   display: inline-block;
@@ -27,6 +34,7 @@ header {
   .search-button {
     margin: 0;
     width: 50px;
+    box-sizing: border-box;
     margin-left: .5em;
     text-indent: -99999px;
     overflow: hidden;
