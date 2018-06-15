@@ -2,11 +2,13 @@
 <div class="feature-footer">
   <h2>{{ entry.featuredTitle }}</h2>
   <div class="feature-section-3">
-    {% for entry in entry.featuredItems %}
+    {% for entry in entry.featuredItems.all() %}
   <div class="teaser-block">
-      {% for asset in entry.featureImage %}
-        <img src="{{ asset.url('footerFeatureItems') }}" alt="{{ asset.title }}"/>
-      {% endfor %}
+      {% if entry.featureImage | length %}
+        {% for asset in entry.featureImage.all() %}
+          <img src="{{ asset.url('footerFeatureItems') }}" alt="{{ asset.title }}"/>
+        {% endfor %}
+      {% endif %}
       <h3>{{ entry.title }}</h3>
       <p>{{ entry.teaserText }}</p>
       <a href="{{entry.url}}" class="button-link">See {{entry.title}}</a>

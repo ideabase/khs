@@ -1,6 +1,6 @@
 <div class="secondary-feature">
   <div class="secondary-feature__image">
-    {% for asset in entry.secondaryImage %}
+    {% for asset in entry.secondaryImage.all() %}
       <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
     {% endfor %}
   </div>
