@@ -4,6 +4,7 @@ $yellow: #F49F00;
 $blue: #33363D;
 $red: #F65742;
 $gray: #F1F1F1;
+$darkgreen: darken($green,10%);
 
 
 // Typography
@@ -13,3 +14,12 @@ $serif: 'IBM Plex Serif';
 
 // Breakpoint for navigation
 $breakpoint: 799px;
+
+
+// Shortcuts
+
+@mixin no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

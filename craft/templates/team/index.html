@@ -1,54 +1,51 @@
-
 {% extends 'layouts/profiles' %}
 
 {% block content %}
   {% cache %}
-
     {# displays the leaders #}
-    <div class="feature-section-background">
-      <h1>{{ entry.subHeadline }}</h1><!-- this is a h1, but have to use subHeadline field for now -->
-      <div class="feature-section-3">
+    <section class="featured-profiles">
+      <h2>Leadership Team</h2>
+      <ul class="featured-profiles-listing">
   			{% for entry in craft.entries.section('teamMembers').orderBy('lastName') %}
   				{% if entry.role.contains('leadership') %}
-            {% include 'globals/profiles.html' %}
+            {% include 'globals/profiles.twig' %}
   				{% endif %}
   			{% endfor %}
-  		</div>
-    </div>
+      </ul>
+    </section>
 
     {# displays the board members #}
-    <h1>Board Members</h1>
 
-    <h1>{{ entry.featuredTitle }}</h1>
+    {# displays the board members who hold positions #}
 
     {% set members = craft.entries.section('teamMembers').orderBy('lastName') %}
-
-    {% for entry in members %}
-      {% if entry.role.contains('boardMembers') %}
-        {% if entry.jobTitle != "Board Member" %}
-        <div class="feature-links">
-          <div class="feature">
-            <h2>{{ entry.title }}</h2>
-            <p>{{ entry.jobTitle }} </p>
-          </div>
-        </div>
+    <section class="featured-profiles">
+      <h2>Board Members</h2>
+      <ul class="text-columns__listing">
+      {% for entry in members %}
+        {% if entry.role.contains('boardMembers') %}
+          {% if entry.jobTitle != "Board Member" %}
+            <li class="text-columns__item">
+              <h4>{{ entry.title }}</h4>
+              <p>{{ entry.jobTitle }}</p>
+            </li>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+
+    {# displays the normal board members #}
 
     {% for entry in members %}
       {% if entry.role.contains('boardMembers') %}
         {% if entry.jobTitle == "Board Member" %}
-        <div class="feature-links">
-          <div class="feature">
-            <h2>{{ entry.title }}</h2>
-            <p>{{ entry.jobTitle }} </p>
-          </div>
-        </div>
+        <li class="text-columns__item">
+          <h4>{{ entry.title }}</h4>
+          <p>{{ entry.jobTitle }}</p>
+        </li>
         {% endif %}
       {% endif %}
     {% endfor %}
-
+  </ul>
 
   {% endcache %}
 {% endblock %}

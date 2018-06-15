@@ -26,12 +26,12 @@
 .card__image {
   width: 35%;
   background-size: cover;
-  border-right: $yellow 4px solid;
+  border-right: $darkgreen 4px solid;
   @media screen and (min-width: 800px) {
     min-height: 220px;
     width: 100%;
     border-right: none;
-    border-bottom: $yellow 4px solid;
+    border-bottom: $darkgreen 5px solid;
     transition: transform .3s ease-in-out;
     z-index: 100;
     position: relative;

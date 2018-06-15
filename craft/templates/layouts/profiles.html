@@ -4,15 +4,15 @@
 
 {% block subheader %}
   {% include 'globals/banner.html' %}
-  <h1>{{ entry.headline }}</h1>
+{% endblock %}
+
+{% block subcontent %}
+<div class="introduction">
   {{ entry.body }}
-  {% for asset in entry.secondaryImage %}
-    <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-  {% endfor %}
+</div>
 {% endblock %}
 
 {% block content %}
-
 
     <!-- This is where the feature-links section goes. Check with Chris about this. -->
 

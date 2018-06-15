@@ -6,6 +6,10 @@ h1 span {
   font-weight: bold;
 }
 
+p {
+  font-weight: 300;
+}
+
 h2 {
   text-align: center;
   font-size: 1.75em;
@@ -25,6 +29,10 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 1.08em;
+}
+
 .introduction{
   font-size: 1.1em;
   max-width: 600px;
@@ -32,6 +40,9 @@ h3 {
   padding: 1em;
   margin-bottom: 3em;
   line-height: 1.45;
+  p {
+    font-weight: 500;
+  }
 }
 
 .quote-page-quote {

@@ -1,0 +1,17 @@
+<li class="featured-profiles__card">
+  <figure class="featured-profiles__image">
+    {% for asset in entry.featureImage %}
+      <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+    {% endfor %}
+    <figcaption>
+      <h4>{{ entry.jobTitle }}</h4>
+    </figcaption>
+  </figure>
+  <div class="featured-profiles__text">
+    <h3>{{ entry.title }}</h3>
+    {{ entry.body }}
+    <span class="featured-profiles__card__contact">
+      E: <a href="mailto:{{entry.email}}">{{ entry.email }}</a>
+    </span>
+  </div>
+</li>
