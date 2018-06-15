@@ -2,6 +2,11 @@
   list-style: none;
   display: flex;
   font-size: .95em;
+  @media screen and (min-width: 800px) {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 
