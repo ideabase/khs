@@ -49,12 +49,12 @@
   z-index: 200;
   @media screen and (min-width: 450px) {
     padding: 1.75em 1em;
-    max-width: 500px;
-    width: 90%;
+    max-width: inherit;
+    width: inherit;
+    padding-right: 100px;
   }
   @media screen and (min-width: 600px) {
     padding-left: 3em;
-    max-width: 600px;
     bottom: 70px;
   }
 }
