@@ -8,11 +8,24 @@
   color: $green;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .top-banner {
+  opacity: 0;
   position: relative;
   overflow: hidden;
+  animation: fadeIn .5s ease-in;
+  animation-fill-mode: forwards;
   margin: .25em;
   overflow: hidden;
+  min-height: 305px;
   &:after {
     content: "";
     top: 40%;
