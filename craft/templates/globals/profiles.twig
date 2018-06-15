@@ -1,7 +1,7 @@
 <li class="featured-profiles__card">
   <figure class="featured-profiles__image">
     {% for asset in entry.featureImage %}
-      <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
+      <img src="{{ asset.url('profile') }}" alt="{{ asset.title }}"/>
     {% endfor %}
     <figcaption>
       <h4>{{ entry.jobTitle }}</h4>
