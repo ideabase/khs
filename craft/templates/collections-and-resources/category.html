@@ -8,8 +8,9 @@
 <section class="top-banner">
   {% for asset in category.featureImage %}
       <picture>
-        <source media="(min-width: 600px)" srcset="{{asset.url('featureImage')}}">
-        <img src="{{asset.url('featureItems')}}" alt="{{asset.title}}">
+        <source media="(min-width: 1000px)" srcset="{{asset.url('featureImageShort')}}">
+        <source media="(min-width: 600px)" srcset="{{asset.url('featureImageMedium')}}">
+        <img src="{{asset.url('featureImageSmall')}}" alt="{{asset.title}}">
       </picture>
   {% endfor %}
   <div class="banner">
