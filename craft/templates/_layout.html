@@ -20,7 +20,6 @@
     <style type="text/css">
   	 {% include '_includes/critical.css' %}
     </style>
-    <script async src="{{ siteUrl }}assets/js/min/critical-min.js"></script>
     <noscript><link href="{{ siteUrl }}assets/css/style.css" rel="stylesheet"></noscript>
 </head>
 {# Helper code for the Admin toolbar, only shown when logged in #}
@@ -51,15 +50,15 @@
 
 		{% include 'globals/footer.html' %}
 
-  <script async src="{{ siteUrl }}assets/js/min/analytics.js"></script>
+  <script defer src="{{ siteUrl }}assets/js/min/critical-min.js"></script>
+  <script defer type="text/javascript" src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>
+  <script defer src="{{ siteUrl }}assets/js/min/analytics.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-52690730-9');
   </script>
-  <script async src="{{ siteUrl }}assets/js/min/jquery.min.js"></script>
-  <script async type="text/javascript" src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>
   {% if craft.app.config.general.devMode %}
     <!-- Live Reload - For local environment only -->
     <script src="//localhost:35729/livereload.js"></script>

@@ -1,10 +1,13 @@
 // JavaScript Goes Here //
 
-// Place all Jquery dependencies here.  Won't run until Jquery is loaded //
+// Call lazy loaded images //
 
-(function() {
-  var nTimer = setInterval(function() {
-    if (window.jQuery) {
+$(function($) {
+    $(".lazy").Lazy();
+});
+
+// Wrap all JQuery functions in this function, which will pause execution until the document is ready.  No need to repeat these. //
+$(document).ready(function() {
 
       // Begin Jquery code //
 
@@ -58,7 +61,4 @@
 
       // END JQUERY CODE //
 
-      clearInterval(nTimer);
-    }
-  }, 100);
-})();
+}); // Ends the document ready function.  Be careful not to remove this!
