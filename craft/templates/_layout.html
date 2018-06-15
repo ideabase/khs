@@ -49,7 +49,6 @@
     {% endblock %}
 
 		{% include 'globals/footer.html' %}
-
   <script defer src="{{ siteUrl }}assets/js/min/critical-min.js"></script>
   <script defer type="text/javascript" src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>
   <script defer src="{{ siteUrl }}assets/js/min/analytics.js"></script>
@@ -58,6 +57,17 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-52690730-9');
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      console.log("Will the service worker register?");
+      navigator.serviceWorker.register('serviceworker.js')
+        .then(function(reg){
+          console.log("Yes, it did.");
+        }).catch(function(err) {
+          console.log("No it didn't. This happened: ", err)
+        });
+    }
   </script>
   {% if craft.app.config.general.devMode %}
     <!-- Live Reload - For local environment only -->
