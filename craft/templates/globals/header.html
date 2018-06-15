@@ -4,16 +4,16 @@
     <!-- Logo goes here -->
     {% if header.primaryLogo | length %}
       <div class="logo">
-        {% for asset in header.primaryLogo %}
+        {% for asset in header.primaryLogo.all() %}
             <a href="{{siteUrl}}"><img src="{{ asset.url }}" alt="{{ asset.title }}" /></a>
         {% endfor %}
       </div>
     {% endif %}
     <nav class="callout-header-navigation"  role="navigation">
         <ul class="callout-header">
-          {% nav entry in craft.entries.section('secondaryNavigation').level('1') %}
+          {% nav entry in craft.entries.section('secondaryNavigation').level('1').all() %}
                 <li class="callout-header-li">
-                    {% for item in entry.navigationItem %}
+                    {% for item in entry.navigationItem.all() %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>
                     {% endfor %}
                 </li>
@@ -37,9 +37,9 @@
     <nav role="navigation">
         <ul class="nav-main">
           {# Chris's super fancy navigation plugin TM #}
-          {% nav entry in craft.entries.section('primaryNavigation').level('<=2') %}
+          {% nav entry in craft.entries.section('primaryNavigation').level('<=2').all() %}
                 <li class="nav-links">
-                    {% for item in entry.navigationItem %}
+                    {% for item in entry.navigationItem.all() %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>
                       {% set totalDescendents = entry.getDescendants().count() %}
                     {% endfor %}
@@ -51,14 +51,14 @@
                     {% if entry.displayFeaturedCategories %}
                         {# Count the number of categories in the menu #}
                             {% set count = 0 %}
-                            {% for category in craft.categories %}
+                            {% for category in craft.categories.all() %}
                               {% if category.featuredCategory %}
                                 {% set count = count + 1 %}
                               {% endif %}
                             {% endfor %}
                         {# End Count #}
                         <ul class="nav-dropdown {% if count >= 6 %}dual-column{%endif%}">
-                            {% for category in craft.categories %}
+                            {% for category in craft.categories.all() %}
                               {% if category.featuredCategory %}
                                 <li class="nav-links"><a href="{{category.url}}">{{category.title}}</a></li>
                               {% endif %}

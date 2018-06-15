@@ -60,7 +60,7 @@
   </script>
   <script async src="{{ siteUrl }}assets/js/min/jquery.min.js"></script>
   <script async type="text/javascript" src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>
-  {% if craft.config.devMode %}
+  {% if craft.app.config.general.devMode %}
     <!-- Live Reload - For local environment only -->
     <script src="//localhost:35729/livereload.js"></script>
   {% endif %}

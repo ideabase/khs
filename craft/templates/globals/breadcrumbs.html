@@ -1,6 +1,6 @@
 {% if entry is defined %}
 <ul class="breadcrumbs">
-  {% for navItem in craft.entries.section('primaryNavigation').relatedTo(entry) %}
+  {% for navItem in craft.entries.section('primaryNavigation').relatedTo(entry).all() %}
       {% for crumb in navItem.getAncestors() %}
         {% for link in crumb.navigationItem %}
           <li class="breadcrumbs__item"><a href="{{link.url}}">{{ crumb.title }}</a></li>

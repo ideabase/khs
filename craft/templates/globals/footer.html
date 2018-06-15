@@ -4,7 +4,7 @@
     <div class="footer-logo-cta-container">
       <div class="footer-logo-container">
         {% if footer.secondaryLogo | length %}
-            {% for asset in footer.secondaryLogo %}
+            {% for asset in footer.secondaryLogo.all() %}
             <a href="{{siteUrl}}" class="footer-logo">
                 <img src="{{ asset.url }}" alt="{{ asset.title }}" />
             </a>
@@ -13,9 +13,9 @@
       </div>
       <div class="callout-footer">
         <ul>
-          {% nav entry in craft.entries.section('secondaryNavigation').level('1') %}
+          {% nav entry in craft.entries.section('secondaryNavigation').level('1').all() %}
                 <li class="callout-header-li">
-                    {% for item in entry.navigationItem %}
+                    {% for item in entry.navigationItem.all() %}
                       <a href="{{ item.url }}">{{ entry.title }}</a>
                     {% endfor %}
                 </li>
@@ -58,7 +58,7 @@
 
   <!-- Social Media Matrix -->
   <div class="social-media__icons">
-  {% for block in footer.socialMedia %}
+  {% for block in footer.socialMedia.all() %}
       {% if block.type == "socialMedia" %}
         <a class="social-media__icon {{ block.socialMediaName }}" href="{{ block.siteURL }}">{{ block.socialMediaName }}</a>
       {% endif %}
@@ -67,9 +67,9 @@
 
   <div class="menu-options">
     <ul>
-    {% nav entry in craft.entries.section('primaryNavigation').level('1') %}
+    {% nav entry in craft.entries.section('primaryNavigation').level('1').all() %}
           <li>
-              {% for item in entry.navigationItem %}
+              {% for item in entry.navigationItem.all() %}
                 <a href="{{ item.url }}">{{ entry.title }}</a>
               {% endfor %}
           </li>

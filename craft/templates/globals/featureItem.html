@@ -1,5 +1,5 @@
 {% cache %}
-{% for entry in entry.mainFeaturedItem %}
+{% for entry in entry.mainFeaturedItem.all() %}
 <div class="feature-section-background">
       <div class="feature-section-1">
         <div class="feature-2">
@@ -27,7 +27,7 @@
           <a href="{{entry.url}}" class="feature-button">See {{entry.title}}</a>
         </div>
         <div class="feature-1">
-          {% for asset in entry.featureImage %}
+          {% for asset in entry.featureImage.all() %}
             <img src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
           {% endfor %}
         </div>

@@ -1,8 +1,8 @@
 <div class="cards">
-{% for entry in entry.featuredItems %}
+{% for entry in entry.featuredItems.all() %}
 <div class="card-container">
   <figure class="card">
-    {% for asset in entry.featureImage %}
+    {% for asset in entry.featureImage.all() %}
       <div class="card__image" style="background-image:url({{ asset.url('featureItems') }})">
       </div>
     {% endfor %}
@@ -16,22 +16,3 @@
 </div>
 {% endfor %}
 </div>
-
-<!-- <div class="home-card">
-{% for entry in entry.featuredItems %}
-<div class="profile-card">
-  <figure class="holder">
-    <a href="{{ entry.url }}">
-    <figcaption class="title">
-      <p>{{ entry.teaserText}}</p>
-      <button type="button">Learn More</button>
-      <h3>{{ entry.title }}</h3>
-    </figcaption>
-    {% for asset in entry.featureImage %}
-      <img src="{{ asset.url('featureItems') }}" alt="{{ asset.title }}"/>
-    {% endfor %}
-    </a>
-  </figure>
-</div>
-{% endfor %}
-</div> -->
