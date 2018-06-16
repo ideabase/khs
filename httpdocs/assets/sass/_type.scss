@@ -12,13 +12,15 @@ p {
 
 h2 {
   text-align: center;
-  font-size: 1.75em;
+  font-size: 1.65em;
+  margin-top: 0;
   span {
     font-family: $serif;
     color: $yellow;
   }
   @media screen and (min-width: 600px) {
     font-size: 1.9em;
+    margin-top: .75em;
   }
 }
 
@@ -37,11 +39,14 @@ h4 {
   font-size: 1.1em;
   max-width: 600px;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0 1em 0 1em;
   margin-bottom: 3em;
   line-height: 1.45;
   p {
     font-weight: 500;
+  }
+  @media screen and (min-width: 600px) {
+    padding: 1em;
   }
 }
 

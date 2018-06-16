@@ -1,21 +1,26 @@
 .hours {
-  background-image: url('/assets/img/ui/secondary-background.svg');
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top left;
-  padding: 0.25em 1em 0.25em 3em;
-  width: 95%;
+  padding: 0.25em 1em 0.25em 1.5em;
+  width: 100%;
   margin: auto 0 auto auto;
-  text-align: right;
-  @media screen and (min-width: 450px) {
-    width: 90%;
+  background-color: $blue;
+  text-align :left;
+  border-left: $yellow 5px solid;
+  @media screen and (min-width: 550px) {
+    width: 70%;
     padding: 0.25em 1em;
+    background-image: url('/assets/img/ui/secondary-background.svg');
+    text-align: right;
+    background-color: transparent;
+    border: none;
   }
   @media screen and (min-width: 700px) {
     padding: 0.07em 1em;
-    width: 60%;
     max-width: 600px;
     text-align: center;
+    width: 60%;
   }
 }
 
