@@ -4,7 +4,6 @@
 {{entry.title}}
 {{entry.startTime}}
 {{entry.endTime}}
-{{entry.startDate}}
+{{entry.startDate | date('M j, Y')}}
 {{entry.body}}
-{{entry.date  | date('M j, Y')}}
 {% endblock %}

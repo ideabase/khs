@@ -1,0 +1,14 @@
+{% extends '_layout' %}
+
+{% block subcontent %}
+
+  <h1>Past Events</h1>
+  <ul>
+    {% for entry in craft.entries.section('events') %}
+      {% if entry.endDate < now %}
+        <li><a href="{{ entry.url }}">{{entry.title}}</a></li>
+      {% endif %}
+    {% endfor%}
+  <ul>
+
+{% endblock %}
