@@ -27,6 +27,7 @@ return array(
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
     'fortrabbit\\Copy\\' => array($vendorDir . '/fortrabbit/craft-copy/src'),
     'firstborn\\migrationmanager\\' => array($vendorDir . '/firstborn/migrationmanager/src'),
+    'enupal\\paypal\\' => array($vendorDir . '/enupal/paypal/src'),
     'enshrined\\svgSanitize\\' => array($vendorDir . '/enshrined/svg-sanitize/src'),
     'creocoder\\nestedsets\\' => array($vendorDir . '/creocoder/yii2-nested-sets/src'),
     'craftcms\\oauth2\\client\\' => array($vendorDir . '/craftcms/oauth2-craftid/src'),

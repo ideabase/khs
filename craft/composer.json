@@ -7,6 +7,7 @@
         "mmikkel/cp-field-inspect": "1.0.4",
         "workingconcept/craft-cloudflare": "0.2.0",
         "craftcms/contact-form": "2.1.1",
-        "fortrabbit/craft-copy": "1.0.0-beta1"
+        "fortrabbit/craft-copy": "1.0.0-beta1",
+        "enupal/paypal": "1.0.1"
     }
 }

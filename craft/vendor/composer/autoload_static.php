@@ -57,6 +57,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         ),
         'e' => 
         array (
+            'enupal\\paypal\\' => 14,
             'enshrined\\svgSanitize\\' => 22,
         ),
         'c' => 
@@ -212,6 +213,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'firstborn\\migrationmanager\\' => 
         array (
             0 => __DIR__ . '/..' . '/firstborn/migrationmanager/src',
+        ),
+        'enupal\\paypal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enupal/paypal/src',
         ),
         'enshrined\\svgSanitize\\' => 
         array (
@@ -2677,6 +2682,40 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'enshrined\\svgSanitize\\data\\AllowedTags' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AllowedTags.php',
         'enshrined\\svgSanitize\\data\\AttributeInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AttributeInterface.php',
         'enshrined\\svgSanitize\\data\\TagInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/TagInterface.php',
+        'enupal\\paypal\\Paypal' => __DIR__ . '/..' . '/enupal/paypal/src/Paypal.php',
+        'enupal\\paypal\\assetbundles\\FontAwesomeAsset' => __DIR__ . '/..' . '/enupal/paypal/src/assetBundles/FontAwesomeAsset.php',
+        'enupal\\paypal\\assetbundles\\OrdersAsset' => __DIR__ . '/..' . '/enupal/paypal/src/assetBundles/OrdersAsset.php',
+        'enupal\\paypal\\assetbundles\\PaypalButtonAsset' => __DIR__ . '/..' . '/enupal/paypal/src/assetBundles/PaypalButtonAsset.php',
+        'enupal\\paypal\\contracts\\PaypalIPN' => __DIR__ . '/..' . '/enupal/paypal/src/contracts/PaypalIPN.php',
+        'enupal\\paypal\\controllers\\ButtonsController' => __DIR__ . '/..' . '/enupal/paypal/src/controllers/ButtonsController.php',
+        'enupal\\paypal\\controllers\\ChartsController' => __DIR__ . '/..' . '/enupal/paypal/src/controllers/ChartsController.php',
+        'enupal\\paypal\\controllers\\OrdersController' => __DIR__ . '/..' . '/enupal/paypal/src/controllers/OrdersController.php',
+        'enupal\\paypal\\controllers\\PaypalController' => __DIR__ . '/..' . '/enupal/paypal/src/controllers/PaypalController.php',
+        'enupal\\paypal\\controllers\\SettingsController' => __DIR__ . '/..' . '/enupal/paypal/src/controllers/SettingsController.php',
+        'enupal\\paypal\\elements\\Order' => __DIR__ . '/..' . '/enupal/paypal/src/elements/Order.php',
+        'enupal\\paypal\\elements\\PaypalButton' => __DIR__ . '/..' . '/enupal/paypal/src/elements/PaypalButton.php',
+        'enupal\\paypal\\elements\\db\\OrdersQuery' => __DIR__ . '/..' . '/enupal/paypal/src/elements/db/OrdersQuery.php',
+        'enupal\\paypal\\elements\\db\\PaypalButtonsQuery' => __DIR__ . '/..' . '/enupal/paypal/src/elements/db/PaypalButtonsQuery.php',
+        'enupal\\paypal\\enums\\BaseEnum' => __DIR__ . '/..' . '/enupal/paypal/src/enums/BaseEnum.php',
+        'enupal\\paypal\\enums\\DiscountType' => __DIR__ . '/..' . '/enupal/paypal/src/enums/DiscountType.php',
+        'enupal\\paypal\\enums\\OpenWindow' => __DIR__ . '/..' . '/enupal/paypal/src/enums/OpenWindow.php',
+        'enupal\\paypal\\enums\\OrderStatus' => __DIR__ . '/..' . '/enupal/paypal/src/enums/OrderStatus.php',
+        'enupal\\paypal\\enums\\PaypalSize' => __DIR__ . '/..' . '/enupal/paypal/src/enums/PaypalSize.php',
+        'enupal\\paypal\\enums\\ShippingOptions' => __DIR__ . '/..' . '/enupal/paypal/src/enums/ShippingOptions.php',
+        'enupal\\paypal\\events\\OrderCompleteEvent' => __DIR__ . '/..' . '/enupal/paypal/src/events/OrderCompleteEvent.php',
+        'enupal\\paypal\\fields\\Buttons' => __DIR__ . '/..' . '/enupal/paypal/src/fields/Buttons.php',
+        'enupal\\paypal\\migrations\\Install' => __DIR__ . '/..' . '/enupal/paypal/src/migrations/Install.php',
+        'enupal\\paypal\\models\\Settings' => __DIR__ . '/..' . '/enupal/paypal/src/models/Settings.php',
+        'enupal\\paypal\\records\\Order' => __DIR__ . '/..' . '/enupal/paypal/src/records/Order.php',
+        'enupal\\paypal\\records\\Payment' => __DIR__ . '/..' . '/enupal/paypal/src/records/Payment.php',
+        'enupal\\paypal\\records\\PaypalButton' => __DIR__ . '/..' . '/enupal/paypal/src/records/PaypalButton.php',
+        'enupal\\paypal\\services\\App' => __DIR__ . '/..' . '/enupal/paypal/src/services/App.php',
+        'enupal\\paypal\\services\\Buttons' => __DIR__ . '/..' . '/enupal/paypal/src/services/Buttons.php',
+        'enupal\\paypal\\services\\Orders' => __DIR__ . '/..' . '/enupal/paypal/src/services/Orders.php',
+        'enupal\\paypal\\services\\Settings' => __DIR__ . '/..' . '/enupal/paypal/src/services/Settings.php',
+        'enupal\\paypal\\validators\\DiscountValidator' => __DIR__ . '/..' . '/enupal/paypal/src/validators/DiscountValidator.php',
+        'enupal\\paypal\\validators\\TaxValidator' => __DIR__ . '/..' . '/enupal/paypal/src/validators/TaxValidator.php',
+        'enupal\\paypal\\variables\\PaypalVariable' => __DIR__ . '/..' . '/enupal/paypal/src/variables/PaypalVariable.php',
         'firstborn\\migrationmanager\\MigrationManager' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/MigrationManager.php',
         'firstborn\\migrationmanager\\actions\\MigrateCategoryElementAction' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/actions/MigrateCategoryElementAction.php',
         'firstborn\\migrationmanager\\actions\\MigrateEntryElementAction' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/actions/MigrateEntryElementAction.php',

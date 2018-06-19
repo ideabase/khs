@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ea985bca59633917d35db466e3dfd3",
+    "content-hash": "9c3344696504f2c69a13357add7d555b",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -897,6 +897,64 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2017-12-06T15:31:26+00:00"
+        },
+        {
+            "name": "enupal/paypal",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enupal/paypal/zipball/d477a87fa8290077b9be8ad400eb187664cbe4f4",
+                "reference": "d477a87fa8290077b9be8ad400eb187664cbe4f4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "PayPal",
+                "handle": "enupal-paypal",
+                "schemaVersion": "1.0.0",
+                "hasSettings": true,
+                "changelogUrl": "https://raw.githubusercontent.com/enupal/paypal/master/CHANGELOG.md",
+                "developer": "Enupal",
+                "class": "enupal\\paypal\\Paypal",
+                "components": {
+                    "app": "enupal\\paypal\\services\\App"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "enupal\\paypal\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Enupal",
+                    "homepage": "http://enupal.com/en"
+                }
+            ],
+            "description": "Sell products or services on your website using a PayPal Buy Now Button",
+            "keywords": [
+                "buy now",
+                "checkout",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "credit card",
+                "e-commerce",
+                "pay",
+                "payment",
+                "paypal",
+                "sell"
+            ],
+            "support": {
+                "email": "support@enupal.com",
+                "issues": "https://github.com/enupal/paypal/issues",
+                "docs": "https://enupal.com/en/craft-plugins/enupal-paypal/docs"
+            },
+            "time": "2018-04-15T16:39:12+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
