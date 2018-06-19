@@ -7,7 +7,8 @@
   {% set image = entry.featureImage.first() %}
               <img src="{{ image.url }}"
                    alt="{{ entry.imageCaption }}"/>
-  {{entry.imageCaption}}
+  {{ entry.imageCaption }}
   {{ entry.body }}
+  {{ entry.location }}
 
 {% endblock %}
