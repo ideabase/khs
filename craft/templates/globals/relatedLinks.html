@@ -3,16 +3,16 @@
 
     {% if block.type == "externalLink" %}
 
-        <a href="{{block.linkUrl}}">{{block.linkName}}</a>
+        <a href="{{block.linkUrl}}" class="button-link">{{block.linkName}}</a>
 
     {% elseif block.type == "fileDownload" %}
         {% for files in block.file %}
-          <a href="{{files.url}}">{{block.fileName}}</a>
+          <a href="{{files.url}}" class="button-link">{{block.fileName}}</a>
         {% endfor %}
 
     {% elseif block.type == "internalLink" %}
         {% for link in block.internalUrl %}
-          <a href="{{ link.url }}">{{ block.linkName }}</a>
+          <a href="{{ link.url }}" class="button-link">{{ block.linkName }}</a>
         {% endfor %}
     {% endif %}
 

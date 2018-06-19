@@ -41,6 +41,13 @@
   margin-top: 1.5em;
 }
 
+.secondary-feature__image {
+  img {
+    margin-bottom: 1.5em;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .feature-section-1 {
     display: flex;
@@ -53,8 +60,10 @@
     display: flex;
     justify-content: space-between;
     .secondary-feature__image {
-      order: 1;
+      order: 2;
       margin-top: 1em;
+      width: 42%;
+
     }
   }
 
@@ -145,13 +154,14 @@
   }
 }
 .teaser-block {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
   display: inline-block;
   margin-top: 2em;
   p {
     font-weight: 300;
-    font-size: .95em;
+    font-size: .9em;
     margin-bottom: 1em;
   }
 }
@@ -178,6 +188,9 @@
   }
 
   .teaser-block {
-    width: 30%;
+    width: 25%;
+    p {
+      margin-bottom: 1.5em;
+    }
   }
 }
