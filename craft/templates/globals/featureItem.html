@@ -1,20 +1,5 @@
 {% cache %}
 
-{% for entry in entry.mainFeaturedItem.all() %}
-  {% for fields in entry.fields %}
-    {% switch fields %}
-      {% case 'title' %}
-        {{entry.title}}
-      {% case 'startDate' %}
-        {{entry.startDate  | date('M j, Y')}}
-      {% case 'teaserText' %}
-        {{entry.teaserText}}
-      {% default %}
-
-    {% endswitch %}
-  {% endfor %}
-{% endfor %}
-
   {% for entry in entry.mainFeaturedItem.all() %}
     {% set fields = entry.fields %}
     <div class="feature-section-background">
