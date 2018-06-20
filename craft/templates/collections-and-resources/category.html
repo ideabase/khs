@@ -48,12 +48,12 @@
 {# PHOTO LAYOUT #}
 
 {% if category.layout == "photo" %}
-
+fdsdsfdsfdsfds
 <div class="introduction">{{ category.body }}</div>
 
 {% set entries = craft.entries.relatedTo(category) %}
 <div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-  {% for entry in entries %}
+  {% for entry in entries.limit(10) %}
         <figure class="photo-gallery__item">
         {% for asset in entry.featureImage %}
             <a class="content" href="{{ asset.url('galleryFull')}}" itemprop="contentUrl" data-size="{{ asset.getWidth('galleryFull') }}x{{ asset.getHeight('galleryFull') }}">
