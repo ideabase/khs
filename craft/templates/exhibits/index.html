@@ -1,28 +1,28 @@
 {% extends 'layouts/feature' %}
 
 {% block content %}
-{% cache %}
+  {% cache %}
 
-  <h2>Upcoming Exhibits</h2>
-  {% set entries = craft.entries.section('exhibits').all() %}
-  <div class="feature-links">
-    {% for entry in entries %}
-      {% if entry.exhibitStatus == 'specialExhibit' %}
-        {% include 'globals/noImageListing.html' %}
-      {% endif %}
-    {% endfor %}
-  </div>
+    <h2>Upcoming Exhibits</h2>
+    {% set entries = craft.entries.section('exhibits').all() %}
+    <div class="feature-links">
+      {% for entry in entries %}
+        {% if entry.exhibitStatus == 'specialExhibit' and entry.endDate > now %}
+          {% include 'globals/noImageListing.html' %}
+        {% endif %}
+      {% endfor %}
+    </div>
 
-  <h2>Ongoing Exhibits</h2>
-  <div class="feature-links">
-    {% for entry in entries %}
-      {% if entry.exhibitStatus == 'ongoingExhibit' %}
-        {% include 'globals/noImageListing.html' %}
-      {% endif %}
-    {% endfor %}
-  </div>
+    <h2>Ongoing Exhibits</h2>
+    <div class="feature-links">
+      {% for entry in entries %}
+        {% if entry.exhibitStatus == 'ongoingExhibit' %}
+          {% include 'globals/noImageListing.html' %}
+        {% endif %}
+      {% endfor %}
+    </div>
 
-  {% include "globals/relatedLinks.html" %}
+    {% include "globals/relatedLinks.html" %}
 
-{% endcache %}
+  {% endcache %}
 {% endblock %}
