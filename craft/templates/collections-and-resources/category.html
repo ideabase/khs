@@ -21,10 +21,8 @@
 
 {% if category.layout == "feature" %}
     This is the content layout
-  {% elseif category.layout == "photo" %}
+  {% elseif category.layout == "timeline" %}
     This is the photo layout
-  {% else %}
-    This is the timeline layout
 {% endif %}
 
 {% endcache %}
@@ -33,11 +31,11 @@
 {% block content %}
 {% cache %}
 
-{{ category.body }}
-
-
 {# FEATURE LAYOUT #}
 {% if category.layout == "feature" %}
+
+{{ category.body }}
+
 {% set entries = craft.entries.relatedTo(category) %}
   <ul>
     {% for entry in entries %}
@@ -50,21 +48,32 @@
 {# PHOTO LAYOUT #}
 
 {% if category.layout == "photo" %}
-{% set entries = craft.entries.relatedTo(category) %}
-  <ul class="photo-heavy-ul">
-    {% for entry in entries %}
-    <li class="pictures">
-      {% for asset in entry.featureImage %}
-          <a href="{{ asset.url}}"><img src="{{ asset.url('photoHeavy') }}" alt=" {{asset.title }}" /></a>
-      {% endfor %}
-    </li>
-    {% endfor %}
-  </ul>
+
+<div class="introduction">{{ category.body }}</div>
+
+{% set entries = craft.entries.relatedTo(category).limit(5) %}
+<div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+  {% for entry in entries %}
+        <figure class="photo-gallery__item">
+        {% for asset in entry.featureImage %}
+            <a class="content" href="{{ asset.url('galleryFull')}}" itemprop="contentUrl" data-size="{{ asset.getWidth('galleryFull') }}x{{ asset.getHeight('galleryFull') }}">
+              <img src="{{ asset.url('gallery') }}" itemprop="thumbnail" alt="{{asset.title }}" />
+            </a>
+        {% endfor %}
+        <figcaption itemprop="caption description">{{entry.mediaDescription}}</figcaption>
+        </figure>
+  {% endfor %}
+</div>
 {% endif %}
 
 
 {# TIMELINE LAYOUT #}
+
+
 {% if category.layout == "timeline" %}
+
+{{ category.body }}
+
   {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
   {{ event.title }}
   {{ event.body }}
@@ -73,6 +82,80 @@
     {% endfor %}
   {% endfor %}
 {% endif %}
+
+
+
+
+{# CODE TO SUPPORT PHOTOSWIPE PLUGIN #}
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script defer type="text/javascript" src="{{ siteUrl }}assets/js/min/photoswipe-min.js"></script>
 
 
 {% endcache %}

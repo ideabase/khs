@@ -1,37 +1,64 @@
 {% cache %}
+
 {% for entry in entry.mainFeaturedItem.all() %}
-<div class="feature-section-background">
-      <div class="feature-section-1">
-        <div class="feature-2">
-          <h5 class="feature-title">Now Featuring</h5>
-          <h3 class="feature-heading">{{entry.title}}</h2>
-          {% if entry.startDate | length %}
-            {{entry.startDate  | date('M j, Y')}}
-          {% endif %}
-          {% if entry.date | length %}
-            {{entry.eventLocation}}
-          {% endif %}
-          {% if entry.date | length %}
-            {{entry.startTime}}
-          {% endif %}
-          {% if entry.date | length %}
-            {{entry.endTime}}
-          {% endif %}
-          {% if entry.teaserText %}
-            <p>{{ entry.teaserText }}</p>
-          {% elseif entry.body %}
-            {{ entry.body | raw }}
-          {% else %}
-            {{ entry.mediaDescription | raw }}
-          {% endif %}
-          <a href="{{entry.url}}" class="feature-button">See {{entry.title}}</a>
-        </div>
-        <div class="feature-1">
-          {% for asset in entry.featureImage.all() %}
-            <img class="lazy" data-src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-          {% endfor %}
-        </div>
-      </div>
-</div>
+  {% for fields in entry.fields %}
+    {% switch fields %}
+      {% case 'title' %}
+        {{entry.title}}
+      {% case 'startDate' %}
+        {{entry.startDate  | date('M j, Y')}}
+      {% case 'teaserText' %}
+        {{entry.teaserText}}
+      {% default %}
+
+    {% endswitch %}
+  {% endfor %}
 {% endfor %}
+
+  {% for entry in entry.mainFeaturedItem.all() %}
+    {% set fields = entry.fields %}
+    <div class="feature-section-background">
+          <div class="feature-section-1">
+            <div class="feature-2">
+              <h5 class="feature-title">Now Featuring</h5>
+              <h3 class="feature-heading">{{entry.title}}</h2>
+              {% for field in fields %}
+              {% switch field %}
+                {% case 'startDate' %}
+                  {{entry.startDate  | date('M j, Y')}}
+
+                {% case 'eventLocation' %}
+                  {{entry.eventLocation}}
+
+                {% case 'startTime' %}
+                  {{entry.startTime}}
+
+                {% case 'endTime' %}
+                  {{entry.endTime}}
+
+                {% default %}
+
+              {% endswitch %}
+              {% endfor %}
+
+              {% if entry.teaserText %}
+                <p>{{ entry.teaserText }}</p>
+
+              {% elseif entry.body %}
+                {{ entry.body | raw }}
+
+              {% elseif entry.mediaDescription %}
+                {{ entry.mediaDescription | raw}}
+              {% endif %}
+
+              <a href="{{entry.url}}" class="feature-button">See {{entry.title}}</a>
+            </div>
+            <div class="feature-1">
+              {% for asset in entry.featureImage.all() %}
+                <img class="lazy" data-src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+              {% endfor %}
+            </div>
+          </div>
+    </div>
+  {% endfor %}
 {% endcache %}
