@@ -52,7 +52,6 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         ),
         'f' => 
         array (
-            'fortrabbit\\Copy\\' => 16,
             'firstborn\\migrationmanager\\' => 27,
         ),
         'e' => 
@@ -206,10 +205,6 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'mikehaertl\\shellcommand\\' => 
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
-        ),
-        'fortrabbit\\Copy\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fortrabbit/craft-copy/src',
         ),
         'firstborn\\migrationmanager\\' => 
         array (
@@ -2785,26 +2780,6 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'firstborn\\migrationmanager\\services\\Tags' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/Tags.php',
         'firstborn\\migrationmanager\\services\\UserGroups' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/UserGroups.php',
         'firstborn\\migrationmanager\\services\\UsersContent' => __DIR__ . '/..' . '/firstborn/migrationmanager/src/services/UsersContent.php',
-        'fortrabbit\\Copy\\Plugin' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/Plugin.php',
-        'fortrabbit\\Copy\\commands\\AssetsDownAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/AssetsDownAction.php',
-        'fortrabbit\\Copy\\commands\\AssetsUpAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/AssetsUpAction.php',
-        'fortrabbit\\Copy\\commands\\CodeDownAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/CodeDownAction.php',
-        'fortrabbit\\Copy\\commands\\CodeUpAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/CodeUpAction.php',
-        'fortrabbit\\Copy\\commands\\DbDownAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/DbDownAction.php',
-        'fortrabbit\\Copy\\commands\\DbExportAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/DbExportAction.php',
-        'fortrabbit\\Copy\\commands\\DbImportAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/DbImportAction.php',
-        'fortrabbit\\Copy\\commands\\DbUpAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/DbUpAction.php',
-        'fortrabbit\\Copy\\commands\\InfoAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/InfoAction.php',
-        'fortrabbit\\Copy\\commands\\SetupAction' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/commands/SetupAction.php',
-        'fortrabbit\\Copy\\exceptions\\CraftNotInstalledException' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/exceptions/CraftNotInstalledException.php',
-        'fortrabbit\\Copy\\exceptions\\PluginNotInstalledException' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/exceptions/PluginNotInstalledException.php',
-        'fortrabbit\\Copy\\exceptions\\RemoteException' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/exceptions/RemoteException.php',
-        'fortrabbit\\Copy\\helpers\\ConsoleOutputHelper' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/helpers/ConsoleOutputHelper.php',
-        'fortrabbit\\Copy\\helpers\\PathHelper' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/helpers/PathHelper.php',
-        'fortrabbit\\Copy\\services\\Dump' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/services/Dump.php',
-        'fortrabbit\\Copy\\services\\Git' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/services/Git.php',
-        'fortrabbit\\Copy\\services\\Rsync' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/services/Rsync.php',
-        'fortrabbit\\Copy\\services\\Ssh' => __DIR__ . '/..' . '/fortrabbit/craft-copy/src/services/Ssh.php',
         'mikehaertl\\shellcommand\\Command' => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src/Command.php',
         'mmikkel\\cpfieldinspect\\CpFieldInspect' => __DIR__ . '/..' . '/mmikkel/cp-field-inspect/src/CpFieldInspect.php',
         'mmikkel\\cpfieldinspect\\CpFieldInspectBundle' => __DIR__ . '/..' . '/mmikkel/cp-field-inspect/src/CpFieldInspectBundle.php',

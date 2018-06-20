@@ -25,7 +25,6 @@ return array(
     'ostark\\Yii2ArtisanBridge\\' => array($vendorDir . '/ostark/yii2-artisan-bridge/src'),
     'mmikkel\\cpfieldinspect\\' => array($vendorDir . '/mmikkel/cp-field-inspect/src'),
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
-    'fortrabbit\\Copy\\' => array($vendorDir . '/fortrabbit/craft-copy/src'),
     'firstborn\\migrationmanager\\' => array($vendorDir . '/firstborn/migrationmanager/src'),
     'enupal\\paypal\\' => array($vendorDir . '/enupal/paypal/src'),
     'enupal\\backup\\' => array($vendorDir . '/enupal/backup/src'),

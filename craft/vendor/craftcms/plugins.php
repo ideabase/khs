@@ -91,25 +91,6 @@ return array (
       'mailer' => 'craft\\contactform\\Mailer',
     ),
   ),
-  'fortrabbit/craft-copy' => 
-  array (
-    'class' => 'fortrabbit\\Copy\\Plugin',
-    'basePath' => $vendorDir . '/fortrabbit/craft-copy/src',
-    'handle' => 'copy',
-    'aliases' => 
-    array (
-      '@fortrabbit/Copy' => $vendorDir . '/fortrabbit/craft-copy/src',
-    ),
-    'name' => 'Copy',
-    'version' => '1.0.0-beta1',
-    'description' => 'Tooling for Craft on fortrabbit',
-    'developer' => 'Oliver Stark',
-    'developerUrl' => 'https://www.fortrabbit.com',
-    'documentationUrl' => 'https://github.com/fortrabbit/craft-copy/blob/master/README.md',
-    'changelogUrl' => 'https://raw.githubusercontent.com/fortrabbit/craft-copy/master/CHANGELOG.md',
-    'hasCpSettings' => false,
-    'hasCpSection' => false,
-  ),
   'wbrowar/adminbar' => 
   array (
     'class' => 'wbrowar\\adminbar\\AdminBar',
