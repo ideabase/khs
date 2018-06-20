@@ -164,17 +164,39 @@ return array (
       '@enupal/paypal' => $vendorDir . '/enupal/paypal/src',
     ),
     'name' => 'PayPal',
-    'version' => '1.0.1',
+    'version' => '1.0.2',
     'schemaVersion' => '1.0.0',
     'description' => 'Sell products or services on your website using a PayPal Buy Now Button',
     'developer' => 'Enupal',
-    'developerUrl' => 'http://enupal.com/en',
+    'developerUrl' => 'http://enupal.com',
     'developerEmail' => 'support@enupal.com',
-    'documentationUrl' => 'https://enupal.com/en/craft-plugins/enupal-paypal/docs',
+    'documentationUrl' => 'https://enupal.com/craft-plugins/paypal/docs',
     'changelogUrl' => 'https://raw.githubusercontent.com/enupal/paypal/master/CHANGELOG.md',
     'components' => 
     array (
       'app' => 'enupal\\paypal\\services\\App',
+    ),
+  ),
+  'enupal/backup' => 
+  array (
+    'class' => 'enupal\\backup\\Backup',
+    'basePath' => $vendorDir . '/enupal/backup/src',
+    'handle' => 'enupal-backup',
+    'aliases' => 
+    array (
+      '@enupal/backup' => $vendorDir . '/enupal/backup/src',
+    ),
+    'name' => 'Enupal Backup',
+    'version' => '1.1.4',
+    'description' => 'Fully integrated Backup solution for Craft CMS',
+    'developer' => 'Enupal',
+    'developerUrl' => 'http://enupal.com/en',
+    'developerEmail' => 'info@enupal.com',
+    'documentationUrl' => 'https://enupal.com/en/craft-plugins/enupal-backup/docs',
+    'changelogUrl' => 'https://raw.githubusercontent.com/enupal/backup/master/CHANGELOG.md',
+    'components' => 
+    array (
+      'app' => 'enupal\\backup\\services\\App',
     ),
   ),
 );

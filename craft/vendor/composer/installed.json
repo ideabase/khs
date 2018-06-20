@@ -930,19 +930,78 @@
         "description": "An SVG sanitizer for PHP"
     },
     {
-        "name": "enupal/paypal",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
+        "name": "enupal/backup",
+        "version": "1.1.4",
+        "version_normalized": "1.1.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/enupal/paypal/zipball/d477a87fa8290077b9be8ad400eb187664cbe4f4",
-            "reference": "d477a87fa8290077b9be8ad400eb187664cbe4f4",
+            "url": "https://api.github.com/repos/enupal/backup/zipball/dfca59a86f999d54c52e0aceedba730525222ea0",
+            "reference": "dfca59a86f999d54c52e0aceedba730525222ea0",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.0.0-RC1",
+            "mikehaertl/php-shellcommand": "~1.2.5"
+        },
+        "time": "2018-06-01T12:11:22+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "name": "Enupal Backup",
+            "handle": "enupal-backup",
+            "hasSettings": true,
+            "changelogUrl": "https://raw.githubusercontent.com/enupal/backup/master/CHANGELOG.md",
+            "developer": "Enupal",
+            "class": "enupal\\backup\\Backup",
+            "components": {
+                "app": "enupal\\backup\\services\\App"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "enupal\\backup\\": "src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "Enupal",
+                "homepage": "http://enupal.com/en"
+            }
+        ],
+        "description": "Fully integrated Backup solution for Craft CMS",
+        "keywords": [
+            "amazon s3",
+            "backup",
+            "cloud",
+            "cms",
+            "craft",
+            "craft-plugin",
+            "craftcms",
+            "dropbox",
+            "ftp",
+            "schedule",
+            "sftp"
+        ],
+        "support": {
+            "email": "info@enupal.com",
+            "issues": "https://github.com/enupal/backup/issues",
+            "docs": "https://enupal.com/en/craft-plugins/enupal-backup/docs"
+        }
+    },
+    {
+        "name": "enupal/paypal",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/enupal/paypal/zipball/bbf37ebc50546573f9856bdc00c8ea75329dc098",
+            "reference": "bbf37ebc50546573f9856bdc00c8ea75329dc098",
             "shasum": ""
         },
         "require": {
             "craftcms/cms": "^3.0.0"
         },
-        "time": "2018-04-15T16:39:12+00:00",
+        "time": "2018-06-20T00:17:03+00:00",
         "type": "craft-plugin",
         "extra": {
             "name": "PayPal",
@@ -965,7 +1024,7 @@
         "authors": [
             {
                 "name": "Enupal",
-                "homepage": "http://enupal.com/en"
+                "homepage": "http://enupal.com"
             }
         ],
         "description": "Sell products or services on your website using a PayPal Buy Now Button",
@@ -986,7 +1045,7 @@
         "support": {
             "email": "support@enupal.com",
             "issues": "https://github.com/enupal/paypal/issues",
-            "docs": "https://enupal.com/en/craft-plugins/enupal-paypal/docs"
+            "docs": "https://enupal.com/craft-plugins/paypal/docs"
         }
     },
     {

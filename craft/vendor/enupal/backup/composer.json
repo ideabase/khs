@@ -1,0 +1,50 @@
+{
+  "name": "enupal/backup",
+  "description": "Fully integrated Backup solution for Craft CMS",
+  "type": "craft-plugin",
+  "version": "1.1.4",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "backup",
+    "schedule",
+    "amazon s3",
+    "dropbox",
+    "cloud",
+    "ftp",
+    "sftp"
+  ],
+  "autoload": {
+    "psr-4": {
+      "enupal\\backup\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Enupal",
+      "homepage": "http://enupal.com/en"
+    }
+  ],
+  "support": {
+    "email": "info@enupal.com",
+    "issues": "https://github.com/enupal/backup/issues",
+    "docs": "https://enupal.com/en/craft-plugins/enupal-backup/docs"
+  },
+  "require": {
+    "craftcms/cms": "^3.0.0-RC1",
+    "mikehaertl/php-shellcommand": "~1.2.5"
+  },
+  "extra": {
+    "name": "Enupal Backup",
+    "handle": "enupal-backup",
+    "hasSettings": true,
+    "changelogUrl": "https://raw.githubusercontent.com/enupal/backup/master/CHANGELOG.md",
+    "developer": "Enupal",
+    "class": "enupal\\backup\\Backup",
+    "components": {
+      "app": "enupal\\backup\\services\\App"
+    }
+  }
+}

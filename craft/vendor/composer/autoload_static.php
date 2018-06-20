@@ -58,6 +58,7 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'e' => 
         array (
             'enupal\\paypal\\' => 14,
+            'enupal\\backup\\' => 14,
             'enshrined\\svgSanitize\\' => 22,
         ),
         'c' => 
@@ -217,6 +218,10 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'enupal\\paypal\\' => 
         array (
             0 => __DIR__ . '/..' . '/enupal/paypal/src',
+        ),
+        'enupal\\backup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enupal/backup/src',
         ),
         'enshrined\\svgSanitize\\' => 
         array (
@@ -2682,6 +2687,39 @@ class ComposerStaticInit0c86cf0e29abb4eab300f43b576709cd
         'enshrined\\svgSanitize\\data\\AllowedTags' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AllowedTags.php',
         'enshrined\\svgSanitize\\data\\AttributeInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AttributeInterface.php',
         'enshrined\\svgSanitize\\data\\TagInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/TagInterface.php',
+        'enupal\\backup\\Backup' => __DIR__ . '/..' . '/enupal/backup/src/Backup.php',
+        'enupal\\backup\\contracts\\BackupConfig' => __DIR__ . '/..' . '/enupal/backup/src/contracts/BackupConfig.php',
+        'enupal\\backup\\contracts\\BackupType' => __DIR__ . '/..' . '/enupal/backup/src/contracts/BackupType.php',
+        'enupal\\backup\\contracts\\DatabaseBackup' => __DIR__ . '/..' . '/enupal/backup/src/contracts/DatabaseBackup.php',
+        'enupal\\backup\\contracts\\DirectoryBackup' => __DIR__ . '/..' . '/enupal/backup/src/contracts/DirectoryBackup.php',
+        'enupal\\backup\\controllers\\BackupsController' => __DIR__ . '/..' . '/enupal/backup/src/controllers/BackupsController.php',
+        'enupal\\backup\\controllers\\SettingsController' => __DIR__ . '/..' . '/enupal/backup/src/controllers/SettingsController.php',
+        'enupal\\backup\\controllers\\WebhookController' => __DIR__ . '/..' . '/enupal/backup/src/controllers/WebhookController.php',
+        'enupal\\backup\\elements\\Backup' => __DIR__ . '/..' . '/enupal/backup/src/elements/Backup.php',
+        'enupal\\backup\\elements\\db\\BackupQuery' => __DIR__ . '/..' . '/enupal/backup/src/elements/db/BackupQuery.php',
+        'enupal\\backup\\enums\\BackupStatus' => __DIR__ . '/..' . '/enupal/backup/src/enums/BackupStatus.php',
+        'enupal\\backup\\enums\\BaseEnum' => __DIR__ . '/..' . '/enupal/backup/src/enums/BaseEnum.php',
+        'enupal\\backup\\jobs\\CreateBackup' => __DIR__ . '/..' . '/enupal/backup/src/jobs/CreateBackup.php',
+        'enupal\\backup\\migrations\\Install' => __DIR__ . '/..' . '/enupal/backup/src/migrations/Install.php',
+        'enupal\\backup\\migrations\\m180530_000000_assets_cleanup' => __DIR__ . '/..' . '/enupal/backup/src/migrations/m180530_000000_assets_cleanup.php',
+        'enupal\\backup\\migrations\\m180531_000000_config_files' => __DIR__ . '/..' . '/enupal/backup/src/migrations/m180531_000000_config_files.php',
+        'enupal\\backup\\models\\Settings' => __DIR__ . '/..' . '/enupal/backup/src/models/Settings.php',
+        'enupal\\backup\\records\\Backup' => __DIR__ . '/..' . '/enupal/backup/src/records/Backup.php',
+        'enupal\\backup\\services\\App' => __DIR__ . '/..' . '/enupal/backup/src/services/App.php',
+        'enupal\\backup\\services\\Backups' => __DIR__ . '/..' . '/enupal/backup/src/services/Backups.php',
+        'enupal\\backup\\services\\Settings' => __DIR__ . '/..' . '/enupal/backup/src/services/Settings.php',
+        'enupal\\backup\\validators\\AmazonValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/AmazonValidator.php',
+        'enupal\\backup\\validators\\AssetSourceValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/AssetSourceValidator.php',
+        'enupal\\backup\\validators\\BackupFilesValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/BackupFilesValidator.php',
+        'enupal\\backup\\validators\\DropboxValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/DropboxValidator.php',
+        'enupal\\backup\\validators\\FtpValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/FtpValidator.php',
+        'enupal\\backup\\validators\\NotificationValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/NotificationValidator.php',
+        'enupal\\backup\\validators\\RecipientsValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/RecipientsValidator.php',
+        'enupal\\backup\\validators\\SoftlayerValidator' => __DIR__ . '/..' . '/enupal/backup/src/validators/SoftlayerValidator.php',
+        'enupal\\backup\\variables\\BackupVariable' => __DIR__ . '/..' . '/enupal/backup/src/variables/BackupVariable.php',
+        'enupal\\backup\\web\\assets\\BackupAsset' => __DIR__ . '/..' . '/enupal/backup/src/web/assets/BackupAsset.php',
+        'enupal\\backup\\web\\assets\\FontAwesomeAsset' => __DIR__ . '/..' . '/enupal/backup/src/web/assets/FontAwesomeAsset.php',
+        'enupal\\backup\\web\\assets\\HighlightAsset' => __DIR__ . '/..' . '/enupal/backup/src/web/assets/HighlightAsset.php',
         'enupal\\paypal\\Paypal' => __DIR__ . '/..' . '/enupal/paypal/src/Paypal.php',
         'enupal\\paypal\\assetbundles\\FontAwesomeAsset' => __DIR__ . '/..' . '/enupal/paypal/src/assetBundles/FontAwesomeAsset.php',
         'enupal\\paypal\\assetbundles\\OrdersAsset' => __DIR__ . '/..' . '/enupal/paypal/src/assetBundles/OrdersAsset.php',

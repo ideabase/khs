@@ -30,6 +30,15 @@
       {% for type in entry.mediaType.all() %}
         {{ type.title }}
       {% endfor %}
+      {% if entry.paymentButton | length %}
+        {% set paypal = entry.paymentButton.first() %}
+        {{ paypal.sku }}
+        {{ paypal.name }}
+        {{ paypal.currency }}
+
+        {# DISPLAY PAYPAL BUTTON #}
+        {{ paypal.displayButton() }}
+      {% endif %}
 			<br>
     </div>
 	{% endif %}
