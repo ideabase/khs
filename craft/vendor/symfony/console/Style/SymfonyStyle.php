@@ -40,6 +40,10 @@ class SymfonyStyle extends OutputStyle
     private $lineLength;
     private $bufferedOutput;
 
+    /**
+     * @param InputInterface  $input
+     * @param OutputInterface $output
+     */
     public function __construct(InputInterface $input, OutputInterface $output)
     {
         $this->input = $input;
@@ -279,7 +283,9 @@ class SymfonyStyle extends OutputStyle
     }
 
     /**
-     * @return mixed
+     * @param Question $question
+     *
+     * @return string
      */
     public function askQuestion(Question $question)
     {
@@ -306,14 +312,8 @@ class SymfonyStyle extends OutputStyle
      */
     public function writeln($messages, $type = self::OUTPUT_NORMAL)
     {
-        if (!is_iterable($messages)) {
-            $messages = array($messages);
-        }
-
-        foreach ($messages as $message) {
-            parent::writeln($message, $type);
-            $this->writeBuffer($message, true, $type);
-        }
+        parent::writeln($messages, $type);
+        $this->bufferedOutput->writeln($this->reduceBuffer($messages), $type);
     }
 
     /**
@@ -321,14 +321,8 @@ class SymfonyStyle extends OutputStyle
      */
     public function write($messages, $newline = false, $type = self::OUTPUT_NORMAL)
     {
-        if (!is_iterable($messages)) {
-            $messages = array($messages);
-        }
-
-        foreach ($messages as $message) {
-            parent::write($message, $newline, $type);
-            $this->writeBuffer($message, $newline, $type);
-        }
+        parent::write($messages, $newline, $type);
+        $this->bufferedOutput->write($this->reduceBuffer($messages), $newline, $type);
     }
 
     /**
@@ -350,7 +344,10 @@ class SymfonyStyle extends OutputStyle
         return new self($this->input, $this->getErrorOutput());
     }
 
-    private function getProgressBar(): ProgressBar
+    /**
+     * @return ProgressBar
+     */
+    private function getProgressBar()
     {
         if (!$this->progressBar) {
             throw new RuntimeException('The ProgressBar is not started.');
@@ -359,20 +356,18 @@ class SymfonyStyle extends OutputStyle
         return $this->progressBar;
     }
 
-    private function autoPrependBlock(): void
+    private function autoPrependBlock()
     {
         $chars = substr(str_replace(PHP_EOL, "\n", $this->bufferedOutput->fetch()), -2);
 
         if (!isset($chars[0])) {
-            $this->newLine(); //empty history, so we should start with a new line.
-
-            return;
+            return $this->newLine(); //empty history, so we should start with a new line.
         }
         //Prepend new line for each non LF chars (This means no blank line was output before)
         $this->newLine(2 - substr_count($chars, "\n"));
     }
 
-    private function autoPrependText(): void
+    private function autoPrependText()
     {
         $fetched = $this->bufferedOutput->fetch();
         //Prepend new line if last char isn't EOL:
@@ -381,14 +376,16 @@ class SymfonyStyle extends OutputStyle
         }
     }
 
-    private function writeBuffer(string $message, bool $newLine, int $type): void
+    private function reduceBuffer($messages)
     {
         // We need to know if the two last chars are PHP_EOL
         // Preserve the last 4 chars inserted (PHP_EOL on windows is two chars) in the history buffer
-        $this->bufferedOutput->write(substr($message, -4), $newLine, $type);
+        return array_map(function ($value) {
+            return substr($value, -4);
+        }, array_merge(array($this->bufferedOutput->fetch()), (array) $messages));
     }
 
-    private function createBlock(iterable $messages, string $type = null, string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = false)
+    private function createBlock($messages, $type = null, $style = null, $prefix = ' ', $padding = false, $escape = false)
     {
         $indentLength = 0;
         $prefixLength = Helper::strlenWithoutDecoration($this->getFormatter(), $prefix);

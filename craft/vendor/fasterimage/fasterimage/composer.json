@@ -1,0 +1,35 @@
+{
+  "name": "fasterimage/fasterimage",
+  "description": "FasterImage finds the size or type of a set of images given their uris by fetching as little as needed, in parallel. Originally ported by Tom Moor.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Will Washburn",
+      "email": "will@tailwindapp.com"
+    }
+  ],
+  "keywords": [
+    "fastimage",
+    "fast image",
+    "faster image",
+    "fasterimage",
+    "getimagesize",
+    "parallel",
+    "image size"
+  ],
+  "github": "https://github.com/willwashburn/fasterimage",
+  "homepage": "https://github.com/willwashburn/fasterimage",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0",
+    "willwashburn/stream": ">=1.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9",
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "classmap": ["src"]
+  },
+  "minimum-stability": "stable"
+}
