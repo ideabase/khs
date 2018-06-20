@@ -51,7 +51,7 @@
 
 <div class="introduction">{{ category.body }}</div>
 
-{% set entries = craft.entries.relatedTo(category).limit(5) %}
+{% set entries = craft.entries.relatedTo(category) %}
 <div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   {% for entry in entries %}
         <figure class="photo-gallery__item">
