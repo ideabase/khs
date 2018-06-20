@@ -6,9 +6,7 @@
         "firstborn/migrationmanager": "3.0.5",
         "mmikkel/cp-field-inspect": "1.0.4",
         "workingconcept/craft-cloudflare": "0.2.0",
-        "craftcms/contact-form": "2.1.1",
-        "enupal/paypal": "1.0.2",
-        "enupal/backup": "1.1.4"
+        "craftcms/contact-form": "2.1.1"
     },
     "config": {
       "platform": {
