@@ -1,6 +1,8 @@
 <div class="feature">
       <h3>{{ entry.title }}</h3>
-      {% if entry.startDate | length %}{{ entry.startDate  | date('M j, Y')}} {% endif %}
+      {% if entry.startDate | length %}
+        {{ entry.startDate  | date('M j, Y')}}
+      {% endif %}
       <p>{{ entry.body }}</p>
       {% if entry.location | length %}<p>{{ entry.location }}</p> {% endif %}
       {% if entry.url %} <a href="{{entry.url}}" class="button-link">{{entry.title}}</a> {% endif %}
