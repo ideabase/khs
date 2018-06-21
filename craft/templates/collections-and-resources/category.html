@@ -18,30 +18,31 @@
     <h2 class="banner-h2">{{ category.subHeadline }}</h2>
   </div>
 </section>
-
-{% if category.layout == "feature" %}
-    This is the content layout
-  {% elseif category.layout == "timeline" %}
-    This is the photo layout
-{% endif %}
-
 {% endcache %}
 {% endblock %}
 
+
 {% block content %}
+
 {% cache %}
 
 {# FEATURE LAYOUT #}
 {% if category.layout == "feature" %}
 
-{{ category.body }}
+  <div class="introduction">
+    {{ category.body }}
+  </div>
+  {% include 'globals/featureItem.html' %} {# displays the now featuring block #}
 
 {% set entries = craft.entries.relatedTo(category) %}
-  <ul>
-    {% for entry in entries %}
-      <li><a href="{{entry.url}}">{{ entry.title }}</a></li>
-    {% endfor %}
-  </ul>
+<h2>{{category.featuredTitle}}</h2>
+<div class="feature-links">
+{% for entry in entries %}
+  {% include 'globals/noImageListing.html' %}
+{% endfor %}
+</div>
+
+
 {% endif %}
 
 

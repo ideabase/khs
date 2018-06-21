@@ -2,6 +2,6 @@
       <h3>{{ entry.title }}</h3>
       {% if entry.startDate | length %}{{ entry.startDate  | date('M j, Y')}} {% endif %}
       <p>{{ entry.body }}</p>
-      <p>{{ entry.location }}</p>
-      {% if entry.url %} <a href="{{entry.url}}" class="button-link">Learn more</a> {% endif %}
+      {% if entry.location | length %}<p>{{ entry.location }}</p> {% endif %}
+      {% if entry.url %} <a href="{{entry.url}}" class="button-link">{{entry.title}}</a> {% endif %}
 </div>

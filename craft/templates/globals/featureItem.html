@@ -1,6 +1,13 @@
 {% cache %}
 
-  {% for entry in entry.mainFeaturedItem.all() %}
+{# Checking to see if this is an entry or category page #}
+{% if entry is defined %}
+  {% set featured = entry.mainFeaturedItem.all() %}
+{% elseif category is defined %}
+  {% set featured = category.mainFeaturedItem.all() %}
+{% endif %}
+
+  {% for entry in featured %}
     {% set fields = entry.fields %}
     <div class="feature-section-background">
           <div class="feature-section-1">
