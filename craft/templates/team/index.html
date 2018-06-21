@@ -14,38 +14,56 @@
       </ul>
     </section>
 
-    {# displays the board members #}
 
     {# displays the board members who hold positions #}
 
     {% set members = craft.entries.section('teamMembers').orderBy('lastName') %}
     <section class="featured-profiles">
       <h2>Board Members</h2>
-      <ul class="text-columns__listing">
-      {% for entry in members %}
-        {% if entry.role.contains('boardMembers') %}
-          {% if entry.jobTitle != "Board Member" %}
-            <li class="text-columns__item">
-              <h4>{{ entry.title }}</h4>
-              <p>{{ entry.jobTitle }}</p>
-            </li>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+        <ul class="text-columns__listing">
+          {% for entry in members %}
+            {% if entry.role.contains('boardMembers') %}
+              {% if entry.jobTitle != "Board Member" %}
+                <li class="text-columns__item">
+                  <h4>{{ entry.title }}</h4>
+                  <p>{{ entry.jobTitle }}</p>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
 
-    {# displays the normal board members #}
+          {# displays the normal board members #}
 
-    {% for entry in members %}
-      {% if entry.role.contains('boardMembers') %}
-        {% if entry.jobTitle == "Board Member" %}
-        <li class="text-columns__item">
-          <h4>{{ entry.title }}</h4>
-          <p>{{ entry.jobTitle }}</p>
-        </li>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </ul>
+          {% for entry in members %}
+            {% if entry.role.contains('boardMembers') %}
+              {% if entry.jobTitle == "Board Member" %}
+                <li class="text-columns__item">
+                  <h4>{{ entry.title }}</h4>
+                  <p>{{ entry.jobTitle }}</p>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+    </section>
+
+{# displays the Volunteers #}
+
+    {% set teamMembers = craft.entries.section('teamMembers').orderBy('lastName') %}
+    <section class="featured-profiles">
+      <h2>Volunteers</h2>
+        <ul class="text-columns__listing">
+          {% for volunteer in teamMembers %}
+            {% if volunteer.role.contains('volunteer')%}
+              <li class="text-columns__item">
+                <h4>{{ volunteer.title }}</h4>
+                <p>{{ volunteer.jobTitle }}</p>
+                <p>{{ volunteer.email }}</p>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+    </section>
 
   {% endcache %}
 {% endblock %}
