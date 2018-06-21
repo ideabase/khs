@@ -2,7 +2,6 @@
 
 {% block subcontent %}
 
-{{ now|date('M j, Y') }}
   <h1>Past Exhibits</h1>
   <ul>
     {% for entry in craft.entries.section('exhibits') %}
