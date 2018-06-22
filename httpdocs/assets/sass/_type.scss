@@ -35,6 +35,14 @@ h4 {
   font-size: 1.08em;
 }
 
+h6 {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid $gray;
+}
+
 .introduction{
   font-size: 1.1em;
   max-width: 600px;
@@ -88,11 +96,4 @@ h4 {
   &:hover {
     color: $yellow;
   }
-}
-
-@media screen and (min-width: 600px) {
-  h5 {
-    padding: 0 2.5em;
-  }
-
 }

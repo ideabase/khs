@@ -1,0 +1,87 @@
+.third-layout {
+  text-align: left;
+  h2 {
+    text-align: left;
+  }
+  h6 {
+    margin-top: 0;
+  }
+  @media screen and (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.third__main {
+  @media screen and (min-width: 600px) {
+    width: 45%;
+    margin-bottom: 1.5em;
+  }
+}
+
+.third__meta {
+  margin-bottom: 2em;
+  display: inline-block;
+  @media screen and (min-width: 600px) {
+    width: 30%;
+    margin-top: 2em;
+  }
+}
+
+.meta-list {
+  font-size: .75em;
+  @include no-list;
+  li {
+    margin-bottom: .45em;
+  }
+}
+
+.third__images__media {
+  position: relative;
+  &:after {
+    background-color: $yellow;
+    mix-blend-mode: multiply;
+    content: "";
+    height: 10%;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  @media screen and (min-width: 600px) {
+    order: 2;
+    width: 70%;
+  }
+}
+
+.third__images__caption {
+  background-color: $green;
+  color: white;
+  font-size: .8em;
+  margin-top: .5em;
+  padding: 2em;
+  position: relative;
+  @media screen and (min-width: 600px) {
+    order: 1;
+    margin-right: .5em;
+    height: 15em;
+    width: 30%;
+    margin-top: 0;
+    text-align: right;
+    margin-top: 5em;
+    figcaption {
+      bottom: 15px;
+      position:absolute;
+      right: 15px;
+    }
+  }
+}
+
+.third__images {
+  position: relative;
+  margin-bottom: 3em;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    width: 100%;
+  }
+}

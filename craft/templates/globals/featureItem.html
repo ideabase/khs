@@ -19,24 +19,17 @@
             <div class="feature-2">
               <h5 class="feature-title">Now Featuring</h5>
               <h3 class="feature-heading">{{entry.title}}</h2>
-              {% for field in fields %}
-              {% switch field %}
-                {% case 'startDate' %}
-                  {{entry.startDate  | date('M j, Y')}}
-
-                {% case 'eventLocation' %}
-                  {{entry.eventLocation}}
-
+              <ul class="meta-list">{% for field in fields %}{% switch field %}
                 {% case 'startTime' %}
-                  {{entry.startTime}}
-
-                {% case 'endTime' %}
-                  {{entry.endTime}}
-
+                <li>{{entry.startTime  | date('g:i')}}</li>
+                {% case 'startDate' %}
+                <li>{{entry.startDate  | date('M j, Y')}}</li>
+                {% case 'eventLocation' %}
+                <li>{{entry.eventLocation}}</li>
                 {% default %}
-
               {% endswitch %}
               {% endfor %}
+            </ul>
 
               {% if entry.teaserText %}
                 <p>{{ entry.teaserText }}</p>

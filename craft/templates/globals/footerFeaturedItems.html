@@ -2,6 +2,7 @@
 <div class="feature-footer">
   <h2>{{ entry.featuredTitle }}</h2>
   <div class="feature-section-3">
+    {% if entry.featuredItems | length %}
     {% for entry in entry.featuredItems.all() %}
   <div class="teaser-block">
       {% if entry.featureImage | length %}
@@ -14,5 +15,6 @@
       <a href="{{entry.url}}" class="button-link">{{entry.title}}</a>
   </div>
   {% endfor %}
+  {% endif %}
 </div>
 {% endcache %}

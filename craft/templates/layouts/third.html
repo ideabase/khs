@@ -7,5 +7,59 @@
 {% endblock %}
 
 {% block content %}
-      {% include 'globals/footerFeaturedItems.html' %}
+  <div class="third-layout">
+    <section class="third__main">
+
+    <h2>{{ entry.subHeadline }}</h2>
+
+      {{ entry.body }}
+      {{ entry.mediaDescription }}
+
+    {% include "globals/relatedLinks.html" %}
+
+    </section>
+
+    <section class="third__meta">
+      <h6>The Details</h6>
+      <ul class="meta-list">
+        {% set categories = entry.mediaType %}
+        {% if categories | length %}
+        Media Type:
+          {% for category in categories %}
+            {{ category.title }}
+          {% endfor %}
+        {% endif %}
+        {% set categories = entry.mediaCategory %}
+        {% if categories | length %}
+        Category:
+          {% for category in categories %}
+            {{ category.title }}
+          {% endfor %}
+        {% endif %}
+        {% if entry.startDate | length %}
+        <li>{{ entry.startDate | date('M j, Y') }}
+        {% endif %}
+          {% if entry.endDate | length %} - {{ entry.endDate | date('M j, Y') }}</date>{% endif %}</li>
+        {% if entry.startTime | length %}
+        <li><time>{{entry.startTime | date('g:i a') }}
+          {% endif %}
+        {% if entry.endDate | length %} - {{entry.endTime | date('g:i a')}} {% endif %}</li>
+        {% if entry.location | length %}<li>{{ entry.eventLocation }}</li> {% endif %}
+      </ul>
+    </section>
+  </div>
+  {% if entry.featureImage.first() | length %}
+  <section class="third__images">
+        <div class="third__images__media">
+          {% set image = entry.featureImage.first() %}
+                      <img src="{{ image.url }}"
+                           alt="{{ image.title }}"/>
+        </div>
+        <div class="third__images__caption">
+          <figcaption>{{ entry.imageCaption }}</figcaption>
+        </div>
+  </section>
+  {% endif %}
+  <h2>Related Items</h2>
+  {% include 'globals/footerFeaturedItems.html' %}
 {% endblock %}
