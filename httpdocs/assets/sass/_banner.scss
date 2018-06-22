@@ -25,19 +25,22 @@
   animation-fill-mode: forwards;
   margin: .25em;
   overflow: hidden;
-  &:after {
+  &:before {
     content: "";
-    top: 40%;
+    top: 0;
     right: 0;
     position: absolute;
-    height: 60%;
+    height: 100%;
     width: 100%;
     display: block;
     z-index: 2;
+    background-color: rgba(black,.15);
+    background-blend-mode: hard-light;
     //background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
   }
   img {
     width: 100%;
+    filter: grayscale(50%);
   }
   @media screen and (min-width: 1200px) {
     min-height: 305px;
