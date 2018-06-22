@@ -1,0 +1,18 @@
+{% cache %}
+<section class="small-banner">
+  <div class="small-banner__container">
+    {% if entry is defined %}
+      {% if entry.section.handle == "exhibits" or entry.section.handle == "events" or entry.section.handle == "historicalMedia" %}
+        <h2 class="small-banner__section">{{entry.section.name}}</h2>
+      {% endif %}
+      <h1 class="banner-h1 small-banner__title">{{ entry.title }}</h1>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">{{entry.section.name}}</li>
+      <li class="breadcrumbs__item">{{entry.title}}</li>
+    </ul>
+    {% else %}
+      <h1 class="banner-h1 small-banner__title">{{ title }}</h1>
+  {% endif %}
+  </div>
+</section>
+{% endcache %}

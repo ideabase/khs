@@ -2,11 +2,16 @@
 
 {# Checking to see if this is an entry or category page #}
 {% if entry is defined %}
+  {% if entry.mainFeaturedItem | length %}
   {% set featured = entry.mainFeaturedItem.all() %}
+  {% endif %}
 {% elseif category is defined %}
-  {% set featured = category.mainFeaturedItem.all() %}
+  {% if category.mainFeaturedItem | length %}
+    {% set featured = category.mainFeaturedItem.all() %}
+  {% endif %}
 {% endif %}
 
+{% if featured is defined %}
   {% for entry in featured %}
     {% set fields = entry.fields %}
     <div class="feature-section-background">
@@ -53,4 +58,5 @@
           </div>
     </div>
   {% endfor %}
+{% endif %}
 {% endcache %}

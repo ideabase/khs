@@ -49,11 +49,10 @@
 
 {# displays the Volunteers #}
 
-    {% set teamMembers = craft.entries.section('teamMembers').orderBy('lastName') %}
     <section class="featured-profiles">
-      <h2>Volunteers</h2>
+      <h2>KHS Volunteers</h2>
         <ul class="text-columns__listing">
-          {% for volunteer in teamMembers %}
+          {% for volunteer in members %}
             {% if volunteer.role.contains('volunteer')%}
               <li class="text-columns__item">
                 <h4>{{ volunteer.title }}</h4>

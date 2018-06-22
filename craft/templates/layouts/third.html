@@ -1,0 +1,11 @@
+{# This is the Third-Tier Page Layout - includes 1 lead feature item and 3 secondary featured items #}
+
+{% extends '_layout' %}
+
+{% block subheader %}
+  {% include 'globals/banner-small.html' %}
+{% endblock %}
+
+{% block content %}
+      {% include 'globals/footerFeaturedItems.html' %}
+{% endblock %}
