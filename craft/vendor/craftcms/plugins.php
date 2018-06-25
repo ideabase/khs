@@ -135,4 +135,27 @@ return array (
     'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
     'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
   ),
+  'enupal/paypal' => 
+  array (
+    'class' => 'enupal\\paypal\\Paypal',
+    'basePath' => $vendorDir . '/enupal/paypal/src',
+    'handle' => 'enupal-paypal',
+    'aliases' => 
+    array (
+      '@enupal/paypal' => $vendorDir . '/enupal/paypal/src',
+    ),
+    'name' => 'PayPal',
+    'version' => '1.0.3',
+    'schemaVersion' => '1.0.0',
+    'description' => 'Sell products or services on your website using a PayPal Buy Now Button',
+    'developer' => 'Enupal',
+    'developerUrl' => 'http://enupal.com',
+    'developerEmail' => 'support@enupal.com',
+    'documentationUrl' => 'https://enupal.com/craft-plugins/paypal/docs',
+    'changelogUrl' => 'https://raw.githubusercontent.com/enupal/paypal/master/CHANGELOG.md',
+    'components' => 
+    array (
+      'app' => 'enupal\\paypal\\services\\App',
+    ),
+  ),
 );
