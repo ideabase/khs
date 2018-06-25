@@ -24,17 +24,17 @@
       <ul class="meta-list">
         {% set categories = entry.mediaType %}
         {% if categories | length %}
-        Media Type:
+        <li>Media Type:
           {% for category in categories %}
             {{ category.title }}
-          {% endfor %}
+          {% endfor %}</li>
         {% endif %}
         {% set categories = entry.mediaCategory %}
         {% if categories | length %}
-        Category:
+        <li>Category:
           {% for category in categories %}
             {{ category.title }}
-          {% endfor %}
+          {% endfor %}</li>
         {% endif %}
         {% if entry.startDate | length %}
         <li>{{ entry.startDate | date('M j, Y') }}
@@ -45,6 +45,12 @@
           {% endif %}
         {% if entry.endDate | length %} - {{entry.endTime | date('g:i a')}} {% endif %}</li>
         {% if entry.location | length %}<li>{{ entry.eventLocation }}</li> {% endif %}
+        {% if entry.paymentButton | length %}
+          {% set paypal = entry.paymentButton.first() %}
+          <li>Price: ${{ paypal.amount|number_format(2, '.', ',') }}</li>
+          {# DISPLAY PAYPAL BUTTON #}
+          {{ paypal.displayButton() }}
+        {% endif %}
       </ul>
     </section>
   </div>

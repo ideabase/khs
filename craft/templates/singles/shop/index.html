@@ -17,30 +17,29 @@
 <div class="shop-items">
 {% for entry in craft.entries.section('historicalMedia').all() %}
 	{% if entry.forSale %}
-    <div class="item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
-			{{ entry.title }}
+      <div class="shop-items__item item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
+			<a href="{{ entry.url }}"><h3>{{ entry.title }}</h3></a>
       {% if entry.featureImage | length %}
   			{% for asset in entry.featureImage.all() %}
-  				<img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+  				<a href="{{ entry.url }}">
+            <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
+          </a>
   			{% endfor %}
       {% endif %}
 			{{ entry.mediaDescription }}
-			{{ entry.price }}
-			{{ entry.paypalProductCode|raw }}
+			{# {{ entry.paypalProductCode|raw }} #}
       {% for type in entry.mediaType.all() %}
         {{ type.title }}
       {% endfor %}
       {% if entry.paymentButton | length %}
         {% set paypal = entry.paymentButton.first() %}
-        {{ paypal.sku }}
-        {{ paypal.name }}
-        {{ paypal.currency }}
-
+        ${{ paypal.amount|number_format(2, '.', ',') }}
         {# DISPLAY PAYPAL BUTTON #}
         {{ paypal.displayButton() }}
       {% endif %}
 			<br>
     </div>
+
 	{% endif %}
 {% endfor %}
 <div>
