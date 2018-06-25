@@ -3,7 +3,7 @@
 {# Checking to see if this is an entry or category page #}
 {% if entry is defined %}
   {% if entry.mainFeaturedItem | length %}
-  {% set featured = entry.mainFeaturedItem.all() %}
+    {% set featured = entry.mainFeaturedItem.all() %}
   {% endif %}
 {% elseif category is defined %}
   {% if category.mainFeaturedItem | length %}
@@ -19,16 +19,18 @@
             <div class="feature-2">
               <h5 class="feature-title">Now Featuring</h5>
               <h3 class="feature-heading">{{entry.title}}</h2>
-              <ul class="meta-list">{% for field in fields %}{% switch field %}
-                {% case 'startTime' %}
-                <li>{{entry.startTime  | date('g:i')}}</li>
-                {% case 'startDate' %}
-                <li>{{entry.startDate  | date('M j, Y')}}</li>
-                {% case 'eventLocation' %}
-                <li>{{entry.eventLocation}}</li>
-                {% default %}
-              {% endswitch %}
-              {% endfor %}
+              <ul class="meta-list">
+                {% for field in fields %}
+                  {% switch field %}
+                    {% case 'startTime' %}
+                      <li>{{entry.startTime  | date('g:i')}}</li>
+                    {% case 'startDate' %}
+                      <li>{{entry.startDate  | date('M j, Y')}}</li>
+                    {% case 'location' %}
+                      <li>{{entry.location}}</li>
+                    {% default %}
+                  {% endswitch %}
+                {% endfor %}
             </ul>
 
               {% if entry.teaserText %}
