@@ -25,22 +25,9 @@
   animation-fill-mode: forwards;
   margin: .25em;
   overflow: hidden;
-  &:before {
-    content: "";
-    top: 0;
-    right: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: block;
-    z-index: 2;
-    background-color: rgba(black,.15);
-    background-blend-mode: hard-light;
-    //background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-  }
   img {
     width: 100%;
-    filter: grayscale(30%);
+    filter: grayscale(20%);
   }
   @media screen and (min-width: 1200px) {
     min-height: 305px;
@@ -49,9 +36,8 @@
 }
 
 .banner {
-  background-color: rgba(255,255,255,.9);
   background-repeat: no-repeat;
-  position: absolute;
+  background-color: white;
   left: 0;
   width: 100%;
   padding: 1.5em 1.25rem 1.75em 1.25em;
@@ -59,12 +45,10 @@
   background-position: top right;
   text-align: left;
   z-index: 200;
-  border-left: 6px solid $green;
   bottom: 0;
   @media screen and (min-width: 550px) {
     background-color: transparent;
     border: none;
-    background-image: url('/assets/img/ui/banner-background.svg');
     padding: 1.75em 1em;
     max-width: inherit;
     width: inherit;
@@ -72,6 +56,8 @@
     bottom: 50px;
   }
   @media screen and (min-width: 600px) {
+    background-image: url('/assets/img/ui/banner-background.svg');
+    position: absolute;
     padding-left: 3em;
     bottom: 90px;
   }
