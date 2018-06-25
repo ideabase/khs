@@ -72,15 +72,47 @@
 
 {% if category.layout == "timeline" %}
 
-{{ category.body }}
-
-  {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
-  {{ event.title }}
-  {{ event.body }}
-    {% for asset in event.featureImage %}
-      <img src="{{asset.url}}" alt="{{asset.title}}" / >
+<section class="timeline-body ">
+  <div class="timeline-body__main">
+    {{ category.body }}
+    {% for image in category.secondaryImage %}
+    <img src="{{ image.url}}" alt="image.title" />
     {% endfor %}
+  </div>
+
+  <aside class="timeline-body__aside">
+    <h2>{{category.featuredTitle}}</h2>
+    <ul>
+    {% for item in craft.entries.section('historicalMedia').relatedTo(category) %}
+      <li>
+        <a href="{{item.url}}">
+          <h3>{{ item.title }}</h3>
+          {{ item.body }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </aside>
+
+
+</section>
+
+<section class="timeline">
+  {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
+  <div class="tile timeline-text">
+    <h3>{{ event.title }}</h3>
+    {{ event.body }}
+  </div>
+  {% if event.featureImage | length %}
+  <div class="tile timeline-image">
+    {% for asset in event.featureImage %}
+      <img class="image-tile" src="{{asset.url}}" alt="{{asset.title}}" / >
+    {% endfor %}
+  </div>
+  {% endif %}
   {% endfor %}
+</section>
+
 {% endif %}
 
 
