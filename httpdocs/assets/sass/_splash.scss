@@ -9,13 +9,6 @@
   background-size: 150%;
   letter-spacing: 1.1px;
 
-  .firstHeading {
-    display: inline-block;
-    text-align: center;
-    &:nth-child(3) {
-      letter-spacing: .1em;
-    }
-  }
 
   h1 {
     font-size: 5em;
