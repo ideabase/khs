@@ -1,0 +1,68 @@
+.splash-page {
+
+  background-color: $blue;
+  color: white;
+  text-align: left;
+  background-image: url('../img/ui/railroad-tracks.svg');
+  background-repeat: no-repeat;
+  background-position: center -25px;
+  background-size: 150%;
+  letter-spacing: 1.1px;
+
+  .firstHeading {
+    display: inline-block;
+    text-align: center;
+    &:nth-child(3) {
+      letter-spacing: .1em;
+    }
+  }
+
+  h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    span {
+      color: $yellow;
+      font-family: $sans;
+    }
+  }
+
+  h1:after {
+    content: "";
+    background-color: $yellow;
+    width: 1.25em;
+    height: 8px;
+    display: block;
+    margin-top: .5em;
+  }
+
+  h3 {
+    text-align: left;
+    margin-bottom: 3em;
+  }
+
+  p {
+    color: white;
+    font-weight: 400;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .hours-address {
+    font-size: 14px;
+    margin-top: 5em;
+    margin-bottom: 7em;
+  }
+
+  .kentLink {
+    color: $yellow;
+  }
+
+  main {
+    max-width: 750px;
+    margin: 0;
+    @media screen and (min-width: 800px) {
+      padding: 3em 5em;
+    }
+  }
+
+}

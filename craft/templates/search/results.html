@@ -13,7 +13,7 @@
   {% paginate craft.entries.section('not primaryNavigation', 'not secondaryNavigation').search(query).limit(10).order('score') as pageInfo, pageEntries %}
 
   {% if pageEntries|length %}
-      <h1>{{ entries|length }} Search Results</h1>
+      <h1 class="searchHeader">Top Results for "{{ query }}"</h1>
       <ul>
           {% for entry in pageEntries %}
               <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
@@ -42,7 +42,7 @@
     <a href="{{ url }}">{{ page }}</a>
   {% endfor %}
 
-  {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}"> Next </a>{% endif %}
+  {% if pageInfo.nextUrl %}<a class="button-link" href="{{ pageInfo.nextUrl }}"> Next </a>{% endif %}
 
   </div>
 
