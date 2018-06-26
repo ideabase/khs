@@ -14,17 +14,17 @@
   {% endif %}
   {% if entry.mediaCategory | length %}
     <li class="breadcrumbs__item"><a href="/collections">Collections</a></li>
-    {% for category in entry.mediaCategory %}
-      <li class="breadcrumbs__item"><a href="{{category.url}}">{{ category.title}}</li></a>
-    {% endfor %}
+      {% for category in entry.mediaCategory %}
+        <li class="breadcrumbs__item"><a href="{{category.url}}">{{ category.title}}</li></a>
+      {% endfor %}
     <li class="breadcrumbs__item">{{ entry.title }}</li>
   {% endif %}
 </ul>
 {% endif %}
 
 {% if category is defined %}
-<ul class="breadcrumbs">
-  <li class="breadcrumbs__item"><a href="/collections">Collections</a></li>
-  <li class="breadcrumbs__item">{{ category.title}}</li>
-</ul>
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item"><a href="/collections">Collections</a></li>
+    <li class="breadcrumbs__item">{{ category.title}}</li>
+  </ul>
 {% endif %}
