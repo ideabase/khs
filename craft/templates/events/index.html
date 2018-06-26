@@ -6,18 +6,18 @@
 {% block content %}
   {% cache %}
 
-  <h2>{{entry.subHeadline}}</h2>
+    <h2>{{entry.subHeadline}}</h2>
 
-  <div class="feature-links">
-    {% set entries = craft.entries.section('events') %}
-    {% for entry in entries %}
-      {% if entry.endDate > now %}
-        {% include 'globals/noImageListing.html' %}
-      {% endif %}
-    {% endfor %}
-  </div>
+    <div class="feature-links">
+      {% set entries = craft.entries.section('events') %}
+      {% for entry in entries %}
+        {% if entry.endDate > now %}
+          {% include 'globals/noImageListing.html' %}
+        {% endif %}
+      {% endfor %}
+    </div>
 
-  {% include "globals/relatedLinks.html" %}
+    {% include "globals/relatedLinks.html" %}
 
   {% endcache %}
 {% endblock %}

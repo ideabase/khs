@@ -5,8 +5,8 @@
   <h1>Past Exhibits</h1>
   <ul>
     {% for entry in craft.entries.section('exhibits') %}
-      {% if entry.endDate < now %}
-        <li><a href="{{ entry.url }}">{{entry.title}}</a></li>
+      {% if entry.endDate < now and entry.exhibitStatus != 'ongoingExhibit'%}
+        {% include 'globals/noImageListing.html' %}
       {% endif %}
     {% endfor%}
   <ul>
