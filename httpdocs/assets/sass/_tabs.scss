@@ -1,0 +1,59 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.tabs label {
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: white;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  opacity: 0;
+  padding: 1rem;
+  transition: .5s opacity ease-in;
+}
+
+.tabs input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background: $green;
+  color: white;
+  border-radius: 3px;
+ }
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+  opacity: 1;
+}
+
+
+@media (max-width: 45em) {
+
+  .tabs .tab,  .tabs label {
+    -webkit-box-ordinal-group: NaN;
+    -webkit-order: initial;
+    -ms-flex-order: initial;
+    order: initial;
+  }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}

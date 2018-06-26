@@ -5,44 +5,35 @@
 
 {# Category names in Media Type category (mediaType) go here dynmically #}
 
-{% for category in craft.categories.group('mediaType').all() %}
-  <input type="radio" id="{{category.slug}}" name="media" />
-  <label for="{{category.slug}}">{{ category.title }}</label>
-{% endfor %}
+<section class="tabs">
+  <input type="radio" name="tabs" id="all" checked="checked">
+  <label for="all">All</label>
+  <div class="tab">
 
-<input type="radio" id="reset" name="color"/>
-<label for="reset">Reset</label>
-
-
-<div class="shop-items">
-{% for entry in craft.entries.section('historicalMedia').all() %}
-	{% if entry.forSale %}
-      <div class="shop-items__item item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
-			<a href="{{ entry.url }}"><h3>{{ entry.title }}</h3></a>
-      {% if entry.featureImage | length %}
-  			{% for asset in entry.featureImage.all() %}
-  				<a href="{{ entry.url }}">
-            <img src="{{ asset.url }}" alt="{{ asset.title }}"/>
-          </a>
-  			{% endfor %}
-      {% endif %}
-			{{ entry.mediaDescription }}
-			{# {{ entry.paypalProductCode|raw }} #}
-      {% for type in entry.mediaType.all() %}
-        {{ type.title }}
+    {% set items =  craft.entries.section('historicalMedia').all() %}
+    <ul class="shop-items">
+    {% for entry in items if entry.forSale %}
+        {% include 'globals/shop-item.twig' %}
+    {% endfor %}
+    </ul>
+  </div>
+  {% for category in craft.categories.group('mediaType').all() %}
+    {% set items =  craft.entries.section('historicalMedia').relatedTo(category) %}
+    {% if items | length %}
+    <input type="radio" name="tabs" id="{{category.slug}}">
+    <label for="{{category.slug}}">{{ category.title }}</label>
+    <div class="tab">
+      <ul class="shop-items">
+      {% for entry in items if entry.forSale %}
+        {% include 'globals/shop-item.twig' %}
       {% endfor %}
-      {% if entry.paymentButton | length %}
-        {% set paypal = entry.paymentButton.first() %}
-        ${{ paypal.amount|number_format(2, '.', ',') }}
-        {# DISPLAY PAYPAL BUTTON #}
-        {{ paypal.displayButton() }}
-      {% endif %}
-			<br>
+      </div>
     </div>
+    {% endif %}
+  {% endfor %}
 
-	{% endif %}
-{% endfor %}
-<div>
+</section>
+
 
 {% endcache %}
 {% endblock %}
