@@ -5,7 +5,7 @@
   <h1>Past Events</h1>
   <ul>
     {% for entry in craft.entries.section('events') %}
-      {% if entry.endDate < now %}
+      {% if entry.endDate < now and entry.exhibitStatus != 'ongoingExhibit' %}
         {% include 'globals/noImageListing.html' %}
       {% endif %}
     {% endfor%}
