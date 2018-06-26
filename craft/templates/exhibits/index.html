@@ -1,4 +1,7 @@
-{% extends 'layouts/feature' %}
+{% extends '_layout' %}
+{% block subheader %}
+  {% include 'globals/banner.html' %}
+{% endblock %}
 
 {% block content %}
   {% cache %}
