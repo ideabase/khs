@@ -8,29 +8,27 @@
   <input type="radio" name="tabs" id="all" checked="checked">
   <label for="all">All</label>
   <div class="tab">
-
     {% set items =  craft.entries.section('historicalMedia').all() %}
     <ul class="shop-items">
-    {% for entry in items if entry.forSale %}
+      {% for entry in items if entry.forSale %}
         {% include 'globals/shop-item.twig' %}
-    {% endfor %}
+      {% endfor %}
     </ul>
   </div>
   {% for category in craft.categories.group('mediaType').all() %}
     {% set items =  craft.entries.section('historicalMedia').relatedTo(category) %}
     {% if items | length %}
-    <input type="radio" name="tabs" id="{{category.slug}}">
-    <label for="{{category.slug}}">{{ category.title }}</label>
-    <div class="tab">
-      <ul class="shop-items">
-      {% for entry in items if entry.forSale %}
-        {% include 'globals/shop-item.twig' %}
-      {% endfor %}
+      <input type="radio" name="tabs" id="{{category.slug}}">
+      <label for="{{category.slug}}">{{ category.title }}</label>
+      <div class="tab">
+        <ul class="shop-items">
+          {% for entry in items if entry.forSale %}
+            {% include 'globals/shop-item.twig' %}
+          {% endfor %}
+        </ul>
       </div>
-    </div>
     {% endif %}
   {% endfor %}
-
 </section>
 
 
