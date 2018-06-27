@@ -1,0 +1,16 @@
+{% if entry.teaserText | length %}
+  {{ entry.teaserText }}
+{% elseif entry.mediaDescription | length %}
+  {{ entry.mediaDescription }}
+{% elseif entry.body | length %}
+  {% set fullBody = entry.body | striptags %}
+  {% set filteredBody = fullBody | replace({'Mrs.': '',
+                                            'Mr.': '',
+                                            'Ms.': '',}) %}
+  {% set firstSentenceInBody = filteredBody | split('.') %}
+  {% for sentence in firstSentenceInBody %}
+    {% if loop.index < 2 %}
+      {{ sentence }}
+    {% endif %}
+  {% endfor %}
+{% endif %}

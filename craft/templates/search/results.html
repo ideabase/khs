@@ -13,7 +13,7 @@
   {% paginate craft.entries.section('not primaryNavigation', 'not secondaryNavigation').search(query).limit(10).order('score') as pageInfo, pageEntries %}
 
   {% if pageEntries|length %}
-      <h1 class="searchHeader">Top Results for "{{ query }}"</h1>
+      <h2 class="searchHeader">Top Results for "{{ query }}"</h2>
         <ul class="first-results">
           {% for entry in pageEntries %}
             {% if loop.index < 5 %}
@@ -28,12 +28,7 @@
                     <a class="tile__name" href="{{ entry.url }}">
                       <h3>{{ entry.title }}</h3>
                     </a>
-                    {% if entry.teaserText %}
-                      {{ entry.teaserText }}
-                    {% else %}
-                      {% set content = entry.body %}
-                      {{ content }}
-                    {% endif %}
+                    {% include 'globals/teaserText.html' %}
                   </div>
                 {% endif %}
               </li>
@@ -43,13 +38,13 @@
         <ul class="all-results">
           {% for entry in pageEntries %}
             {% if loop.index >= 5 %}
-              <li><a class="entryTitle" href="{{ entry.url }}">{{ entry.title }}</a></li>
-              {% if entry.teaserText %} {{entry.teaserText}} {% endif %}
-              {% if entry.url %}
-                <a href="{{ entry.url }}"> {{ entry. url }} </a>
-              {% endif %}
-              <br>
-              <br>
+              <li class="all-results__item">
+                <a class="entryTitle" href="{{ entry.url }}">{{ entry.title }}</a>
+                {% include 'globals/teaserText.html' %}
+                {% if entry.url %}
+                  <a class="linkTitle" href="{{ entry.url }}"> {{ entry. url }} </a>
+                {% endif %}
+              </li>
             {% endif %}
           {% endfor %}
         </ul>
@@ -58,19 +53,19 @@
   {% endif %}
 
   {# Prints out the search navigation at the bottom of the webpage #}
-  {% if pageInfo.prevUrl %}<a class="button-link" href="{{ pageInfo.prevUrl }}"> Previous Page </a>{% endif %}
+  {% if pageInfo.prevUrl %}<a class="button-link" href="{{ pageInfo.prevUrl }}"> Previous </a>{% endif %}
 
   {% for page, url in pageInfo.getPrevUrls( 5 ) %}
-    <a href="{{ url }}">{{ page }}</a>
+    <a class="page-number" href="{{ url }}">{{ page }}</a>
   {% endfor %}
 
-  {% if pageInfo.currentPage %}<a class="currentPage">{{ pageInfo.currentPage }}</a>{% endif %}
+  {% if pageInfo.currentPage %}<a class="page-number currentPage">{{ pageInfo.currentPage }}</a>{% endif %}
 
   {% for page, url in pageInfo.getNextUrls( 5 ) %}
-    <a href="{{ url }}">{{ page }}</a>
+    <a class="page-number" href="{{ url }}">{{ page }}</a>
   {% endfor %}
 
-  {% if pageInfo.nextUrl %}<a class="button-link" href="{{ pageInfo.nextUrl }}"> Next Page </a>{% endif %}
+  {% if pageInfo.nextUrl %}<a class="button-link" href="{{ pageInfo.nextUrl }}"> Next </a>{% endif %}
 
   </div>
 
