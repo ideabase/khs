@@ -1,25 +1,25 @@
 {% if entry.teaserText | length %}
-  {{ entry.teaserText }}
+    {{ entry.teaserText }}
 {% elseif entry.mediaDescription | length %}
-  {% set fullBody = entry.mediaDescription | striptags %}
-  {% set filteredBody = fullBody | replace({'Mrs.': '',
-                                            'Mr.': '',
-                                            'Ms.': '',}) %}
-  {% set firstSentenceInBody = filteredBody | split('.') %}
-  {% for sentence in firstSentenceInBody %}
-    {% if loop.index < 2 %}
-      {{ sentence }}
-    {% endif %}
-  {% endfor %}
+    {% set fullBody = entry.mediaDescription | striptags %}
+    {% set filteredBody = fullBody | replace({'Mrs.': '',
+                                              'Mr.': '',
+                                              'Ms.': '',}) %}
+    {% set firstSentenceInBody = filteredBody | split('.') %}
+    {% for sentence in firstSentenceInBody %}
+      {% if loop.index < 2 %}
+        {{ sentence }}
+      {% endif %}
+    {% endfor %}
 {% elseif entry.body | length %}
-  {% set fullBody = entry.body | striptags %}
-  {% set filteredBody = fullBody | replace({'Mrs.': '',
-                                            'Mr.': '',
-                                            'Ms.': '',}) %}
-  {% set firstSentenceInBody = filteredBody | split('.') %}
-  {% for sentence in firstSentenceInBody %}
-    {% if loop.index < 2 %}
-      {{ sentence }}
-    {% endif %}
-  {% endfor %}
+    {% set fullBody = entry.body | striptags %}
+    {% set filteredBody = fullBody | replace({'Mrs.': '',
+                                              'Mr.': '',
+                                              'Ms.': '',}) %}
+    {% set firstSentenceInBody = filteredBody | split('.') %}
+    {% for sentence in firstSentenceInBody %}
+      {% if loop.index < 2 %}
+        {{ sentence }}
+      {% endif %}
+    {% endfor %}
 {% endif %}
