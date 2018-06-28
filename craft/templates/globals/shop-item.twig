@@ -1,4 +1,4 @@
-<li class="shop-items__item item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
+<li class="shop-items__item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
 {% if entry.featureImage | length %}
   {% for asset in entry.featureImage.all() %}
     <a class="shop-items__image" href="{{ entry.url }}">
@@ -12,7 +12,7 @@
       {{ type.title }}
     {% endfor %}
   </div>
-  <a href="{{ entry.url }}"><h3>{{ entry.title }}</h3></a>
+  <a class="shop-items__info__title" href="{{ entry.url }}">{{ entry.title }}</a>
   <div class="shop-items__body">
     {% include 'globals/teaserText.html' %}
   </div>
@@ -26,12 +26,12 @@
   </div>
 
   <div class="parent-button">
-  <a class="button-link" href="{{entry.url}}">Item Details</a>
-  {% if entry.paymentButton | length %}
-    {% set paypal = entry.paymentButton.first() %}
-    {# DISPLAY PAYPAL BUTTON #}
-    {{ paypal.displayButton() }}
-  {% endif %}
+    <a class="button-link" href="{{entry.url}}">Item Details</a>
+      {% if entry.paymentButton | length %}
+        {% set paypal = entry.paymentButton.first() %}
+        {# DISPLAY PAYPAL BUTTON #}
+        {{ paypal.displayButton() }}
+      {% endif %}
   </div>
 </div>
 </li>
