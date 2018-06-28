@@ -145,7 +145,7 @@ return array (
       '@enupal/paypal' => $vendorDir . '/enupal/paypal/src',
     ),
     'name' => 'PayPal',
-    'version' => '1.0.3',
+    'version' => '1.0.4',
     'schemaVersion' => '1.0.0',
     'description' => 'Sell products or services on your website using a PayPal Buy Now Button',
     'developer' => 'Enupal',
