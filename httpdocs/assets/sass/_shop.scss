@@ -3,10 +3,12 @@
   padding: 0;
 }
 
+/* Note from Chris -  you need to scope this with a class or it affects the entire site
 h3{
   color: black;
   margin: 0;
 }
+*/
 
 .shop-items__body{
   border-bottom: 2px solid lightgray;
