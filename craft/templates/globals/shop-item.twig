@@ -1,25 +1,37 @@
 <li class="shop-items__item item {% for type in entry.mediaType.all() %} {{ type.slug }} {% endfor %}">
-  {% if entry.featureImage | length %}
-    {% for asset in entry.featureImage.all() %}
-      <a class="shop-items__image" href="{{ entry.url }}">
-        <img src="{{ asset.url('shopImage') }}" alt="{{ asset.title }}"/>
-      </a>
+{% if entry.featureImage | length %}
+  {% for asset in entry.featureImage.all() %}
+    <a class="shop-items__image" href="{{ entry.url }}">
+      <img src="{{ asset.url('shopImage') }}" alt="{{ asset.title }}"/>
+    </a>
+  {% endfor %}
+{% endif %}
+<div class="shop-items__info">
+  <div class="shop-items__mediaType">
+    {% for type in entry.mediaType.all() %}
+      {{ type.title }}
     {% endfor %}
-  {% endif %}
-  <div class="shop-items__info">
-    <a href="{{ entry.url }}"><h3>{{ entry.title }}</h3></a>
-    <div class="shop-items__body">
-      {% for type in entry.mediaType.all() %}
-        {{ type.title }}
-      {% endfor %}
-      {% include 'globals/teaserText.html' %}
-    </div>
-    <a class="button-link" href="{{entry.url}}">Item Details</a>
+  </div>
+  <a href="{{ entry.url }}"><h3>{{ entry.title }}</h3></a>
+  <div class="shop-items__body">
+    {% include 'globals/teaserText.html' %}
+  </div>
+
+
+  <div class="shop-item__amount">
     {% if entry.paymentButton | length %}
-      {% set paypal = entry.paymentButton.first() %}
-      ${{ paypal.amount|number_format(2, '.', ',') }}
-      {# DISPLAY PAYPAL BUTTON #}
-      {{ paypal.displayButton() }}
+      {% set mypaypal = entry.paymentButton.first() %}
+      ${{ mypaypal.amount|number_format(2, '.', ',') }}
     {% endif %}
   </div>
+
+  <div class="parent-button">
+  <a class="button-link" href="{{entry.url}}">Item Details</a>
+  {% if entry.paymentButton | length %}
+    {% set paypal = entry.paymentButton.first() %}
+    {# DISPLAY PAYPAL BUTTON #}
+    {{ paypal.displayButton() }}
+  {% endif %}
+  </div>
+</div>
 </li>

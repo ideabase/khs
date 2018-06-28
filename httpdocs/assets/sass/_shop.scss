@@ -9,7 +9,7 @@ h3{
 }
 
 .shop-items__body{
-  border-bottom: 2px solid lightgray;
+
   margin-bottom: 1em;
 }
 
@@ -18,6 +18,31 @@ h3{
     width: 45%;
   }
 }
+
+
+
+
+
+
+.shop-items__mediaType{
+  color: green;
+  margin-bottom: 1em;
+}
+
+.shop-item__amount{
+  color: green;
+  margin-bottom: 1em;
+  border-bottom: 2px solid lightgray;
+}
+
+.parent-button{
+  display: flex;
+}
+
+
+
+
+
 
 .shop-items__item {
   color: black;
