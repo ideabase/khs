@@ -6,6 +6,6 @@
 /public/.htaccess
 /public/node_modules
 package-lock.json
-httpdocs/assets/img/uploads
-httpdocs/assets/file/uploads
-/httpdocs/cpresources/
+/html/assets/img/uploads
+/html/assets/file/uploads
+/html/cpresources/
