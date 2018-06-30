@@ -66,6 +66,17 @@ $(document).ready(function() {
         return (text.length > 0 ? "<span class='first'>"+ first + "</span> " : first) + text.join(" ");
       });
 
+      $(document).on("scroll", function(){
+      		if
+            ($(document).scrollTop() > 100){
+      		      $(".top-banner,.supplemental").addClass("shrink");
+      		  }
+      		else
+      		{
+      			$(".top-banner,.supplemental").removeClass("shrink");
+      		}
+      	});
+
       // END JQUERY CODE //
 
 }); // Ends the document ready function.  Be careful not to remove this!

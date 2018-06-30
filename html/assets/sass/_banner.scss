@@ -17,6 +17,20 @@
   }
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .top-banner {
   opacity: 0;
   position: relative;
@@ -29,6 +43,17 @@
     width: 100%;
     filter: grayscale(20%);
   }
+  /*&:after {
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    transition: .3s opacity ease-in-out;
+  }*/
   @media screen and (min-width: 1200px) {
     min-height: 305px;
     max-height: 550px;
@@ -60,8 +85,30 @@
     position: absolute;
     padding-left: 3em;
     bottom: 90px;
+    opacity: 0;
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+    transform: scale3d(1, 1, 1);
+    transition:transform 0.25s ease-in ;
+    transform-origin:left;
   }
 }
+
+/*.top-banner.shrink  {
+  &:after {
+    opacity: .5;
+  }
+}*/
+
+/*.shrink .banner {
+  @media screen and (min-width: 600px) {
+    transform: scale3d(.8, .8, 1);
+  }
+}*/
+
+
 
 .banner-h1 {
   font-family: $serif;

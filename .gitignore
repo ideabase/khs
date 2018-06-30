@@ -9,3 +9,4 @@ package-lock.json
 html/assets/img/uploads
 html/assets/file/uploads
 html/cpresources/
+/.htaccess
