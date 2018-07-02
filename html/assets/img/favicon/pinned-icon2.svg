@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#000000" x="0" y="0" width="512" height="512" rx="79"></rect>
+        <g id="Group-2" transform="translate(-117.000000, 48.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <polygon id="Shape" points="302 0 229.839587 129.810515 71 415.697553 108.488743 417 241.757974 129.593441"></polygon>
+            <path d="M227.99,224 L225,224" id="Shape"></path>
+            <polygon id="Shape" points="231 63 231 76 245.694444 76 254 63"></polygon>
+            <polygon id="Shape" points="172 132 172 145 199.642857 145 208 132"></polygon>
+            <polygon id="Shape" points="92 229 92 242 136.665323 242 145 229"></polygon>
+            <polygon id="Shape" points="276.881818 23.2105263 262.181818 23.2105263 258.840909 23 231 55 234.563636 55 255.277273 55 258.395455 55 280 23.2105263"></polygon>
+            <polygon id="Shape" points="200.222222 93 172 127 212.444444 127 234 93.4415584"></polygon>
+            <polygon id="Shape" points="127.994898 181 92 225 149.028061 224.566502 177 181"></polygon>
+            <polygon id="Shape" points="495.160413 129.810515 654 415.697553 616.511257 417 483.242026 129.593441 423 0"></polygon>
+            <path d="M501,224 L503.99,224" id="Shape"></path>
+            <polygon id="Shape" points="493 63 493 76 478.383178 76 470 63"></polygon>
+            <polygon id="Shape" points="555 132 555 145 527.52071 145 519 132"></polygon>
+            <polygon id="Shape" points="631 229 631 242 586.514056 242 578 229"></polygon>
+            <polygon id="Shape" points="453.13242 23.2105263 467.675799 23.2105263 471.255708 23 499 55 495.643836 55 474.835616 55 471.479452 55 450 23.2105263"></polygon>
+            <polygon id="Shape" points="523.878571 93 552 127 511.7 127 490 93.4415584"></polygon>
+            <polygon id="Shape" points="599.005102 181 635 225 577.971939 224.566502 550 181"></polygon>
+            <polygon id="Shape" points="617.356031 285 680.449416 285 683.805447 285 729 338 725.420233 338 652.258755 337.784553 649.126459 337.784553 614 285"></polygon>
+            <polygon id="Shape" points="439.141243 76 440 76 440 63 439.141243 63 288.858757 63 288 63 288 76 288.858757 76"></polygon>
+            <polygon id="Shape" points="464.568134 145 465 145 465 132 464.568134 132 259.431866 132 259 132 259 145 259.431866 145"></polygon>
+            <polygon id="Shape" points="177.215212 345 177 345 177 367.273684 177.215212 367.273684 177.215212 368 359.5 367.515789 541.784788 368 541.784788 367.273684 542 367.273684 542 345 541.784788 345"></polygon>
+            <polygon id="Shape" points="180.011196 338 539.203889 338 541.569829 338 542 338 521.997054 285 521.566883 285 197.648203 285 197.218032 285 177 338 177.645256 338"></polygon>
+            <polygon id="Shape" points="290.806818 55 437.193182 55 439.784091 55 440 55 427.477273 23 427.261364 23 424.670455 23 303.329545 23 300.738636 23 300.522727 23 288 55 288 55"></polygon>
+            <polygon id="Shape" points="452.665966 93 271.983193 93 259 125 465 125"></polygon>
+            <polygon id="Shape" points="506.132308 225 507 225 490.08 181 489.429231 181 242.570769 181 241.703077 181 225 225 225.867692 225"></polygon>
+            <polygon id="Shape" points="507 242 507 229 505.917051 229 226.082949 229 225 229 225 242 226.082949 242 505.917051 242"></polygon>
+        </g>
+    </g>
+</svg>
