@@ -10,7 +10,9 @@
   {% set query = craft.request.getParam('q') %}
   {% set entries = craft.entries.search(query).order('score') %}
 
-  {% paginate craft.entries.section('not primaryNavigation', 'not secondaryNavigation').search(query).limit(10).order('score') as pageInfo, pageEntries %}
+  {% paginate craft.entries.section([
+    'and', 'not primaryNavigation', 'not teamMembers', 'not secondaryNavigation'
+    ]).search(query).limit(10).order('score') as pageInfo, pageEntries %}
 
   {% if pageEntries|length %}
       <h2 class="searchHeader">Top Results for "{{ query }}"</h2>
