@@ -12,8 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% if entry is defined %}{{ entry.title }} - {% endif %}{{ siteName }}</title>
+  <meta property="og:title" content="{% if entry is defined %}{{ entry.title }} - {% endif %}{{ siteName }}">
+  <meta name="twitter:title" content="{% if entry is defined %}{{ entry.title }} - {% endif %}{{ siteName }}">
+  <meta property="og:site_name" content="Kent Historical Society & Museum">
   <meta name="Description" content="{% if entry is defined %}{% if entry.teaserText | length %}{{ entry.teaserText }}{% else %} Kent, Ohio's historical society can help you research online collections, plan a museum visit and shop for historic media.{% endif%}{% endif %}">
+  <meta name="twitter:description" content="{% if entry is defined %}{% if entry.teaserText | length %}{{ entry.teaserText }}{% else %} Kent, Ohio's historical society can help you research online collections, plan a museum visit and shop for historic media.{% endif%}{% endif %}">
+  <meta property="og:description" content="{% if entry is defined %}{% if entry.teaserText | length %}{{ entry.teaserText }}{% else %} Kent, Ohio's historical society can help you research online collections, plan a museum visit and shop for historic media.{% endif%}{% endif %}">
+  <meta property="og:image" content="{{siteUrl}}assets/img/ui/facebook-image-default.jpg">
+  <meta name="twitter:image" content="{{siteUrl}}assets/img/ui/twitter-default.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:see_also" content="https://www.facebook.com/KentHistoricalSociety">
+  <meta property="og:see_also" content="https://www.instagram.com/kentohhistory">
 	<link rel="home" href="{{ siteUrl }}" />
+  <meta property="og:url" content="{{ siteUrl }}">
   <!-- Render Favicons -->
   	{% include '_includes/_favicons.html' %}
   <!--Begin Critical CSS -->
