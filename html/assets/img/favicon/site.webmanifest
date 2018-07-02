@@ -1,6 +1,7 @@
 {
     "name": "Kent Historical Society & Museum",
     "short_name": "KHS",
+    "start_url": "/?utm_source=homescreen",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

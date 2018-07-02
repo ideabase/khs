@@ -22,6 +22,7 @@
 {% block subheader %}
 {% cache %}
 <section class="top-banner">
+  <div class="top-banner__image">
   {% for asset in entry.featureImage.all() %}
       <picture>
         <source media="(min-width: 1000px)" srcset="{{asset.url('featureImage')}}">
@@ -29,6 +30,7 @@
         <img src="{{asset.url('featureImageSmall')}}" alt="{{asset.title}}">
       </picture>
   {% endfor %}
+  </div>
   <div class="banner">
     <h1 class="banner-h1">{{ entry.headline }}</h1>
     <h2 class="banner-h2">{{ entry.subHeadline }}</h2>
