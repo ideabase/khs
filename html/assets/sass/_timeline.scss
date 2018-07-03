@@ -7,22 +7,50 @@
   @media screen and (min-width: 600px) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
+}
+
+.timeline-resources {
+  @include no-list;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.timeline__feature {
+  img {
+    width: 100%;
+  }
+  font-size: .9em;
+  margin-top: 2em;
+}
+
+.timeline__feature__caption {
+  margin-top: 1em;
 }
 
 .timeline-body__main{
   @media screen and (min-width: 600px) {
-    width: 65%;
+    width: 55%;
   }
 }
 
 .timeline-body__aside {
   background-color: $blue;
   color: white;
-  padding: 1em;
+  padding: 1em 2em;
+  margin-bottom: 1em;
   @media screen and (min-width: 600px) {
-    width: 25%;
+    width: 30%;
+    margin-top: 2em;
   }
+}
+
+.timeline-resources__item {
+  margin-bottom: 2em;
+  display: block;
 }
 
 
@@ -33,7 +61,7 @@
   grid-auto-flow: dense;
   grid-gap: 5px;
 }
-.tile {
+.timeline-tile {
   // margin: 5px;
   overflow: hidden;
 }
