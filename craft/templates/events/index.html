@@ -6,6 +6,16 @@
 {% block content %}
   {% cache %}
 
+    <p>You can find more events through the following links:
+      <ul>
+        <li><a href="http://www.kentbiz.com/events/calendar/"> Kent Chamber of Commerce </a></li>
+        <li><a href="https://www.ohiohistory.org/visit"> Ohio History Connection </a> </li>
+        <li><a href="https://www.kent.edu/calendars"> Kent State Events </a> </li>
+        <li><a href="http://www.mainstreetkent.org/"> Main Street Kent </a></li>
+        <li><a href="https://www.kent.edu/destination"> Destination Kent State </a></li>
+      </ul>
+    </p>
+
     <h2>{{entry.subHeadline}}</h2>
 
     <div class="feature-links">
@@ -17,6 +27,17 @@
       {% endfor %}
     </div>
 
+    {# Shows two past events #}
+    <h2>Some of our Past Events</h2>
+    <ul>
+      {% for entry in craft.entries.section('events') %}
+        {% if entry.endDate < now and entry.exhibitStatus != 'ongoingExhibit' and loop.index0 <= 2%}
+          {% include 'globals/noImageListing.html' %}
+        {% endif %}
+      {% endfor%}
+    <ul>
+
+    {# This is the button to view the past events #}
     {% include "globals/relatedLinks.html" %}
 
   {% endcache %}
