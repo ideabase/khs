@@ -3,7 +3,8 @@
 {% block subheader %}
   {% include 'globals/banner.html' %}
 {% endblock %}
-
 {% block subcontent %}
-      {% include 'globals/secondaryFeature.html' %}
+  <div class="introduction">
+    {{ entry.body }}
+  </div>
 {% endblock %}

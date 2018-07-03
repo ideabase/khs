@@ -1,4 +1,4 @@
-button, .button-link {
+button, .button-link, main form input[type="submit"] {
   background-color: $green;
   text-transform: uppercase;
   color: white;
@@ -21,6 +21,75 @@ main form{
   text-align: left;
 }
 
+main form label {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: .5em;
+}
+
+main form input[type=email], main form input[type=text] {
+  margin-bottom: 2em;
+  margin-top: .5em;
+  width: 100%;
+  padding: .5em;
+}
+
+main form textarea {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+.contact-information {
+  @media screen and (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contact-form {
+  @media screen and (min-width: 600px) {
+    text-align: left;
+    width: 55%;
+    margin: 0 auto;
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.contact-form__options {
+  @media screen and (min-width: 850px) {
+    display: flex;
+    flex-wrap: wrap;
+    label {
+      width: 32%;
+    }
+  }
+}
+
+.contact-form__fields {
+  @media screen and (min-width: 700px) {
+    display: flex;
+    justify-content: space-between;
+    .contact-form__name, .contact-form__email {
+      width: 45%;
+    }
+  }
+}
+
+.callout-text {
+  @media screen and (min-width: 600px) {
+    text-align: left;
+    width: 30%;
+    h2 {
+      text-align :left;
+    }
+  }
+}
 .check-out{
     width: 100%;
     margin: 0 auto;

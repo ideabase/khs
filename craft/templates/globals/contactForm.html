@@ -14,31 +14,34 @@
     {{ csrfInput() }}
     <input type="hidden" name="action" value="contact-form/send">
     {{ redirectInput('singles/contact/thanks.html') }}
-
-    <h3><label for="from-name">Your Name</label></h3>
-    <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
-    {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
-
-    <h3><label for="from-email">Your Email</label></h3>
-    <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
-    {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
-
-    <h3>What services are you interested in?</h3>
+    <div class="contact-form__fields">
+      <div class="contact-form__name">
+        <label for="from-name">Your Name</label>
+        <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+        {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+      </div>
+      <div class="contact-form__email">
+        <label for="from-email">Your Email</label>
+        <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
+        {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+      </div>
+    </div>
+    <label>What are you interested in?</label>
+    <div class="contact-form__options">
     {% if entry.section.handle == "volunteer" %}
-      <label><input type="checkbox" checked name="message[Services][]" value="Design">Volunteer</label>
+      <label><input type="checkbox" checked name="message[Services][]" value="Volunteering">Volunteering</label>
     {% else %}
-      <label><input type="checkbox" name="message[Services][]" value="Design">Volunteer</label>
+      <label><input type="checkbox" name="message[Services][]" value="Volunteering">Volunteering</label>
     {% endif %}
-<label><input type="checkbox" name="message[Services][]" value="Development"> Photos</label>
-<label><input type="checkbox" name="message[Services][]" value="Strategy"> Research</label>
-<label><input type="checkbox" name="message[Services][]" value="Marketing"> Collections</label>
-<label><input type="checkbox" name="message[Services][]" value="Marketing"> Schedule a Visit</label>
-<label><input type="checkbox" name="message[Services][]" value="Marketing"> General Question</label>
-
-
-
-    <h3><label for="message">Message</label></h3>
-    <textarea rows="10" cols="40" id="message" name="message[body]">{{ message.message.body ?? '' }}</textarea>
+      <label><input type="checkbox" name="message[Services][]" value="Photography">Photography</label>
+      <label><input type="checkbox" name="message[Services][]" value="Research">Research</label>
+      <label><input type="checkbox" name="message[Services][]" value="Collections">Collections</label>
+      <label><input type="checkbox" name="message[Services][]" value="Scheduling a Visit">Scheduling a Visit</label>
+      <label><input type="checkbox" name="message[Services][]" value="General Question">General Question</label>
+    </div>
+    <br/>
+    <label for="message">Message</label>
+    <textarea rows="5" cols="40" id="message" name="message[body]">{{ message.message.body ?? '' }}</textarea>
     {{ message is defined and message ? errorList(message.getErrors('message')) }}
 
     <input type="submit" value="Send">
