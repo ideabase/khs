@@ -2,7 +2,9 @@
 
 {% block content %}
 	<h2>{{ entry.subHeadline }}</h2>
-	{{entry.paypalProductCode|raw}}
+	<div class="contact-form">
+		{{entry.paypalProductCode|raw}}
+	</div>
 	{% include "globals/relatedLinks.html" %}
 
 {% endblock %}
