@@ -8,7 +8,7 @@
     {% set firstSentenceInBody = filteredBody | split('.') %}
     {% for sentence in firstSentenceInBody %}
       {% if loop.index < 2 %}
-        {{ sentence }}
+        <p>{{ sentence }}</p>
       {% endif %}
     {% endfor %}
 {% elseif entry.body | length %}
@@ -19,7 +19,7 @@
     {% set firstSentenceInBody = filteredBody | split('.') %}
     {% for sentence in firstSentenceInBody %}
       {% if loop.index < 2 %}
-        {{ sentence }}
+        <p>{{ sentence }}</p>
       {% endif %}
     {% endfor %}
 {% endif %}

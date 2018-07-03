@@ -66,6 +66,18 @@
         </div>
   </section>
   {% endif %}
-  <h2>Related Items</h2>
-  {% include 'globals/footerFeaturedItems.html' %}
+  {% if entry.mediaCategory | length %}
+    <div class="feature-footer">
+    <h2>Related Items</h2>
+    <div class="feature-section-3">
+    {% set category = entry.mediaCategory %}
+    {% for category in categories %}
+      {% set related = craft.entries.relatedTo(category) %}
+      {% for entry in related.id('not ' ~ entry.id).order('RAND()').limit(2) %}
+        {% include 'globals/noImageListing.html' %}
+      {% endfor %}
+    {% endfor %}
+    </div>
+    </div>
+  {% endif %}
 {% endblock %}
