@@ -22,7 +22,7 @@
       <label for="{{category.slug}}">{{ category.title }}</label>
       <div class="tab">
         <ul class="shop-items">
-          {% for entry in items if entry.forSale %}
+          {% for entry in items.all() if entry.forSale %}
             {% include 'globals/shop-item.twig' %}
           {% endfor %}
         </ul>

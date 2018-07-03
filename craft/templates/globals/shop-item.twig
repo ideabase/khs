@@ -20,7 +20,7 @@
 
   <div class="shop-item__amount">
     {% if entry.paymentButton | length %}
-      {% set mypaypal = entry.paymentButton.first() %}
+      {% set mypaypal = entry.paymentButton.one() %}
       ${{ mypaypal.amount|number_format(2, '.', ',') }}
     {% endif %}
   </div>
@@ -28,7 +28,7 @@
   <div class="parent-button">
     <a class="button-link" href="{{entry.url}}">Item Details</a>
       {% if entry.paymentButton | length %}
-        {% set paypal = entry.paymentButton.first() %}
+        {% set paypal = entry.paymentButton.one() %}
         {# DISPLAY PAYPAL BUTTON #}
         {{ paypal.displayButton() }}
       {% endif %}
