@@ -78,33 +78,50 @@
     {% for image in category.secondaryImage %}
     <img src="{{ image.url}}" alt="image.title" />
     {% endfor %}
+    {% if category.mainFeaturedItem | length %}
+      {% set featured = category.mainFeaturedItem.all() %}
+    {% endif %}
+    {% if featured is defined %}
+    {% for entry in featured %}
+      <div class="timeline__feature">
+      {% for asset in entry.featureImage.all() %}
+        <img class="lazy" data-src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+      {% endfor %}
+      <div class="timeline__feature__caption">{% include 'globals/teaserText.html' %} <a href="{{ entry.url }}">Learn more about {{ entry.title }}</a></div>
+      </div>
+    {% endfor %}
+    {% endif %}
   </div>
+
+  {% set currentcategory = craft.entries.section('historicalMedia').relatedTo(category).limit(4) %}
 
   <aside class="timeline-body__aside">
     <h2>{{category.featuredTitle}}</h2>
-    <ul>
-    {% for item in craft.entries.section('historicalMedia').relatedTo(category) %}
-      <li>
-        <a href="{{item.url}}">
-          <h3>{{ item.title }}</h3>
-          {{ item.body }}
+    <ul class="timeline-resources">
+    {% for entry in currentcategory %}
+      <li class="timeline-resources__item">
+        <a href="{{entry.url}}">
+          <h3>{{ entry.title }}</h3>
         </a>
+          {% include 'globals/teaserText.html' %}
+        <a class="feature-button" href="{{ entry.url}}">Learn More</a>
       </li>
     {% endfor %}
     </ul>
   </aside>
 
-
 </section>
 
+{% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category) %}
+
 <section class="timeline">
-  {% for event in craft.entries.section('timelineEvent').relatedTo(category) %}
-  <div class="tile timeline-text">
+  {% for event in currenttimeline %}
+  <div class="timeline-tile timeline-text">
     <h3>{{ event.title }}</h3>
     {{ event.body }}
   </div>
   {% if event.featureImage | length %}
-  <div class="tile timeline-image">
+  <div class="timeline-tile timeline-image">
     {% for asset in event.featureImage %}
       <img class="image-tile" src="{{asset.url}}" alt="{{asset.title}}" / >
     {% endfor %}
