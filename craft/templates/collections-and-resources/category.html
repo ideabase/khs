@@ -6,7 +6,7 @@
 {% cache %}
 
 <section class="top-banner">
-  {% for asset in category.featureImage %}
+  {% for asset in category.featureImage.all() %}
       <picture>
         <source media="(min-width: 1000px)" srcset="{{asset.url('featureImageShort')}}">
         <source media="(min-width: 600px)" srcset="{{asset.url('featureImageMedium')}}">
@@ -34,7 +34,7 @@
   </div>
   {% include 'globals/featureItem.html' %} {# displays the now featuring block #}
 
-{% set entries = craft.entries.relatedTo(category) %}
+{% set entries = craft.entries.relatedTo(category).all() %}
 <h2>{{category.featuredTitle}}</h2>
 <div class="feature-links">
 {% for entry in entries %}
@@ -51,7 +51,7 @@
 {% if category.layout == "photo" %}
 <div class="introduction">{{ category.body }}</div>
 
-{% set entries = craft.entries.relatedTo(category) %}
+{% set entries = craft.entries.relatedTo(category).all() %}
 <div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   {% for entry in entries.limit(15) %}
         <figure class="photo-gallery__item">
@@ -75,7 +75,7 @@
 <section class="timeline-body ">
   <div class="timeline-body__main">
     {{ category.body }}
-    {% for image in category.secondaryImage %}
+    {% for image in category.secondaryImage.all() %}
     <img src="{{ image.url}}" alt="image.title" />
     {% endfor %}
     {% if category.mainFeaturedItem | length %}
@@ -98,7 +98,7 @@
   <aside class="timeline-body__aside">
     <h2>{{category.featuredTitle}}</h2>
     <ul class="timeline-resources">
-    {% for entry in currentcategory %}
+    {% for entry in currentcategory.all() %}
       <li class="timeline-resources__item">
         <a href="{{entry.url}}">
           <h3>{{ entry.title }}</h3>
@@ -112,7 +112,7 @@
 
 </section>
 
-{% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category) %}
+{% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category).all() %}
 
 <section class="timeline">
   {% for event in currenttimeline %}
@@ -122,7 +122,7 @@
   </div>
   {% if event.featureImage | length %}
   <div class="timeline-tile timeline-image">
-    {% for asset in event.featureImage %}
+    {% for asset in event.featureImage.all() %}
       <img class="image-tile" src="{{asset.url}}" alt="{{asset.title}}" / >
     {% endfor %}
   </div>
