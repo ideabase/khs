@@ -41,9 +41,6 @@ header ul, footer ul {
     border: 1px solid $green;
   }
   @media screen and (min-width: $breakpoint) {
-    input {
-      margin-left: 1em;
-    }
     form {
       display: flex;
     }
@@ -53,6 +50,10 @@ header ul, footer ul {
 .search-small {
   margin-top: 1em;
   padding-bottom: 2em;
+  input[type="search"]{
+    border-radius: 5px;
+	   -webkit-appearance: none !important;
+  }
   @media screen and (min-width: $breakpoint) {
     display: none;
   }
@@ -80,7 +81,7 @@ header ul, footer ul {
 }
 
 
-.search-button {
+.search .search-button {
   margin: 0;
   width: 50px;
   box-sizing: border-box;
@@ -100,6 +101,7 @@ header ul, footer ul {
   @media screen and (min-width: $breakpoint) {
     background-color: $green;
     background-image: url(/assets/img/ui/search-white.svg);
+    margin-left: .5em;
   }
 }
 
@@ -118,8 +120,8 @@ a {
   @media screen and (min-width: $breakpoint) {
     display: flex;
     align-items: flex-start;
-    width: inherit;
     max-width: 500px;
+    width: inherit;
     align-items: center;
     height: 100%;
   }
