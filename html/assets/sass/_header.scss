@@ -2,6 +2,12 @@ header {
   background-color: $gray;
   font-family: $sans;
   margin: .25em;
+  margin-top: 0;
+  border-top: 3px solid $green;
+  @media screen and (min-width: $breakpoint) {
+    margin-top: .25em;
+    border-top: none;
+  }
 }
 
 header ul, footer ul {
@@ -23,32 +29,80 @@ header ul, footer ul {
 .main-nav-container {
   width: 100%;
 }
-.search-large {
-  display: none;
+
+.search {
+  input {
+    padding: 0.5em;
+    padding-left: 1em;
+    border-radius: 5px;
+    margin: 0;
+  }
+  input[type="search"] {
+    border: 1px solid $green;
+  }
   @media screen and (min-width: $breakpoint) {
-    display: block;
+    input {
+      margin-left: 1em;
+    }
     form {
       display: flex;
     }
   }
-  .search-button {
-    margin: 0;
-    width: 50px;
-    box-sizing: border-box;
-    margin-left: .5em;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-color: $green;
-    background-image: url(/assets/img/ui/search-white.svg);
-    background-size: 40% auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    transition: .3s ease-in-out all;
-    &:hover {
-      background-color: $blue;
-    }
+}
+
+.search-small {
+  margin-top: 1em;
+  padding-bottom: 2em;
+  @media screen and (min-width: $breakpoint) {
+    display: none;
   }
 }
+
+.search-large {
+  display: none;
+  @media screen and (min-width: $breakpoint) {
+    display: block;
+    margin-left: 2em;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lightgray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: lightgray;
+}
+
+
+.search-button {
+  margin: 0;
+  width: 50px;
+  box-sizing: border-box;
+  margin-left: .5em;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-color: white;
+  background-image: url(/assets/img/ui/search-green.svg);
+  background-size: 40% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: .3s ease-in-out all;
+  border: none;
+  &:hover {
+    background-color: $blue;
+  }
+  @media screen and (min-width: $breakpoint) {
+    background-color: $green;
+    background-image: url(/assets/img/ui/search-white.svg);
+  }
+}
+
 ul {
   list-style-type: none;
 }
@@ -59,19 +113,22 @@ a {
 }
 
 .callout-header-navigation {
-  width: 50%;
+  width: 45%;
   max-width: 200px;
   @media screen and (min-width: $breakpoint) {
     display: flex;
     align-items: flex-start;
     width: inherit;
     max-width: 500px;
+    align-items: center;
+    height: 100%;
   }
 }
 
 .callout-header {
   display: flex;
   justify-content: space-between;
+  margin-top: -3px;
 }
 
 .nav-main {
@@ -163,7 +220,9 @@ a {
   text-transform: uppercase;
   color: $green;
   font-weight: bold;
-
+  font-size: .9em;
+  display: inline-block;
+  position: relative;
 }
 
 @media screen and (min-width: $breakpoint) {
@@ -172,6 +231,7 @@ a {
     color: white;
     padding: 0;
     width: 100%;
+    margin-top: inherit;
   }
 
   .callout-header a {
@@ -183,7 +243,8 @@ a {
     border-radius: 5px;
     padding: 0.5em 0.6em;
     font-size: .9em;
-    &:hover {
+    transition: .2s all ease-in-out;
+    &:hover,&:focus {
        color: white;
        background-color: $green;
        border: 1px solid $green;
@@ -255,22 +316,31 @@ a {
   right: 18px;
   bottom: 15px;
   width: 85px;
-  background-color: white;
+  background-color: $blue;
   border: 1px solid $blue;
-  color: $blue;
+  color: white;
   text-transform: uppercase;
-  padding: .35em .75em;
-  font-size: .95em;
+  padding: .5em .6em .5em .75em;
+  font-size: .9em;
   border-radius: 3px;
+  letter-spacing: .02em;
+  transition: .2s all ease-in-out;
   .label {
     font-family: $sans;
   }
   &:after {
-    content: ">";
+    content: "";
+    background-image: url('/assets/img/ui/arrow-down.svg');
     display: block;
-    height: 100%;
-    width: 15px;
-    margin-left: 10px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 10px;
+    margin-left: 9px;
+    margin-top: 5px;
+  }
+  &.active {
+    background-color: white;
+    color: $blue;
   }
 }
 
@@ -318,19 +388,4 @@ a {
     padding: 1.25em 2em;
     height: 129px;
   }
-}
-
-.header-top input {
-  padding: 0.5em;
-  border: 1px solid $green;
-  border-radius: 5px;
-  margin: 0;
-  margin-left: 2em;
-}
-
-
-
-// Removes blue border on search bar
-input:focus {
-  outline: none;
 }

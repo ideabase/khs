@@ -19,15 +19,15 @@
                 </li>
             {% endnav %}
         </ul>
-        <div class="search-large">
+        <div class="search search-large">
           <form action="{{ url('search/results') }}">
-            <input type="search" name="q">
+            <input type="search" placeholder="Search the KHS" name="q">
             <input class="search-button" type="submit" value="Go">
           </form>
         </div>
         <!-- Mobile Menu Button -->
           <div class="nav-mobile">
-            <a id="nav-toggle" href="#"><span class="label">More</span></a>
+            <a id="nav-toggle" href="#"><span class="label">Menu</span></a>
           </div>
         <!-- End Mobile Menu Button -->
     </nav>
@@ -67,7 +67,13 @@
                     {% endif %}
                 </li>
             {% endnav %}
-        <ul>
+            <div class="search search-small">
+              <form action="{{ url('search/results') }}">
+                <input type="search" placeholder="Search the KHS" name="q">
+                <input class="search-button" type="submit" value="Go">
+              </form>
+            </div>
+        </ul>
     </nav>
   </div>
 </header>
