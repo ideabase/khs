@@ -9,14 +9,10 @@
 {% block content %}
   <div class="third-layout">
     <section class="third__main">
-
-    <h2>{{ entry.subHeadline }}</h2>
-
+      <h2>{{ entry.subHeadline }}</h2>
       {{ entry.body }}
       {{ entry.mediaDescription }}
-
-    {% include "globals/relatedLinks.html" %}
-
+      {% include "globals/relatedLinks.html" %}
     </section>
 
     <section class="third__meta">
@@ -30,6 +26,7 @@
             {% endfor %}
           </li>
         {% endif %}
+
         {% set categories = entry.mediaCategory %}
         {% if categories | length %}
           <li>Category:
@@ -38,15 +35,27 @@
             {% endfor %}
           </li>
         {% endif %}
+
         {% if entry.startDate | length %}
           <li>{{ entry.startDate | date('M j, Y') }}
         {% endif %}
-        {% if entry.endDate | length %} - {{ entry.endDate | date('M j, Y') }}</date>{% endif %}</li>
+
+        {% if entry.endDate | length %}
+          - {{ entry.endDate | date('M j, Y') }}</date>
+        {% endif %}</li>
+
         {% if entry.startTime | length %}
           <li><time>{{entry.startTime | date('g:i a') }}
         {% endif %}
-        {% if entry.endDate | length %} - {{entry.endTime | date('g:i a')}} {% endif %}</li>
-        {% if entry.location | length %}<li>{{ entry.eventLocation }}</li> {% endif %}
+
+        {% if entry.endTime | length %}
+          - {{entry.endTime | date('g:i a')}}
+        {% endif %}</li>
+
+        {% if entry.location | length %}
+          <li> {{ entry.eventLocation }} </li>
+        {% endif %}
+
         {% if entry.paymentButton | length %}
           {% set paypal = entry.paymentButton.first() %}
           <li>Price: ${{ paypal.amount|number_format(2, '.', ',') }}</li>
@@ -57,29 +66,29 @@
     </section>
   </div>
   {% if entry.featureImage.first() | length %}
-  <section class="third__images">
-        <div class="third__images__media">
-          {% set image = entry.featureImage.first() %}
-                      <img src="{{ image.url }}"
-                           alt="{{ image.title }}"/>
-        </div>
-        <div class="third__images__caption">
-          <figcaption>{{ entry.imageCaption }}</figcaption>
-        </div>
-  </section>
+    <section class="third__images">
+      <div class="third__images__media">
+        {% set image = entry.featureImage.first() %}
+          <img src="{{ image.url }}" alt="{{ image.title }}"/>
+      </div>
+      <div class="third__images__caption">
+        <figcaption>{{ entry.imageCaption }}</figcaption>
+      </div>
+    </section>
   {% endif %}
+
   {% if entry.mediaCategory | length %}
     <div class="feature-footer">
-    <h2>Related Items</h2>
-    <div class="feature-section-3">
-    {% set category = entry.mediaCategory %}
-    {% for category in categories %}
-      {% set related = craft.entries.relatedTo(category) %}
-      {% for entry in related.id('not ' ~ entry.id).order('RAND()').limit(2) %}
-        {% include 'globals/noImageListing.html' %}
-      {% endfor %}
-    {% endfor %}
-    </div>
+      <h2>Related Items</h2>
+      <div class="feature-section-3">
+        {% set category = entry.mediaCategory %}
+        {% for category in categories %}
+          {% set related = craft.entries.relatedTo(category) %}
+          {% for entry in related.id('not ' ~ entry.id).order('RAND()').limit(2) %}
+            {% include 'globals/noImageListing.html' %}
+          {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   {% endif %}
 {% endblock %}
