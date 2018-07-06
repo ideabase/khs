@@ -48,10 +48,33 @@ $(document).ready(function() {
       // Card Accordion //
 
       $(document).ready(function(){
-          $('.card-container').click(function(){
-            $(this).toggleClass('active');
-            $('.card-container').not($(this)).removeClass('active');
-          });
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+              $('.card').click(function(){
+                var parentElement = $(this).parent();
+                $(parentElement).toggleClass('active');
+                $('.card-container').not($(parentElement)).removeClass('active');
+              });
+              $('.card__title').click(function(e){
+                e.preventDefault();
+              });
+            } else {
+              $('.card').hover(function(){
+                var parentElement = $(this).parent();
+                $(parentElement).toggleClass('active');
+                $('.card-container').not($(parentElement)).removeClass('active');
+              });
+              $('.card__title').click(function(e){
+                e.stopPropagation();
+              });
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 800px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+
       });
 
       $(".banner-h1").html(function(){
