@@ -1,5 +1,5 @@
 {% if entry.teaserText | length %}
-    {{ entry.teaserText }}
+    <p>{{ entry.teaserText }}</p>
 {% elseif entry.mediaDescription | length %}
     {% set fullBody = entry.mediaDescription | striptags %}
     {% set filteredBody = fullBody | replace({'Mrs.': 'Mrs',
