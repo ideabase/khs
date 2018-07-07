@@ -5,7 +5,7 @@
 {# Displays the all the events underneath the now featuring item on the webpage #}
 {% block content %}
   {% cache %}
-  
+
     <h2>{{entry.subHeadline}}</h2>
 
     <div class="feature-links">
@@ -18,14 +18,14 @@
     </div>
 
     {# Shows two past events #}
-    <h2>Some of our Past Events</h2>
-    <ul>
+    <h2>Past Events</h2>
+    <div class="feature-links">
       {% for entry in craft.entries.section('events') %}
         {% if entry.endDate < now and entry.exhibitStatus != 'ongoingExhibit' and loop.index0 <= 2%}
           {% include 'globals/noImageListing.html' %}
         {% endif %}
       {% endfor%}
-    <ul>
+    </div>
 
     {# This is the button to view the past events #}
     {% include "globals/relatedLinks.html" %}
