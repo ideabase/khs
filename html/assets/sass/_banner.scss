@@ -91,10 +91,10 @@
     padding-left: 3em;
     bottom: 90px;
     opacity: 0;
-    animation-name: fadeInLeft;
+    animation-name: fadeIn;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: .2s;
+    animation-delay: .5s;
     transform: scale3d(1, 1, 1);
     transition:transform 0.25s ease-in ;
     transform-origin:left;

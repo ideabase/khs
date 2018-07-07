@@ -166,10 +166,11 @@
     z-index: 50;
     height: 50%;
     margin-right: .25em;
-    &:hover, &:active {
-      background-color: $blue;
-    }
   }
+}
+
+.active .card__title__container {
+    background-color: $blue;
 }
 
 .card__figure__large {
