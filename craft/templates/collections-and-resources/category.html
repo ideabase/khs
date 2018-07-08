@@ -56,7 +56,7 @@
   {% for entry in pageEntries %}
         <figure class="photo-gallery__item">
         {% for asset in entry.featureImage %}
-            <a class="content" href="{{ asset.getUrl('galleryFull')}}" itemprop="contentUrl" data-size="{{ asset.getWidth('galleryFull') }}x{{ asset.getHeight('galleryFull') }}">
+            <a class="content" href="{{ asset.getUrl('galleryFull')}}" itemprop="contentUrl" data-size="{{ asset.getWidth('galleryFull') }}&#120;{{ asset.getHeight('galleryFull') }}">
               <img src="{{ asset.getUrl('gallery') }}" itemprop="thumbnail" alt="{{asset.title }}" />
             </a>
         {% endfor %}
