@@ -106,7 +106,7 @@ $(document).ready(function() {
 
 // Responsive Grid of Images //
 
-function resizeGridItem(item){
+/*function resizeGridItem(item){
     grid = document.getElementsByClassName("photo-gallery")[0];
     rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
     rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
@@ -133,3 +133,4 @@ function resizeGridItem(item){
   for(x=0;x<allItems.length;x++){
     imagesLoaded( allItems[x], resizeInstance);
   }
+*/

@@ -52,7 +52,7 @@
 <div class="introduction">{{ category.body }}</div>
 
 {% set entries = craft.entries.relatedTo(category) %}
-{% paginate entries.limit(15) as pageInfo, pageEntries %}
+{% paginate entries.limit(16) as pageInfo, pageEntries %}
 <div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   {% for entry in pageEntries %}
         <figure class="photo-gallery__item">
