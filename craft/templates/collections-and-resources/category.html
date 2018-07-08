@@ -60,7 +60,10 @@
               <img src="{{ asset.getUrl('gallery') }}" itemprop="thumbnail" alt="{{asset.title }}" />
             </a>
         {% endfor %}
-        <figcaption itemprop="caption description">{{entry.mediaDescription}}</figcaption>
+        <figcaption itemprop="caption description">
+          <strong>{{entry.title}}</strong>
+          {{entry.mediaDescription}}
+        </figcaption>
         </figure>
   {% endfor %}
 </div>
