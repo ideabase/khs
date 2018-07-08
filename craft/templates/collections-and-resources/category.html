@@ -51,9 +51,10 @@
 {% if category.layout == "photo" %}
 <div class="introduction">{{ category.body }}</div>
 
-{% set entries = craft.entries.relatedTo(category).all() %}
+{% set entries = craft.entries.relatedTo(category) %}
+{% paginate entries.limit(15) as pageInfo, pageEntries %}
 <div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-  {% for entry in entries.limit(15) %}
+  {% for entry in pageEntries %}
         <figure class="photo-gallery__item">
         {% for asset in entry.featureImage %}
             <a class="content" href="{{ asset.url('galleryFull')}}" itemprop="contentUrl" data-size="{{ asset.getWidth('galleryFull') }}x{{ asset.getHeight('galleryFull') }}">
@@ -64,6 +65,29 @@
         </figure>
   {% endfor %}
 </div>
+<div class="searchResults">
+  {# Prints out the search navigation at the bottom of the webpage #}
+  {% if pageInfo.prevUrl %}
+    <a class="button-link" href="{{ pageInfo.prevUrl }}"> Previous </a>
+  {% endif %}
+
+  {% for page, url in pageInfo.getPrevUrls( 5 ) %}
+    <a class="page-number" href="{{ url }}">{{ page }}</a>
+  {% endfor %}
+
+  {% if pageInfo.currentPage %}
+    <a class="page-number currentPage">{{ pageInfo.currentPage }}</a>
+  {% endif %}
+
+  {% for page, url in pageInfo.getNextUrls( 5 ) %}
+    <a class="page-number" href="{{ url }}">{{ page }}</a>
+  {% endfor %}
+
+  {% if pageInfo.nextUrl %}
+    <a class="button-link" href="{{ pageInfo.nextUrl }}"> Next </a>
+  {% endif %}
+</div>
+
 {% endif %}
 
 
