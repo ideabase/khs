@@ -25,31 +25,6 @@
     {% endif %}
   </div>
 
-
-  <h1>==========</h1>
-
-
-  {% if button.enupalPaypalBasicVariants is defined %}
-  {% for basicOptionsBlock in button.enupalPaypalBasicVariants %}
-      <input type="hidden" name="on{{ loop.index }}" value="{{ basicOptionsBlock.variantName }}">
-      <div class="form-group">
-          <label class="basicVariantsLabel" for="os{{ loop.index }}">{{ basicOptionsBlock.variantName }}</label>
-          <select class="form-control basicVariants" name="os{{ loop.index }}" id="os{{ loop.index }}">
-              {% for row in basicOptionsBlock.options %}
-                  {% if loop.first %}
-                      <option value="">{{ "Select a"|t }} {{ basicOptionsBlock.variantName }}</option>
-                  {% endif %}
-                  <option value="{{ row.handle }}">{{ row.optionLabel|t }}</option>
-              {% endfor %}
-          </select>
-      </div>
-      <br>
-  {% endfor %}
-  {% endif %}
-
-
-  <h1>==========</h1>
-
   <div class="parent-button">
     <a class="button-link" href="{{entry.url}}">Item Details</a>
       {% if entry.paymentButton | length %}
