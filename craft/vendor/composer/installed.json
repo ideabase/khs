@@ -292,12 +292,12 @@
     },
     {
         "name": "craftcms/cms",
-        "version": "3.0.14",
-        "version_normalized": "3.0.14.0",
+        "version": "3.0.15",
+        "version_normalized": "3.0.15.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/craftcms/cms/zipball/56a91951c79bce33f784a8b1674a87037a5fb950",
-            "reference": "56a91951c79bce33f784a8b1674a87037a5fb950",
+            "url": "https://api.github.com/repos/craftcms/cms/zipball/9f31ce73985cc88f5f8a684bb32da7a56a1cfc77",
+            "reference": "9f31ce73985cc88f5f8a684bb32da7a56a1cfc77",
             "shasum": ""
         },
         "require": {
@@ -343,7 +343,7 @@
             "ext-imagick": "Adds support for more image processing formats and options.",
             "ext-intl": "Adds rich internationalization support."
         },
-        "time": "2018-07-03T23:13:18+00:00",
+        "time": "2018-07-09T14:37:11+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1401,15 +1401,18 @@
     },
     {
         "name": "mikehaertl/php-shellcommand",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "version": "1.4.1",
+        "version_normalized": "1.4.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/727e2143578796c714a50c0a350459758ff16c43",
-            "reference": "727e2143578796c714a50c0a350459758ff16c43",
+            "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/903ee95d3ee8f65ebbe4c6e17705d1d91760521a",
+            "reference": "903ee95d3ee8f65ebbe4c6e17705d1d91760521a",
             "shasum": ""
         },
-        "time": "2018-02-16T07:02:50+00:00",
+        "require": {
+            "php": ">= 5.4.0"
+        },
+        "time": "2018-07-07T07:35:36+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
