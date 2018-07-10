@@ -1,25 +1,15 @@
+
+
 {% if entry.teaserText | length %}
     <p>{{ entry.teaserText }}</p>
 {% elseif entry.mediaDescription | length %}
-    {% set fullBody = entry.mediaDescription | striptags %}
-    {% set filteredBody = fullBody | replace({'Mrs.': 'Mrs',
-                                              'Mr.': 'Mr',
-                                              'Ms.': 'Ms',}) %}
-    {% set firstSentenceInBody = filteredBody | split('.') %}
-    {% for sentence in firstSentenceInBody %}
-      {% if loop.index < 2 %}
-        <p>{{ sentence }}</p>
-      {% endif %}
-    {% endfor %}
+    {% set paragraphs = entry.mediaDescription | split('</p>') %}
+    {% set firstParagraph = paragraphs|first ~ '</p>' %}
+    {{ firstParagraph | raw }}
+
 {% elseif entry.body | length %}
-    {% set fullBody = entry.body | striptags %}
-    {% set filteredBody = fullBody | replace({'Mrs.': 'Mrs',
-                                              'Mr.': 'Mr',
-                                              'Ms.': 'Ms',}) %}
-    {% set firstSentenceInBody = filteredBody | split('.') %}
-    {% for sentence in firstSentenceInBody %}
-      {% if loop.index < 2 %}
-        <p>{{ sentence }}</p>
-      {% endif %}
-    {% endfor %}
+    {% set paragraphs = entry.body | split('</p>') %}
+    {% set firstParagraph = paragraphs|first ~ '</p>' %}
+    {{ firstParagraph|raw }}
+
 {% endif %}
