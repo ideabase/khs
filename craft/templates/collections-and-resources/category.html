@@ -14,8 +14,8 @@
       </picture>
   {% endfor %}
   <div class="banner">
-    <h1 class="banner-h1">{{ category.title }}</h1><!-- check to see if title needs to be outputed -->
-    <h2 class="banner-h2">{{ category.subHeadline }}</h2>
+    <h1 class="banner-h1">{{ category.title }}</h1>
+    {% if category.subHeadline | length %}<h2 class="banner-h2">{{ category.subHeadline }}</h2> {% endif %}
   </div>
 </section>
 {% endcache %}
@@ -143,15 +143,16 @@
 <section class="timeline">
   {% for event in currenttimeline %}
   <div class="timeline-tile timeline-text">
-    <h3>{{ event.title }}</h3>
-    {{ event.body }}
+    <div class="timeline-text__inner">
+      <h3>{{ event.title }}</h3>
+      {{ event.body }}
+    </div>
   </div>
   {% if event.featureImage | length %}
-  <div class="timeline-tile timeline-image">
-    {% for asset in event.featureImage.all() %}
-      <img class="image-tile" src="{{asset.url}}" alt="{{asset.title}}" / >
-    {% endfor %}
+  {% for asset in event.featureImage.all() %}
+  <div class="timeline-tile timeline-image" style="background-image: url('{{asset.url}}');">
   </div>
+  {% endfor %}
   {% endif %}
   {% endfor %}
 </section>
