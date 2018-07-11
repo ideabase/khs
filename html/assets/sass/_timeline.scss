@@ -1,6 +1,7 @@
 
 .timeline-body {
   text-align: left;
+  margin-bottom: 2em;
   h2 {
     text-align: left;
   }
@@ -84,7 +85,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  min-height: 200px;
+  min-height: 275px;
   grid-column: span 2;
   @media screen and (min-width: 800px) {
     grid-row: span 3;

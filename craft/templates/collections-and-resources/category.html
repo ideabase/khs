@@ -139,7 +139,7 @@
 </section>
 
 {% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category).all() %}
-
+<h2>{{category.title}} Timeline</h2>
 <section class="timeline">
   {% for event in currenttimeline %}
   <div class="timeline-tile timeline-text">
