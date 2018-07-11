@@ -1,20 +1,22 @@
 {% cache %}
-{% for block in entry.relatedLinksDownloads %}
+    {% if entry.relatedLinksDownloads | length %}
+        {% for block in entry.relatedLinksDownloads.all() %}
 
-    {% if block.type == "externalLink" %}
+            {% if block.type == "externalLink" %}
 
-        <a href="{{block.linkUrl}}" class="button-link">{{block.linkName}}</a>
+                <a href="{{block.linkUrl}}" class="button-link">{{block.linkName}}</a>
 
-    {% elseif block.type == "fileDownload" %}
-        {% for files in block.file %}
-          <a href="{{files.url}}" class="button-link">{{block.fileName}}</a>
-        {% endfor %}
+            {% elseif block.type == "fileDownload" %}
+                {% for files in block.file %}
+                  <a href="{{files.url}}" class="button-link">{{block.fileName}}</a>
+                {% endfor %}
 
-    {% elseif block.type == "internalLink" %}
-        {% for link in block.internalUrl %}
-          <a href="{{ link.url }}" class="button-link">{{ block.linkName }}</a>
+            {% elseif block.type == "internalLink" %}
+                {% for link in block.internalUrl %}
+                  <a href="{{ link.url }}" class="button-link">{{ block.linkName }}</a>
+                {% endfor %}
+            {% endif %}
+
         {% endfor %}
     {% endif %}
-
-{% endfor %}
 {% endcache %}

@@ -7,12 +7,12 @@
 
   <div class="searchResults">
 
-  {% set query = craft.request.getParam('q') %}
-  {% set entries = craft.entries.search(query).order('score') %}
+  {% set query = craft.app.request.getParam('q') %}
+  {% set entries = craft.entries.search(query).orderBy('score') %}
 
   {% paginate craft.entries.section([
     'and', 'not primaryNavigation', 'not teamMembers', 'not secondaryNavigation'
-    ]).search(query).limit(10).order('score') as pageInfo, pageEntries %}
+    ]).search(query).limit(10).orderBy('score') as pageInfo, pageEntries %}
 
 
 
@@ -26,7 +26,7 @@
               <li class="tile">
                 {% if entry.featureImage %}
                   <div class="tile__image">
-                    {% for image in entry.featureImage %}
+                    {% for image in entry.featureImage.all() %}
                       <img src="{{ image.url('featureItems') }}" alt="{{ image.title }}">
                     {% endfor %}
                   </div>

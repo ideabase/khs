@@ -9,8 +9,7 @@
     <h2>{{entry.subHeadline}}</h2>
 
     <div class="feature-links">
-      {% set entries = craft.entries.section('events') %}
-      {% for entry in entries %}
+      {% for entry in craft.entries.section('events').all() %}
         {% if entry.endDate > now %}
           {% include 'globals/noImageListing.html' %}
         {% endif %}
@@ -20,7 +19,7 @@
     {# Shows two past events #}
     <h2>Past Events</h2>
     <div class="feature-links">
-      {% for entry in craft.entries.section('events') %}
+      {% for entry in craft.entries.section('events').all() %}
         {% if entry.endDate < now and entry.exhibitStatus != 'ongoingExhibit' and loop.index0 <= 2%}
           {% include 'globals/noImageListing.html' %}
         {% endif %}

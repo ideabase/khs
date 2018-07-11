@@ -84,7 +84,7 @@
         {% set category = entry.mediaCategory %}
         {% for category in categories %}
           {% set related = craft.entries.relatedTo(category) %}
-          {% for entry in related.id('not ' ~ entry.id).order('RAND()').limit(2) %}
+          {% for entry in related.id('not ' ~ entry.id).orderBy('RAND()').limit(2) %}
             {% include 'globals/noImageListing.html' %}
           {% endfor %}
         {% endfor %}

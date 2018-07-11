@@ -6,7 +6,7 @@
     <section class="featured-profiles">
       <h2>Leadership Team</h2>
       <ul class="featured-profiles-listing">
-  			{% for entry in craft.entries.section('teamMembers').orderBy('lastName') %}
+  			{% for entry in craft.entries.section('teamMembers').orderBy('lastName').all() %}
   				{% if entry.role.contains('leadership') %}
             {% include 'globals/profiles.twig' %}
   				{% endif %}
@@ -21,7 +21,7 @@
     <section class="featured-profiles">
       <h2>Board Members</h2>
         <ul class="text-columns__listing">
-          {% for entry in members %}
+          {% for entry in members.all() %}
             {% if entry.role.contains('boardMembers') %}
               {% if entry.jobTitle != "Board Member" %}
                 <li class="text-columns__item">
@@ -34,7 +34,7 @@
 
           {# displays the normal board members #}
 
-          {% for entry in members %}
+          {% for entry in members.all() %}
             {% if entry.role.contains('boardMembers') %}
               {% if entry.jobTitle == "Board Member" %}
                 <li class="text-columns__item">
@@ -52,7 +52,7 @@
     <section class="featured-profiles">
       <h2>KHS Volunteers</h2>
         <ul class="text-columns__listing">
-          {% for volunteer in members %}
+          {% for volunteer in members.all() %}
             {% if volunteer.role.contains('volunteer')%}
               <li class="text-columns__item">
                 <h4>{{ volunteer.title }}</h4>
