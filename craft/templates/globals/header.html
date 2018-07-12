@@ -5,7 +5,7 @@
     {% if header.primaryLogo | length %}
       <div class="logo">
         {% for asset in header.primaryLogo.all() %}
-            <a href="{{siteUrl}}index.php"><img src="{{ asset.url }}" alt="{{ asset.title }}" /></a>
+            <a href="{{siteUrl}}"><img src="{{ asset.url }}" alt="{{ asset.title }}" /></a>
         {% endfor %}
       </div>
     {% endif %}
