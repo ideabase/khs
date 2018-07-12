@@ -12,3 +12,4 @@ package-lock.json
 /.htaccess
 /html/assets/img/uploads/global/_gallery/DSF2668.jpg
 /html/assets/img/uploads/global/_gallery/FACEBOOK.png
+html/cpresources/*
