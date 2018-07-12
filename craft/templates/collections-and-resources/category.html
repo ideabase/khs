@@ -55,7 +55,7 @@
 <div class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   {% for entry in pageEntries %}
         <figure class="photo-gallery__item">
-        {% for asset in entry.featureImage %}
+        {% for asset in entry.featureImage.all() %}
             <a class="content" href="{{ asset.getUrl('galleryFull')}}" itemprop="contentUrl" data-size="{{ asset.getWidth('galleryFull') }}&#120;{{ asset.getHeight('galleryFull') }}">
               <img src="{{ asset.getUrl('gallery') }}" itemprop="thumbnail" alt="{{asset.title }}" />
             </a>
@@ -101,9 +101,11 @@
 <section class="timeline-body ">
   <div class="timeline-body__main">
     {{ category.body }}
-    {% for image in category.secondaryImage.all() %}
-    <img src="{{ image.url}}" alt="image.title" />
-    {% endfor %}
+    {% if category.secondaryImage | length %}
+      {% for image in category.secondaryImage.all() %}
+      <img src="{{ image.url}}" alt="image.title" />
+      {% endfor %}
+    {% endif %}
     {% if category.mainFeaturedItem | length %}
       {% set featured = category.mainFeaturedItem.all() %}
     {% endif %}

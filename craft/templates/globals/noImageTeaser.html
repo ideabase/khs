@@ -1,9 +1,9 @@
 <h1>{{ entry.featuredTitle }}</h1>
 <div class="feature-links">
-  {% for entry in entry.featuredItems %}
-  <div class="feature">
-    <h3>{{ entry.title }}</h3>
-    <p>{{ entry.body }}</p>
-  </div>
+  {% for entry in entry.featuredItems.all() %}
+      <div class="feature">
+          <h3>{{ entry.title }}</h3>
+          <p>{{ entry.body }}</p>
+      </div>
   {% endfor %}
 </div>
