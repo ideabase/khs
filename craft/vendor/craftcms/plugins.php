@@ -68,29 +68,6 @@ return array (
       'rulesService' => 'workingconcept\\cloudflare\\services\\RulesService',
     ),
   ),
-  'craftcms/contact-form' => 
-  array (
-    'class' => 'craft\\contactform\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/contact-form/src',
-    'handle' => 'contact-form',
-    'aliases' => 
-    array (
-      '@craft/contactform' => $vendorDir . '/craftcms/contact-form/src',
-    ),
-    'name' => 'Contact Form',
-    'version' => '2.1.1',
-    'description' => 'Add a simple contact form to your Craft CMS site',
-    'developer' => 'Pixel & Tonic',
-    'developerUrl' => 'https://pixelandtonic.com/',
-    'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/contact-form',
-    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/contact-form/v2/CHANGELOG.md',
-    'downloadUrl' => 'https://github.com/craftcms/contact-form/archive/v2.zip',
-    'components' => 
-    array (
-      'mailer' => 'craft\\contactform\\Mailer',
-    ),
-  ),
   'wbrowar/adminbar' => 
   array (
     'class' => 'wbrowar\\adminbar\\AdminBar',
@@ -116,24 +93,28 @@ return array (
       'editLinks' => 'wbrowar\\adminbar\\services\\EditLinks',
     ),
   ),
-  'craftcms/redactor' => 
+  'craftcms/contact-form' => 
   array (
-    'class' => 'craft\\redactor\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/redactor/src',
-    'handle' => 'redactor',
+    'class' => 'craft\\contactform\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/contact-form/src',
+    'handle' => 'contact-form',
     'aliases' => 
     array (
-      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+      '@craft/contactform' => $vendorDir . '/craftcms/contact-form/src',
     ),
-    'name' => 'Redactor',
-    'version' => '2.1.0',
-    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
+    'name' => 'Contact Form',
+    'version' => '2.2.2',
+    'description' => 'Add a simple contact form to your Craft CMS site',
     'developer' => 'Pixel & Tonic',
     'developerUrl' => 'https://pixelandtonic.com/',
     'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/redactor',
-    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
-    'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
+    'documentationUrl' => 'https://github.com/craftcms/contact-form',
+    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/contact-form/v2/CHANGELOG.md',
+    'downloadUrl' => 'https://github.com/craftcms/contact-form/archive/v2.zip',
+    'components' => 
+    array (
+      'mailer' => 'craft\\contactform\\Mailer',
+    ),
   ),
   'enupal/paypal' => 
   array (
@@ -145,7 +126,7 @@ return array (
       '@enupal/paypal' => $vendorDir . '/enupal/paypal/src',
     ),
     'name' => 'PayPal',
-    'version' => '1.0.4',
+    'version' => '1.0.5',
     'schemaVersion' => '1.0.0',
     'description' => 'Sell products or services on your website using a PayPal Buy Now Button',
     'developer' => 'Enupal',
@@ -157,5 +138,24 @@ return array (
     array (
       'app' => 'enupal\\paypal\\services\\App',
     ),
+  ),
+  'craftcms/redactor' => 
+  array (
+    'class' => 'craft\\redactor\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/redactor/src',
+    'handle' => 'redactor',
+    'aliases' => 
+    array (
+      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+    ),
+    'name' => 'Redactor',
+    'version' => '2.1.3',
+    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
+    'developer' => 'Pixel & Tonic',
+    'developerUrl' => 'https://pixelandtonic.com/',
+    'developerEmail' => 'support@craftcms.com',
+    'documentationUrl' => 'https://github.com/craftcms/redactor',
+    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
+    'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
   ),
 );

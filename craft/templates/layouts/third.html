@@ -21,7 +21,7 @@
         {% set categories = entry.mediaType %}
         {% if categories | length %}
           <li>Media Type:
-            {% for category in categories %}
+            {% for category in categories.all() %}
               {{ category.title }}
             {% endfor %}
           </li>
@@ -30,7 +30,7 @@
         {% set categories = entry.mediaCategory %}
         {% if categories | length %}
           <li>Category:
-            {% for category in categories %}
+            {% for category in categories.all() %}
               {{ category.title }}
             {% endfor %}
           </li>
@@ -65,10 +65,10 @@
       </ul>
     </section>
   </div>
-  {% if entry.featureImage.first() | length %}
+  {% if entry.featureImage.one() | length %}
     <section class="third__images">
       <div class="third__images__media">
-        {% set image = entry.featureImage.first() %}
+        {% set image = entry.featureImage.one() %}
           <img src="{{ image.url }}" alt="{{ image.title }}"/>
       </div>
       <div class="third__images__caption">
@@ -82,9 +82,9 @@
       <h2>Related Items</h2>
       <div class="feature-section-3">
         {% set category = entry.mediaCategory %}
-        {% for category in categories %}
+        {% for category in categories.all() %}
           {% set related = craft.entries.relatedTo(category) %}
-          {% for entry in related.id('not ' ~ entry.id).orderBy('RAND()').limit(2) %}
+          {% for entry in related.id('not ' ~ entry.id).orderBy('RAND()').limit(2).all() %}
             {% include 'globals/noImageListing.html' %}
           {% endfor %}
         {% endfor %}
