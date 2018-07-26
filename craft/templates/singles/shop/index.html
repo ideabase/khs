@@ -4,6 +4,7 @@
 
 {# Category names in Media Type category (mediaType) go here dynmically #}
 
+{% cache %}
 <section class="tabs">
   <input type="radio" name="tabs" id="all" checked="checked">
   <label for="all">All</label>
@@ -30,6 +31,6 @@
     {% endif %}
   {% endfor %}
 </section>
-
+{% endcache %}
 
 {% endblock %}
