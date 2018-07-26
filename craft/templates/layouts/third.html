@@ -61,7 +61,9 @@
           <li>Price: ${{ paypal.amount|number_format(2, '.', ',') }}</li>
           {# DISPLAY PAYPAL BUTTON #}
           {{ paypal.displayButton() }}
+
         {% endif %}
+
       </ul>
     </section>
   </div>

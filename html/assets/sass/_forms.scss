@@ -8,6 +8,9 @@ button, .button-link, main form input[type="submit"] {
   margin-bottom: 1em;
   display: inline-block;
   transition: .3s all ease-in-out;
+  letter-spacing: .03em;
+  font-size: .9em;
+  font-weight: bold;
   &:hover,&:active {
     color: $green;
     background-color: white;
