@@ -9,7 +9,7 @@
   <input type="radio" name="tabs" id="all" checked="checked">
   <label for="all">All</label>
   <div class="tab">
-    {% set items =  craft.entries.section('historicalMedia').all() %}
+    {% set items =  craft.entries.section('historicalMedia').order('title') %}
     <ul class="shop-items">
       {% for entry in items if entry.forSale %}
         {% include 'globals/shop-item.twig' %}
@@ -23,7 +23,7 @@
       <label for="{{category.slug}}">{{ category.title }}</label>
       <div class="tab">
         <ul class="shop-items">
-          {% for entry in items.all() if entry.forSale %}
+          {% for entry in items.order('title') if entry.forSale %}
             {% include 'globals/shop-item.twig' %}
           {% endfor %}
         </ul>
