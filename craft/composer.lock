@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a60b6c1d5a7a9647aef16fa81f6d697",
+    "content-hash": "551d379d3250de117e12bd3b85674a08",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -823,11 +823,11 @@
         },
         {
             "name": "enupal/paypal",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enupal/paypal/zipball/207d636a94439cd0d8d7b366514b79ad2e361742",
-                "reference": "207d636a94439cd0d8d7b366514b79ad2e361742",
+                "url": "https://api.github.com/repos/enupal/paypal/zipball/b6b9f1c29af66e23fa8d186e8f188470101206a4",
+                "reference": "b6b9f1c29af66e23fa8d186e8f188470101206a4",
                 "shasum": ""
             },
             "require": {
@@ -877,7 +877,7 @@
                 "issues": "https://github.com/enupal/paypal/issues",
                 "docs": "https://enupal.com/craft-plugins/paypal/docs"
             },
-            "time": "2018-07-11T22:40:06+00:00"
+            "time": "2018-07-26T13:59:53+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",

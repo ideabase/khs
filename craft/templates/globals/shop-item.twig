@@ -24,9 +24,9 @@
       {% set buttonName = mypaypal.sku %}
       {# if there are priced variants display them #}
       {% set button = craft.paypalButton.getButton(buttonName) %}
-      {% if mypaypal.enupalPaypalPricedVariants.first() %}
+      {% if mypaypal.enupalPaypalPricedVariants.one() %}
         {# GETTING VARIANTS #}
-          {% set pricedOptionsBlock = button.enupalPaypalPricedVariants.first() %}
+          {% set pricedOptionsBlock = button.enupalPaypalPricedVariants.one() %}
 
           {% for row in pricedOptionsBlock.options %}
               ${{row.price}} ({{ row.optionLabel|t }})<br>
@@ -45,11 +45,11 @@
       {% if entry.paymentButton | length %}
         {% set paypal = entry.paymentButton.one() %}
         {# DISPLAY PAYPAL BUTTON #}
-        {% if mypaypal.enupalPaypalPricedVariants.first() %}
+        {% if mypaypal.enupalPaypalPricedVariants.one() %}
         <div class="varient-button">
         {% endif %}
         {{ paypal.displayButton() }}
-        {% if mypaypal.enupalPaypalPricedVariants.first() %}
+        {% if mypaypal.enupalPaypalPricedVariants.one() %}
         </div>
         {% endif %}
       {% endif %}

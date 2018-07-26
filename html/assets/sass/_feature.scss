@@ -88,6 +88,24 @@
   }
 }
 
+.feature-section__text {
+  text-align: left;
+  padding: 1.5em;
+  p {
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 800px) {
+    padding-right: 2em;
+    padding-left: 0;
+    width: 50%;
+    max-width: 600px;
+    padding-bottom: 2.5em;
+    h2 {
+      text-align: left;
+    }
+  }
+}
 
 .feature-2 {
   text-align: left;

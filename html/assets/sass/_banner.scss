@@ -61,7 +61,7 @@
 }
 
 .top-banner__image {
-  min-height: 250px;
+  min-height: 200px;
   background-color: gray;
 }
 
@@ -79,13 +79,13 @@
   @media screen and (min-width: 550px) {
     background-color: transparent;
     border: none;
-    padding: 1.75em 1em;
+    padding: 1.5em 1em;
     max-width: inherit;
     width: inherit;
     padding-right: 100px;
     bottom: 50px;
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     background-image: url('/assets/img/ui/banner-background.svg');
     position: absolute;
     padding-left: 3em;
@@ -161,7 +161,7 @@
 
 .supplemental {
   margin: .25em;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     display: flex;
     z-index: 3;
     position: relative;
