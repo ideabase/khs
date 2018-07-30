@@ -156,6 +156,9 @@
     padding-left: 1.5em;
   }
   @media screen and (min-width: 1000px) {
+    a {
+      color: white;
+    }
     padding: .75em;
     padding-bottom: .5em;
     width: 95%;

@@ -1,7 +1,7 @@
 <div class="cards">
 {% for entry in entry.featuredItems.all() %}
 <div class="card-container">
-  <figure class="card">
+  <a href="{{ entry.url }}" class="card">
     {% for asset in entry.featureImage.all() %}
       <div class="lazy card__image" data-src="{{ asset.url('featureItems') }}">
       <noscript><div class="card__image" style="background-image: url('{{ asset.url('featureItems') }}')"></noscript>
@@ -11,9 +11,9 @@
       <div class="card__figure__large">
           {{ entry.teaserText}}
       </div>
-      <h5 class="card__title"><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
+      <h5 class="card__title">{{ entry.title }}</h5>
     </div>
-  </figure>
+  </a>
     <figcaption class="card__figure">
       <div class="card__figure__container">
         {{ entry.teaserText}}

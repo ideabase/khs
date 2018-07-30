@@ -56,6 +56,9 @@ $(document).ready(function() {
                 $(parentElement).toggleClass('active');
                 $('.card-container').not($(parentElement)).removeClass('active');
               });
+              $('.card').click(function(e){
+                e.preventDefault();
+              });
               $('.card__title').click(function(e){
                 e.preventDefault();
               });
