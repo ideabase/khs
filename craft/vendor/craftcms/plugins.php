@@ -116,25 +116,6 @@ return array (
       'mailer' => 'craft\\contactform\\Mailer',
     ),
   ),
-  'craftcms/redactor' => 
-  array (
-    'class' => 'craft\\redactor\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/redactor/src',
-    'handle' => 'redactor',
-    'aliases' => 
-    array (
-      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
-    ),
-    'name' => 'Redactor',
-    'version' => '2.1.3',
-    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
-    'developer' => 'Pixel & Tonic',
-    'developerUrl' => 'https://pixelandtonic.com/',
-    'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/redactor',
-    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
-    'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
-  ),
   'enupal/paypal' => 
   array (
     'class' => 'enupal\\paypal\\Paypal',
@@ -156,6 +137,68 @@ return array (
     'components' => 
     array (
       'app' => 'enupal\\paypal\\services\\App',
+    ),
+  ),
+  'craftcms/redactor' => 
+  array (
+    'class' => 'craft\\redactor\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/redactor/src',
+    'handle' => 'redactor',
+    'aliases' => 
+    array (
+      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+    ),
+    'name' => 'Redactor',
+    'version' => '2.1.5',
+    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
+    'developer' => 'Pixel & Tonic',
+    'developerUrl' => 'https://pixelandtonic.com/',
+    'developerEmail' => 'support@craftcms.com',
+    'documentationUrl' => 'https://github.com/craftcms/redactor',
+    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/redactor/master/CHANGELOG.md',
+    'downloadUrl' => 'https://github.com/craftcms/redactor/archive/master.zip',
+  ),
+  'craftcms/contact-form-honeypot' => 
+  array (
+    'class' => 'craft\\contactform\\honeypot\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/contact-form-honeypot/src',
+    'handle' => 'contact-form-honeypot',
+    'aliases' => 
+    array (
+      '@craft/contactform/honeypot' => $vendorDir . '/craftcms/contact-form-honeypot/src',
+    ),
+    'name' => 'Contact Form Honeypot',
+    'version' => '1.0.2',
+    'description' => 'Add a honeypot captcha to your Craft CMS contact form',
+    'developer' => 'Pixel & Tonic',
+    'developerUrl' => 'https://pixelandtonic.com/',
+    'developerEmail' => 'support@craftcms.com',
+    'documentationUrl' => 'https://github.com/craftcms/contact-form-honeypot',
+    'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/contact-form-honeypot/master/CHANGELOG.md',
+    'downloadUrl' => 'https://github.com/craftcms/contact-form-honeypot/archive/master.zip',
+  ),
+  'rias/craft-contact-form-extensions' => 
+  array (
+    'class' => 'rias\\contactformextensions\\ContactFormExtensions',
+    'basePath' => $vendorDir . '/rias/craft-contact-form-extensions/src',
+    'handle' => 'contact-form-extensions',
+    'aliases' => 
+    array (
+      '@rias/contactformextensions' => $vendorDir . '/rias/craft-contact-form-extensions/src',
+    ),
+    'name' => 'Contact Form Extensions',
+    'version' => '1.0.7',
+    'schemaVersion' => '1.0.0',
+    'description' => 'Adds extensions to the Craft CMS contact form plugin.',
+    'developer' => 'Rias',
+    'developerUrl' => 'https://rias.be',
+    'documentationUrl' => 'https://github.com/Rias500/craft-contact-form-extensions/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/Rias500/craft-contact-form-extensions/master/CHANGELOG.md',
+    'hasCpSettings' => true,
+    'hasCpSection' => true,
+    'components' => 
+    array (
+      'contactFormExtensionsService' => 'rias\\contactformextensions\\services\\ContactFormExtensionsService',
     ),
   ),
 );

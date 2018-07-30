@@ -84,6 +84,9 @@ input[type="checkbox"] {
   }
 }
 
+/* Honeyput field */
+input#streetAddress, label#streetAddress { display: none; }
+
 .callout-text {
   @media screen and (min-width: 600px) {
     text-align: left;

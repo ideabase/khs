@@ -2,12 +2,14 @@
     "require": {
         "craftcms/cms": "3.0.17.1",
         "wbrowar/adminbar": "3.1.6",
-        "craftcms/redactor": "2.1.3",
+        "craftcms/redactor": "2.1.5",
         "firstborn/migrationmanager": "3.0.5",
         "mmikkel/cp-field-inspect": "1.0.4",
         "workingconcept/craft-cloudflare": "0.2.0",
         "craftcms/contact-form": "2.2.2",
-        "enupal/paypal": "1.0.6"
+        "enupal/paypal": "1.0.6",
+        "craftcms/contact-form-honeypot": "1.0.2",
+        "rias/craft-contact-form-extensions": "1.0.7"
     },
     "config": {
       "platform": {

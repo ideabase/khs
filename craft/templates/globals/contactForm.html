@@ -26,6 +26,8 @@
         {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
       </div>
     </div>
+    <label for="streetAddress" id="streetAddress">Street Address</label>
+    <input id="streetAddress" name="streetAddress" type="text">
     <label>What are you interested in?</label>
     <div class="contact-form__options">
     {% if entry.section.handle == "volunteer" %}
