@@ -6,12 +6,40 @@
 {% block content %}
   {% cache %}
 
-    <h2>Upcoming Exhibits</h2>
+    {% include 'globals/featureItem.html' %}
+
     {% set entries = craft.entries.section('exhibits').all() %}
+    {% set count = 0 %}
+    {% for exhibit in entries %}
+      {% if exhibit.exhibitStatus == 'specialExhibit' and exhibit.endDate > now %}
+        {% for item in entry.mainFeaturedItem %}
+          {% if item.id != exhibit.id and count != 1 %}
+          {% set count = count+1 %}
+          <h2>Upcoming Exhibits</h2>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
     <div class="feature-links">
-      {% for entry in entries %}
-        {% if entry.exhibitStatus == 'specialExhibit' and entry.endDate > now %}
-          {% include 'globals/noImageListing.html' %}
+      {% for exhibit in entries %}
+        {% if exhibit.exhibitStatus == 'specialExhibit' and exhibit.endDate > now %}
+          {% for item in entry.mainFeaturedItem %}
+            {% if item.id != exhibit.id %}
+            <div class="feature">
+              <h3><a href="{{exhibit.url}}">{{ exhibit.title }}</a></h3>
+                {% if exhibit.startDate | length %}
+                  {{ exhibit.startDate  | date('M j, Y')}}
+                {% endif %}
+
+                {% include 'globals/teaserText.html' %}
+
+                {% if exhibit.location | length %}
+                  <p>{{ exhibit.location }}</p>
+                {% endif %}
+            </div>
+            {% endif %}
+          {% endfor %}
         {% endif %}
       {% endfor %}
     </div>
