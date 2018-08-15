@@ -36,6 +36,34 @@
   }
 }
 
+.sponsor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: .75em;
+}
+
+.sponsor-content {
+  width: 45%;
+}
+
+.sponsor-text {
+  margin-top: .45em;
+  margin-bottom: 1.75em;
+}
+
+#sponsor-title {
+  margin-top: 3em;
+}
+
+.comma:after {
+  content:",";
+}
+
+.comma:last-child:after {
+  content: none;
+}
+
 .third__images__media {
   position: relative;
   &:after {
