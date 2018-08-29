@@ -65,8 +65,31 @@
         {% endif %}
 
       </ul>
+
+        {% if entry.sponsor | length %}
+          <h6 id="sponsor-title">The Sponsors</h6>
+        {% endif %}
+        <div class="sponsor">
+          {% for block in entry.sponsor.all() %}
+            {% if block.type == "sponsor" %}
+              {% set image = block.sponsorLogo.one() %}
+                {% if image %}
+                  <div class="sponsor-content">
+                    <img src="{{ image.getUrl('sponsorImage') }}" alt="{{ image.title }}" class="sponsor-image">
+                {% endif %}
+                {% if block.sponsorText | length %}
+                  <div class="sponsor-text">
+                    {{ block.sponsorText }}
+                  </div>
+                  </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
     </section>
   </div>
+
   {% if entry.featureImage.one() | length %}
     <section class="third__images">
       <div class="third__images__media">
