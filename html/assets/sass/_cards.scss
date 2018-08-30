@@ -33,6 +33,7 @@
 .card__image {
   width: 35%;
   background-size: cover;
+  background-position: center center;
   border-right: $darkgreen 4px solid;
   @media screen and (min-width: 1000px) {
     min-height: 200px;
