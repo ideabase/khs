@@ -69,7 +69,7 @@
           <h6 id="sponsor-title">The Sponsors</h6>
         {% endif %}
         <div class="sponsor">
-          {% for block in entry.sponsor %} <!--removed .all() due to error-->
+          {% for block in entry.sponsor %}
             {% if block.type == "sponsor" %}
               {% set image = block.sponsorLogo.one() %}
                 {% if image %}
@@ -91,13 +91,30 @@
 
   {% if entry.featureImage.one() | length %}
     <section class="third__images">
-      <div class="third__images__media">
+
         {% set image = entry.featureImage.one() %}
-          <img src="{{ image.url }}" alt="{{ image.title }}"/>
+        {% set media = entry.mediaType %}
+        {% if media | length %}
+          {% for category in media %}
+            {% if category.title == "Book" %}
+                <div class="third__images__media third__images__media--small">
+                <img src="{{ image.url('portrait') }}" alt="{{ image.title }}" />
+            {% else %}
+              <div class="third__images__media">
+              <img src="{{ image.url('landscape') }}" alt="{{ image.title }}"/>
+            {% endif %}
+          {% endfor %}
+          {% else %}
+              <div class="third__images__media">
+              <img src="{{ image.url('landscape') }}" alt="{{ image.title }}"/>
+        {% endif %}
       </div>
-      <div class="third__images__caption">
-        <figcaption>{{ entry.imageCaption }}</figcaption>
-      </div>
+
+      {% if entry.imageCaption | length %}
+        <div class="third__images__caption">
+          <figcaption>{{ entry.imageCaption }}</figcaption>
+        </div>
+      {% endif %}
     </section>
   {% endif %}
 

@@ -80,6 +80,15 @@
     order: 2;
     width: 70%;
   }
+  img {
+    width: 100%;
+  }
+}
+
+.third__images__media--small {
+  @media screen and (min-width: 600px) {
+    width: auto;
+  }
 }
 
 .third__images__caption {
