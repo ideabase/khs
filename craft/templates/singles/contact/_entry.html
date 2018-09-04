@@ -1,18 +1,18 @@
 {% extends "layouts/form" %}
 {% block content %}
 	<div class="contact-information">
-			<div class="callout-text">
-				<h2>Contact Information</h2>
-				<p>{{ footer.phone }}</p>
-				{% if footer.emailAddress %}
-					<p><a href="mailto:{{ footer.emailAddress }}">{{ footer.emailAddress }}</a></p>
-				{% endif %}
-				{% if footer.address %}
-				{% set staticGoogleUrl = 'https://www.google.com/maps/place/' %}
-					<p><a href="{{ staticGoogleUrl ~ footer.address |replace({' ': '+', ',': '+', '.': '+'}) }}">{{ footer.address }}</a></p>
-				{% endif %}
-				<br />
-			</div>
+		<div class="callout-text">
+			<h2>Contact Information</h2>
+			<p>{{ footer.phone }}</p>
+			{% if footer.emailAddress %}
+				<p><a href="mailto:{{ footer.emailAddress }}">{{ footer.emailAddress }}</a></p>
+			{% endif %}
+			{% if footer.address %}
+			{% set staticGoogleUrl = 'https://www.google.com/maps/place/' %}
+				<p><a href="{{ staticGoogleUrl ~ footer.address |replace({' ': '+', ',': '+', '.': '+'}) }}">{{ footer.address }}</a></p>
+			{% endif %}
+			<br />
+		</div>
 		<div class="contact-form">
 			<h2>Contact Form</h2>
 		  {% include "globals/contactForm.html" %}

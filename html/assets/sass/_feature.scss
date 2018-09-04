@@ -125,6 +125,24 @@
   }
 }
 
+// for the membership page only
+.feature-2-membership {
+  text-align: left;
+  padding: 0;
+  p {
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 800px) {
+    padding-right: 2em;
+    max-width: 600px;
+    padding-bottom: 2.5em;
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
 .feature-button {
   background-color: darken($yellow,10%);
   text-transform: uppercase;

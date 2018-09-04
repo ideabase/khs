@@ -1,10 +1,24 @@
-{% extends "layouts/secondary" %}
+{% extends '_layout' %}
+
+{% block subheader %}
+  {% include 'globals/banner.html' %}
+{% endblock %}
 
 {% block content %}
-	<div class="contact-form">
+<div class="membership">
+
+	<div class="secondary-feature">
+	  <div class="feature-2-membership">
+	      <h2>{{entry.headline}}</h2>
+	      {{ entry.body}}
+	  </div>
+
+	</div>
+	<div class="purchase-a-membership contact-form">
 		<h2>{{ entry.subHeadline }}</h2>
 		{{entry.paypalProductCode|raw}}
 	</div>
 	{% include "globals/relatedLinks.html" %}
+</div>
 
 {% endblock %}

@@ -2,10 +2,9 @@ button, .button-link, main form input[type="submit"] {
   background-color: $green;
   text-transform: uppercase;
   color: white;
-  padding: 0.65em 1em;
+  padding: 0.75em 1em;
   border: 1px solid $green;
   border-radius: 5px;
-  margin-bottom: 1em;
   display: inline-block;
   transition: .3s all ease-in-out;
   letter-spacing: .03em;
@@ -17,11 +16,19 @@ button, .button-link, main form input[type="submit"] {
   }
 }
 
-main form{
+button, main form input[type="submit"] {
+  width: 100%;
+}
+
+main form {
   padding: 0.2em;
   box-sizing: border-box;
   margin: 20px auto;
   text-align: left;
+}
+
+main form table {
+  width: 100%;
 }
 
 main form label {
@@ -35,11 +42,26 @@ main form input[type=email], main form input[type=text] {
   margin-top: .5em;
   width: 100%;
   padding: .5em;
+  border: 1.25px solid;
+  outline: none;
+  border-radius: 5px;
+}
+
+main form select {
+  border: 1.25px solid;
+  background-color: white;
+  outline: none;
+  margin-bottom: 1em;
+  border-radius: 5px;
 }
 
 main form textarea {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   width: 100%;
+  border: 1.25px solid;
+  padding: .5em;
+  outline: none;
+  border-radius: 5px;
 }
 
 input[type="checkbox"] {
@@ -96,15 +118,30 @@ input#streetAddress, label#streetAddress { display: none; }
     }
   }
 }
-.check-out{
-    width: 100%;
-    margin: 0 auto;
-    padding: 12px 60px;
-    text-align: center;
-    border-radius: 3px;
-    border: none;
-    font-size: 18px;
-    letter-spacing: 2px;
-    background: $green;
-    color: white;
+.check-out {
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 60px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background: $green;
+  color: white;
+}
+
+.membership {
+  @media screen and (min-width: 800px) {
+    display: flex;
+    justify-content: space-between;
   }
+}
+
+.purchase-a-membership {
+  margin-top: 2.5em;
+  @media screen and (min-width: 800px) {
+    margin-top: 1.5em;
+    width: 40%;
+  }
+}
