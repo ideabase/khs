@@ -35,15 +35,12 @@
                 {% if entry.sponsor | length %}
                   <li>Sponsored By:
                     {% for block in entry.sponsor.all() %}
-                    {% if block.type == "sponsor" %}
-
-                    {% if block.sponsorText %}
-                      <span class="comma">{{ block.sponsorText }}</span>
-                    {% endif %}
-                    {% endif %}
-
-
-                {% endfor %}
+                        {% if block.type == "sponsor" %}
+                            {% if block.sponsorText %}
+                              <span class="comma">{{ block.sponsorText }}</span>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
               </li>{% endif %}
             </ul>
 
