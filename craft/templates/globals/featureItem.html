@@ -5,12 +5,17 @@
   {% if entry.mainFeaturedItem | length %}
     {% set featured = entry.mainFeaturedItem.all() %}
   {% endif %}
+  {#{% if entry.secondaryFeaturedItem | length %}
+    {% set secondaryItem = entry.secondaryFeaturedItem %}
+  {% endif %}#}
 {% elseif category is defined %}
   {% if category.mainFeaturedItem | length %}
     {% set featured = category.mainFeaturedItem.all() %}
   {% endif %}
 {% endif %}
 
+
+{# This block of code is for the main featured items.#}
 {% if featured is defined %}
   {% for entry in featured %}
     {% set fields = entry.fields %}
@@ -18,7 +23,7 @@
           <div class="feature-section-1">
             <div class="feature-section__text">
               <h5 class="feature-title">Now Featuring</h5>
-              <h3 class="feature-heading">{{entry.title}}</h2>
+              <h3 class="feature-heading">{{entry.title}}</h3>
               <ul class="meta-list">
                 {% for field in fields %}
                   {% switch field %}
@@ -65,4 +70,26 @@
     </div>
   {% endfor %}
 {% endif %}
+
+{# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
+{# {% if secondaryItem is defined %}
+  <div class="feature-section-1">
+    <div class="feature-section__text">
+      <div class="feature-section-background">
+        <h5 class="feature-title">Other News</h5>
+        {% for entry in secondaryItem.all() %}
+          <h3 class="feature-heading">{{ entry.title }}</h3>
+          {% if entry.teaserText %}
+            <p>{{ entry.teaserText }}</p>
+          {% elseif entry.body %}
+            {{ entry.body | raw }}
+          {% elseif entry.mediaDescription %}
+            {{ entry.mediaDescription | raw }}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %} #}
+
 {% endcache %}
