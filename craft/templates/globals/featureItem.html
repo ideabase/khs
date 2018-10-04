@@ -5,9 +5,9 @@
   {% if entry.mainFeaturedItem | length %}
     {% set featured = entry.mainFeaturedItem.all() %}
   {% endif %}
-  {#{% if entry.secondaryFeaturedItem | length %}
+  {% if entry.secondaryFeaturedItem | length %}
     {% set secondaryItem = entry.secondaryFeaturedItem %}
-  {% endif %}#}
+  {% endif %}
 {% elseif category is defined %}
   {% if category.mainFeaturedItem | length %}
     {% set featured = category.mainFeaturedItem.all() %}
@@ -72,7 +72,7 @@
 {% endif %}
 
 {# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
-{# {% if secondaryItem is defined %}
+{% if secondaryItem is defined %}
   <div class="feature-section-1">
     <div class="feature-section__text">
       <div class="feature-section-background">
@@ -90,6 +90,6 @@
       </div>
     </div>
   </div>
-{% endif %} #}
+{% endif %} 
 
 {% endcache %}
