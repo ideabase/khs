@@ -73,23 +73,23 @@
 
 {# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
 {% if secondaryItem is defined %}
-  <div class="feature-section-1">
-    <div class="feature-section__text">
-      <div class="feature-section-background">
-        <h5 class="feature-title">Other News</h5>
-        {% for entry in secondaryItem.all() %}
-          <h3 class="feature-heading">{{ entry.title }}</h3>
-          {% if entry.teaserText %}
-            <p>{{ entry.teaserText }}</p>
-          {% elseif entry.body %}
-            {{ entry.body | raw }}
-          {% elseif entry.mediaDescription %}
-            {{ entry.mediaDescription | raw }}
-          {% endif %}
-        {% endfor %}
-      </div>
+    <div class="feature-section-1">
+        <div class="feature-section__text">
+            <div class="feature-section-background">
+                <h5 class="feature-title">Other News</h5>
+                {% for entry in secondaryItem.all() %}
+                    <h3 class="feature-heading">{{ entry.title }}</h3>
+                    {% if entry.teaserText %}
+                        <p>{{ entry.teaserText }}</p>
+                    {% elseif entry.body %}
+                        {{ entry.body | raw }}
+                    {% elseif entry.mediaDescription %}
+                        {{ entry.mediaDescription | raw }}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
-  </div>
-{% endif %} 
+{% endif %}
 
 {% endcache %}
