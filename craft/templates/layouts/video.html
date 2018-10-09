@@ -1,0 +1,6 @@
+{% block content %}
+    {% for block in entry.video %}
+        <h3>{{ block.videoTitle }}</h3>
+        <iframe src="{{ block.videoUrl }}"> </iframe>
+    {% endfor %}
+{% endblock %}
