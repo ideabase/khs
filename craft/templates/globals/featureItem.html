@@ -66,6 +66,10 @@
             {% for asset in entry.featureImage.all() %}
               <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
             {% endfor %}
+
+            {#Video to be displayed only if the current page == homepage #}
+            {#{% include 'globals/video.html' %}#}
+
           </div>
     </div>
   {% endfor %}
