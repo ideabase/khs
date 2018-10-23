@@ -17,10 +17,10 @@
 
 {# This block of code is for the main featured items.#}
 {% if featured is defined %}
-  {% for entry in featured %}
-    {% set fields = entry.fields %}
-    <div class="feature-section-background">
-          <div class="feature-section-1">
+  <div class="feature-section-background">
+    <div class="feature-section-1">
+      {% for entry in featured %}
+        {% set fields = entry.fields %}
             <div class="feature-section__text">
               <h5 class="feature-title">Now Featuring</h5>
               <h3 class="feature-heading">{{entry.title}}</h3>
@@ -96,18 +96,37 @@
 
 
             {# Prints feature image in now featuring block #}
+
             {% for asset in entry.featureImage.all() %}
                 <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
             {% endfor %}
 
 
+
             {#Video to be displayed only if the current page == homepage #}
             {#{% include 'globals/video.html' %}#}
 
-          </div>
-    </div>
+            {# testing #}
+
+
+
+
   {% endfor %}
+  {#{% include 'globals/video.html' %} This works finally! #}
+  </div>
+</div>
 {% endif %}
+
+{#
+<div class="feature-section-background">
+    <div class="feature-section-1">
+
+          {% include 'globals/video.html' %}
+
+    </div>
+</div>
+#}
+
 
 {# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
 {#
