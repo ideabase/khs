@@ -49,8 +49,6 @@
               </li>{% endif %}
             </ul>
 
-
-
               {% if entry.teaserText %}
                 <p>{{ entry.teaserText }}</p>
 
@@ -64,36 +62,6 @@
               <a href="{{entry.url}}" class="feature-button">See {{entry.title}}</a>
             </div>
 
-            {# Logic to display either feature image or video in the now featuring block #}
-            {#
-            {% set fImage = false %}
-            {% set fVideo = false %}
-
-
-            {% if entry.featureImage is defined %}
-                {% set fImage = true %}
-            {% endif %}
-
-            {% if entry.video is defined %}
-                {% set fVideo = true %}
-            {% endif %}
-
-
-            {% if fImage == true and fVideo == true %}
-                {% include 'globals/video.html' %}
-            {% elseif fImage == true and fVideo == false %}
-                {% for asset in entry.featureImage.all() %}
-                    <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
-                {% endfor %}
-            {% elseif fImage == false and fVideo == true %}
-                {% include 'globals/video.html' %}
-            {% else %}
-                {% for asset in entry.featureImage.all() %}
-                    <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
-                {% endfor %}
-            {% endif %}
-            #}
-
 
             {# Prints feature image in now featuring block #}
 
@@ -102,30 +70,57 @@
             {% endfor %}
 
 
+      {% endfor %}
 
-            {#Video to be displayed only if the current page == homepage #}
-            {#{% include 'globals/video.html' %}#}
-
-            {# testing #}
-
-
+      {# Logic to display either feature image or video in the now featuring block #}
+      {#
+      {% set fImage = false %}
+      {% set fVideo = false %}
 
 
-  {% endfor %}
-  {#{% include 'globals/video.html' %} This works finally! #}
-  </div>
-</div>
-{% endif %}
+      {% if entry.featureImage is defined %}
+          {% set fImage = true %}
+      {% endif %}
 
-{#
-<div class="feature-section-background">
-    <div class="feature-section-1">
 
+      {% if entry.video is defined %}
+          {% set fVideo = true %}
+      {% endif %}
+
+
+      {% if fImage == true and fVideo == true %}
           {% include 'globals/video.html' %}
+      {% elseif fImage == true and fVideo == false %}
+          {% for asset in entry.featureImage.all() %}
+              <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
+          {% endfor %}
+      {% elseif fImage == false and fVideo == true %}
+          {% include 'globals/video.html' %}
+      {% else %}
+          {% for asset in entry.featureImage.all() %}
+              <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
+          {% endfor %}
+      {% endif %}
+      #}
+      {# end of logic block #}
+
 
     </div>
-</div>
+  </div>
+{% endif %}
+
+{# TESTing mp4 videos #}
+{#
+{% for block in entry.video %}
+    <h3>{{ block.videoTitle }}</h3>
+    {% set videoAsset = block.mpfourVideo %}
+        <source src="{{ videoAsset }}" type="video/mp4">
+
+{% endfor %}
 #}
+
+{# end of test #}
+
 
 
 {# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
