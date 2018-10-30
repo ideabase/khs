@@ -1,6 +1,8 @@
 {% block content %}
     {% for block in entry.video %}
-        <h3>{{ block.videoTitle }}</h3>
-        <iframe width="560" height="315" src="{{ block.videoUrl }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="video">
+            <h3 class="videoTitle">{{ block.videoTitle }}</h3>
+            <iframe class="videoContent" src="{{ block.videoUrl }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
     {% endfor %}
 {% endblock %}

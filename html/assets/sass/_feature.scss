@@ -42,6 +42,22 @@
   }
 }
 
+.video{
+  margin: 2em 2em 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.videoTitle{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.videoContent{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .secondary-feature {
   margin-top: 0;
   @media screen and (min-width: 800px) {
