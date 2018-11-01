@@ -42,21 +42,24 @@
   }
 }
 
+
+
 .video{
   margin: 2em 2em 2em;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .videoTitle{
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
+  color: gold;
 }
 
 .videoContent{
-  display: flex;
-  flex-wrap: wrap;
+
 }
+
+
 
 .secondary-feature {
   margin-top: 0;

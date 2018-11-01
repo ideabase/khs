@@ -64,7 +64,7 @@
 
 
             {# Prints feature image in now featuring block #}
-
+            
             {% for asset in entry.featureImage.all() %}
                 <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
             {% endfor %}
