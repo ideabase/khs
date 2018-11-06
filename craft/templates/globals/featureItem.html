@@ -78,12 +78,12 @@
       {% set fVideo = false %}
 
 
-      {% if entry.featureImage is defined %}
+      {% if entry.featureImage | length %}
           {% set fImage = true %}
       {% endif %}
 
 
-      {% if entry.video is defined %}
+      {% if entry.video | length %}
           {% set fVideo = true %}
       {% endif %}
 
@@ -144,6 +144,6 @@
         </div>
     </div>
 {% endif %}
-#}
 
+#}
 {% endcache %}
