@@ -63,8 +63,8 @@
             </div>
 
 
-            {# Prints feature image in now featuring block #}
-            
+            {# OLD-for when video code did not exist. Prints feature image in now featuring block #}
+
             {% for asset in entry.featureImage.all() %}
                 <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
             {% endfor %}
@@ -81,13 +81,21 @@
       {% if entry.featureImage | length %}
           {% set fImage = true %}
       {% endif %}
+      #}
 
-
+      {# Ensures both the video asset and video url exist in order to display on webpage. #}
+      {#
       {% if entry.video | length %}
-          {% set fVideo = true %}
+          {% for field in entry.video %}
+              {% if field.videoUrl | length %}
+                  {% set fVideo = true %}
+              {% endif %}
+          {% endfor %}
       {% endif %}
+      #}
 
-
+      {# Depending on the case, switches between displaying picture and video. #}
+      {#
       {% if fImage == true and fVideo == true %}
           {% include 'globals/video.html' %}
       {% elseif fImage == true and fVideo == false %}
@@ -102,12 +110,14 @@
           {% endfor %}
       {% endif %}
       #}
-      {# end of logic block #}
+      {# end of video/picture logic block #}
 
 
     </div>
   </div>
 {% endif %}
+
+
 
 {# TESTing mp4 videos #}
 {#
@@ -118,7 +128,6 @@
 
 {% endfor %}
 #}
-
 {# end of test #}
 
 
@@ -126,24 +135,26 @@
 {# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
 {#
 {% if secondaryItem is defined %}
-    <div class="feature-section-1">
-        <div class="feature-section__text">
-            <div class="feature-section-background">
-                <h5 class="feature-title">Other News</h5>
-                {% for entry in secondaryItem.all() %}
-                    <h3 class="feature-heading">{{ entry.title }}</h3>
-                    {% if entry.teaserText %}
-                        <p>{{ entry.teaserText }}</p>
-                    {% elseif entry.body %}
-                        {{ entry.body | raw }}
-                    {% elseif entry.mediaDescription %}
-                        {{ entry.mediaDescription | raw }}
-                    {% endif %}
-                {% endfor %}
+    <div class="secondary-feature-item">
+        <div class="feature-section-1">
+            <div class="feature-section__text">
+                <div class="feature-section-background">
+                    <h5 class="feature-title">Other News</h5>
+                    {% for entry in secondaryItem.all() %}
+                        <h3 class="feature-heading">{{ entry.title }}</h3>
+                        {% if entry.teaserText %}
+                            <p>{{ entry.teaserText }}</p>
+                        {% elseif entry.body %}
+                            {{ entry.body | raw }}
+                        {% elseif entry.mediaDescription %}
+                            {{ entry.mediaDescription | raw }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
 {% endif %}
-
 #}
+
 {% endcache %}
