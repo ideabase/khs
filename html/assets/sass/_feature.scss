@@ -1,6 +1,6 @@
 .feature-title {
   background-color: $green;
-  margin-top: 0;
+  margin-top: .8em;
   padding: .5em .75em;
   color: white;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 }
 
 
-
+/* Styles attributes for video to be displayed in Now Featuring section if the video exists. */
 .video{
   margin: 2em 2em 2em;
   display: flex;
@@ -56,10 +56,19 @@
 }
 
 
-.secondary-feature-item{
-  
+/* Secondary featured section code. */
+.secondary-feature-item {
+  text-align: left;
+  margin-left: 15em;
+  margin-right: 15em;
 
 }
+
+/* Adds padding to either the teaser text, body, or media description in the secondary featured block/item on webpage. */
+.text-styling{
+  padding-bottom: .3em;
+}
+
 
 
 
@@ -214,6 +223,7 @@
   //padding: 0 2em 0 2em;
   margin: 0 auto;
   margin-bottom: 5em;
+
   @media screen and (min-width: 800px) {
     padding-right: 0;
     padding: 0 0em 0em 3em;
