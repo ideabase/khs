@@ -102,22 +102,25 @@
   <div class="timeline-body__main">
     {{ category.body }}
     {% if category.secondaryImage | length %}
-      {% for image in category.secondaryImage.all() %}
-      <img src="{{ image.url}}" alt="image.title" />
-      {% endfor %}
+        {% for image in category.secondaryImage.all() %}
+            <img src="{{ image.url}}" alt="image.title" />
+        {% endfor %}
     {% endif %}
     {% if category.mainFeaturedItem | length %}
-      {% set featured = category.mainFeaturedItem.all() %}
+        {% set featured = category.mainFeaturedItem.all() %}
     {% endif %}
     {% if featured is defined %}
-    {% for entry in featured %}
-      <div class="timeline__feature">
-      {% for asset in entry.featureImage.all() %}
-        <img class="lazy" data-src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
-      {% endfor %}
-      <div class="timeline__feature__caption">{% include 'globals/teaserText.html' %} <a href="{{ entry.url }}">Learn more about {{ entry.title }}</a></div>
-      </div>
-    {% endfor %}
+        {% for entry in featured %}
+            <div class="timeline__feature">
+                {% for asset in entry.featureImage.all() %}
+                    <img class="lazy" data-src="{{ asset.url('secondaryImage') }}" alt="{{ asset.title }}" / >
+                {% endfor %}
+                <div class="timeline__feature__caption">
+                    {% include 'globals/teaserText.html' %}
+                    <a href="{{ entry.url }}">Learn more about {{ entry.title }}</a>
+                </div>
+            </div>
+        {% endfor %}
     {% endif %}
   </div>
 
@@ -127,13 +130,13 @@
     <h2>{{category.featuredTitle}}</h2>
     <ul class="timeline-resources">
     {% for entry in currentcategory.all() %}
-      <li class="timeline-resources__item">
-        <a href="{{entry.url}}">
-          <h3>{{ entry.title }}</h3>
-        </a>
-          {% include 'globals/teaserText.html' %}
-        <a class="feature-button" href="{{ entry.url}}">Learn More</a>
-      </li>
+        <li class="timeline-resources__item">
+            <a href="{{entry.url}}">
+                <h3>{{ entry.title }}</h3>
+            </a>
+            {% include 'globals/teaserText.html' %}
+            <a class="feature-button" href="{{ entry.url}}">Learn More</a>
+        </li>
     {% endfor %}
     </ul>
   </aside>
@@ -143,20 +146,20 @@
 {% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category).orderBy('title asc').all() %}
 <h2>{{category.title}} Timeline</h2>
 <section class="timeline">
-  {% for event in currenttimeline %}
-  <div class="timeline-tile timeline-text">
-    <div class="timeline-text__inner">
-      <h3>{{ event.title }}</h3>
-      {{ event.body }}
-    </div>
-  </div>
-  {% if event.featureImage | length %}
-  {% for asset in event.featureImage.all() %}
-  <div class="timeline-tile timeline-image" style="background-image: url('{{asset.url}}');">
-  </div>
-  {% endfor %}
-  {% endif %}
-  {% endfor %}
+    {% for event in currenttimeline %}
+        <div class="timeline-tile timeline-text">
+            <div class="timeline-text__inner">
+                <h3>{{ event.title }}</h3>
+                {{ event.body }}
+            </div>
+        </div>
+        {% if event.featureImage | length %}
+            {% for asset in event.featureImage.all() %}
+                <div class="timeline-tile timeline-image" style="background-image: url('{{asset.url}}');">
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
 </section>
 
 {% endif %}
