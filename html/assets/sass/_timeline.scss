@@ -92,7 +92,7 @@
     grid-row: span 3; // was 3
   }
   @media screen and (min-width: 1000px) {
-
+    /*grid-column: span 6; //was 6, commented out on nov 20th 2018 then commited and pushed this- matt.*/
     grid-row: span 4; // was 4
   }
 }
