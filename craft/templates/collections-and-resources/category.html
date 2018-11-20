@@ -146,15 +146,16 @@
 {% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category).orderBy('title asc').all() %}
 <h2>{{category.title}} Timeline</h2>
 <section class="timeline">
-    {% for event in currenttimeline %}
+    {% for entry in currenttimeline %}
         <div class="timeline-tile timeline-text">
             <div class="timeline-text__inner">
-                <h3>{{ event.title }}</h3>
-                {{ event.body }}
+                <h3>{{ entry.title }}</h3>
+                {% include 'globals/teaserText.html' %} {#Changed for loops original to entry from event keyword and testing the look of the teaserText description for timelines. #}
+                {#{{ event.body }}#}
             </div>
         </div>
-        {% if event.featureImage | length %}
-            {% for asset in event.featureImage.all() %}
+        {% if entry.featureImage | length %}
+            {% for asset in entry.featureImage.all() %}
                 <div class="timeline-tile timeline-image" style="background-image: url('{{asset.url}}');">
                 </div>
             {% endfor %}
