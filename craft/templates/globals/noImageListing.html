@@ -2,6 +2,8 @@
       <h3><a href="{{entry.url}}">{{ entry.title }}</a></h3>
         {% if entry.startDate | length %}
           {{ entry.startDate  | date('M j, Y')}}
+        {% elseif entry.endDate | length %}
+          {{ entry.endDate | date('M j, Y')}}
         {% endif %}
 
         {% include 'globals/teaserText.html' %}
@@ -10,5 +12,5 @@
           <p>{{ entry.location }}</p>
         {% endif %}
 
-        
+
 </div>
