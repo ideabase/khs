@@ -6,21 +6,22 @@
 {% block content %}
   {% cache %}
 
+    {# Displays the current/upcoming events #}
     <h2>{{entry.subHeadline}}</h2>
-
     <div class="feature-links">
       {% for entry in craft.entries.section('events').all() %}
-        {% if entry.endDate > now %}
+        {% if entry.endDate >= now and entry.startDate > = now %}
           {% include 'globals/noImageListing.html' %}
         {% endif %}
       {% endfor %}
     </div>
 
     {# Shows two past events #}
+    {# if the enddate and startdate are less than now, in other words are in the past by judging the current date then display the events under past events#}
     <h2>Past Events</h2>
     <div class="feature-links">
       {% for entry in craft.entries.section('events').all() %}
-        {% if entry.endDate < now and entry.exhibitStatus != 'ongoingExhibit' and loop.index0 <= 2%}
+        {% if entry.endDate < now and entry.startDate < now and entry.exhibitStatus != 'ongoingExhibit' and loop.index0 <= 2%}
           {% include 'globals/noImageListing.html' %}
         {% endif %}
       {% endfor%}
