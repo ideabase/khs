@@ -143,6 +143,7 @@
 
 </section>
 
+<!-- This portion of code below prints the actual timelines by printing the description of the entry, then if available the picture accompanying picture.-->
 {% set currenttimeline = craft.entries.section('timelineEvent').relatedTo(category).orderBy('title asc').all() %}
 <h2>{{category.title}} Timeline</h2>
 <section class="timeline">
