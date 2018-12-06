@@ -64,16 +64,17 @@
 
 
             {# OLD-for when video code did not exist. Prints feature image in now featuring block #}
-
+            {#
             {% for asset in entry.featureImage.all() %}
                 <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
             {% endfor %}
-
+            #}
 
       {% endfor %}
 
+
       {# Logic to display either feature image or video in the now featuring block #}
-      {#
+
       {% set fImage = false %}
       {% set fVideo = false %}
 
@@ -81,10 +82,9 @@
       {% if entry.featureImage | length %}
           {% set fImage = true %}
       {% endif %}
-      #}
+
 
       {# Ensures both the video asset and video url exist in order to display on webpage. #}
-      {#
       {% if entry.video | length %}
           {% for field in entry.video %}
               {% if field.videoUrl | length %}
@@ -92,10 +92,9 @@
               {% endif %}
           {% endfor %}
       {% endif %}
-      #}
+
 
       {# Depending on the case, switches between displaying picture and video. #}
-      {#
       {% if fImage == true and fVideo == true %}
           {% include 'globals/video.html' %}
       {% elseif fImage == true and fVideo == false %}
@@ -109,7 +108,7 @@
               <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
           {% endfor %}
       {% endif %}
-      #}
+
       {# end of video/picture logic block #}
 
 
@@ -119,7 +118,7 @@
 
 
 
-{# TESTing mp4 videos #}
+{# TESTING mp4 videos to see if they display with the following code #}
 {#
 {% for block in entry.video %}
     <h3>{{ block.videoTitle }}</h3>
@@ -133,7 +132,6 @@
 
 
 {# This portion of code is for the secondary Featured Item to be displayed on the webpage #}
-{#
 {% if secondaryItem is defined %}
         <div class="secondary-feature-item">
                 <div class="feature-section-background">
@@ -153,6 +151,6 @@
                 </div>
         </div>
 {% endif %}
-#}
+
 
 {% endcache %}
