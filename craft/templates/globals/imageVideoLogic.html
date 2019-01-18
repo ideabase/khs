@@ -3,7 +3,7 @@
 {% set fImage = false %}
 {% set fVideo = false %}
 
-
+{# Checks to see if the feature image field has a value in the backend of craft. #}
 {% if entry.featureImage | length %}
     {% set fImage = true %}
 {% endif %}

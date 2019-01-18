@@ -1,20 +1,20 @@
 {% extends "layouts/feature" %}
 
 {% block content %}
-{% cache %}
-  {# List all of the Collections and Resources Categories by Media Category #}
-  {% set categories = craft.categories.group('mediaCategory').all() %}
+    {% cache %}
+      {# List all of the Collections and Resources Categories by Media Category #}
+      {% set categories = craft.categories.group('mediaCategory').all() %}
 
-  <h2>{{ entry.featuredTitle }}</h2>
-  <div class="feature-links">
-      {% for item in categories %}
-    <div class="feature">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.teaserText }}</p>
-        <a href="{{item.url}}" class="button-link">Explore {{item.title}}</a>
-    </div>
-    {% endfor %}
-  </div>
+      <h2>{{ entry.featuredTitle }}</h2>
+      <div class="feature-links">
+          {% for item in categories %}
+              <div class="feature">
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.teaserText }}</p>
+                  <a href="{{item.url}}" class="button-link">Explore {{item.title}}</a>
+              </div>
+          {% endfor %}
+      </div>
 
-{% endcache %}
+    {% endcache %}
 {% endblock %}

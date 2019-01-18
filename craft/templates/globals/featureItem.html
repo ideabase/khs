@@ -74,41 +74,7 @@
 
 
       {# Logic to display either feature image or video in the now featuring block #}
-
-      {% set fImage = false %}
-      {% set fVideo = false %}
-
-
-      {% if entry.featureImage | length %}
-          {% set fImage = true %}
-      {% endif %}
-
-
-      {# Ensures both the video asset and video url exist in order to display on webpage. #}
-      {% if entry.video | length %}
-          {% for field in entry.video %}
-              {% if field.videoUrl | length %}
-                  {% set fVideo = true %}
-              {% endif %}
-          {% endfor %}
-      {% endif %}
-
-
-      {# Depending on the case, switches between displaying picture and video. #}
-      {% if fImage == true and fVideo == true %}
-          {% include 'globals/video.html' %}
-      {% elseif fImage == true and fVideo == false %}
-          {% for asset in entry.featureImage.all() %}
-              <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
-          {% endfor %}
-      {% elseif fImage == false and fVideo == true %}
-          {% include 'globals/video.html' %}
-      {% else %}
-          {% for asset in entry.featureImage.all() %}
-              <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div>
-          {% endfor %}
-      {% endif %}
-
+      {% include 'globals/imageVideoLogic.html'%}
       {# end of video/picture logic block #}
 
 
