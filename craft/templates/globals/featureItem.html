@@ -70,11 +70,14 @@
             {% endfor %}
             #}
 
+            {# moved this line inside the for loop b/c it was causing errors being outside the loop. added on 1-25-19 #}
+            {% include 'globals/imageVideoLogic.html'%}
+
       {% endfor %}
 
 
       {# Logic to display either feature image or video in the now featuring block #}
-      {% include 'globals/imageVideoLogic.html'%}
+      {# {% include 'globals/imageVideoLogic.html'%} #}
       {# end of video/picture logic block #}
 
 
