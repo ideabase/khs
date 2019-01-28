@@ -23,14 +23,14 @@
 {% if fImage == true and fVideo == true %}
     {% include 'globals/video.html' %}
 {% elseif fImage == true and fVideo == false %}
-    {% for asset in entry.featureImage.all() %}
+    {% for asset in entry.featureImage.first() %}
         {# <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div> #}
         <div class="lazy feature-1" data-src="{{ asset.url('testImageTransform') }}"></div>
     {% endfor %}
 {% elseif fImage == false and fVideo == true %}
     {% include 'globals/video.html' %}
 {% else %}
-    {% for asset in entry.featureImage.all() %}
+    {% for asset in entry.featureImage.first() %}
         {# <div class="lazy feature-1" data-src="{{ asset.url('secondaryImage') }}"></div> #}
         <div class="lazy feature-1" data-src="{{ asset.url('testImageTransform') }}"></div>
     {% endfor %}
