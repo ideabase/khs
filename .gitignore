@@ -4,7 +4,7 @@
 /craft/config/general.php
 /craft/config/db.php
 /public/.htaccess
-/public/node_modules
+/html/node_modules
 package-lock.json
 /html/assets/img/uploads
 /html/assets/file/uploads
