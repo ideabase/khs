@@ -1,6 +1,6 @@
 {
     "require": {
-        "craftcms/cms": "3.0.17.1",
+        "craftcms/cms": "3.5.19.1",
         "wbrowar/adminbar": "3.1.6",
         "craftcms/redactor": "2.1.5",
         "firstborn/migrationmanager": "3.0.5",
